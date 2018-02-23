@@ -1,0 +1,26 @@
+{
+  "name": "vue-cli-plugin-vuetify",
+  "version": "0.0.1",
+  "description": "Plugin for vue cli 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
+  },
+  "keywords": [
+    "vuetify",
+    "plugin",
+    "vue",
+    "cli",
+    "3"
+  ],
+  "author": "Mauro Perez <maurop123@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
+  },
+  "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme"
+}
