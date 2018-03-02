@@ -1,7 +1,7 @@
 module.exports = (api, opts, rootOpts) => {
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.0.3"
+      vuetify: "^1.0.4"
     }
   })
 
@@ -31,6 +31,10 @@ module.exports = (api, opts, rootOpts) => {
       // Modify app
       content = lines.reverse().join('\n')
       fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
+    }
+
+    if (opts.replaceComponents) {
+      api.render('./templates/default', { ...opts })
     }
   })
 }
