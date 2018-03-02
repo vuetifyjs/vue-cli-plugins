@@ -45,7 +45,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <router-view/>
+      <HelloWorld/>
     </v-content>
     <v-navigation-drawer
       temporary
@@ -70,6 +70,8 @@
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld'
+
 export default {
   data () {
     return {
@@ -86,6 +88,9 @@ export default {
       title: 'Vuetify.js'
     }
   },
-  name: 'App'
+  name: 'App',
+  components: {
+    HelloWorld
+  }
 }
 </script>
