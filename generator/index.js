@@ -40,7 +40,7 @@ module.exports = (api, opts, rootOpts) => {
 
     // Add Material Icons
     {
-      const indexPath = api.resolve('./index.html')
+      const indexPath = api.resolve('./public/index.html')
 
       let content = fs.readFileSync(indexPath, { encoding: 'utf8' })
 
