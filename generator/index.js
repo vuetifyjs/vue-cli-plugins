@@ -5,6 +5,10 @@ module.exports = (api, opts, rootOpts) => {
     }
   })
 
+  if (opts.replaceComponents) {
+    api.render('./templates/default', { ...opts })
+  }
+
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
     const fs = require('fs')
@@ -31,10 +35,6 @@ module.exports = (api, opts, rootOpts) => {
       // Modify app
       content = lines.reverse().join('\n')
       fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
-    }
-
-    if (opts.replaceComponents) {
-      api.render('./templates/default', { ...opts })
     }
   })
 }
