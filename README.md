@@ -13,8 +13,5 @@ To install and invoke the vuetify plugin...
 ```
 npm i -D vue-cli-plugin-vuetify
 vue invoke vuetify
+yarn serve
 ```
-
-Now you should see your package.json dependencies updated with vuetify.
-
-This is still a work in progress. Soon you'll be able to scaffold a full project like with `vue init vuetijyjs/webpack`
