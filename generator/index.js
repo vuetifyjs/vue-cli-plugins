@@ -15,7 +15,8 @@ module.exports = (api, opts, rootOpts) => {
 
     let vuetifyLines = ''
     {
-      vuetifyLines += "\nimport Vuetify from 'vuetify'\n\n"
+      vuetifyLines += "\nimport Vuetify from 'vuetify'"
+      vuetifyLines += "\nimport 'vuetify/dist/vuetify.min.css'\n\n"
       vuetifyLines += "Vue.use(Vuetify)"
     }
 
