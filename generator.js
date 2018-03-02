@@ -9,6 +9,12 @@ module.exports = (api, opts, rootOpts) => {
   api.onCreateComplete(() => {
     const fs = require('fs')
 
+    let vuetifyLines = ''
+    {
+      vuetifyLines += "\nimport Vuetify from 'vuetify'\n\n"
+      vuetifyLines += "Vue.use(Vuetify)"
+    }
+
     // Modify main.js
     {
       const tsPath = api.resolve('./src/main.ts')
@@ -21,12 +27,7 @@ module.exports = (api, opts, rootOpts) => {
 
       // Inject import
       const lastImportIndex = lines.findIndex(line => line.match(/^import/))
-      lines[lastImportIndex] += `
-        import Vuetify from 'vuetify'
-
-        Vue.use(Vuetify)
-      `
-
+      lines[lastImportIndex] += vuetifyLines
       // Modify app
       content = lines.reverse().join('\n')
       fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
