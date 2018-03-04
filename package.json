@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
-  "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme"
+  "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
 }

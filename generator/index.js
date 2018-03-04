@@ -5,8 +5,15 @@ module.exports = (api, opts, rootOpts) => {
     }
   })
 
-  if (opts.replaceComponents) {
-    api.render('./templates/default', { ...opts })
+  // Handle if router exists
+  {
+    const fs = require('fs')
+    const routerPath = api.resolve('./src/router.js')
+    opts.router = fs.existsSync(routerPath)
+
+    if (opts.replaceComponents) {
+      api.render('./templates/default', { ...opts })
+    }
   }
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
@@ -51,6 +58,14 @@ module.exports = (api, opts, rootOpts) => {
 
       content = lines.reverse().join('\n')
       fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
+    }
+
+    // Based on router option, remove unneccessary vue components
+    const rimraf = require('rimraf')
+    if (opts.router) {
+      rimraf( api.resolve('./src/components'), () => {})
+    } else {
+      rimraf( api.resolve('./src/views'), () => {})
     }
   })
 }

@@ -45,7 +45,11 @@
       </v-btn>
     </v-toolbar>
     <v-content>
+      <%_ if (options.router) { _%>
+      <router-view/>
+      <%_ } else { _%>
       <HelloWorld/>
+      <%_ } _%>
     </v-content>
     <v-navigation-drawer
       temporary
@@ -70,9 +74,17 @@
 </template>
 
 <script>
+<%_ if (!options.router) { _%>
 import HelloWorld from './components/HelloWorld'
+<%_ } _%>
 
 export default {
+  name: 'App',
+  <%_ if (!options.router) { _%>
+  components: {
+    HelloWorld
+  },
+  <%_ } _%>
   data () {
     return {
       clipped: false,
@@ -87,10 +99,6 @@ export default {
       rightDrawer: false,
       title: 'Vuetify.js'
     }
-  },
-  name: 'App',
-  components: {
-    HelloWorld
   }
 }
 </script>
