@@ -24,14 +24,21 @@ module.exports = (api, opts, rootOpts) => {
     {
       vuetifyLines += "\nimport Vuetify from 'vuetify'"
       vuetifyLines += "\nimport 'vuetify/dist/vuetify.min.css'\n"
-      vuetifyLines += "\nVue.use(Vuetify<%_ if (options.useTheme) { _%>, { theme: { primary: '#ee44aa' } }<%_ } else { _%> ) <%_ } _%>"
     }
 
-    // if (opts.useTheme) {
-    //   vuetifyLines += "\nVue.use(Vuetify"
-    // } else {
-    //   vuetifyLines += "\nVue.use(Vuetify)"
-    // }
+    if (opts.useTheme) {
+      vuetifyLines += "\nVue.use(Vuetify, { theme: {"
+      vuetifyLines += "\n  primary: '#ee44aa',"
+      vuetifyLines += "\n  secondary: '#424242',"
+      vuetifyLines += "\n  accent: '#82B1FF',"
+      vuetifyLines += "\n  error: '#FF5252',"
+      vuetifyLines += "\n  info: '#2196F3',"
+      vuetifyLines += "\n  success: '#4CAF50',"
+      vuetifyLines += "\n  warning: '#FFC107'"
+      vuetifyLines += "\n}})"
+    } else {
+      vuetifyLines += "\nVue.use(Vuetify)"
+    }
 
     // Modify main.js
     {
