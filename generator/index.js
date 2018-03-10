@@ -23,9 +23,15 @@ module.exports = (api, opts, rootOpts) => {
     let vuetifyLines = ''
     {
       vuetifyLines += "\nimport Vuetify from 'vuetify'"
-      vuetifyLines += "\nimport 'vuetify/dist/vuetify.min.css'\n\n"
-      vuetifyLines += "Vue.use(Vuetify)"
+      vuetifyLines += "\nimport 'vuetify/dist/vuetify.min.css'\n"
+      vuetifyLines += "\nVue.use(Vuetify<%_ if (options.useTheme) { _%>, { theme: { primary: '#ee44aa' } }<%_ } else { _%> ) <%_ } _%>"
     }
+
+    // if (opts.useTheme) {
+    //   vuetifyLines += "\nVue.use(Vuetify"
+    // } else {
+    //   vuetifyLines += "\nVue.use(Vuetify)"
+    // }
 
     // Modify main.js
     {
