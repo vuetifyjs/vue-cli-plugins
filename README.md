@@ -20,7 +20,7 @@ To install and invoke the vuetify plugin...
 ```
 npm i -D vue-cli-plugin-vuetify
 vue invoke vuetify
-yarn serve
+npm run serve
 ```
 
 That's it! Let us know what you think on [discord](https://discordapp.com/channels/340160225338195969/340160225338195969).
