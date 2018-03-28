@@ -16,7 +16,7 @@ vue create my-app
 
 Before installing the vuetify plugin, make sure to commit or stash your changes in case you need to revert
 
-To install and invoke the vuetify plugin...
+To install the vuetify plugin...
 ```
 vue add vuetify
 npm run serve
