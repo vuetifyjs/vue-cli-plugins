@@ -18,8 +18,7 @@ Before installing the vuetify plugin, make sure to commit or stash your changes 
 
 To install and invoke the vuetify plugin...
 ```
-npm i -D vue-cli-plugin-vuetify
-vue invoke vuetify
+vue add vuetify
 npm run serve
 ```
 
