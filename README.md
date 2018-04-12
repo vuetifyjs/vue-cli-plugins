@@ -19,7 +19,6 @@ Before installing the vuetify plugin, make sure to commit or stash your changes 
 To install the vuetify plugin...
 ```
 vue add vuetify
-npm run serve
 ```
 
 That's it! Let us know what you think on [discord](https://discordapp.com/channels/340160225338195969/340160225338195969).
