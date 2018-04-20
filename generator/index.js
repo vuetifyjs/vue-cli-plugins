@@ -1,7 +1,7 @@
 module.exports = (api, opts, rootOpts) => {
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.0.6"
+      vuetify: "^1.0.16"
     }
   })
 
