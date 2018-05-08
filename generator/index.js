@@ -1,4 +1,6 @@
 module.exports = (api, opts, rootOpts) => {
+  const helpers = require('./helpers')(api)
+
   api.extendPackage({
     dependencies: {
       vuetify: "^1.0.16"
@@ -15,99 +17,78 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
-  // Handle if router exists
-  {
-    const fs = require('fs')
-    const routerPath = api.resolve('./src/router.js')
-    opts.router = fs.existsSync(routerPath)
+  // Render vuetify plugin file
+  api.render({
+    './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
+  }, opts)
 
-    if (opts.replaceComponents) {
-      api.render('./templates/default', { ...opts })
+  // Render files if we're replacing
+  const fs = require('fs')
+  const routerPath = api.resolve('./src/router.js')
+  opts.router = fs.existsSync(routerPath)
+
+  if (opts.replaceComponents) {
+    const files = {
+      './src/App.vue': './templates/default/src/App.vue',
+      './src/assets/logo.png': './templates/default/src/assets/logo.png'
     }
+
+    if (opts.router) {
+      files['./src/views/Home.vue'] = './templates/default/src/views/Home.vue'
+    } else {
+      files['./src/components/HelloWorld.vue'] = './templates/default/src/components/HelloWorld.vue'
+    }
+
+    api.render(files, opts)
   }
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
-    const fs = require('fs')
-
-    // Setup Vuetify import for main.js
-    let vuetifyLines = ''
-    if (opts.useAlaCarte) {
-      vuetifyLines += "\nimport {"
-      vuetifyLines += "\n  Vuetify,"
-      vuetifyLines += "\n  VApp,"
-      vuetifyLines += "\n  VNavigationDrawer,"
-      vuetifyLines += "\n  VFooter,"
-      vuetifyLines += "\n  VList,"
-      vuetifyLines += "\n  VBtn,"
-      vuetifyLines += "\n  VIcon,"
-      vuetifyLines += "\n  VGrid,"
-      vuetifyLines += "\n  VToolbar,"
-      vuetifyLines += "\n  transitions"
-      vuetifyLines += "\n} from 'vuetify'"
-      vuetifyLines += "\nimport '../node_modules/vuetify/src/stylus/app.styl'\n"
-    } else {
-      vuetifyLines += "\nimport Vuetify from 'vuetify'"
-      vuetifyLines += "\nimport 'vuetify/dist/vuetify.min.css'\n"
-    }
-
-    if (opts.useAlaCarte || opts.useTheme) {
-      vuetifyLines += "\nVue.use(Vuetify, {"
-
-      if (opts.useAlaCarte) {
-        vuetifyLines += "\n  components: {"
-        vuetifyLines += "\n    VApp,"
-        vuetifyLines += "\n    VNavigationDrawer,"
-        vuetifyLines += "\n    VFooter,"
-        vuetifyLines += "\n    VList,"
-        vuetifyLines += "\n    VBtn,"
-        vuetifyLines += "\n    VIcon,"
-        vuetifyLines += "\n    VGrid,"
-        vuetifyLines += "\n    VToolbar,"
-        vuetifyLines += "\n    transitions"
-        vuetifyLines += "\n  },"
-      }
-
-      if (opts.useTheme) {
-        vuetifyLines += "\n  theme: {"
-        vuetifyLines += "\n    primary: '#ee44aa',"
-        vuetifyLines += "\n    secondary: '#424242',"
-        vuetifyLines += "\n    accent: '#82B1FF',"
-        vuetifyLines += "\n    error: '#FF5252',"
-        vuetifyLines += "\n    info: '#2196F3',"
-        vuetifyLines += "\n    success: '#4CAF50',"
-        vuetifyLines += "\n    warning: '#FFC107'"
-        vuetifyLines += "\n  },"
-      }
-
-      vuetifyLines += "\n})"
-    } else {
-      vuetifyLines += "\nVue.use(Vuetify)"
-    }
-
     // Modify main.js
-    {
-      const tsPath = api.resolve('./src/main.ts')
-      const jsPath = api.resolve('./src/main.js')
+    helpers.updateMain(src => {
+      const vueImportIndex = src.findIndex(line => line.match(/^import Vue/))
 
-      const mainPath = fs.existsSync(tsPath) ? tsPath : jsPath
-      let content = fs.readFileSync(mainPath, { encoding: 'utf8' })
+      src.splice(vueImportIndex + 1, 0, 'import \'./plugins/vuetify\'')
 
-      const lines = content.split(/\r?\n/g).reverse()
+      return src
+    })
 
-      // Inject import
-      const lastImportIndex = lines.findIndex(line => line.match(/^import/))
-      lines[lastImportIndex] += vuetifyLines
-      // Modify app
-      content = lines.reverse().join('\n')
-      fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
+    // Add polyfill
+    if (opts.usePolyfill) {
+      helpers.updateBabelConfig(cfg => {
+        if (!cfg.presets) return
+
+        const vuePresetIndex = cfg.presets.findIndex(p => Array.isArray(p) ? p[0] === '@vue/app' : p === '@vue/app')
+        const isArray = Array.isArray(cfg.presets[vuePresetIndex])
+
+        if (vuePresetIndex < 0) return
+
+        if (isArray) {
+          cfg.presets[vuePresetIndex][1]['useBuiltIns'] = 'entry'
+        } else {
+          cfg.presets[vuePresetIndex] = [
+            '@vue/app',
+            {
+              useBuiltIns: 'entry'
+            }
+          ]
+        }
+
+        return cfg
+      })
+
+      helpers.updateMain(src => {
+        if (!src.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
+          src.unshift('import \'@babel/polyfill\'')
+        }
+
+        return src
+      })
     }
 
     // If a-la-carte, update babel
     if (opts.useAlaCarte) {
-      let config
-      let configPath
-      function addBabelPlugin(cfg) {
+      helpers.updateBabelConfig(cfg => {
         if (cfg.plugins === undefined) {
           cfg.plugins = []
         }
@@ -123,32 +104,7 @@ module.exports = (api, opts, rootOpts) => {
         ])
 
         return cfg
-      }
-
-      const rcPath = api.resolve('./.babelrc')
-      if (fs.existsSync(rcPath)) {
-        configPath = rcPath
-        config = JSON.parse( fs.readFileSync(rcPath, { encoding: 'utf8' }) )
-        config = addBabelPlugin(config)
-      } else {
-        const pkgPath = api.resolve('./package.json')
-        config = JSON.parse( fs.readFileSync(pkgPath, { encoding: 'utf8' }) )
-
-        if (config.babel) {
-          configPath = pkgPath
-          config.babel = addBabelPlugin(config.babel)
-        }
-      }
-
-      if (configPath) {
-        fs.writeFileSync(
-          configPath,
-          JSON.stringify(config, null, 2),
-          { encoding: 'utf8' }
-        )
-      } else {
-        // TODO handle if babel config doesn't exist
-      }
+      })
     }
 
     // Add Material Icons
@@ -160,18 +116,10 @@ module.exports = (api, opts, rootOpts) => {
       const lines = content.split(/\r?\n/g).reverse()
 
       const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
-      lines[lastLink] += '\n<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet">'
+      lines[lastLink] += '\n\t\t<link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">'
 
       content = lines.reverse().join('\n')
       fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
-    }
-
-    // Based on router option, remove unneccessary vue components
-    const rimraf = require('rimraf')
-    if (opts.router) {
-      rimraf( api.resolve('./src/components'), () => {})
-    } else {
-      rimraf( api.resolve('./src/views'), () => {})
     }
   })
 }
