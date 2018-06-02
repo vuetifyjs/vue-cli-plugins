@@ -26,7 +26,7 @@ If you run into any issues you can hit us up on [discord/need](https://discordap
 
 Here are some extra steps for setting up the old templates but using plugins from the new ecosystem.
 
-## Nuxt
+### Nuxt
 
 ```
 # preset: default (babel, eslint)
@@ -63,25 +63,8 @@ Todo
 
 If you already made a project with the PWA option selected, then just adding like above should do it.
 
-Otherwise...
 
-Todo
+### Cordova
 
-- check if can add PWA plugin after now without old bug
-
-### Cordova (not working yet)
-
-https://www.npmjs.com/package/vue-cli-plugin-cordova
-
-
-Gotcha
-
--  `semver module not found`
- - fix with `yarn add -D semver`
-
-Todo
-
-- can i skip `yarn cordova:build`?
-
-## Typescript Support
+Follow the instructions detailed in this plugin https://www.npmjs.com/package/vue-cli-plugin-cordova
 
