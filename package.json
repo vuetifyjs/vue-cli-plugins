@@ -23,7 +23,7 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
-  "dependencies": {
-    "rimraf": "^2.6.2"
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.0-beta.15"
   }
 }

@@ -1,7 +1,6 @@
 # vue-cli-plugin-vuetify
-Plugin for vue-cli@3.0
 
-If you want to try out the new vue-cli 3 to make an app using Vuetify, this plugin will set up Vuetify hassle-free.
+Vuetify Plugin for [vue-cli@3.0](https://github.com/vuejs/vue-cli)
 
 ## Install
 
@@ -21,4 +20,68 @@ To install the vuetify plugin...
 vue add vuetify
 ```
 
-That's it! Let us know what you think on [discord](https://discordapp.com/channels/340160225338195969/340160225338195969).
+If you run into any issues you can hit us up on [discord/need](https://discordapp.com/channels/340160225338195969/340215499398840331).
+
+## Using with other plugins
+
+Here are some extra steps for setting up the old templates but using plugins from the new ecosystem.
+
+## Nuxt
+
+```
+# preset: default (babel, eslint)
+
+vue add nuxt-starter-template
+
+```
+
+Todo
+
+- Add vuetify Nuxt starter template
+
+
+### Electron
+
+Just add [vue-cli-plugin-electron-builder](https://www.npmjs.com/package/vue-cli-plugin-electron-builder)
+
+```
+# preset: default (babel, eslint)
+
+vue add vuetify electron-builder vuetify
+yarn server:electron
+```
+
+Gotcha
+
+- If you add vuetify before electron-builder, electron-builder will overwrite Vuetify's App.vue and HelloWorld.vue
+
+Todo
+
+- material icons aren't properly included
+
+### PWA
+
+If you already made a project with the PWA option selected, then just adding like above should do it.
+
+Otherwise...
+
+Todo
+
+- check if can add PWA plugin after now without old bug
+
+### Cordova (not working yet)
+
+https://www.npmjs.com/package/vue-cli-plugin-cordova
+
+
+Gotcha
+
+-  `semver module not found`
+ - fix with `yarn add -D semver`
+
+Todo
+
+- can i skip `yarn cordova:build`?
+
+## Typescript Support
+
