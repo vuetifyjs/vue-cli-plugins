@@ -12,7 +12,7 @@ import {
   VToolbar,
   transitions
 } from 'vuetify'
-import '../node_modules/vuetify/src/stylus/app.styl'
+import 'vuetify/src/stylus/app.styl'
 <%_ } else { _%>
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
