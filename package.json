@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Plugin for vue cli 3",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
-  "dependencies": {
-    "rimraf": "^2.6.2"
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.0-beta.15"
   }
 }

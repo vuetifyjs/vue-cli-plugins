@@ -1,25 +1,25 @@
 module.exports = [
   {
-    type: 'confirm',
     name: 'replaceComponents',
-    message: 'Allow Vuetify to replace App.vue and HelloWorld.vue?',
+    type: 'confirm',
+    message: 'Use default theme? (will replace App.vue and HelloWorld.vue)',
     default: true,
   },
   {
-    type: 'confirm',
     name: 'useTheme',
+    type: 'confirm',
     message: 'Use custom theme?',
     default: false,
   },
   {
-    type: 'confirm',
     name: 'useAlaCarte',
+    type: 'confirm',
     message: 'Use a-la-carte components?',
     default: false,
   },
   {
-    type: 'confirm',
     name: 'usePolyfill',
+    type: 'confirm',
     message: 'Use babel/polyfill?',
     default: true
   }
