@@ -9,18 +9,25 @@ module.exports = (api, opts, rootOpts) => {
 
   if (opts.useAlaCarte) {
     api.extendPackage({
-      devDependencies: {
-        "babel-plugin-transform-imports": "^1.4.1",
-        "stylus": "^0.54.5",
-        "stylus-loader": "^3.0.1",
-      }
+      devDependencies: api.hasPlugin('typescript')
+        ? {
+          "stylus": "^0.54.5",
+          "stylus-loader": "^3.0.1",
+        }
+        : {
+          "babel-plugin-transform-imports": "^1.4.1",
+          "stylus": "^0.54.5",
+          "stylus-loader": "^3.0.1",
+        }
     })
   }
 
   // Render vuetify plugin file
   api.render({
     './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
-  }, opts)
+  }, Object.assign({
+    typescript: api.hasPlugin('typescript')
+  }, opts))
 
   // Render files if we're replacing
   const fs = require('fs')
@@ -55,7 +62,7 @@ module.exports = (api, opts, rootOpts) => {
 
     // Add polyfill
     if (opts.usePolyfill) {
-      helpers.updateBabelConfig(cfg => {
+      api.hasPlugin('typescript') || helpers.updateBabelConfig(cfg => {
         if (!cfg.presets) return
 
         const vuePresetIndex = cfg.presets.findIndex(p => Array.isArray(p) ? p[0] === '@vue/app' : p === '@vue/app')
@@ -87,7 +94,7 @@ module.exports = (api, opts, rootOpts) => {
     }
 
     // If a-la-carte, update babel
-    if (opts.useAlaCarte) {
+    if (opts.useAlaCarte && !api.hasPlugin('typescript')) {
       helpers.updateBabelConfig(cfg => {
         if (cfg.plugins === undefined) {
           cfg.plugins = []
