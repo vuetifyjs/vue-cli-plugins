@@ -5,12 +5,11 @@ module.exports = function (api) {
     updateBabelConfig (callback) {
       let config, configPath
 
-      const rcPath = api.resolve('./.babelrc')
+      const rcPath = api.resolve('./babel.config.js')
       const pkgPath = api.resolve('./package.json')
       if (fs.existsSync(rcPath)) {
         configPath = rcPath
-        config = JSON.parse(fs.readFileSync(rcPath, { encoding: 'utf8' }))
-        config = callback(config)
+        config = callback(require(rcPath))
       } else if (fs.existsSync(pkgPath)) {
         configPath = pkgPath
         config = JSON.parse(fs.readFileSync(pkgPath, { encoding: 'utf8' }))
@@ -23,9 +22,11 @@ module.exports = function (api) {
       }
 
       if (configPath) {
+        const moduleExports = configPath !== pkgPath ? 'module.exports = ' : ''
+
         fs.writeFileSync(
           configPath,
-          JSON.stringify(config, null, 2),
+          `${moduleExports}${JSON.stringify(config, null, 2)}`,
           { encoding: 'utf8' }
         )
       } else {

@@ -56,12 +56,12 @@ module.exports = (api, opts, rootOpts) => {
     // Add polyfill
     if (opts.usePolyfill) {
       helpers.updateBabelConfig(cfg => {
-        if (!cfg.presets) return
+        if (!cfg.presets) return cfg
 
         const vuePresetIndex = cfg.presets.findIndex(p => Array.isArray(p) ? p[0] === '@vue/app' : p === '@vue/app')
         const isArray = Array.isArray(cfg.presets[vuePresetIndex])
 
-        if (vuePresetIndex < 0) return
+        if (vuePresetIndex < 0) return cfg
 
         if (isArray) {
           cfg.presets[vuePresetIndex][1]['useBuiltIns'] = 'entry'
