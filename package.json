@@ -25,5 +25,8 @@
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
   "devDependencies": {
     "@vue/cli-service": "^3.0.0-beta.15"
+  },
+  "dependencies": {
+    "@phenomnomnominal/tsquery": "^2.0.0-beta.4"
   }
 }

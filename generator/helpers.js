@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { tsquery } = require('@phenomnomnominal/tsquery')
 
 module.exports = function (api) {
   return {
@@ -47,6 +48,53 @@ module.exports = function (api) {
 
       content = lines.join('\n')
       fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
+    },
+
+    // tsconfig.json isn't strict JSON, so we need to parse it like a javascript file
+    // TODO: actually use this (a-la-carte only)
+    updateTsConfig () {
+      const configPath = api.resolve('./tsconfig.json')
+      let content = fs.readFileSync(configPath, { encoding: 'utf8' })
+
+      content = replaceSyntheticDefaultImports(content)
+      content = replaceTypes(content)
+
+      fs.writeFileSync(configPath, content, { encoding: 'utf8' })
+
+      function replaceSyntheticDefaultImports (code) {
+        code = 'v =' + code
+        const ast = tsquery.ast(code)
+        const nodes = tsquery(ast, 'PropertyAssignment[name.text="compilerOptions"] > ObjectLiteralExpression > PropertyAssignment[name.text="allowSyntheticDefaultImports"]')
+
+        const intializer = nodes[0].initializer
+
+        return (
+          code.slice(3, intializer.pos) +
+          ' false, // Has to be disabled for Vuetify exports to work' +
+          code.slice(intializer.end + 1)
+        )
+      }
+
+      function replaceTypes (code) {
+        code = 'v =' + code
+        const ast = tsquery.ast(code)
+        const node = tsquery(ast, 'PropertyAssignment[name.text="compilerOptions"] > ObjectLiteralExpression > PropertyAssignment[name.text="types"] > ArrayLiteralExpression')[0]
+
+        const elements = node.elements.map(e => e.value)
+
+        if (!elements.includes('vuetify')) {
+          const arrayEnd = node.elements[node.elements.length - 1].end
+          const newElement = ',' + (node.multiLine ? '\n      ' : ' ') + '"vuetify"'
+
+          code = (
+            code.slice(0, arrayEnd) +
+            newElement +
+            code.slice(arrayEnd)
+          )
+        }
+
+        return code.slice(3)
+      }
     }
   }
 }
