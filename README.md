@@ -45,10 +45,9 @@ Todo
 Just add [vue-cli-plugin-electron-builder](https://www.npmjs.com/package/vue-cli-plugin-electron-builder)
 
 ```
-# preset: default (babel, eslint)
-
-vue add vuetify electron-builder vuetify
-yarn server:electron
+vue add electron-builder
+vue add vuetify
+yarn serve:electron
 ```
 
 Gotcha
