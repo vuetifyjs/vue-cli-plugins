@@ -17,6 +17,14 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
+  if (opts.usePolyfill) {
+    api.extendPackage({
+      devDependencies: {
+        "@babel/polyfill": "^7.0.0-beta.49",
+      }
+    })
+  }
+
   // Render vuetify plugin file
   api.render({
     './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
