@@ -2,7 +2,7 @@ module.exports = [
   {
     name: 'replaceComponents',
     type: 'confirm',
-    message: 'Use default theme? (will replace App.vue and HelloWorld.vue)',
+    message: 'Use a pre-made template? (will replace App.vue and HelloWorld.vue)',
     default: true,
   },
   {

@@ -3,7 +3,7 @@ module.exports = (api, opts, rootOpts) => {
 
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.0.16"
+      vuetify: "^1.0.19"
     }
   })
 
@@ -13,6 +13,14 @@ module.exports = (api, opts, rootOpts) => {
         "babel-plugin-transform-imports": "^1.4.1",
         "stylus": "^0.54.5",
         "stylus-loader": "^3.0.1",
+      }
+    })
+  }
+
+  if (opts.usePolyfill) {
+    api.extendPackage({
+      devDependencies: {
+        "@babel/polyfill": "^7.0.0-beta.49",
       }
     })
   }
