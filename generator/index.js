@@ -124,7 +124,7 @@ module.exports = (api, opts, rootOpts) => {
       const lines = content.split(/\r?\n/g).reverse()
 
       const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
-      lines[lastLink] += '\n\t\t<link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">'
+      lines[lastLink] += '\n\s\s\s\s<link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">'
 
       content = lines.reverse().join('\n')
       fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
