@@ -17,6 +17,7 @@ Before installing the vuetify plugin, make sure to commit or stash your changes 
 
 To install the vuetify plugin...
 ```
+cd my-app
 vue add vuetify
 ```
 
