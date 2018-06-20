@@ -25,6 +25,24 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
+  if (api.hasPlugin('electron-builder') === true) {
+    // material icons pkg for electron
+    api.extendPackage({
+      devDependencies: {
+        "material-design-icons-iconfont": "^3.0.3",
+      }
+    })
+
+    try {
+      api.injectImports(helpers.getMain(),
+        `import 'material-design-icons-iconfont/dist/material-design-icons.css'`
+      )
+    } catch(e) {
+      console.error(e)
+    }
+  }
+
+
   // Render vuetify plugin file
   api.render({
     './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
@@ -115,8 +133,8 @@ module.exports = (api, opts, rootOpts) => {
       })
     }
 
-    // Add Material Icons
-    {
+    // Add Material Icons (unless electron)
+    if(api.hasPlugin('electron-builder') === false) {
       const indexPath = api.resolve('./public/index.html')
 
       let content = fs.readFileSync(indexPath, { encoding: 'utf8' })
@@ -124,7 +142,7 @@ module.exports = (api, opts, rootOpts) => {
       const lines = content.split(/\r?\n/g).reverse()
 
       const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
-      lines[lastLink] += '\n\s\s\s\s<link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">'
+      lines[lastLink] += '\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons" rel="stylesheet">'
 
       content = lines.reverse().join('\n')
       fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
