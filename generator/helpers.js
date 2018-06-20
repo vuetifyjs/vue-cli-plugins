@@ -2,6 +2,12 @@ const fs = require('fs')
 
 module.exports = function (api) {
   return {
+    getMain() {
+      const tsPath = api.resolve('src/main.ts')
+
+      return fs.existsSync(tsPath) ? 'src/main.ts' : 'src/main.js'
+    },
+
     updateBabelConfig (callback) {
       let config, configPath
 
