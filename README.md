@@ -9,7 +9,6 @@ If you haven't yet installed vue-cli 3, first follow the install instructions he
 **Tip**: If you don't want to overwrite your current vue-cli because you still need `vue init`, [then try this](https://github.com/vuejs/vue-cli/blob/dev/docs/cli.md#pulling-vue-cli2x-templates-legacy).
 
 Generate a project using vue-cli 3.0
-
 ```
 vue create my-app
 ```
@@ -17,7 +16,6 @@ vue create my-app
 Before installing the vuetify plugin, make sure to commit or stash your changes in case you need to revert
 
 To install the vuetify plugin...
-
 ```
 cd my-app
 vue add vuetify
@@ -35,11 +33,13 @@ Here are some extra steps for setting up the old templates but using plugins fro
 # preset: default (babel, eslint)
 
 vue add nuxt-starter-template
+
 ```
 
 Todo
 
 - Add vuetify Nuxt starter template
+
 
 ### Electron
 
@@ -55,6 +55,8 @@ yarn serve:electron
 
 If you already made a project with the PWA option selected, then just adding like above should do it.
 
+
 ### Cordova
 
 Follow the instructions detailed in this plugin https://www.npmjs.com/package/vue-cli-plugin-cordova
+
