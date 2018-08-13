@@ -12,6 +12,23 @@ module.exports = [
     default: false,
   },
   {
+    name: 'iconFont',
+    type: 'rawlist',
+    message: 'Select icon font',
+    choices: [
+      'Material Icons (default)',
+      'Material Design Icons',
+      'Font Awesome 5',
+    ],
+    default: 0
+  },
+  {
+    name: 'installFontIcon',
+    type: 'confirm',
+    message: 'Use font-icon as a dependency?',
+    default: false,
+  },
+  {
     name: 'useAlaCarte',
     type: 'confirm',
     message: 'Use a-la-carte components?',

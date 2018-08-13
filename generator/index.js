@@ -25,17 +25,38 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
-  if (api.hasPlugin('electron-builder') === true) {
-    // material icons pkg for electron
+  if (opts.installFontIcon) {
+    const iconFonts = [
+      // Material Icons
+      {
+        'package': {
+          'material-design-icons-iconfont': '^3.0.3',
+        },
+        'import': 'material-design-icons-iconfont/dist/material-design-icons.css',
+      },
+      // Material Design Icons
+      {
+        'package': {
+          '@mdi/font': '^2.6.95',
+        },
+        'import': '@mdi/font/css/materialdesignicons.css',
+      },
+      // Font Awesome 5
+      {
+        'package': {
+          '@fortawesome/fontawesome-free': '^5.2.0',
+        },
+        'import': '@fortawesome/fontawesome-free/css/all.css',
+      },
+    ]
+
     api.extendPackage({
-      devDependencies: {
-        "material-design-icons-iconfont": "^3.0.3",
-      }
+      devDependencies: iconFonts[opts.iconFont]['package'],
     })
 
     try {
       api.injectImports(helpers.getMain(),
-        `import 'material-design-icons-iconfont/dist/material-design-icons.css'`
+        `import '${iconFonts[opts.iconFont]['import']}'`,
       )
     } catch(e) {
       console.error(e)
@@ -136,7 +157,15 @@ module.exports = (api, opts, rootOpts) => {
     }
 
     // Add Material Icons (unless electron)
-    if(api.hasPlugin('electron-builder') === false) {
+    if (!opts.installFontIcon) {
+      const links = [
+        // Material Icons
+        "<link href=\"https://fonts.googleapis.com/css?family=Material+Icons\" rel=\"stylesheet\">",
+        // Material Design Icons
+        "<link href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\" rel=\"stylesheet\">",
+        // Font Awesome 5
+        "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
+      ]
       const indexPath = api.resolve('./public/index.html')
 
       let content = fs.readFileSync(indexPath, { encoding: 'utf8' })
@@ -144,7 +173,8 @@ module.exports = (api, opts, rootOpts) => {
       const lines = content.split(/\r?\n/g).reverse()
 
       const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
-      lines[lastLink] += '\n    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">'
+      lines[lastLink] += "\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900\" rel=\"stylesheet\">"
+      lines[lastLink] += "\n    " + links[opts.iconFont]
 
       content = lines.reverse().join('\n')
       fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
