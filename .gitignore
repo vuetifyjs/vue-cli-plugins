@@ -1,3 +1,9 @@
 /node_modules/
 
 *.swp
+
+.DS_Store
+.idea/
+.vscode/
+npm-debug.log
+yarn-error.log
