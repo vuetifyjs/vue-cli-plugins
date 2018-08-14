@@ -12,6 +12,12 @@ module.exports = [
     default: false,
   },
   {
+    name: 'useCustomProperties',
+    type: 'confirm',
+    message: 'Use custom properties (CSS variables)?',
+    default: false,
+  },
+  {
     name: 'iconFont',
     type: 'rawlist',
     message: 'Select icon font',
