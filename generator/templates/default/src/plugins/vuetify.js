@@ -46,4 +46,11 @@ theme: {
 <%_ if (options.useCustomProperites) { _%>
 customProperties: true,
 <%_ } _%>
+<%_ if (options.iconFont === 0) { _%>
+iconfont: 'md',
+<%_ } else if (options.iconFont === 1) { _%>
+iconfont: 'mdi',
+<%_ } else if (options.iconFont === 2) { _%>
+iconfont: 'fa',
+<%_ } _%>
 })
