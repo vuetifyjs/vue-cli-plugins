@@ -44,15 +44,15 @@ theme: {
 },
 <%_ } _%>
 <%_ if (options.useCustomProperties) { _%>
-customProperties: true,
+  customProperties: true,
 <%_ } _%>
 <%_ if (options.iconFont === 'md') { _%>
-iconfont: '<%_ options.iconFont _%>',
+  iconfont: '<%_ options.iconFont _%>',
 <%_ } else if (options.iconFont === 'mdi') { _%>
-iconfont: 'mdi',
+  iconfont: 'mdi',
 <%_ } else if (options.iconFont === 'fa') { _%>
-iconfont: 'fa',
+  iconfont: 'fa',
 <%_ } else if (options.iconFont === 'fa4') { _%>
-iconfont: 'fa4',
+  iconfont: 'fa4',
 <%_ } _%>
 })
