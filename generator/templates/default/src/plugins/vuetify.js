@@ -43,16 +43,16 @@ theme: {
     warning: '#FFC107'
 },
 <%_ } _%>
-<%_ if (options.useCustomProperites) { _%>
+<%_ if (options.useCustomProperties) { _%>
 customProperties: true,
 <%_ } _%>
-<%_ if (options.iconFont === 0) { _%>
-iconfont: 'md',
-<%_ } else if (options.iconFont === 1) { _%>
+<%_ if (options.iconFont === 'md') { _%>
+iconfont: '<%_ options.iconFont _%>',
+<%_ } else if (options.iconFont === 'mdi') { _%>
 iconfont: 'mdi',
-<%_ } else if (options.iconFont === 2) { _%>
+<%_ } else if (options.iconFont === 'fa') { _%>
 iconfont: 'fa',
-<%_ } else if (options.iconFont === 3) { _%>
+<%_ } else if (options.iconFont === 'fa4') { _%>
 iconfont: 'fa4',
 <%_ } _%>
 })

@@ -3,7 +3,7 @@ module.exports = (api, opts, rootOpts) => {
 
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.2.0"
+      vuetify: "^1.2.0-beta.1"
     }
   })
 
@@ -26,36 +26,32 @@ module.exports = (api, opts, rootOpts) => {
   }
 
   if (opts.installFontIcon) {
-    const iconFonts = [
-      // Material Icons
-      {
+    const iconFonts = {
+      md: {
         'package': {
           'material-design-icons-iconfont': '^3.0.3',
         },
         'import': 'material-design-icons-iconfont/dist/material-design-icons.css',
       },
-      // Material Design Icons
-      {
+      mdi: {
         'package': {
           '@mdi/font': '^2.6.95',
         },
         'import': '@mdi/font/css/materialdesignicons.css',
       },
-      // Font Awesome 5
-      {
+      fa: {
         'package': {
           '@fortawesome/fontawesome-free': '^5.2.0',
         },
         'import': '@fortawesome/fontawesome-free/css/all.css',
       },
-      // Font Awesome 4
-      {
+      fa4: {
         'package': {
           'font-awesome': '^4.7.0',
         },
         'import': 'font-awesome/css/font-awesome.css',
       },
-    ]
+    }
 
     api.extendPackage({
       devDependencies: iconFonts[opts.iconFont]['package'],
@@ -165,16 +161,12 @@ module.exports = (api, opts, rootOpts) => {
 
     // Add Material Icons (unless electron)
     if (!opts.installFontIcon) {
-      const links = [
-        // Material Icons
-        "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Material+Icons\">",
-        // Material Design Icons
-        "<link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\">",
-        // Font Awesome 5
-        "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.min.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
-        // Font Awesome 4
-        "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css\">",
-      ]
+      const links = {
+        md: "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Material+Icons\">",
+        mdi: "<link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\">",
+        fa: "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.min.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
+        fa4: "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css\">",
+      }
       const indexPath = api.resolve('./public/index.html')
 
       let content = fs.readFileSync(indexPath, { encoding: 'utf8' })

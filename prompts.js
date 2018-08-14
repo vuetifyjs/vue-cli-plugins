@@ -19,7 +19,7 @@ module.exports = [
   },
   {
     name: 'iconFont',
-    type: 'rawlist',
+    type: 'list',
     message: 'Select icon font',
     choices: [
       'Material Icons (default)',
@@ -27,7 +27,15 @@ module.exports = [
       'Font Awesome 5',
       'Font Awesome 4',
     ],
-    default: 0
+    default: 0,
+    filter: function (val) {
+      return {
+        'Material Icons (default)': 'md',
+        'Material Design Icons': 'mdi',
+        'Font Awesome 5': 'fa',
+        'Font Awesome 4': 'fa4',
+      }[val]
+    }
   },
   {
     name: 'installFontIcon',
