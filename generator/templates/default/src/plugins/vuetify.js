@@ -41,13 +41,13 @@ theme: {
     info: '#2196F3',
     success: '#4CAF50',
     warning: '#FFC107'
-},
+  },
 <%_ } _%>
 <%_ if (options.useCustomProperties) { _%>
   customProperties: true,
 <%_ } _%>
 <%_ if (options.iconFont === 'md') { _%>
-  iconfont: '<%_ options.iconFont _%>',
+  iconfont: 'md',
 <%_ } else if (options.iconFont === 'mdi') { _%>
   iconfont: 'mdi',
 <%_ } else if (options.iconFont === 'fa') { _%>
