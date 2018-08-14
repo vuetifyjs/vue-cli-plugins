@@ -164,7 +164,7 @@ module.exports = (api, opts, rootOpts) => {
       const links = {
         md: "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Material+Icons\">",
         mdi: "<link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\">",
-        fa: "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.min.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
+        fa: "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
         fa4: "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css\">",
       }
       const indexPath = api.resolve('./public/index.html')
