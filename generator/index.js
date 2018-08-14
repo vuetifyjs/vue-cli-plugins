@@ -48,6 +48,13 @@ module.exports = (api, opts, rootOpts) => {
         },
         'import': '@fortawesome/fontawesome-free/css/all.css',
       },
+      // Font Awesome 4
+      {
+        'package': {
+          'font-awesome': '^4.7.0',
+        },
+        'import': 'font-awesome/css/font-awesome.css',
+      },
     ]
 
     api.extendPackage({
@@ -160,11 +167,13 @@ module.exports = (api, opts, rootOpts) => {
     if (!opts.installFontIcon) {
       const links = [
         // Material Icons
-        "<link href=\"https://fonts.googleapis.com/css?family=Material+Icons\" rel=\"stylesheet\">",
+        "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Material+Icons\">",
         // Material Design Icons
-        "<link href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\" rel=\"stylesheet\">",
+        "<link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\">",
         // Font Awesome 5
-        "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
+        "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.min.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
+        // Font Awesome 4
+        "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css\">",
       ]
       const indexPath = api.resolve('./public/index.html')
 

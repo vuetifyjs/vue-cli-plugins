@@ -25,6 +25,7 @@ module.exports = [
       'Material Icons (default)',
       'Material Design Icons',
       'Font Awesome 5',
+      'Font Awesome 4',
     ],
     default: 0
   },

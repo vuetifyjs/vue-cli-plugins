@@ -52,5 +52,7 @@ iconfont: 'md',
 iconfont: 'mdi',
 <%_ } else if (options.iconFont === 2) { _%>
 iconfont: 'fa',
+<%_ } else if (options.iconFont === 3) { _%>
+iconfont: 'fa4',
 <%_ } _%>
 })
