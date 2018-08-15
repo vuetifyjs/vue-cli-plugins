@@ -40,7 +40,7 @@ module.exports = [
   {
     name: 'installFonts',
     type: 'confirm',
-    message: 'Use fonts as a dependency?',
+    message: 'Use fonts as a dependency (for Electron or offline)?',
     default: false,
   },
   {
