@@ -41,7 +41,9 @@ module.exports = function (api) {
     },
 
     updateFile (file, callback) {
-      let content = fs.readFileSync(file, { encoding: 'utf8' })
+      let content = fs.existsSync(file)
+        ? fs.readFileSync(file, { encoding: 'utf8' })
+        : ''
 
       content = callback(content.split(/\r?\n/g)).join('\n')
 
