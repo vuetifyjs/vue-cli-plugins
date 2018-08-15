@@ -5,7 +5,7 @@ module.exports = function (api) {
     getMain() {
       return api.hasPlugin('typescript')
         ? api.resolve('src/main.ts')
-        : api.resolve('src/main.ts')
+        : api.resolve('src/main.js')
     },
 
     updateBabelConfig (callback) {
