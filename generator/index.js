@@ -71,12 +71,12 @@ module.exports = (api, opts, rootOpts) => {
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
     // Modify main.js
-    helpers.updateMain(src => {
-      const vueImportIndex = src.findIndex(line => line.match(/^import Vue/))
+    helpers.updateFile(helpers.getMain(), lines => {
+      const vueImportIndex = lines.findIndex(line => line.match(/^import Vue/))
 
-      src.splice(vueImportIndex + 1, 0, 'import \'./plugins/vuetify\'')
+      lines.splice(vueImportIndex + 1, 0, 'import \'./plugins/vuetify\'')
 
-      return src
+      return lines
     })
 
     // Add polyfill
@@ -103,12 +103,12 @@ module.exports = (api, opts, rootOpts) => {
         return cfg
       })
 
-      helpers.updateMain(src => {
-        if (!src.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
-          src.unshift('import \'@babel/polyfill\'')
+      helpers.updateFile(helpers.getMain(), lines => {
+        if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
+          lines.unshift('import \'@babel/polyfill\'')
         }
 
-        return src
+        return lines
       })
     }
 

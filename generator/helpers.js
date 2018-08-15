@@ -40,19 +40,12 @@ module.exports = function (api) {
       }
     },
 
-    updateMain (callback) {
-      const tsPath = api.resolve('./src/main.ts')
-      const jsPath = api.resolve('./src/main.js')
+    updateFile (file, callback) {
+      let content = fs.readFileSync(file, { encoding: 'utf8' })
 
-      const mainPath = fs.existsSync(tsPath) ? tsPath : jsPath
-      let content = fs.readFileSync(mainPath, { encoding: 'utf8' })
+      content = callback(content.split(/\r?\n/g)).join('\n')
 
-      let lines = content.split(/\r?\n/g)
-
-      lines = callback(lines)
-
-      content = lines.join('\n')
-      fs.writeFileSync(mainPath, content, { encoding: 'utf8' })
+      fs.writeFileSync(file, content, { encoding: 'utf8' })
     }
   }
 }
