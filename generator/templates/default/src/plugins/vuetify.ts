@@ -17,6 +17,9 @@ import 'vuetify/src/stylus/app.styl'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 <%_ } _%>
+<%_ if (locale !== 'en') { _%>
+import <%= locale.replace(/-/g, '') %> from 'vuetify/src/locale/<%= locale %>'
+<%_ } _%>
 
 Vue.use(Vuetify, {
 <%_ if (useAlaCarte) { _%>
@@ -46,13 +49,12 @@ Vue.use(Vuetify, {
 <%_ if (useCustomProperties) { _%>
   customProperties: true,
 <%_ } _%>
-<%_ if (iconFont === 'md') { _%>
-  iconfont: 'md',
-<%_ } else if (iconFont === 'mdi') { _%>
-  iconfont: 'mdi',
-<%_ } else if (iconFont === 'fa') { _%>
-  iconfont: 'fa',
-<%_ } else if (iconFont === 'fa4') { _%>
-  iconfont: 'fa4',
+  iconfont: '<%= iconFont %>',
+<%_ if (locale !== 'en') { _%>
+  lang: {
+    locales: { <%= locale.replace(/-/g, '') %> },
+    current: '<%= locale %>'
+  },
 <%_ } _%>
 })
+

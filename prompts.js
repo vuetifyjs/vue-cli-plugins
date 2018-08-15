@@ -19,7 +19,7 @@ module.exports = [
   },
   {
     name: 'iconFont',
-    type: 'list',
+    type: 'rawlist',
     message: 'Select icon font',
     choices: [
       'Material Icons (default)',
@@ -54,5 +54,37 @@ module.exports = [
     type: 'confirm',
     message: 'Use babel/polyfill?',
     default: true
+  },
+  {
+    name: 'locale',
+    type: 'rawlist',
+    message: 'Select locale',
+    choices: [
+      'English (default)',
+      'German',
+      'French',
+      'Greek',
+      'Polish',
+      'Portuguese',
+      'Russian',
+      'Ukrainian',
+      'Chinese (simplified)',
+      'Chinese (traditional)'
+    ],
+    default: 0,
+    filter: function (val) {
+      return {
+        'English (default)': 'en',
+        'German': 'de',
+        'French': 'fr',
+        'Greek': 'gr',
+        'Polish': 'pl',
+        'Portuguese': 'pt',
+        'Russian': 'ru',
+        'Ukrainian': 'uk',
+        'Chinese (simplified)': 'zh-Hans',
+        'Chinese (traditional)': 'zh-Hant'
+      }[val]
+    }
   }
 ]
