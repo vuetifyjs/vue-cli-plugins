@@ -3,9 +3,9 @@ const fs = require('fs')
 module.exports = function (api) {
   return {
     getMain() {
-      const tsPath = api.resolve('src/main.ts')
-
-      return fs.existsSync(tsPath) ? 'src/main.ts' : 'src/main.js'
+      return api.hasPlugin('typescript')
+        ? api.resolve('src/main.ts')
+        : api.resolve('src/main.ts')
     },
 
     updateBabelConfig (callback) {

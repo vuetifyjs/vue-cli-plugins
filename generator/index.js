@@ -44,7 +44,9 @@ module.exports = (api, opts, rootOpts) => {
 
 
   // Render vuetify plugin file
-  api.render({
+  api.render(api.hasPlugin('typescript') ? {
+    './src/plugins/vuetify.ts': './templates/default/src/plugins/vuetify.ts'
+  } : {
     './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
   }, opts)
 
