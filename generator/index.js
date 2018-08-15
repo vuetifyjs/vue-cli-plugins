@@ -140,11 +140,11 @@ module.exports = (api, opts, rootOpts) => {
     // Add fonts
     if (!opts.installFonts) {
       helpers.updateFile(api.resolve('./public/index.html'), lines => {
-        const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
+        const lastLink = lines.reverse().lastIndexOf(line => line.match(/^\s*<link/))
         lines[lastLink] += "\n    " + fonts['roboto'].link
         lines[lastLink] += "\n    " + fonts[opts.iconFont].link
 
-        return lines
+        return lines.reverse()
       })
     }
   })
