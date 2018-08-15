@@ -1,4 +1,5 @@
-module.exports = {
+const helpers = require('./helpers')
+const fonts = {
   md: {
     'package': {
       'material-design-icons-iconfont': '^3.0.3',
@@ -34,4 +35,39 @@ module.exports = {
     'import': 'roboto-fontface/css/roboto/roboto-fontface.css',
     link: '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">',
   }
+}
+
+function addDependencies (api, iconFont) {
+  api.extendPackage({
+    devDependencies: {
+      'roboto-fontface': '*',
+      ...fonts[iconFont]['package'],
+    }
+  })
+}
+
+function addImports (api, iconFont) {
+  try {
+    api.injectImports(api.entryFile, `import '${fonts['roboto']['import']}'`)
+    api.injectImports(api.entryFile, `import '${fonts[iconFont]['import']}'`)
+  } catch(e) {
+    console.error(e)
+  }
+}
+
+function addLinks (api, iconFont) {
+  helpers.updateFile(api, './public/index.html', lines => {
+    const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
+
+    lines.splice(lastLink + 1, 0, `    ${fonts['roboto'].link}`)
+    lines.splice(lastLink + 1, 0, `    ${fonts[iconFont].link}`)
+
+    return lines.reverse()
+  })
+}
+
+module.exports = {
+  addDependencies,
+  addImports,
+  addLinks,
 }
