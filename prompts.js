@@ -38,9 +38,9 @@ module.exports = [
     }
   },
   {
-    name: 'installFontIcon',
+    name: 'installFonts',
     type: 'confirm',
-    message: 'Use font-icon as a dependency?',
+    message: 'Use fonts as a dependency?',
     default: false,
   },
   {

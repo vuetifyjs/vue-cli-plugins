@@ -1,3 +1,5 @@
+const fonts = require('./fonts')
+
 module.exports = (api, opts, rootOpts) => {
   const helpers = require('./helpers')(api)
 
@@ -25,47 +27,21 @@ module.exports = (api, opts, rootOpts) => {
     })
   }
 
-  if (opts.installFontIcon) {
-    const iconFonts = {
-      md: {
-        'package': {
-          'material-design-icons-iconfont': '^3.0.3',
-        },
-        'import': 'material-design-icons-iconfont/dist/material-design-icons.css',
-      },
-      mdi: {
-        'package': {
-          '@mdi/font': '^2.6.95',
-        },
-        'import': '@mdi/font/css/materialdesignicons.css',
-      },
-      fa: {
-        'package': {
-          '@fortawesome/fontawesome-free': '^5.2.0',
-        },
-        'import': '@fortawesome/fontawesome-free/css/all.css',
-      },
-      fa4: {
-        'package': {
-          'font-awesome': '^4.7.0',
-        },
-        'import': 'font-awesome/css/font-awesome.css',
-      },
-    }
-
+  if (opts.installFonts) {
     api.extendPackage({
-      devDependencies: iconFonts[opts.iconFont]['package'],
+      devDependencies: {
+        'roboto-fontface': '*',
+        ...fonts[opts.iconFont]['package'],
+      }
     })
 
     try {
-      api.injectImports(helpers.getMain(),
-        `import '${iconFonts[opts.iconFont]['import']}'`,
-      )
+      api.injectImports(api.entryFile, `import '${fonts['roboto']['import']}'`)
+      api.injectImports(api.entryFile, `import '${fonts[opts.iconFont]['import']}'`)
     } catch(e) {
       console.error(e)
     }
   }
-
 
   // Render vuetify plugin file
   api.render(api.hasPlugin('typescript') ? {
@@ -97,7 +73,7 @@ module.exports = (api, opts, rootOpts) => {
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
     // Modify main.js
-    helpers.updateFile(helpers.getMain(), lines => {
+    helpers.updateFile(api.entryFile, lines => {
       const vueImportIndex = lines.findIndex(line => line.match(/^import Vue/))
 
       lines.splice(vueImportIndex + 1, 0, 'import \'./plugins/vuetify\'')
@@ -129,7 +105,7 @@ module.exports = (api, opts, rootOpts) => {
         return cfg
       })
 
-      helpers.updateFile(helpers.getMain(), lines => {
+      helpers.updateFile(api.entryFile, lines => {
         if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
           lines.unshift('import \'@babel/polyfill\'')
         }
@@ -159,26 +135,15 @@ module.exports = (api, opts, rootOpts) => {
       })
     }
 
-    // Add Material Icons (unless electron)
-    if (!opts.installFontIcon) {
-      const links = {
-        md: "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Material+Icons\">",
-        mdi: "<link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css\">",
-        fa: "<link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.2.0/css/all.css\" integrity=\"sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ\" crossorigin=\"anonymous\">",
-        fa4: "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css\">",
-      }
-      const indexPath = api.resolve('./public/index.html')
+    // Add fonts
+    if (!opts.installFonts) {
+      helpers.updateFile(api.resolve('./public/index.html'), lines => {
+        const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
+        lines[lastLink] += "\n    " + fonts['roboto'].link
+        lines[lastLink] += "\n    " + fonts[opts.iconFont].link
 
-      let content = fs.readFileSync(indexPath, { encoding: 'utf8' })
-
-      const lines = content.split(/\r?\n/g).reverse()
-
-      const lastLink = lines.findIndex(line => line.match(/^\s*<link/))
-      lines[lastLink] += "\n    <link href=\"https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900\" rel=\"stylesheet\">"
-      lines[lastLink] += "\n    " + links[opts.iconFont]
-
-      content = lines.reverse().join('\n')
-      fs.writeFileSync(indexPath, content, { encoding: 'utf8' })
+        return lines
+      })
     }
   })
 }

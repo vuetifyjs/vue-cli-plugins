@@ -2,12 +2,6 @@ const fs = require('fs')
 
 module.exports = function (api) {
   return {
-    getMain() {
-      return api.hasPlugin('typescript')
-        ? api.resolve('src/main.ts')
-        : api.resolve('src/main.js')
-    },
-
     updateBabelConfig (callback) {
       let config, configPath
 
