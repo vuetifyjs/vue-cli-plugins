@@ -1,7 +1,6 @@
-const fonts = require('./fonts')
-
 module.exports = (api, opts, rootOpts) => {
   const helpers = require('./helpers')(api)
+  const fonts = require('./fonts')
 
   api.extendPackage({
     dependencies: {
@@ -9,24 +8,23 @@ module.exports = (api, opts, rootOpts) => {
     }
   })
 
-  if (opts.useAlaCarte) {
-    api.extendPackage({
-      devDependencies: {
-        "babel-plugin-transform-imports": "^1.4.1",
-        "stylus": "^0.54.5",
-        "stylus-loader": "^3.0.1",
-      }
-    })
-  }
+  // Add alacarte dependencies
+  opts.useAlaCarte && api.extendPackage({
+    devDependencies: {
+      "babel-plugin-transform-imports": "^1.5.0",
+      "stylus": "^0.54.5",
+      "stylus-loader": "^3.0.1",
+    }
+  })
 
-  if (opts.usePolyfill) {
-    api.extendPackage({
-      devDependencies: {
-        "@babel/polyfill": "^7.0.0-beta.49",
-      }
-    })
-  }
+  // Add polyfill dependencies
+  opts.usePolyfill && api.extendPackage({
+    devDependencies: {
+        "@babel/polyfill": "^7.0.0-rc.1",
+    }
+  })
 
+  // Add font dependencies
   if (opts.installFonts) {
     api.extendPackage({
       devDependencies: {
@@ -44,13 +42,10 @@ module.exports = (api, opts, rootOpts) => {
   }
 
   // Render vuetify plugin file
-  api.render(api.hasPlugin('typescript') ? {
-    './src/plugins/vuetify.ts': './templates/default/src/plugins/vuetify.ts'
-  } : {
-    './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
-  }, {
-    ...opts
-  })
+  const pluginFilename = api.hasPlugin('typescript') ? 'vuetify.ts' : 'vuetify.js'
+  api.render({
+    [`./src/plugins/${pluginFilename}`]: `./templates/default/src/plugins/${pluginFilename}`
+  }, opts)
 
   // Render files if we're replacing
   const fs = require('fs')
@@ -84,68 +79,63 @@ module.exports = (api, opts, rootOpts) => {
     })
 
     // Add polyfill
-    if (opts.usePolyfill) {
-      helpers.updateBabelConfig(cfg => {
-        if (!cfg.presets) return cfg
+    opts.usePolyfill && helpers.updateBabelConfig(cfg => {
+      if (!cfg.presets) return cfg
 
-        const vuePresetIndex = cfg.presets.findIndex(p => Array.isArray(p) ? p[0] === '@vue/app' : p === '@vue/app')
-        const isArray = Array.isArray(cfg.presets[vuePresetIndex])
+      const vuePresetIndex = cfg.presets.findIndex(p => Array.isArray(p) ? p[0] === '@vue/app' : p === '@vue/app')
+      const isArray = Array.isArray(cfg.presets[vuePresetIndex])
 
-        if (vuePresetIndex < 0) return cfg
+      if (vuePresetIndex < 0) return cfg
 
-        if (isArray) {
-          cfg.presets[vuePresetIndex][1]['useBuiltIns'] = 'entry'
-        } else {
-          cfg.presets[vuePresetIndex] = [
-            '@vue/app',
-            {
-              useBuiltIns: 'entry'
-            }
-          ]
-        }
+      if (isArray) {
+        cfg.presets[vuePresetIndex][1]['useBuiltIns'] = 'entry'
+      } else {
+        cfg.presets[vuePresetIndex] = [
+          '@vue/app',
+          {
+            useBuiltIns: 'entry'
+          }
+        ]
+      }
 
-        return cfg
-      })
+      return cfg
+    })
 
-      helpers.updateFile(api.entryFile, lines => {
-        if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
-          lines.unshift('import \'@babel/polyfill\'')
-        }
+    // Add polyfill imports
+    opts.usePolyfill && helpers.updateFile(api.entryFile, lines => {
+      if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
+        lines.unshift('import \'@babel/polyfill\'')
+      }
 
-        return lines
-      })
-    }
+      return lines
+    })
 
     // If a-la-carte, update babel
-    if (opts.useAlaCarte) {
-      helpers.updateBabelConfig(cfg => {
-        if (cfg.plugins === undefined) {
-          cfg.plugins = []
-        }
+    opts.useAlaCarte && helpers.updateBabelConfig(cfg => {
+      if (cfg.plugins === undefined) {
+        cfg.plugins = []
+      }
 
-        cfg.plugins.push([
-          'transform-imports',
-          {
-            vuetify: {
-              transform: 'vuetify/es5/components/${member}',
-              preventFullImport: true
-            }
+      cfg.plugins.push([
+        'transform-imports',
+        {
+          vuetify: {
+            transform: 'vuetify/es5/components/${member}',
+            preventFullImport: true
           }
-        ])
+        }
+      ])
 
-        return cfg
-      })
-    }
+      return cfg
+    })
 
-    // Add fonts
-    if (!opts.installFonts) {
-      helpers.updateFile(api.resolve('./public/index.html'), lines => {
-        const lastLink = lines.reverse().lastIndexOf(line => line.match(/^\s*<link/))
-        lines[lastLink] += "\n    " + fonts['roboto'].link
-        lines[lastLink] += "\n    " + fonts[opts.iconFont].link
+    // Add font links
+    opts.installFonts || helpers.updateFile('./public/index.html', lines => {
+      const lastLink = lines.reverse().lastIndexOf(line => line.match(/^\s*<link/))
+      lines[lastLink] += "\n    " + fonts['roboto'].link
+      lines[lastLink] += "\n    " + fonts[opts.iconFont].link
 
-        return lines.reverse()
-      })
-    }
+      return lines.reverse()
+    })
   })
 }

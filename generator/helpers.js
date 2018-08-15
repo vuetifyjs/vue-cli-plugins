@@ -35,6 +35,7 @@ module.exports = function (api) {
     },
 
     updateFile (file, callback) {
+      file = api.resolve(file)
       let content = fs.existsSync(file)
         ? fs.readFileSync(file, { encoding: 'utf8' })
         : ''
