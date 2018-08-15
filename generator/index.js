@@ -48,7 +48,9 @@ module.exports = (api, opts, rootOpts) => {
     './src/plugins/vuetify.ts': './templates/default/src/plugins/vuetify.ts'
   } : {
     './src/plugins/vuetify.js': './templates/default/src/plugins/vuetify.js'
-  }, opts)
+  }, {
+    ...opts
+  })
 
   // Render files if we're replacing
   const fs = require('fs')

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-<%_ if (options.useAlaCarte) { _%>
+<%_ if (useAlaCarte) { _%>
 import {
   Vuetify,
   VApp,
@@ -19,7 +19,7 @@ import 'vuetify/dist/vuetify.min.css'
 <%_ } _%>
 
 Vue.use(Vuetify, {
-<%_ if (options.useAlaCarte) { _%>
+<%_ if (useAlaCarte) { _%>
   components: {
     VApp,
     VNavigationDrawer,
@@ -32,7 +32,7 @@ Vue.use(Vuetify, {
     transitions
   },
 <%_ } _%>
-<%_ if (options.useTheme) { _%>
+<%_ if (useTheme) { _%>
   theme: {
     primary: '#ee44aa',
     secondary: '#424242',
@@ -43,16 +43,16 @@ Vue.use(Vuetify, {
     warning: '#FFC107'
   },
 <%_ } _%>
-<%_ if (options.useCustomProperties) { _%>
+<%_ if (useCustomProperties) { _%>
   customProperties: true,
 <%_ } _%>
-<%_ if (options.iconFont === 'md') { _%>
+<%_ if (iconFont === 'md') { _%>
   iconfont: 'md',
-<%_ } else if (options.iconFont === 'mdi') { _%>
+<%_ } else if (iconFont === 'mdi') { _%>
   iconfont: 'mdi',
-<%_ } else if (options.iconFont === 'fa') { _%>
+<%_ } else if (iconFont === 'fa') { _%>
   iconfont: 'fa',
-<%_ } else if (options.iconFont === 'fa4') { _%>
+<%_ } else if (iconFont === 'fa4') { _%>
   iconfont: 'fa4',
 <%_ } _%>
 })
