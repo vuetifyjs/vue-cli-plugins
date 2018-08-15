@@ -33,8 +33,8 @@ Vue.use(Vuetify, {
   },
 <%_ } _%>
 <%_ if (options.useTheme) { _%>
-theme: {
-  primary: '#ee44aa',
+  theme: {
+    primary: '#ee44aa',
     secondary: '#424242',
     accent: '#82B1FF',
     error: '#FF5252',
