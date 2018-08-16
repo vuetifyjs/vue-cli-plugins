@@ -40,7 +40,7 @@ const fonts = {
 function addDependencies (api, iconFont) {
   api.extendPackage({
     devDependencies: {
-      'roboto-fontface': '*',
+      ...fonts['roboto']['package'],
       ...fonts[iconFont]['package'],
     }
   })
