@@ -18,7 +18,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 <%_ } _%>
 <%_ if (locale !== 'en') { _%>
-import <%= locale.replace(/-/g, '') %> from 'vuetify/src/locale/<%= locale %>'
+import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>'
 <%_ } _%>
 
 Vue.use(Vuetify, {

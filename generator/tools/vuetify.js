@@ -10,9 +10,13 @@ function addDependencies (api) {
 
 function renderFiles (api, opts) {
   const pluginFilename = api.hasPlugin('typescript') ? 'vuetify.ts' : 'vuetify.js'
+  const pluginSourceFilename = 'vuetify.js'
   api.render({
-    [`./src/plugins/${pluginFilename}`]: `../templates/default/src/plugins/${pluginFilename}`
-  }, opts)
+    [`./src/plugins/${pluginFilename}`]: `../templates/default/src/plugins/${pluginSourceFilename}`
+  }, {
+    ...opts,
+    typescript: api.hasPlugin('typescript')
+  })
 
   // Render files if we're replacing
   const fs = require('fs')
