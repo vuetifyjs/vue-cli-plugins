@@ -125,7 +125,7 @@ module.exports = (api, opts, rootOpts) => {
           'transform-imports',
           {
             vuetify: {
-              transform: 'vuetify/es5/components/${member}',
+              transform: 'vuetify/es5/components/${' + 'member}',
               preventFullImport: true
             }
           }
