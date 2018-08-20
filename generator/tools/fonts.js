@@ -39,7 +39,7 @@ const fonts = {
 
 function addDependencies (api, iconFont) {
   api.extendPackage({
-    devDependencies: {
+    dependencies: {
       ...fonts['roboto']['package'],
       ...fonts[iconFont]['package'],
     }
