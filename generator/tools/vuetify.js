@@ -49,8 +49,21 @@ function addImports (api) {
   })
 }
 
+function setHtmlLang (api, locale) {
+  helpers.updateFile(api, './public/index.html', lines => {
+    const htmlIndex = lines.findIndex(line => line.match(/<html\s+(.+\s+)?lang=[^\s>]+(\s|>)/))
+
+    if (htmlIndex !== -1) {
+      lines[htmlIndex] = lines[htmlIndex].replace(/(<html\s+(.+\s+)?)(lang=)([^\s>]+)(\s|>)/, `$1$3"${locale}"$5`)
+    }
+
+    return lines
+  })
+}
+
 module.exports = {
   addDependencies,
-  renderFiles,
   addImports,
+  renderFiles,
+  setHtmlLang,
 }

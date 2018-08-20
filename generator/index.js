@@ -18,5 +18,6 @@ module.exports = (api, opts, rootOpts) => {
     opts.usePolyfill && polyfill.addImports(api)
     opts.useAlaCarte && alaCarte.updateBabelConfig(api)
     !opts.installFonts && fonts.addLinks(api, opts.iconFont)
+    vuetify.setHtmlLang(api, opts.locale)
   })
 }
