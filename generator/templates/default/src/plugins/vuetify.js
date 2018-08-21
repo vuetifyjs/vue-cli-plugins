@@ -18,7 +18,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 <%_ } _%>
 
-Vue.use(Vuetify, {
+Vue.use(Vuetify.install, {
 <%_ if (options.useAlaCarte) { _%>
   components: {
     VApp,
