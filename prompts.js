@@ -62,6 +62,7 @@ module.exports = [
     choices: [
       'English (default)',
       'German',
+      'Farsi',
       'French',
       'Greek',
       'Dutch',
@@ -77,6 +78,7 @@ module.exports = [
       return {
         'English (default)': 'en',
         'German': 'de',
+        'Farsi': 'fa',
         'French': 'fr',
         'Greek': 'gr',
         'Dutch': 'nl',
@@ -89,4 +91,4 @@ module.exports = [
       }[val]
     }
   }
-]
+];
