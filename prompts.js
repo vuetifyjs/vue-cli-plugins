@@ -61,33 +61,35 @@ module.exports = [
     message: 'Select locale',
     choices: [
       'English (default)',
-      'German',
+      'Catalan',
+      'Chinese (simplified)',
+      'Chinese (traditional)',
+      'Dutch',
       'Farsi',
       'French',
+      'German',
       'Greek',
-      'Dutch',
       'Polish',
       'Portuguese',
       'Russian',
       'Ukrainian',
-      'Chinese (simplified)',
-      'Chinese (traditional)'
     ],
     default: 0,
     filter: function (val) {
       return {
         'English (default)': 'en',
-        'German': 'de',
+        'Catalan': 'ca',
+        'Chinese (simplified)': 'zh-Hans',
+        'Chinese (traditional)': 'zh-Hant',
+        'Dutch': 'nl',
         'Farsi': 'fa',
         'French': 'fr',
+        'German': 'de',
         'Greek': 'gr',
-        'Dutch': 'nl',
         'Polish': 'pl',
         'Portuguese': 'pt',
         'Russian': 'ru',
         'Ukrainian': 'uk',
-        'Chinese (simplified)': 'zh-Hans',
-        'Chinese (traditional)': 'zh-Hant'
       }[val]
     }
   }
