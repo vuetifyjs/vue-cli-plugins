@@ -32,7 +32,7 @@ function updateBabelConfig (api) {
   })
 }
 
-function updateBrowserslist (api) {
+function updateBrowsersList (api) {
   helpers.updateFile(api, './.browserslistrc', lines => {
     if (!lines.length) {
       return [
