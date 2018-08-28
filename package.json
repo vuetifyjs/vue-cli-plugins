@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-vuetify",
-  "version": "0.1.6",
-  "description": "Plugin for vue cli 3",
+  "version": "0.2.0",
+  "description": "Plugin for Vue CLI 3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
