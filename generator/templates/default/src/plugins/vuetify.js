@@ -1,5 +1,5 @@
 import Vue from 'vue'
-<%_ if (options.useAlaCarte) { _%>
+<%_ if (useAlaCarte) { _%>
 import {
   Vuetify,
   VApp,
@@ -17,9 +17,12 @@ import 'vuetify/src/stylus/app.styl'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 <%_ } _%>
+<%_ if (locale !== 'en') { _%>
+import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>'
+<%_ } _%>
 
 Vue.use(Vuetify, {
-<%_ if (options.useAlaCarte) { _%>
+<%_ if (useAlaCarte) { _%>
   components: {
     VApp,
     VNavigationDrawer,
@@ -32,7 +35,7 @@ Vue.use(Vuetify, {
     transitions
   },
 <%_ } _%>
-<%_ if (options.useTheme) { _%>
+<%_ if (useTheme) { _%>
   theme: {
     primary: '#ee44aa',
     secondary: '#424242',
@@ -43,4 +46,15 @@ Vue.use(Vuetify, {
     warning: '#FFC107'
   },
 <%_ } _%>
+<%_ if (useCustomProperties) { _%>
+  customProperties: true,
+<%_ } _%>
+  iconfont: '<%= iconFont %>',
+<%_ if (locale !== 'en') { _%>
+  lang: {
+    locales: { <%= locale.replace(/-/g, '') %> },
+    current: '<%= locale %>'
+  },
+<%_ } _%>
 })
+
