@@ -3,7 +3,7 @@ const helpers = require('./helpers')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.2.0-beta.1"
+      vuetify: "^1.2.0"
     }
   })
 }
