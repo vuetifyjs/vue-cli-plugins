@@ -15,6 +15,7 @@ module.exports = (api, opts, rootOpts) => {
   api.onCreateComplete(() => {
     vuetify.addImports(api)
     opts.usePolyfill && polyfill.updateBabelConfig(api)
+    opts.usePolyfill && polyfill.updateBrowsersList(api)
     opts.usePolyfill && polyfill.addImports(api)
     opts.useAlaCarte && alaCarte.updateBabelConfig(api)
     !opts.installFonts && fonts.addLinks(api, opts.iconFont)

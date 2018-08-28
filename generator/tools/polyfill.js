@@ -32,6 +32,27 @@ function updateBabelConfig (api) {
   })
 }
 
+function updateBrowsersList (api) {
+  helpers.updateFile(api, './.browserslistrc', lines => {
+    if (!lines.length) {
+      return [
+        '> 1%',
+        'last 2 versions',
+        'not ie <= 10',
+      ]
+    }
+
+    const ieLineIndex = lines.findIndex(line => line.match(/^([^\s]*\s+|)ie\s*</))
+    if (ieLineIndex === -1) {
+      lines.push('not ie <= 10')
+    } else {
+      lines[ieLineIndex] = 'not ie <= 10'
+    }
+
+    return lines
+  })
+}
+
 function addImports (api) {
   helpers.updateFile(api, api.entryFile, lines => {
     if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
@@ -46,4 +67,5 @@ module.exports = {
   addDependencies,
   updateBabelConfig,
   addImports,
+  updateBrowsersList,
 }
