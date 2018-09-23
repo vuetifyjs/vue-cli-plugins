@@ -73,6 +73,7 @@ module.exports = [
       'Portuguese',
       'Russian',
       'Ukrainian',
+      'Serbian (cyrillic)',
     ],
     default: 0,
     filter: function (val) {
@@ -90,6 +91,7 @@ module.exports = [
         'Portuguese': 'pt',
         'Russian': 'ru',
         'Ukrainian': 'uk',
+        'Serbian (cyrillic)': 'sr-Cyrl',
       }[val]
     }
   }
