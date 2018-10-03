@@ -1,4 +1,5 @@
 const helpers = require('./helpers')
+const fs = require('fs')
 
 function addDependencies (api) {
   api.extendPackage({
@@ -33,24 +34,46 @@ function updateBabelConfig (api) {
 }
 
 function updateBrowsersList (api) {
-  helpers.updateFile(api, './.browserslistrc', lines => {
-    if (!lines.length) {
-      return [
-        '> 1%',
-        'last 2 versions',
-        'not ie <= 10',
-      ]
-    }
+  const pkgPath = api.resolve('./package.json')
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, { encoding: 'utf8' }))
+  const isInPackage = !!pkg.browserslist
 
-    const ieLineIndex = lines.findIndex(line => line.match(/^([^\s]*\s+|)ie\s*</))
+  const findIeIndex = lines => lines.findIndex(line => line.match(/^([^\s]*\s+|)ie\s*</))
+
+  if (isInPackage) {
+    const ieLineIndex = findIeIndex(pkg.browserslist)
+
     if (ieLineIndex === -1) {
-      lines.push('not ie <= 10')
+      pkg.browserslist.push('not ie <= 10')
     } else {
-      lines[ieLineIndex] = 'not ie <= 10'
+      pkg.browserslist[ieLineIndex] = 'not ie <= 10'
     }
 
-    return lines
-  })
+    fs.writeFileSync(
+      pkgPath,
+      JSON.stringify(pkg, null, 2),
+      { encoding: 'utf8' }
+    )
+  } else {
+    helpers.updateFile(api, './.browserslistrc', lines => {
+      if (!lines.length) {
+        return [
+          '> 1%',
+          'last 2 versions',
+          'not ie <= 10',
+        ]
+      }
+
+      const ieLineIndex = findIeIndex(lines)
+      if (ieLineIndex === -1) {
+        lines.push('not ie <= 10')
+      } else {
+        lines[ieLineIndex] = 'not ie <= 10'
+      }
+
+      return lines
+    })
+  }
 }
 
 function addImports (api) {
