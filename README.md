@@ -43,21 +43,13 @@ Todo
 
 ### Electron
 
-Just add [vue-cli-plugin-electron-builder](https://www.npmjs.com/package/vue-cli-plugin-electron-builder)
+Just add [vue-cli-plugin-electron-builder](https://nklayman.github.io/vue-cli-plugin-electron-builder/)
 
 ```
 vue add electron-builder
 vue add vuetify
 yarn serve:electron
 ```
-
-Gotcha
-
-- If you add vuetify before electron-builder, electron-builder will overwrite Vuetify's App.vue and HelloWorld.vue
-
-Todo
-
-- material icons aren't properly included
 
 ### PWA
 
