@@ -58,5 +58,17 @@ If you already made a project with the PWA option selected, then just adding lik
 
 ### Cordova
 
-Follow the instructions detailed in this plugin https://www.npmjs.com/package/vue-cli-plugin-cordova
+Use the [Cordova](https://github.com/m0dch3n/vue-cli-plugin-cordova) plugin.
+
+```
+npm install -g cordova # If cordova is not already installed
+vue add cordova
+
+npm run cordova-serve-android # Development Android
+npm run cordova-build-android # Build Android
+npm run cordova-serve-ios # Development IOS
+npm run cordova-build-ios # Build IOS
+npm run cordova-serve-browser # Development Browser
+npm run cordova-build-browser # Build Browser
+```
 
