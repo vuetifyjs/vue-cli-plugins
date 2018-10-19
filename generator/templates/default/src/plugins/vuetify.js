@@ -1,17 +1,23 @@
 import Vue from 'vue'
 <%_ if (useAlaCarte) { _%>
-import {
-  Vuetify,
+// For information on how to automate this process
+// Checkout https://vuetifyjs.com/guides/a-la-carte#vuetify-loader
+
+import Vuetify, {
   VApp,
-  VNavigationDrawer,
-  VFooter,
-  VList,
   VBtn,
+  VContainer,
+  VContent,
+  VFlex,
+  VFooter,
   VIcon,
-  VGrid,
+  VImg,
+  VLayout,
+  VNavigationDrawer,
+  VSpacer,
   VToolbar,
-  transitions
-} from 'vuetify'
+  VToolbarTitle
+} from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 <%_ } else { _%>
 import Vuetify from 'vuetify'
@@ -25,14 +31,18 @@ Vue.use(Vuetify, {
 <%_ if (useAlaCarte) { _%>
   components: {
     VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
     VBtn,
+    VContainer,
+    VContent,
+    VFlex,
+    VFooter,
     VIcon,
-    VGrid,
+    VImg,
+    VLayout,
+    VNavigationDrawer,
+    VSpacer,
     VToolbar,
-    transitions
+    VToolbarTitle
   },
 <%_ } _%>
 <%_ if (useTheme) { _%>
@@ -57,4 +67,3 @@ Vue.use(Vuetify, {
   },
 <%_ } _%>
 })
-
