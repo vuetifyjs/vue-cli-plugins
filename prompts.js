@@ -72,6 +72,7 @@ module.exports = [
       'Polish',
       'Portuguese',
       'Russian',
+      'Spanish',
       'Ukrainian',
     ],
     default: 0,
@@ -89,6 +90,7 @@ module.exports = [
         'Polish': 'pl',
         'Portuguese': 'pt',
         'Russian': 'ru',
+        'Spanish': 'es',
         'Ukrainian': 'uk',
       }[val]
     }
