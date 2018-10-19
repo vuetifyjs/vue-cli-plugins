@@ -34,8 +34,6 @@ function renderFiles (api, opts) {
       files['./src/views/Home.vue'] = '../templates/default/src/views/Home.vue'
     }
 
-    console.log(files)
-
     api.render(files, opts)
   }
 }
