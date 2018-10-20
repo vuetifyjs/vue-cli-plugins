@@ -3,7 +3,7 @@ const helpers = require('./helpers')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.2.0"
+      vuetify: "^1.3.0"
     }
   })
 }
@@ -26,13 +26,12 @@ function renderFiles (api, opts) {
   if (opts.replaceComponents) {
     const files = {
       './src/App.vue': '../templates/default/src/App.vue',
-      './src/assets/logo.png': '../templates/default/src/assets/logo.png'
+      './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
+      './src/components/HelloWorld.vue': '../templates/default/src/components/HelloWorld.vue'
     }
 
     if (opts.router) {
       files['./src/views/Home.vue'] = '../templates/default/src/views/Home.vue'
-    } else {
-      api.render('../templates/hw')
     }
 
     api.render(files, opts)
