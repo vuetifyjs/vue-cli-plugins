@@ -12,7 +12,15 @@
         target="_blank"
       >
         <span class="mr-2">Latest Release</span>
+        <%_ if (options.iconFont === 'md') { _%>
         <v-icon>open_in_new</v-icon>
+        <%_ } else if (options.iconFont === 'mdi') { _%>
+        <v-icon>mdi-open-in-new</v-icon>
+        <%_ } else if (options.iconFont === 'fa') { _%>
+        <v-icon>fas fa-external-link-alt</v-icon>
+        <%_ } else if (options.iconFont === 'fa4') { _%>
+        <v-icon>fa-external-link</v-icon>
+        <%_ } _%>
       </v-btn>
     </v-toolbar>
 
