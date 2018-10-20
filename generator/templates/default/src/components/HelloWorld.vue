@@ -6,6 +6,7 @@
     >
       <v-flex xs12>
         <v-img
+          :src="require('../assets/logo.svg')"
           class="my-3"
           contain
           height="200"
@@ -124,17 +125,18 @@
       ],
       whatsNext: [
         {
+          text: 'Explore components',
+          href: 'https://vuetifyjs.com/components/api-explorer'
+        },
+        {
           text: 'Select a layout',
           href: 'https://vuetifyjs.com/layout/pre-defined'
         },
         {
           text: 'Frequently Asked Questions',
           href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-        },
-        {
-          text: 'Explore components',
-          href: 'https://vuetifyjs.com/components/api-explorer'
         }
+
       ]
     })
   }

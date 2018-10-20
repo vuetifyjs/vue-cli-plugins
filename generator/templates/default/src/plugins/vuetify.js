@@ -1,23 +1,6 @@
 import Vue from 'vue'
 <%_ if (useAlaCarte) { _%>
-// For information on how to automate this process
-// Checkout https://vuetifyjs.com/guides/a-la-carte#vuetify-loader
-
-import Vuetify, {
-  VApp,
-  VBtn,
-  VContainer,
-  VContent,
-  VFlex,
-  VFooter,
-  VIcon,
-  VImg,
-  VLayout,
-  VNavigationDrawer,
-  VSpacer,
-  VToolbar,
-  VToolbarTitle
-} from 'vuetify/lib'
+import Vuetify from 'vuetify/lib'
 import 'vuetify/src/stylus/app.styl'
 <%_ } else { _%>
 import Vuetify from 'vuetify'
@@ -28,23 +11,6 @@ import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'e
 <%_ } _%>
 
 Vue.use(Vuetify, {
-<%_ if (useAlaCarte) { _%>
-  components: {
-    VApp,
-    VBtn,
-    VContainer,
-    VContent,
-    VFlex,
-    VFooter,
-    VIcon,
-    VImg,
-    VLayout,
-    VNavigationDrawer,
-    VSpacer,
-    VToolbar,
-    VToolbarTitle
-  },
-<%_ } _%>
 <%_ if (useTheme) { _%>
   theme: {
     primary: '#ee44aa',
