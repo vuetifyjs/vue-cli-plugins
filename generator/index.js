@@ -1,24 +1,12 @@
-const defaults = {
-  preset: 'configure',
-  replaceComponents: true,
-  useTheme: false,
-  useCustomProperties: false,
-  iconFont: 'md',
-  installFonts: false,
-  useAlaCarte: true,
-  usePolyfill: true,
-  locale: 'en'
-}
-
-module.exports = (api, opts, rootOpts) => {
+module.exports = (api, opts) => {
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
   const polyfill = require('./tools/polyfill')
   const vuetify = require('./tools/vuetify')
 
-  opts = opts.preset === 'default'
-    ? defaults
-    : opts
+  if (opts.preset !== 'configure') {
+    opts = require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
+  }
 
   vuetify.addDependencies(api)
   opts.useAlaCarte && alaCarte.addDependencies(api)

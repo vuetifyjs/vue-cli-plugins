@@ -1,14 +1,30 @@
+const fs = require('fs')
+const path = require('path')
+const resolve = file => path.resolve(__dirname, file)
+
 function isCustom (answers) {
   return answers.preset === 'configure'
 }
+
+const PRESET_MAP = {
+  'default.json': 'Default (recommended)',
+  'prototype.json': 'Prototype (rapid development)'
+}
+
+const presets = fs.readdirSync(resolve('./presets')).map(preset => {
+  return {
+    name: PRESET_MAP[preset],
+    value: preset
+  }
+})
 
 module.exports = [
   {
     name: 'preset',
     type: 'list',
     choices: [
-      { name: 'default (recommended)', value: 'default' },
-      { name: 'configure', value: 'configure' }
+      ...presets,
+      { name: 'Configure (advanced)', value: 'configure' }
     ],
     default: 'default'
   },
