@@ -10,7 +10,7 @@
       "locale": "en",
       "useAlaCarte": true,
       "useCustomProperties": false,
-      "usePolyfill": true,
+      "usePolyfill": false,
       "useTheme": false
     }
   }

@@ -5,7 +5,7 @@
     "vue-cli-plugin-vuetify": {
       "preset": "configure",
       "replaceComponents": true,
-      "iconFont": "mdi",
+      "iconFont": "md",
       "installFonts": true,
       "locale": "en",
       "useAlaCarte": false,

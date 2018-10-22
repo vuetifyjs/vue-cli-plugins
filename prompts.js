@@ -1,26 +1,18 @@
-const fs = require('fs')
 const path = require('path')
 const resolve = file => path.resolve(__dirname, file)
+
+const iconfonts = require(resolve('./util/iconfonts.js'))
+const presets = require(resolve('./util/presets.js'))
+const locales = require(resolve('./util/locales.js'))
 
 function isCustom (answers) {
   return answers.preset === 'configure'
 }
 
-const PRESET_MAP = {
-  'default.json': 'Default (recommended)',
-  'prototype.json': 'Prototype (rapid development)'
-}
-
-const presets = fs.readdirSync(resolve('./presets')).map(preset => {
-  return {
-    name: PRESET_MAP[preset],
-    value: preset
-  }
-})
-
 module.exports = [
   {
     name: 'preset',
+    message: 'Choose a preset:',
     type: 'list',
     choices: [
       ...presets,
@@ -51,23 +43,10 @@ module.exports = [
   },
   {
     name: 'iconFont',
-    type: 'rawlist',
+    type: 'list',
     message: 'Select icon font',
-    choices: [
-      'Material Icons (default)',
-      'Material Design Icons',
-      'Font Awesome 5',
-      'Font Awesome 4',
-    ],
-    default: 0,
-    filter: function (val) {
-      return {
-        'Material Icons (default)': 'md',
-        'Material Design Icons': 'mdi',
-        'Font Awesome 5': 'fa',
-        'Font Awesome 4': 'fa4',
-      }[val]
-    },
+    choices: iconfonts,
+    default: 'md',
     when: isCustom
   },
   {
@@ -89,47 +68,16 @@ module.exports = [
     type: 'confirm',
     message: 'Use babel/polyfill?',
     default: true,
-    when: isCustom
+    when: answers => {
+      return isCustom(answers) && !answers.useAlaCarte
+    }
   },
   {
     name: 'locale',
-    type: 'rawlist',
+    type: 'list',
     message: 'Select locale',
-    choices: [
-      'English (default)',
-      'Catalan',
-      'Chinese (simplified)',
-      'Chinese (traditional)',
-      'Dutch',
-      'Farsi',
-      'French',
-      'German',
-      'Greek',
-      'Polish',
-      'Portuguese',
-      'Russian',
-      'Ukrainian',
-      'Serbian (cyrillic)',
-    ],
-    default: 0,
-    filter: function (val) {
-      return {
-        'English (default)': 'en',
-        'Catalan': 'ca',
-        'Chinese (simplified)': 'zh-Hans',
-        'Chinese (traditional)': 'zh-Hant',
-        'Dutch': 'nl',
-        'Farsi': 'fa',
-        'French': 'fr',
-        'German': 'de',
-        'Greek': 'gr',
-        'Polish': 'pl',
-        'Portuguese': 'pt',
-        'Russian': 'ru',
-        'Ukrainian': 'uk',
-        'Serbian (cyrillic)': 'sr-Cyrl',
-      }[val]
-    },
+    choices: locales,
+    default: 'en',
     when: isCustom
   }
 ]
