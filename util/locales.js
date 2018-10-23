@@ -1,7 +1,3 @@
-const fs = require('fs')
-const path = require('path')
-const resolve = file => path.resolve(__dirname, file)
-
 const LOCALE_MAP = {
   ca: 'Catalan',
   de: 'German',
@@ -21,8 +17,9 @@ const LOCALE_MAP = {
   'zh-Hant': 'Chinese (traditional)'
 }
 
-module.exports = fs.readdirSync('node_modules/vuetify/src/locale').map(locale => {
-  const value = locale.split('.').shift()
-
-  return { name: LOCALE_MAP[value], value }
+module.exports = Object.keys(LOCALE_MAP).map(key => {
+  return {
+    name: LOCALE_MAP[key],
+    value: key
+  }
 }).sort()
