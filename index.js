@@ -12,10 +12,9 @@ module.exports = (api) => {
         .rule('js')
         .include
           .add(api.resolve('node_modules/vuetify'))
-    })
-
-    api.configureWebpack(webpackConfig => {
-      webpackConfig.plugins.push(new VuetifyLoaderPlugin())
+      
+      config.plugin('VuetifyLoaderPlugin')
+        .use(VuetifyLoaderPlugin)
     })
   }
 }
