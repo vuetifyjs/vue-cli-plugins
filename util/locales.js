@@ -21,7 +21,7 @@ const LOCALE_MAP = {
   'zh-Hant': 'Chinese (traditional)'
 }
 
-module.exports = fs.readdirSync(resolve('../node_modules/vuetify/src/locale')).map(locale => {
+module.exports = fs.readdirSync('node_modules/vuetify/src/locale').map(locale => {
   const value = locale.split('.').shift()
 
   return { name: LOCALE_MAP[value], value }
