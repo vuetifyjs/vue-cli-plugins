@@ -23,7 +23,9 @@ Vue.use(Vuetify, {
   },
 <%_ } _%>
 <%_ if (useCustomProperties) { _%>
-  customProperties: true,
+  options: {
+    customProperties: true
+  },
 <%_ } _%>
   iconfont: '<%= iconFont %>',
 <%_ if (locale !== 'en') { _%>
