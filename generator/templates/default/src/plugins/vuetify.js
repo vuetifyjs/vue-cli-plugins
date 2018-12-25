@@ -10,6 +10,8 @@ import 'vuetify/dist/vuetify.min.css'
 import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>'
 <%_ } _%>
 
+import colors from 'vuetify/es5/util/colors'
+
 Vue.use(Vuetify, {
 <%_ if (useTheme) { _%>
   theme: {
