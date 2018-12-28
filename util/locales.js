@@ -2,6 +2,7 @@ const LOCALE_MAP = {
   ca: 'Catalan',
   de: 'German',
   en: 'English',
+  et: 'Estonian',
   fa: 'Farsi',
   gr: 'Greek',
   fr: 'French',
