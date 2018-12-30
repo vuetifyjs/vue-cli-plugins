@@ -8,6 +8,7 @@ const LOCALE_MAP = {
   fr: 'French',
   hu: 'Hungary',
   it: 'Italy',
+  id: "Indonesian",
   nl: 'Dutch',
   pl: 'Polish',
   pt: 'Portuguese',
