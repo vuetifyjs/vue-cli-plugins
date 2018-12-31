@@ -1,4 +1,5 @@
 const LOCALE_MAP = {
+  af: 'Afrikaans',
   ca: 'Catalan',
   de: 'German',
   en: 'English',
