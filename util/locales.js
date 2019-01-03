@@ -15,6 +15,7 @@ const LOCALE_MAP = {
   pl: 'Polish',
   pt: 'Portuguese',
   ru: 'Russian',
+  ro: 'Romanian',
   'sr-Cyrl': 'Serbian (cyrillic)',
   uk: 'Ukrainian',
   'zh-Hans': 'Chinese (simplified)',
