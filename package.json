@@ -27,6 +27,7 @@
     "@vue/cli-service": "^3.0.0-beta.15"
   },
   "dependencies": {
-    "@phenomnomnominal/tsquery": "^2.0.0-beta.4"
+    "@phenomnomnominal/tsquery": "^2.0.0-beta.4",
+    "typescript": "^3.2.2"
   }
 }

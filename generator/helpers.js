@@ -3,6 +3,16 @@ const { tsquery } = require('@phenomnomnominal/tsquery')
 
 module.exports = function (api) {
   return {
+    isTS() {
+      const tsPath = api.resolve('./src/main.ts')
+      const jsPath = api.resolve('./src/main.js')
+
+      const isTyped = fs.existsSync(tsPath)
+      const mainPath = isTyped ? tsPath : jsPath
+
+      return { mainPath, isTyped }
+    },
+
     updateBabelConfig (callback) {
       let config, configPath
 
@@ -36,10 +46,8 @@ module.exports = function (api) {
     },
 
     updateMain (callback) {
-      const tsPath = api.resolve('./src/main.ts')
-      const jsPath = api.resolve('./src/main.js')
+      const mainPath = isTS().mainPath
 
-      const mainPath = fs.existsSync(tsPath) ? tsPath : jsPath
       let content = fs.readFileSync(mainPath, { encoding: 'utf8' })
 
       let lines = content.split(/\r?\n/g)

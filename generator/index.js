@@ -105,6 +105,9 @@ module.exports = (api, opts, rootOpts) => {
 
         return cfg
       })
+      if (helpers.isTS().isTyped) {
+        helpers.updateTsConfig()
+      }
     }
 
     // Add Material Icons
