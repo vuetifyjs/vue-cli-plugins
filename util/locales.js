@@ -18,6 +18,7 @@ const LOCALE_MAP = {
   ru: 'Russian',
   ro: 'Romanian',
   'sr-Cyrl': 'Serbian (cyrillic)',
+  th: 'Thai',
   uk: 'Ukrainian',
   'zh-Hans': 'Chinese (simplified)',
   'zh-Hant': 'Chinese (traditional)'
