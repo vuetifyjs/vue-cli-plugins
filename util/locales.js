@@ -12,6 +12,7 @@ const LOCALE_MAP = {
   hu: 'Hungary',
   it: 'Italy',
   id: "Indonesian",
+  ja: 'Japanese',
   nl: 'Dutch',
   pl: 'Polish',
   pt: 'Portuguese',
