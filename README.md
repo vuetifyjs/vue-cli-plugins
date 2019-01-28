@@ -48,7 +48,7 @@ Just add [vue-cli-plugin-electron-builder](https://nklayman.github.io/vue-cli-pl
 ```
 vue add electron-builder
 vue add vuetify
-yarn serve:electron
+yarn electron:serve
 ```
 
 ### PWA
