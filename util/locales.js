@@ -1,5 +1,6 @@
 const LOCALE_MAP = {
   af: 'Afrikaans',
+  ar: 'Arabic',
   ca: 'Catalan',
   de: 'German',
   es: 'Spanish',
