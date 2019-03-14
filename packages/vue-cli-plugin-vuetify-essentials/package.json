@@ -1,0 +1,6 @@
+{
+  "name": "vue-cli-plugin-vuetify-essentials",
+  "version": "1.0.0",
+  "main": "generator/index.js",
+  "license": "MIT"
+}
