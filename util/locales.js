@@ -10,6 +10,7 @@ const LOCALE_MAP = {
   gr: 'Greek',
   fr: 'French',
   hr: 'Croatian',
+  he: 'Hebrew',
   hu: 'Hungary',
   it: 'Italy',
   id: "Indonesian",
