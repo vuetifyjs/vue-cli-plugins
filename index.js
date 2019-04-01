@@ -21,6 +21,8 @@ module.exports = (api) => {
       .tap(options => ({
         ...options,
         transformAssetUrls: {
+          // v-carousel-item extends v-img
+          'v-carousel-item': ['src', 'lazy-src'],
           'v-img': ['src', 'lazy-src'],
           'v-parallax': 'src',
         },
