@@ -13,7 +13,7 @@ module.exports = (api) => {
     })
   }
 
-  // Resolve asset references from v-img
+  // Resolve asset references from components
   api.chainWebpack(config => {
     config.module
       .rule('vue')
