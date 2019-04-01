@@ -21,10 +21,13 @@ module.exports = (api) => {
       .tap(options => ({
         ...options,
         transformAssetUrls: {
+          // v-app-bar extends v-toolbar
+          'v-app-bar': 'src',
           // v-carousel-item extends v-img
           'v-carousel-item': ['src', 'lazy-src'],
           'v-img': ['src', 'lazy-src'],
           'v-parallax': 'src',
+          'v-toolbar': 'src',
         },
       }))
   })
