@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
   "devDependencies": {
-    "@vue/cli-service": "^3.4.1",
-    "vuetify": "^1.5.5",
-    "vuetify-loader": "^1.2.1"
+    "@vue/cli-service": "^3.8.0",
+    "vuetify": "^2.0.0-beta.0",
+    "vuetify-loader": "^1.2.2"
   },
   "dependencies": {}
 }
