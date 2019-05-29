@@ -91,7 +91,7 @@ module.exports = api => {
           name: 'icons',
           message: 'Icon font',
           description: 'Application icon defaults',
-          default: 'md',
+          default: 'mdi',
           link: 'https://vuetifyjs.com/framework/icons#using-custom-icons',
           type: 'list',
           choices: iconfonts
