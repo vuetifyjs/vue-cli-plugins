@@ -3,7 +3,7 @@ const helpers = require('./helpers')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      vuetify: "^1.5.5"
+      vuetify: "^2.0.0-beta.0"
     }
   })
 }
@@ -39,13 +39,8 @@ function renderFiles (api, opts) {
 }
 
 function addImports (api) {
-  helpers.updateFile(api, api.entryFile, lines => {
-    const vueImportIndex = lines.findIndex(line => line.match(/^import Vue/))
-
-    lines.splice(vueImportIndex + 1, 0, `import './plugins/vuetify'`)
-
-    return lines
-  })
+  api.injectImports(api.entryFile, `import vuetify from './plugins/vuetify'`)
+  api.injectRootOptions(api.entryFile, 'vuetify')
 }
 
 function setHtmlLang (api, locale) {

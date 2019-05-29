@@ -8,30 +8,31 @@ module.exports = (api, opts) => {
     opts = require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
   }
 
-  vuetify.addDependencies(api)
+  // Add imports
+  // Must be before dependencies because of weird bug
+  vuetify.addImports(api)
+  if (!opts.useAlaCarte && opts.usePolyfill) polyfill.addImports(api)
+  if (opts.installFonts) fonts.addImports(api, opts.iconFont)
 
-  if (opts.useAlaCarte) {
-    alaCarte.addDependencies(api)
-  } else if (opts.usePolyfill) {
-    polyfill.addDependencies(api)
-  }
+  // Add dependencies
+  vuetify.addDependencies(api)
+  if (opts.useAlaCarte) alaCarte.addDependencies(api)
+  else if (opts.usePolyfill) polyfill.addDependencies(api)
 
   if (opts.installFonts) {
     fonts.addDependencies(api, opts.iconFont)
-    fonts.addImports(api, opts.iconFont)
   }
 
+  // Update templates
   vuetify.renderFiles(api, opts)
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
-    vuetify.addImports(api)
     if (!opts.useAlaCarte && opts.usePolyfill) {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
-      polyfill.addImports(api)
     }
-    !opts.installFonts && fonts.addLinks(api, opts.iconFont)
+    if(!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
   })
 }

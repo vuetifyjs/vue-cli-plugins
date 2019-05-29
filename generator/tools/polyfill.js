@@ -4,7 +4,7 @@ const fs = require('fs')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      "@babel/polyfill": "^7.0.0-rc.1",
+      "@babel/polyfill": "^7.4.4",
     }
   })
 }
@@ -77,13 +77,7 @@ function updateBrowsersList (api) {
 }
 
 function addImports (api) {
-  helpers.updateFile(api, api.entryFile, lines => {
-    if (!lines.find(l => l.match(/^(import|require).*@babel\/polyfill.*$/))) {
-      lines.unshift('import \'@babel/polyfill\'')
-    }
-
-    return lines
-  })
+  api.injectImports(api.entryFile, `import '@babel/polyfill'`)
 }
 
 module.exports = {
