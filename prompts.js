@@ -46,7 +46,7 @@ module.exports = [
     type: 'list',
     message: 'Select icon font',
     choices: iconfonts,
-    default: 'md',
+    default: 'mdi',
     when: isCustom
   },
   {
