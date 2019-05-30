@@ -32,7 +32,7 @@
 
         <v-layout justify-center>
           <a
-            v-for="(next, i) in assets.whatsNext"
+            v-for="(next, i) in whatsNext"
             :key="i"
             :href="next.href"
             class="subheading mx-3"
@@ -51,7 +51,7 @@
 
         <v-layout justify-center>
           <a
-            v-for="(link, i) in assets.importantLinks"
+            v-for="(link, i) in importantLinks"
             :key="i"
             :href="link.href"
             class="subheading mx-3"
@@ -70,7 +70,7 @@
 
         <v-layout justify-center>
           <a
-            v-for="(eco, i) in assets.ecosystem"
+            v-for="(eco, i) in ecosystem"
             :key="i"
             :href="eco.href"
             class="subheading mx-3"
