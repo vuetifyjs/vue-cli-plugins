@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <v-toolbar app>
+    <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
         <span class="font-weight-light">MATERIAL DESIGN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        flat
+        text
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
@@ -22,7 +22,7 @@
         <v-icon>fa-external-link</v-icon>
         <%_ } _%>
       </v-btn>
-    </v-toolbar>
+    </v-app-bar>
 
     <v-content>
       <%_ if (options.router) { _%>
