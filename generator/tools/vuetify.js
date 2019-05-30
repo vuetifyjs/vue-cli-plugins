@@ -9,10 +9,11 @@ function addDependencies (api) {
 }
 
 function renderFiles (api, opts) {
-  const pluginFilename = api.hasPlugin('typescript') ? 'vuetify.ts' : 'vuetify.js'
-  const pluginSourceFilename = 'vuetify.js'
+  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  const pluginFilename = `vuetify.${ext}`
+
   api.render({
-    [`./src/plugins/${pluginFilename}`]: `../templates/default/src/plugins/${pluginSourceFilename}`
+    [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js'
   }, {
     ...opts,
     typescript: api.hasPlugin('typescript')
@@ -20,18 +21,18 @@ function renderFiles (api, opts) {
 
   // Render files if we're replacing
   const fs = require('fs')
-  const routerPath = api.resolve('./src/router.js')
+  const routerPath = api.resolve(`./src/router.${ext}`)
   opts.router = fs.existsSync(routerPath)
 
   if (opts.replaceComponents) {
     const files = {
-      './src/App.vue': '../templates/default/src/App.vue',
+      './src/App.vue': `../templates/default/src/App.${ext}.vue`,
       './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
-      './src/components/HelloWorld.vue': '../templates/default/src/components/HelloWorld.vue'
+      './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`
     }
 
     if (opts.router) {
-      files['./src/views/Home.vue'] = '../templates/default/src/views/Home.vue'
+      files['./src/views/Home.vue'] = `../templates/default/src/views/Home.${ext}.vue`
     }
 
     api.render(files, opts)
