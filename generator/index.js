@@ -32,7 +32,7 @@ module.exports = (api, opts) => {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
     }
-    if(!opts.installFonts) fonts.addLinks(api, opts.iconFont)
+    if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
   })
 }
