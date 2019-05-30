@@ -112,7 +112,7 @@ export default {
       },
       {
         text: 'Made with Vuetify',
-        href: 'https://madewithvuetifyjs.com',
+        href: 'https://madewithvuejs.com/vuetify',
       },
       {
         text: 'Twitter',
