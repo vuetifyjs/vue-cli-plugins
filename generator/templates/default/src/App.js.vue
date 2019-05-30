@@ -36,20 +36,18 @@
 
 <script>
 <%_ if (!options.router) { _%>
-import HelloWorld from './components/HelloWorld'
+import HelloWorld from './components/HelloWorld';
 <%_ } _%>
 
 export default {
   name: 'App',
   <%_ if (!options.router) { _%>
   components: {
-    HelloWorld
+    HelloWorld,
   },
   <%_ } _%>
-  data () {
-    return {
-      //
-    }
-  }
-}
+  data: () => ({
+    //
+  }),
+};
 </script>

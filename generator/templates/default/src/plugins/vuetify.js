@@ -1,22 +1,22 @@
-import Vue from 'vue'
+import Vue from 'vue';
 <%_ if (useAlaCarte) { _%>
-import Vuetify from 'vuetify/lib'
+import Vuetify from 'vuetify/lib';
 <%_ } else { _%>
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 <%_ } _%>
 <%_ if (locale !== 'en') { _%>
-import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>'
+import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>';
 <%_ } _%>
 
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 
 export default new Vuetify({
   <%_ if (useTheme) { _%>
   theme: {
     <%_ if (useCustomProperties) { _%>
       options: {
-        customProperties: true
+        customProperties: true,
       },
     <%_ } _%>
     themes: {
@@ -28,17 +28,17 @@ export default new Vuetify({
         info: '#2196F3',
         success: '#4CAF50',
         warning: '#FFC107'
-      }
-    }
+      },
+    },
   },
   <%_ } _%>
   <%_ if (locale !== 'en') { _%>
     lang: {
       locales: { <%= locale.replace(/-/g, '') %> },
-      current: '<%= locale %>'
+      current: '<%= locale %>',
     },
   <%_ } _%>
   icons: {
     iconfont: '<%= iconFont %>',
-  }
-})
+  },
+});

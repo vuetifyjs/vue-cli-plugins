@@ -35,22 +35,20 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 <%_ if (!options.router) { _%>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 <%_ } _%>
 
 export default Vue.extend({
   name: 'App',
   <%_ if (!options.router) { _%>
   components: {
-    HelloWorld
+    HelloWorld,
   },
   <%_ } _%>
-  data () {
-    return {
-      //
-    }
-  }
-})
+  data: () => ({
+    //
+  }),
+});
 </script>
