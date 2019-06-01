@@ -15,6 +15,7 @@ const LOCALE_MAP = {
   it: 'Italy',
   id: "Indonesian",
   ja: 'Japanese',
+  ko: 'Korean',
   lv: 'Latvian',
   nl: 'Dutch',
   pl: 'Polish',
