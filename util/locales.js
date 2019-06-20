@@ -18,6 +18,7 @@ const LOCALE_MAP = {
   ko: 'Korean',
   lv: 'Latvian',
   nl: 'Dutch',
+  no: 'Norwegian',
   pl: 'Polish',
   pt: 'Portuguese',
   ru: 'Russian',
