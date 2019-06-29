@@ -1,17 +1,10 @@
 module.exports = (api) => {
-  const hasVuetifyLoader = Boolean(
-    api.service.pkg.devDependencies['vuetify-loader'] ||
-    api.service.pkg.dependencies['vuetify-loader']
-  )
+  const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
-  if (hasVuetifyLoader) {
-    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-
-    api.chainWebpack(config => {
-      config.plugin('VuetifyLoaderPlugin')
-        .use(VuetifyLoaderPlugin)
-    })
-  }
+  api.chainWebpack(config => {
+    config.plugin('VuetifyLoaderPlugin')
+      .use(VuetifyLoaderPlugin)
+  })
 
   // Resolve asset references from components
   api.chainWebpack(config => {
