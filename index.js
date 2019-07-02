@@ -1,10 +1,21 @@
 module.exports = (api) => {
-  const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-
-  api.chainWebpack(config => {
-    config.plugin('VuetifyLoaderPlugin')
-      .use(VuetifyLoaderPlugin)
-  })
+  // Require vuetify-loader if available
+  let VuetifyLoaderPlugin
+  try {
+    VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+  } catch (e){
+    // Only ignore cases where module doesn't exist
+    if (e.code !== 'MODULE_NOT_FOUND'){
+        throw e
+    }
+  }
+  
+  if (VuetifyLoaderPlugin) {
+    api.chainWebpack(config => {
+      config.plugin('VuetifyLoaderPlugin')
+        .use(VuetifyLoaderPlugin)
+    })
+  }
 
   // Resolve asset references from components
   api.chainWebpack(config => {
