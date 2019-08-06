@@ -1,8 +1,9 @@
-module.exports = (api, opts) => {
+module.exports = (api, opts, _, invoking) => {
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
   const polyfill = require('./tools/polyfill')
   const vuetify = require('./tools/vuetify')
+  const helpers = require('./tools/helpers')
 
   if (opts.preset !== 'configure') {
     opts = require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
@@ -21,6 +22,11 @@ module.exports = (api, opts) => {
 
   if (opts.installFonts) {
     fonts.addDependencies(api, opts.iconFont)
+  }
+
+  // Update tsconfig if typerscript plugin
+  if (api.hasPlugin('typescript')) {
+    helpers.updateTypeScriptConfig(api, invoking)
   }
 
   // Update templates

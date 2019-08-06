@@ -32,6 +32,23 @@ function updateBabelConfig (api, callback) {
   }
 }
 
+function updateTypeScriptConfig (api, invoking) {
+  // inject vuetify types to tsconfig.json
+  if (invoking) {
+    api.render(files => {
+      const tsconfig = files['tsconfig.json']
+      if (tsconfig) {
+        const parsed = JSON.parse(tsconfig)
+        const types = parsed.compilerOptions.types
+        if (types && !types.includes('vuetify')) {
+          types.push('vuetify')
+        }
+        files['tsconfig.json'] = JSON.stringify(parsed, null, 2)
+      }
+    })
+  }
+}
+
 function updateFile (api, file, callback) {
   file = api.resolve(file)
   let content = fs.existsSync(file)
@@ -45,5 +62,6 @@ function updateFile (api, file, callback) {
 
 module.exports = {
   updateBabelConfig,
+  updateTypeScriptConfig,
   updateFile,
 }
