@@ -18,7 +18,7 @@ module.exports = api => {
           message: 'Locale',
           description: 'Default application language',
           default: 'en',
-          link: 'https://vuetifyjs.com/framework/internationalization#getting-started',
+          link: 'https://vuetifyjs.com/customization/internationalization',
           type: 'list',
           choices: locales
         },
@@ -27,7 +27,7 @@ module.exports = api => {
           message: 'Custom Theme',
           description: 'Specify custom theme values',
           default: false,
-          link: 'https://vuetifyjs.com/style/theme',
+          link: 'https://vuetifyjs.com/customization/theme',
           type: 'confirm'
         },
         {
@@ -84,7 +84,7 @@ module.exports = api => {
           message: 'CSS Variables',
           description: 'Create css variables from defined theme',
           default: false,
-          link: 'https://vuetifyjs.com/style/theme#options',
+          link: 'https://vuetifyjs.com/customization/theme#options',
           type: 'confirm'
         },
         {
@@ -92,7 +92,7 @@ module.exports = api => {
           message: 'Icon font',
           description: 'Application icon defaults',
           default: 'mdi',
-          link: 'https://vuetifyjs.com/framework/icons#using-custom-icons',
+          link: 'https://vuetifyjs.com/customization/icons#using-custom-icons',
           type: 'list',
           choices: iconfonts
         },
@@ -101,7 +101,7 @@ module.exports = api => {
           message: 'RTL',
           description: 'Enable Right to Left support',
           default: false,
-          link: 'https://vuetifyjs.com/framework/internationalization#rtl',
+          link: 'https://vuetifyjs.com/customization/rtl',
           type: 'confirm'
         }
       ]
