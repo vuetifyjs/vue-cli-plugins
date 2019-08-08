@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app>
+  <v-app-bar app>
     <!--  -->
-  </v-toolbar>
+  </v-app-bar>
 </template>
