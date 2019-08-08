@@ -2,5 +2,8 @@
   "name": "vue-cli-plugin-vuetify-essentials",
   "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^1.1.0"
+  }
 }
