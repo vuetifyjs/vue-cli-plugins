@@ -2,10 +2,9 @@
   <v-footer
     app
     inset
+    class="justify-center"
   >
-    <div class="text-center">
-      Copyright &copy; {{ date }}&nbsp;<strong>Vuetify</strong>
-    </div>
+    Copyright &copy; {{ date }}&nbsp;<strong>Vuetify</strong>
   </v-footer>
 </template>
 
