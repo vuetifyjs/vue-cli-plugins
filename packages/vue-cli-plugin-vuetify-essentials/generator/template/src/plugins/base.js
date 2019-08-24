@@ -1,4 +1,17 @@
 import Vue from 'vue'
-import BaseCard from '@/components/base/Card'
+import upperFirst from 'lodash/upperFirst'
+import camelCase from 'lodash/camelCase'
 
-Vue.components(BaseCard.name, BaseCard)
+const requireComponent = require.context(
+  '@/components/base', true, /\.vue$/
+)
+
+requireComponent.keys().forEach(fileName => {
+  const componentConfig = requireComponent(fileName)
+
+  const componentName = upperFirst(
+    camelCase(fileName.replace(/^\.\//, '').replace(/\.\w+$/, ''))
+  )
+
+  Vue.component(`Base${componentName}`, componentConfig.default || componentConfig)
+})

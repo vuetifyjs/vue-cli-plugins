@@ -1,8 +1,8 @@
 <template>
   <v-footer
     app
-    inset
     class="justify-center"
+    inset
   >
     Copyright &copy; {{ date }}&nbsp;<strong>Vuetify</strong>
   </v-footer>
