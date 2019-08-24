@@ -5,8 +5,8 @@
     tag="section"
   >
     <v-row
-      class="fill-height"
       align="center"
+      class="fill-height"
     >
       <v-img
         :src="require('@/assets/vuetify.svg')"
