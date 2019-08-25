@@ -12,6 +12,8 @@
 
 <script>
   export default {
+    name: 'App',
+
     components: {
       CoreDrawer: () => import('@/components/core/Drawer'),
       CoreFooter: () => import('@/components/core/Footer'),
