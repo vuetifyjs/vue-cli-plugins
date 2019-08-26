@@ -4,12 +4,19 @@
     app
   >
     <v-list nav>
-      <v-list-item to="/">
-        <v-list-item-title>Home</v-list-item-title>
-      </v-list-item>
+      <v-list-item
+        v-for="(item, i) in items"
+        :key="i"
+        :to="item.to"
+        exact
+      >
+        <v-list-item-icon>
+          <v-icon v-text="item.icon" />
+        </v-list-item-icon>
 
-      <v-list-item to="/about">
-        <v-list-item-title>About</v-list-item-title>
+        <v-list-item-content>
+          <v-list-item-title v-text="$t(item.text)" />
+        </v-list-item-content>
       </v-list-item>
     </v-list>
   </v-navigation-drawer>
@@ -25,7 +32,8 @@
     name: 'CoreDrawer',
 
     computed: {
-      drawer: sync('app/drawer')
+      drawer: sync('app/drawer'),
+      items: sync('app/items')
     }
   }
 </script>

@@ -2,7 +2,7 @@
   import { VCard } from 'vuetify/lib'
 
   export default {
-    name: 'Card',
+    name: 'BaseCard',
 
     extends: VCard
   }
