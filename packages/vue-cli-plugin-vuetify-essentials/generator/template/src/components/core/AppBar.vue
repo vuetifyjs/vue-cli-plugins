@@ -1,6 +1,11 @@
 <template>
   <v-app-bar app>
-    <v-app-bar-nav-icon @click="drawer = !drawer" />
+    <v-app-bar-nav-icon
+      :aria-label="$t('toggleDrawer')"
+      @click="drawer = !drawer"
+    />
+
+    <v-toolbar-title v-text="$t('app')" />
   </v-app-bar>
 </template>
 

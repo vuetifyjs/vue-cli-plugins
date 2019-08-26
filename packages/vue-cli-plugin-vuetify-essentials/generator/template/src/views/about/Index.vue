@@ -17,3 +17,17 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+  export default {
+    name: 'About',
+
+    metaInfo: {
+      title: 'About',
+      meta: [
+        { name: 'description', content: 'The About Page' },
+        { name: 'keywords', content: 'about' }
+      ]
+    }
+  }
+</script>

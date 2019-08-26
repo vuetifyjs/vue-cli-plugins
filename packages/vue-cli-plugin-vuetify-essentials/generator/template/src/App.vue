@@ -14,6 +14,20 @@
   export default {
     name: 'App',
 
+    metaInfo () {
+      return {
+        title: 'Material Design Framework',
+        titleTemplate: '%s — Vuetify',
+        htmlAttrs: {
+          lang: this.$i18n.locale,
+          amp: true
+        },
+        meta: [
+          { charset: 'utf-8' }
+        ]
+      }
+    },
+
     components: {
       CoreDrawer: () => import('@/components/core/Drawer'),
       CoreFooter: () => import('@/components/core/Footer'),

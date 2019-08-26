@@ -2,7 +2,7 @@
   import { VBtn } from 'vuetify/lib'
 
   export default {
-    name: 'Btn',
+    name: 'BaseBtn',
 
     extends: VBtn
   }
