@@ -5,7 +5,7 @@ module.exports = api => {
 
   api.extendPackage({
     devDependencies: {
-      '@mdi/svg': '*',
+      '@mdi/js': '*',
       'axios': '*',
       'webfontloader': '*',
       'vue-analytics': '*',
@@ -32,7 +32,7 @@ module.exports = api => {
     let index = fs.readFileSync(indexPath, 'utf8')
 
     index = index.replace('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">', '')
-    index = index.replace('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">', '')
+    index = index.replace('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">', '')
     index = index.replace(/^\s*\n/gm, '')
 
     fs.writeFileSync(indexPath, index)

@@ -18,6 +18,9 @@ WebFontLoader.load({
 })
 
 export default new Vuetify({
+  icons: {
+    iconfont: 'mdiSvg'
+  },
   lang: {
     t: (key, ...params) => i18n.t(key, params)
   },
