@@ -12,6 +12,11 @@ module.exports = api => {
       'vue-meta': '*',
       'vuex-pathify': '*',
       'vuex-router-sync': '*'
+    },
+    jest: {
+      setupFiles: [
+        '<rootDir>/tests/index.js'
+      ]
     }
   })
 
@@ -25,8 +30,14 @@ module.exports = api => {
     package.scripts.deploy = 'yarn build && now'
 
     fs.writeFileSync(packagePath, JSON.stringify(package, null, 2))
-    fs.unlinkSync(api.resolve('src/views/About.vue'))
-    fs.unlinkSync(api.resolve('src/views/Home.vue'))
+
+    try {
+      fs.unlinkSync(api.resolve('src/views/About.vue'))
+    } catch (e) {}
+
+    try {
+      fs.unlinkSync(api.resolve('src/views/Home.vue'))
+    } catch (e) {}
 
     const indexPath = api.resolve('public/index.html')
     let index = fs.readFileSync(indexPath, 'utf8')
