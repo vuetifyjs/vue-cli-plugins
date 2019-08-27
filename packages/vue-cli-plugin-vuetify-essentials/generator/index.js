@@ -13,6 +13,9 @@ module.exports = api => {
       'vuex-pathify': '*',
       'vuex-router-sync': '*'
     },
+    eslintConfig: {
+      extends: 'vuetify'
+    },
     jest: {
       setupFiles: [
         '<rootDir>/tests/index.js'
