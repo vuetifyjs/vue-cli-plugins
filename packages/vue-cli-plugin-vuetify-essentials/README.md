@@ -2,6 +2,12 @@
 
 Extremely opinionated pre-configured Vuetify application. Includes the following features:
 
+### 🎉 Installation
+
+```bash
+vue create my-project --preset vuetifyjs/vue-cli-preset-vuetify
+```
+
 ### 🏨 Default Component Structure
 Adds **base** and **core** components.
 
