@@ -11,6 +11,7 @@ module.exports = api => {
       'vue-analytics': '*',
       'vue-meta': '*',
       'vuex-pathify': '*',
+      'eslint-config-vuetify': '*',
       'vuex-router-sync': '*'
     },
     eslintConfig: {
