@@ -1,0 +1,8 @@
+{
+  "name": "vuetify-cli",
+  "version": "0.0.0",
+  "description": "A Scaffolding Tool for Vue / Vuetify",
+  "main": "index.js",
+  "author": "John Leider",
+  "license": "MIT"
+}
