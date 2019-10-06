@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "Vuetify Framework Plugin for Vue CLI 3",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
   "devDependencies": {
+    "@release-it/conventional-changelog": "^1.1.0",
     "@vue/cli-service": "^3.8.0",
     "vuetify": "^2.0.0",
     "vuetify-loader": "^1.2.2"
