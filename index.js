@@ -1,10 +1,20 @@
+const fs = require('fs')
 const path = require('path')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = (api, opts) => {
+function mergeRules (opt, sass = true, type) {
+  const end = sass ? "'" : "';"
+
+  opt.data = `@import '~vuetify/src/styles/styles.sass${end}`
+  opt.data += `\n@import '@/sass/variables.${type}${end}`
+
+  return opt
+}
+
+module.exports = (api) => {
   const hasVuetifyLoader = Boolean(
     api.service.pkg.devDependencies['vuetify-loader'] ||
     api.service.pkg.dependencies['vuetify-loader']
@@ -13,21 +23,9 @@ module.exports = (api, opts) => {
   if (hasVuetifyLoader) {
     const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
-    // As the vuetify-loader automatically imports the necessary Vuetify components they are not found and
-    // transpiled by Babel. Add Vuetify explicitly as a module to be transpiled.
-    if (opts.transpileDependencies.indexOf('vuetify') === -1) {
-      api.chainWebpack(config => {
-        config.module
-          .rule('js')
-            .test(/\.m?jsx?$/)
-            .include
-            .add(resolve('vuetify'))
-            .end()
-      })
-    }
-
     api.chainWebpack(config => {
-      config.plugin('VuetifyLoaderPlugin')
+      config
+        .plugin('VuetifyLoaderPlugin')
         .use(VuetifyLoaderPlugin)
     })
   }
@@ -50,5 +48,28 @@ module.exports = (api, opts) => {
           'v-toolbar': 'src',
         },
       }))
+  })
+
+  // Bootstrap SASS Variables
+  let type
+  const hasSassVariables = fs.existsSync(api.resolve('src/sass/variables.sass'))
+  const hasScssVariables = fs.existsSync(api.resolve('src/sass/variables.scss'))
+
+  if (!hasSassVariables && !hasScssVariables) return
+
+  type = hasSassVariables ? 'sass' : 'scss'
+
+  api.chainWebpack(config => {
+    ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
+      for (let i = 0; i < 2; i++) {
+        const boolean = Boolean(i)
+
+        config.module
+          .rule(boolean ? 'sass' : 'scss')
+          .oneOf(match)
+          .use('sass-loader')
+          .tap(opt => mergeRules(opt, boolean, type))
+      }
+    })
   })
 }

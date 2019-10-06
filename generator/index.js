@@ -1,3 +1,6 @@
+// Imports
+const shell = require('shelljs')
+
 module.exports = (api, opts) => {
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
@@ -19,9 +22,7 @@ module.exports = (api, opts) => {
   if (opts.useAlaCarte) alaCarte.addDependencies(api)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
-  if (opts.installFonts) {
-    fonts.addDependencies(api, opts.iconFont)
-  }
+  if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
   // Update templates
   vuetify.renderFiles(api, opts)
@@ -34,5 +35,11 @@ module.exports = (api, opts) => {
     }
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
+
+    // Update vue.config.js for transpileDependency
+    vuetify.updateOrCreateVueConfig(api)
+
+    // lint & fix after create to ensure files adhere to chosen config
+    shell.exec('npm run lint --fix')
   })
 }

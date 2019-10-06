@@ -28,9 +28,11 @@
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.1.0",
-    "@vue/cli-service": "^3.8.0",
-    "vuetify": "^2.0.0",
+    "@vue/cli-service": "^3.11.0",
+    "vuetify": "^2.1.0",
     "vuetify-loader": "^1.2.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  }
 }
