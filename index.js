@@ -50,6 +50,21 @@ module.exports = (api) => {
       }))
   })
 
+  // Avoid loading styles in testing
+  if (process.env.NODE_ENV === 'test') {
+    api.chainWebpack(config => {
+      const sassRule = config.module.rule('sass')
+      sassRule.uses.clear()
+      sassRule.use('null-loader').loader('null-loader')
+
+      const scssRule = config.module.rule('scss')
+      scssRule.uses.clear()
+      scssRule.use('null-loader').loader('null-loader')
+    })
+
+    return
+  }
+
   // Bootstrap SASS Variables
   let type
   const hasSassVariables = fs.existsSync(api.resolve('src/sass/variables.sass'))
