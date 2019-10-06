@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "A Scaffolding Tool for Vue / Vuetify",
   "main": "index.js",
-  "author": "John Leider",
+  "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
   "devDependencies": {
     "inquirer": "^7.0.0",
