@@ -8,6 +8,6 @@
 
 <script>
   export default {
-    name: 'CoreView'
+    name: 'FrontendView',
   }
 </script>

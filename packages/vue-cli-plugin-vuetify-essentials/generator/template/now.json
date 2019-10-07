@@ -1,5 +1,5 @@
 {
-  "name": "vuetify",
+  "name": "vuetify-essentials",
   "type": "static",
   "static": {
     "public": "dist",

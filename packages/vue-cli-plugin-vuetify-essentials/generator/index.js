@@ -7,12 +7,13 @@ module.exports = api => {
     devDependencies: {
       '@mdi/js': '*',
       'axios': '*',
-      'webfontloader': '*',
+      'eslint-config-vuetify': '*',
       'vue-analytics': '*',
       'vue-meta': '*',
       'vuex-pathify': '*',
-      'eslint-config-vuetify': '*',
-      'vuex-router-sync': '*'
+      'vuex-router-sync': '*',
+      'webfontloader': '*',
+      "lodash": "*",
     },
     eslintConfig: {
       extends: 'vuetify'
@@ -30,7 +31,6 @@ module.exports = api => {
     const packagePath = api.resolve('package.json')
     const package = require(packagePath)
 
-    package.scripts.serve = 'vue-cli-service serve --open'
     package.scripts.deploy = 'yarn build && now'
 
     fs.writeFileSync(packagePath, JSON.stringify(package, null, 2))

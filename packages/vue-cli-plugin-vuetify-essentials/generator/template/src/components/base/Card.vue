@@ -4,6 +4,6 @@
   export default {
     name: 'BaseCard',
 
-    extends: VCard
+    extends: VCard,
   }
 </script>

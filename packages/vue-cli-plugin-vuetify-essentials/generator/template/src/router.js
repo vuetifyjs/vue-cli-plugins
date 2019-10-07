@@ -1,15 +1,32 @@
+// Imports
 import Vue from 'vue'
 import Router from 'vue-router'
-import i18n from '@/i18n'
 import vuetify from './plugins/vuetify'
+import kebabCase from 'lodash/kebabCase'
 
 Vue.use(Router)
 
-function route (path, name) {
+function layout (path, name, children) {
+  const folder = kebabCase(name)
+
+  return {
+    path,
+    component: () => import(`@/layouts/${folder}/Index`),
+    children,
+  }
+}
+
+function redirect (redirect) {
+  return { path: '*', redirect }
+}
+
+function route (path, name, file) {
+  const folder = (file || `${kebabCase(name)}`).toLowerCase()
+
   return {
     path,
     name,
-    component: () => import(`@/views/${name.toLowerCase()}/Index`)
+    component: () => import(`@/views/${folder}/Index.vue`),
   }
 }
 
@@ -28,22 +45,22 @@ const router = new Router({
     return vuetify.framework.goTo(scrollTo)
   },
   routes: [
-    {
-      path: '/:lang',
-      component: () => import(
-        /* webpackChunkName: "root" */
-        '@/views/Root.vue'
-      ),
-      children: [
-        route('', 'Home'),
-        route('about', 'About')
-      ]
-    },
-    {
-      path: '*',
-      redirect: '/en'
-    }
-  ]
+    layout('/admin', 'Backend', [
+      route('', 'Dashboard', 'backend/Dashboard'),
+      route('profile', 'Profile', 'backend/Profile'),
+      route('settings', 'Settings', 'backend/Settings'),
+      redirect(''),
+    ]),
+    layout('/auth', 'Frontend', [
+      route('login', 'Login', 'auth/Login'),
+      route('register', 'Register', 'auth/Register'),
+      redirect('login'),
+    ]),
+    layout('/', 'Frontend', [
+      route('', 'Home', 'frontend/Home'),
+    ]),
+    redirect('/'),
+  ],
 })
 
 // Bootstrap Analytics
@@ -54,14 +71,9 @@ if (process.env.VUE_APP_GOOGLE_ANALYTICS) {
     id: process.env.VUE_APP_GOOGLE_ANALYTICS,
     router,
     autoTracking: {
-      page: process.env.NODE_ENV !== 'development'
-    }
+      page: process.env.NODE_ENV !== 'development',
+    },
   })
 }
-
-router.beforeEach((to, from, next) => {
-  i18n.locale = to.params.lang || 'en'
-  next()
-})
 
 export default router

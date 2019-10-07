@@ -4,6 +4,13 @@
   export default {
     name: 'BaseBtn',
 
-    extends: VBtn
+    extends: VBtn,
+
+    props: {
+      color: {
+        type: String,
+        default: 'primary',
+      },
+    },
   }
 </script>
