@@ -15,9 +15,12 @@ function mergeRules (opt, sass = true, type) {
 }
 
 module.exports = (api) => {
+  const dependencies = api.service.pkg.dependencies || {}
+  const devDependencies = api.service.pkg.devDependencies || {}
+
   const hasVuetifyLoader = Boolean(
-    api.service.pkg.devDependencies['vuetify-loader'] ||
-    api.service.pkg.dependencies['vuetify-loader']
+    devDependencies['vuetify-loader'] ||
+    dependencies['vuetify-loader']
   )
 
   if (hasVuetifyLoader) {
@@ -66,13 +69,12 @@ module.exports = (api) => {
   }
 
   // Bootstrap SASS Variables
-  let type
   const hasSassVariables = fs.existsSync(api.resolve('src/sass/variables.sass'))
   const hasScssVariables = fs.existsSync(api.resolve('src/sass/variables.scss'))
 
   if (!hasSassVariables && !hasScssVariables) return
 
-  type = hasSassVariables ? 'sass' : 'scss'
+  const type = hasSassVariables ? 'sass' : 'scss'
 
   api.chainWebpack(config => {
     ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
