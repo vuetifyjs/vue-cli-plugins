@@ -1,13 +1,7 @@
 <template>
-  <v-app>
-    <core-app-bar />
-
-    <core-drawer />
-
-    <core-view />
-
-    <core-footer />
-  </v-app>
+  <v-fade-transition mode="out-in">
+    <router-view />
+  </v-fade-transition>
 </template>
 
 <script>
@@ -16,23 +10,16 @@
 
     metaInfo () {
       return {
-        title: 'Material Design Framework',
+        title: 'Boilerplate',
         titleTemplate: '%s — Vuetify',
         htmlAttrs: {
-          lang: this.$i18n.locale,
-          amp: true
+          lang: 'en',
+          amp: true,
         },
         meta: [
-          { charset: 'utf-8' }
-        ]
+          { charset: 'utf-8' },
+        ],
       }
     },
-
-    components: {
-      CoreDrawer: () => import('@/components/core/Drawer'),
-      CoreFooter: () => import('@/components/core/Footer'),
-      CoreAppBar: () => import('@/components/core/AppBar'),
-      CoreView: () => import('@/components/core/View')
-    }
   }
 </script>
