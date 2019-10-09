@@ -1,18 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-
-function mergeRules (opt, sass = true, type) {
-  const end = sass ? "'" : "';"
-
-  opt.data = `@import '~vuetify/src/styles/styles.sass${end}`
-  opt.data += `\n@import '@/sass/variables.${type}${end}`
-
-  return opt
-}
+// Imports
+const { mergeRules } = require('./util/helpers')
 
 module.exports = (api) => {
   const dependencies = api.service.pkg.dependencies || {}
@@ -69,23 +56,17 @@ module.exports = (api) => {
   }
 
   // Bootstrap SASS Variables
-  const hasSassVariables = fs.existsSync(api.resolve('src/sass/variables.sass'))
-  const hasScssVariables = fs.existsSync(api.resolve('src/sass/variables.scss'))
-
-  if (!hasSassVariables && !hasScssVariables) return
-
-  const type = hasSassVariables ? 'sass' : 'scss'
-
   api.chainWebpack(config => {
     ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
       for (let i = 0; i < 2; i++) {
         const boolean = Boolean(i)
+        const rule = boolean ? 'sass' : 'scss'
 
         config.module
-          .rule(boolean ? 'sass' : 'scss')
+          .rule(rule)
           .oneOf(match)
           .use('sass-loader')
-          .tap(opt => mergeRules(opt, boolean, type))
+          .tap(opt => mergeRules(api, opt, rule))
       }
     })
   })
