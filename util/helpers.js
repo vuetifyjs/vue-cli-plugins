@@ -1,4 +1,5 @@
 // Imports
+const semver = require('semver')
 const fs = require('fs')
 
 // Check for existence of file and add import
@@ -46,7 +47,16 @@ function mergeRules (api, opt, ext) {
 
   addImports(api, 'lists', data, end)
 
-  opt.data = data.join('\n')
+  let sassLoaderVersion
+  try {
+    sassLoaderVersion = semver.major(require('sass-loader/package.json').version)
+  } catch (e) {}
+
+  if (sassLoaderVersion < 8) {
+    opt.data = data.join('\n')
+  } else {
+    opt.prependData = data.join('\n')
+  }
 
   return opt
 }

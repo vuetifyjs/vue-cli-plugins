@@ -35,7 +35,8 @@
     "vuetify-loader": "^1.2.2"
   },
   "dependencies": {
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "semver": "^6.0.0"
   },
   "husky": {
     "hooks": {
