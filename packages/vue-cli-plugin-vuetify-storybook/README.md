@@ -19,7 +19,7 @@ npm run serve:storybook
 To add new stories, simply create a new file that contains `.stories.js`. An example exists in `.storybook/stories/example.stories.js` of your project.
 
 #### Creating stories
-If you are using [vue-cli-plugin-vuetify-cli](https://github.com/vuetifyjs/vue-cli-plugin-vuetify), stories will be automatically generated when you create new components.
+If you are using [vue-cli-plugin-vuetify-cli](https://github.com/vuetifyjs/vue-cli-plugin-vuetify-cli), stories will be automatically generated when you create new components.
 
 ```js
 // A helper function to faciliate the generation of stories
