@@ -1,7 +1,7 @@
 # vue-cli-plugin-vuetify-storybook
 > A Vuetify Storybook Plugin for [vue-cli@3.0](https://github.com/vuejs/vue-cli)
 
-### Install
+### 💿 Install
 
 ```bash
 vue add vuetify-storybook
@@ -15,7 +15,7 @@ yarn serve:storybook
 npm run serve:storybook
 ```
 
-### Usage
+### 🚀 Usage
 To add new stories, simply create a new file that contains `.stories.js`. An example exists in `.storybook/stories/example.stories.js` of your project.
 
 #### Creating stories
@@ -50,7 +50,7 @@ export const withAnotherComponent = () => story({
 })
 ```
 
-### Supporting Vuetify
+### 💪 Supporting Vuetify
 <p>Vuetify is an open source MIT project that has been made possible due to the generous contributions by <a href="https://github.com/vuetifyjs/vuetify/blob/dev/BACKERS.md">community backers</a>. If you are interested in supporting this project, please consider:</p>
 
 <ul>
@@ -73,7 +73,7 @@ export const withAnotherComponent = () => story({
   </li>
 </ul>
 
-### License
+### 📑 License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present John Leider
+Copyright (c) 2016-present Vuetify LLC
