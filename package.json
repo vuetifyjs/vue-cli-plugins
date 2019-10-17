@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vuetify Framework Plugin for Vue CLI 3",
   "main": "index.js",
   "scripts": {
