@@ -8,8 +8,8 @@ function resolve (dir) {
 function mergeRules (opt, sass = true, type) {
   const end = sass ? "'" : "';"
 
-  opt.data = `@import '~vuetify/src/styles/styles.sass${end}`
-  opt.data += `\n@import '@/sass/variables.${type}${end}`
+  opt.prependData = `@import '~vuetify/src/styles/styles.sass${end}`
+  opt.prependData += `\n@import '@/sass/variables.${type}${end}`
 
   return opt
 }
