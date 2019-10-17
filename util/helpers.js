@@ -40,9 +40,7 @@ function mergeRules (api, opt, ext) {
 
   addImports(api, 'variables', data, end)
 
-  // Vuetify styles must go between variables and lists
-  // since variables must be defined at the top level
-  // and lists require existing variables to merge
+  // Inject Vuetify styles at the end of user supplied
   data.push(`@import '~vuetify/src/styles/styles.sass${end}`)
 
   addImports(api, 'lists', data, end)
