@@ -8,7 +8,9 @@
   "devDependencies": {
     "inquirer": "^7.0.0",
     "lodash": "^4.17.15",
-    "pluralize": "^8.0.0",
     "shelljs": "^0.8.3"
+  },
+  "peerDependencies": {
+    "pluralize": "^8.0.0"
   }
 }
