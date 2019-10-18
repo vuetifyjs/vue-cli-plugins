@@ -2,7 +2,7 @@ module.exports = api => {
   api.extendPackage({
     // TODO: figure out why peer dependency isn't working
     devDependencies: {
-      'pluralize': 'latest'
+      'pluralize': '^8.0.0'
     },
     scripts: {
       'make:component': 'vue-cli-service make:component',
