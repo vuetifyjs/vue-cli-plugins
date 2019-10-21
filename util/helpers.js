@@ -50,9 +50,14 @@ function mergeRules (api, opt, ext) {
     sassLoaderVersion = semver.major(require('sass-loader/package.json').version)
   } catch (e) {}
 
+  // Merge with user-defined loader data config
   if (sassLoaderVersion < 8) {
+    if (opt.data) data.unshift(opt.data)
+
     opt.data = data.join('\n')
   } else {
+    if (opt.prependData) data.unshift(opt.prependData)
+
     opt.prependData = data.join('\n')
   }
 
