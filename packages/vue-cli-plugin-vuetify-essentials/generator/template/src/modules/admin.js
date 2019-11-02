@@ -1,4 +1,4 @@
-// Imports
+// Utilities
 import {
   make,
 } from 'vuex-pathify'
@@ -9,7 +9,7 @@ import {
 } from '@mdi/js'
 
 const state = {
-  drawer: false,
+  drawer: null,
   items: [
     {
       icon: mdiMonitorDashboard,

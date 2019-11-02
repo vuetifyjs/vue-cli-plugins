@@ -30,4 +30,4 @@ This should not be installed stand-a-lone.
 ### 📑 License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present Vuetify LLC
+Copyright (c) 2016-present Vuetify, LLC
