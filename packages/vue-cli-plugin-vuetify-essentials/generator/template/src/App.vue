@@ -10,15 +10,10 @@
 
     metaInfo () {
       return {
-        title: 'Boilerplate',
-        titleTemplate: '%s — Vuetify',
-        htmlAttrs: {
-          lang: 'en',
-          amp: true,
-        },
-        meta: [
-          { charset: 'utf-8' },
-        ],
+        title: 'Vuetify',
+        titleTemplate: '%s — Vuetify Essentials',
+        htmlAttrs: { lang: 'en' },
+        meta: [{ charset: 'utf-8' }],
       }
     },
   }

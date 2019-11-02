@@ -1,4 +1,4 @@
-// Automatically included in "./src/main.js"
+// Automatically included in './src/main.js'
 
 import './axios'
 import './base'

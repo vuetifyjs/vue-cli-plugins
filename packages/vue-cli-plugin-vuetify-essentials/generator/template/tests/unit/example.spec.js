@@ -1,3 +1,4 @@
+// Imports
 import {
   createLocalVue,
   shallowMount,

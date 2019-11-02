@@ -45,19 +45,12 @@ const router = new Router({
     return vuetify.framework.goTo(scrollTo)
   },
   routes: [
-    layout('/admin', 'Backend', [
-      route('', 'Dashboard', 'backend/Dashboard'),
-      route('profile', 'Profile', 'backend/Profile'),
-      route('settings', 'Settings', 'backend/Settings'),
+    layout('/admin', 'Admin', [
+      route('', 'Dashboard'),
       redirect(''),
     ]),
-    layout('/auth', 'Frontend', [
-      route('login', 'Login', 'auth/Login'),
-      route('register', 'Register', 'auth/Register'),
-      redirect('login'),
-    ]),
     layout('/', 'Frontend', [
-      route('', 'Home', 'frontend/Home'),
+      route('', 'Home'),
     ]),
     redirect('/'),
   ],

@@ -16,6 +16,7 @@ module.exports = api => {
       "lodash": "*",
     },
     eslintConfig: {
+      env: { jest: true },
       extends: 'vuetify'
     },
     jest: {

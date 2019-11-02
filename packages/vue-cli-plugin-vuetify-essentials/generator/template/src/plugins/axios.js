@@ -1,4 +1,8 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-Vue.prototype.$http = axios
+const $http = axios.create()
+
+Vue.prototype.$http = $http
+
+export default $http
