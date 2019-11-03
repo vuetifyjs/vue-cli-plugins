@@ -46,8 +46,6 @@ function mergeRules (api, opt, ext) {
   // Inject Vuetify styles at the end of user supplied
   data.push(`@import '~vuetify/src/styles/styles.sass${end}`)
 
-  addImports(api, 'lists', data, end)
-
   let sassLoaderVersion
   try {
     sassLoaderVersion = semver.major(require('sass-loader/package.json').version)
