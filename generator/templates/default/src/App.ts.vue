@@ -33,20 +33,20 @@
         text
       >
         <span class="mr-2">Latest Release</span>
-        <%_ if (opts.iconFont === 'mdi') { _%>
+        <%_ if (iconFont === 'mdi') { _%>
         <v-icon>mdi-open-in-new</v-icon>
-        <%_ } else if (opts.iconFont === 'md') { _%>
+        <%_ } else if (iconFont === 'md') { _%>
         <v-icon>open_in_new</v-icon>
-        <%_ } else if (opts.iconFont === 'fa') { _%>
+        <%_ } else if (iconFont === 'fa') { _%>
         <v-icon>fas fa-external-link-alt</v-icon>
-        <%_ } else if (opts.iconFont === 'fa4') { _%>
+        <%_ } else if (iconFont === 'fa4') { _%>
         <v-icon>fa-external-link</v-icon>
         <%_ } _%>
       </v-btn>
     </v-app-bar>
 
     <v-content>
-      <%_ if (opts.router) { _%>
+      <%_ if (router) { _%>
       <router-view/>
       <%_ } else { _%>
       <HelloWorld/>
@@ -57,14 +57,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-<%_ if (!options.router) { _%>
+<%_ if (!router) { _%>
 import HelloWorld from './components/HelloWorld.vue';
 <%_ } _%>
 
 export default Vue.extend({
   name: 'App',
 
-  <%_ if (!options.router) { _%>
+  <%_ if (!router) { _%>
   components: {
     HelloWorld,
   },

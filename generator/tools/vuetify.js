@@ -10,7 +10,7 @@ function addDependencies (api) {
   })
 }
 
-function renderFiles (api, opts) {
+function renderFiles (api, { opts }) {
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
   const pluginFilename = `vuetify.${ext}`
 

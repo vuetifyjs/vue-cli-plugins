@@ -1,20 +1,20 @@
 import Vue from 'vue';
-<%_ if (opts.useAlaCarte) { _%>
+<%_ if (useAlaCarte) { _%>
 import Vuetify from 'vuetify/lib';
 <%_ } else { _%>
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 <%_ } _%>
-<%_ if (opts.locale !== 'en') { _%>
+<%_ if (locale !== 'en') { _%>
 import <%= locale.replace(/-/g, '') %> from 'vuetify/<%= typescript ? 'src' : 'es5' %>/locale/<%= locale %>';
 <%_ } _%>
 
 Vue.use(Vuetify);
 
 export default new Vuetify({
-  <%_ if (opts.useTheme) { _%>
+  <%_ if (useTheme) { _%>
   theme: {
-    <%_ if (opts.useCustomProperties) { _%>
+    <%_ if (useCustomProperties) { _%>
       options: {
         customProperties: true,
       },
@@ -32,15 +32,15 @@ export default new Vuetify({
     },
   },
   <%_ } _%>
-  <%_ if (opts.locale !== 'en') { _%>
+  <%_ if (locale !== 'en') { _%>
     lang: {
-      locales: { <%= opts.locale.replace(/-/g, '') %> },
+      locales: { <%= locale.replace(/-/g, '') %> },
       current: '<%= locale %>',
     },
   <%_ } _%>
-  <%_ if (opts.iconFont !== 'mdi') { _%>
+  <%_ if (iconFont !== 'mdi') { _%>
   icons: {
-    iconfont: '<%= opts.iconFont %>',
+    iconfont: '<%= iconFont %>',
   },
   <%_ } _%>
 });
