@@ -38,7 +38,9 @@ export default new Vuetify({
       current: '<%= locale %>',
     },
   <%_ } _%>
+  <%_ if (opts.iconFont !== 'mdi') { _%>
   icons: {
     iconfont: '<%= opts.iconFont %>',
   },
+  <%_ } _%>
 });
