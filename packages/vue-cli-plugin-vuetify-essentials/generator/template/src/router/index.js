@@ -1,7 +1,7 @@
 // Imports
 import Vue from 'vue'
 import Router from 'vue-router'
-import vuetify from './plugins/vuetify'
+import vuetify from '@/plugins/vuetify'
 import kebabCase from 'lodash/kebabCase'
 
 Vue.use(Router)
