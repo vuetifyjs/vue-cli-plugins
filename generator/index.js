@@ -38,8 +38,5 @@ module.exports = (api, opts) => {
 
     // Update vue.config.js for transpileDependency
     vuetify.updateOrCreateVueConfig(api)
-
-    // lint & fix after create to ensure files adhere to chosen config
-    shell.exec('npm run lint --fix')
   })
 }
