@@ -8,13 +8,7 @@ Object {
 @import '@/scss/variables.scss'
 @import '@/styles/variables.sass'
 @import '@/styles/variables.scss'
-@import '~vuetify/src/styles/styles.sass'
-@import '@/sass/lists.sass'
-@import '@/sass/lists.scss'
-@import '@/scss/lists.sass'
-@import '@/scss/lists.scss'
-@import '@/styles/lists.sass'
-@import '@/styles/lists.scss'",
+@import '~vuetify/src/styles/styles.sass'",
 }
 `;
 
@@ -26,12 +20,6 @@ Object {
 @import '@/scss/variables.scss';
 @import '@/styles/variables.sass';
 @import '@/styles/variables.scss';
-@import '~vuetify/src/styles/styles.sass';
-@import '@/sass/lists.sass';
-@import '@/sass/lists.scss';
-@import '@/scss/lists.sass';
-@import '@/scss/lists.scss';
-@import '@/styles/lists.sass';
-@import '@/styles/lists.scss';",
+@import '~vuetify/src/styles/styles.sass';",
 }
 `;
