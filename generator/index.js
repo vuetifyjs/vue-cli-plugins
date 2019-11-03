@@ -25,7 +25,7 @@ module.exports = (api, opts) => {
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
   // Update templates
-  vuetify.renderFiles(api, opts)
+  vuetify.renderFiles(api, { opts })
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
