@@ -72,6 +72,17 @@ npm run cordova-serve-browser # Development Browser
 npm run cordova-build-browser # Build Browser
 ```
 
+#### Capacitor
+
+Use  the [Capacitor](https://github.com/nklayman/vue-cli-plugin-capacitor) plugin.
+
+```
+vue add @nklayman/capacitor
+yarn capacitor:serve
+```
+
+Note: you may also want to hide to splashcreen when your app is ready to make your app load faster. See the [plugin installation docs](https://github.com/nklayman/vue-cli-plugin-capacitor#install) for instructions.
+
 ### 💪 Supporting Vuetify
 <p>Vuetify is an open source MIT project that has been made possible due to the generous contributions by <a href="https://github.com/vuetifyjs/vuetify/blob/dev/BACKERS.md">community backers</a>. If you are interested in supporting this project, please consider:</p>
 
