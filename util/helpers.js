@@ -41,7 +41,7 @@ function mergeRules (api, opt, ext) {
   addImports(api, 'variables', data, end)
 
   // If user isn't supplying variables, avoid prepending data
-  if (!data.length) return
+  if (!data.length) return opt
 
   // Inject Vuetify styles at the end of user supplied
   data.push(`@import '~vuetify/src/styles/styles.sass${end}`)
