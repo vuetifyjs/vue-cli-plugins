@@ -1,6 +1,6 @@
 // Imports
 const inquire = require('inquirer')
-const kebabcase = require('lodash/kebabcase')
+const kebabCase = require('lodash/kebabCase')
 const { writeFiles } = require('../../util/helpers.js')
 
 // Variables
@@ -9,7 +9,7 @@ const questions = [
     type: 'input',
     message: 'Directive name:',
     name: 'name',
-    filter: kebabcase
+    filter: kebabCase
   }
 ]
 
