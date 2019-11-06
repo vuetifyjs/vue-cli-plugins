@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Scaffolding Tool for Vue / Vuetify",
   "main": "index.js",
   "author": "John Leider <john@vuetifyjs.com>",
