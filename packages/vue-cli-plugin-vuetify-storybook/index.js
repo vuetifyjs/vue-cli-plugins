@@ -3,6 +3,7 @@ const path = require('path')
 const kebabCase = require('lodash/kebabCase')
 
 module.exports = api => {
+  return
   if (!api.hasPlugin('vuetify-cli')) return
 
   const component = api.service.commands['make:component']
