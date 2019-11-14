@@ -4,28 +4,19 @@
     fill-height
   >
     <page-jumbotron
-      :icon="mdiMonitorDashboard"
       heading="Dashboard"
+      icon="$mdiMonitorDashboard"
       view="src/views/dashboard/Index.vue"
     />
   </base-section>
 </template>
 
 <script>
-  // Icons
-  import {
-    mdiMonitorDashboard,
-  } from '@mdi/js'
-
   export default {
     name: 'Dashboard',
 
     components: {
       PageJumbotron: () => import('@/components/PageJumbotron'),
     },
-
-    data: () => ({
-      mdiMonitorDashboard,
-    }),
   }
 </script>

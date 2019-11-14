@@ -20,18 +20,9 @@
     name: 'PageJumbotron',
 
     props: {
-      heading: {
-        type: String,
-        default: undefined,
-      },
-      icon: {
-        type: String,
-        default: undefined,
-      },
-      view: {
-        type: String,
-        default: undefined,
-      },
+      heading: String,
+      icon: String,
+      view: String,
     },
   }
 </script>

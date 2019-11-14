@@ -31,21 +31,8 @@
     sync,
   } from 'vuex-pathify'
 
-  // Icons
-  import {
-    mdiCogs,
-    mdiMonitorCellphone,
-    mdiVuetify,
-  } from '@mdi/js'
-
   export default {
     name: 'FrontendDrawer',
-
-    data: () => ({
-      mdiCogs,
-      mdiMonitorCellphone,
-      mdiVuetify,
-    }),
 
     computed: {
       ...sync('frontend/*'),

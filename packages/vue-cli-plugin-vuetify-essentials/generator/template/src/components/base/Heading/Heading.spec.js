@@ -8,7 +8,7 @@ import { shallow, createLocalVue } from '@vue/test-utils'
 const localVue = createLocalVue()
 
 describe('Heading', () => {
-  function mountFunction(options = {}) {
+  function mountFunction (options = {}) {
     return shallow(Heading, {
       localVue,
       ...options,
