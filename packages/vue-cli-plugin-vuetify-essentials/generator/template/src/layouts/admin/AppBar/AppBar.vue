@@ -4,10 +4,9 @@
       icon
       @click="drawer = !drawer"
     >
-      <v-icon
-        aria-label="Toggle Drawer"
-        v-text="(drawer || $vuetify.breakpoint.smAndDown) ? mdiMenu : mdiClose"
-      />
+      <v-icon aria-label="Toggle Drawer">
+        {{ (drawer || $vuetify.breakpoint.smAndDown) ? '$menu' : '$close' }}
+      </v-icon>
     </v-btn>
 
     <v-spacer />
@@ -17,7 +16,7 @@
       exact
       icon
     >
-      <v-icon v-text="mdiVuetify" />
+      <v-icon>$mdiVuetify</v-icon>
     </v-btn>
   </v-app-bar>
 </template>
@@ -28,21 +27,8 @@
     sync,
   } from 'vuex-pathify'
 
-  // Icons
-  import {
-    mdiClose,
-    mdiMenu,
-    mdiVuetify,
-  } from '@mdi/js'
-
   export default {
     name: 'BackendAppBar',
-
-    data: () => ({
-      mdiClose,
-      mdiMenu,
-      mdiVuetify,
-    }),
 
     computed: {
       drawer: sync('admin/drawer'),

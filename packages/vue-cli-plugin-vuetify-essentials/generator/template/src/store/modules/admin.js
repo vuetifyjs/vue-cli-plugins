@@ -3,16 +3,11 @@ import {
   make,
 } from 'vuex-pathify'
 
-// Icons
-import {
-  mdiMonitorDashboard,
-} from '@mdi/js'
-
 const state = {
   drawer: null,
   items: [
     {
-      icon: mdiMonitorDashboard,
+      icon: '$mdiMonitorDashboard',
       text: 'Dashboard',
       to: { name: 'Dashboard' },
     },

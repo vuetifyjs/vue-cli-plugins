@@ -34,17 +34,8 @@
     sync,
   } from 'vuex-pathify'
 
-  // Icons
-  import {
-    mdiVuetify,
-  } from '@mdi/js'
-
   export default {
     name: 'BackendDrawer',
-
-    data: () => ({
-      mdiVuetify,
-    }),
 
     computed: {
       ...sync('admin/*'),

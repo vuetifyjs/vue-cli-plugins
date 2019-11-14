@@ -31,7 +31,7 @@
     },
 
     beforeDestroy () {
-      this.drawer = false
+      this.drawer = null
     },
   }
 </script>

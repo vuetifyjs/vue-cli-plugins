@@ -12,7 +12,7 @@
       :to="{ name: 'Dashboard' }"
       icon
     >
-      <v-icon v-text="mdiMonitorDashboard" />
+      <v-icon>$mdiMonitorDashboard</v-icon>
     </v-btn>
   </v-app-bar>
 </template>
@@ -23,19 +23,8 @@
     sync,
   } from 'vuex-pathify'
 
-  // Icons
-  import {
-    mdiDotsVertical,
-    mdiMonitorDashboard,
-  } from '@mdi/js'
-
   export default {
     name: 'FrontendAppBar',
-
-    data: () => ({
-      mdiDotsVertical,
-      mdiMonitorDashboard,
-    }),
 
     computed: {
       ...sync('frontend/*'),
