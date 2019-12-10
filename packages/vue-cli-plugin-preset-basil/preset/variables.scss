@@ -1,0 +1,38 @@
+$lekton-font-family: 'Lekton', sans-serif;
+$theme-primary-color: #356859;
+$border-radius-root: 0;
+$body-font-family: 'Montserrat', sans-serif;
+$btn-font-weight: 700;
+$btn-icon-font-size: 0.875rem;
+$btn-outline-border-width: 2px;
+$headings: (
+  'h1': ('weight': 600),
+  'h2': ('weight': 600),
+  'h3': ('weight': 600),
+  'h4': ('weight': 600),
+  'h5': ('weight': 500),
+  'h6': (
+    'font-family': $lekton-font-family,
+    'weight': 700
+  ),
+  'subtitle-1': (
+    'font-family': $lekton-font-family,
+    'size': 1.0625rem,
+    'weight': 700
+  ),
+  'subtitle-2': (
+    'font-family': $lekton-font-family,
+    'size': 0.9375rem,
+    'weight': 700
+  ),
+  'body-1': ('weight': 600),
+  'body-2': ('weight': 600),
+  'caption': ('weight': 500)
+);
+$material-light: (
+  'background': #FFFBE6,
+  'cards': #FFFBE6
+);
+
+@import '~vuetify/src/components/VBtn/_variables.scss';
+@import '~vuetify/src/components/VTabs/_variables.scss';

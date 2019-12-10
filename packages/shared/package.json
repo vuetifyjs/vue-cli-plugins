@@ -1,0 +1,23 @@
+{
+  "name": "@vuetify/shared",
+  "version": "1.0.0",
+  "description": "Utility files",
+  "author": "John Leider <john.j.leider@gmail.com>",
+  "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
+  },
+  "devDependencies": {
+    "vuetify": "^2.1.13"
+  }
+}
