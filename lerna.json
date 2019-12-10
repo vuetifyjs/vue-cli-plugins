@@ -17,5 +17,9 @@
       "push": true
     }
   },
-  "version": "independent"
+  "version": "independent",
+  "changelog": {
+    "repo": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify",
+    "cacheDir": ".changelog"
+  }
 }
