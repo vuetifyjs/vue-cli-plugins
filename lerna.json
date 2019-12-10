@@ -1,0 +1,25 @@
+{
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "publish": {
+      "allowBranch": [
+        "master",
+        "dev",
+        "next"
+      ],
+      "message": "chore(release): publish %s"
+    },
+    "version": {
+      "push": true
+    }
+  },
+  "version": "independent",
+  "changelog": {
+    "repo": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify",
+    "cacheDir": ".changelog"
+  }
+}

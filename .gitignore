@@ -1,6 +1,4 @@
-/node_modules/
-/dev/
-/coverage/
+node_modules/
 
 *.swp
 
