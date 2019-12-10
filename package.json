@@ -2,5 +2,14 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lerna run test"
+    }
+  },
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "lerna": "^3.19.0"
+  }
 }
