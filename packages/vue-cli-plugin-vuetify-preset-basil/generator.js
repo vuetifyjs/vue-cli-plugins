@@ -5,7 +5,7 @@ const {
 
 module.exports = api => {
   api.onCreateComplete(() => {
-    addHtmlLink(api, 'Raleway:100,300,400,500,700,900')
+    addHtmlLink(api, 'Montserrat:100,300,400,500,700,900&Lekton:100,300,400,500,700,900')
   })
 
   generatePreset(api, 'basil')

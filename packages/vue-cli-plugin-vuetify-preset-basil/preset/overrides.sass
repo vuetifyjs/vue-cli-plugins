@@ -1,26 +1,34 @@
-.v-card.v-card.v-card--outlined
-  border-color: #356859
-  border-left-width: 0
-  border-right-width: 0
+.v-image
+  border-radius: 16px
 
-.v-tabs--vertical
+// Remove in v2.0.0-beta.2
+.v-tabs-bar
+  background-color: transparent !important
+  padding: 8px 0
+
+.v-tabs
   .v-tabs-slider
     background-color: transparent
-    border-radius: 50%
+    border-radius: 24px
     border: 2px solid currentColor
-    width: 100%
+    min-height: inherit
 
   .v-tabs-slider-wrapper
-    border-radius: 50%
-    width: 100% !important
+    min-height: 100%
 
-  .v-tab
-    font-size: 1.3rem
-    min-width: 0
-    padding: 8px
+    + .v-tab ~ .v-tab
+      margin-left: 16px
 
   .v-tab
     &:before,
-    &:after,
     .v-ripple__container
-      border-radius: 50%
+      border-radius: 24px
+
+.v-text-field
+  // Remove in v2.0.0-beta.2
+  border-radius: 4px !important
+
+  .v-input__slot
+    &:before,
+    &:after
+      display: none
