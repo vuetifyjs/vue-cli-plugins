@@ -1,6 +1,4 @@
 // Imports
-const { addVariables } = require('@vuetify/shared')
+const { bootstrapPreset } = require('@vuetify/shared')
 
-module.exports = api => {
-  addVariables(api, '~vue-cli-plugin-preset-basil/preset/variables.scss')
-}
+module.exports = api => bootstrapPreset(api, 'basil')

@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
-  "devDependencies": {
-    "semver": "^6.3.0",
-    "vuetify": "^2.1.13"
-  }
+  "devDependencies": {}
 }

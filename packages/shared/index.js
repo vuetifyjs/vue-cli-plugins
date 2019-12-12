@@ -1,6 +1,23 @@
+// Utilities
 const semver = require('semver')
+const fs = require('fs')
 
-function addVariables (api, file) {
+function addHtmlLink (api, font) {
+  updateFile(api, './public/index.html', lines => {
+    const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
+    const link = `<link rel="stylesheet" href="${font}&display=swap">`
+
+    if (lines.join('').indexOf(link) > -1) {
+      return lines.reverse()
+    }
+
+    lines.splice(lastLink + 1, 0, `    ${link}`)
+
+    return lines.reverse()
+  })
+}
+
+function addSassVariables (api, file) {
   api.chainWebpack(config => {
     const modules = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
@@ -14,21 +31,53 @@ function addVariables (api, file) {
           .rule(rule)
           .oneOf(match)
           .use('sass-loader')
-          .tap(opt => setVariables(opt, `'${file}${end}`))
+          .tap(opt => setSassVariables(opt, `'${file}${end}`))
       }
     })
   })
 }
 
+function bootstrapPreset (api, preset) {
+  addSassVariables(api, `~vue-cli-plugin-vuetify-preset-${preset}/preset/variables.scss`)
+}
+
+function generatePreset (api, preset) {
+  if (!api.hasPlugin('vuetify')) {
+    console.error('Vuetify presets require the `vue-cli-plugin-vuetify` package.')
+
+    return
+  }
+
+  const file = 'src/plugins/vuetify.js'
+  const plugin = api.resolve(file)
+
+  if (!fs.existsSync(plugin)) {
+    console.warn('Unable to locate `vuetify.js` plugin file.')
+
+    return
+  }
+
+  api.injectImports(file, `import { preset } from 'vue-cli-plugin-vuetify-preset-${preset}/preset'`)
+
+  api.onCreateComplete(() => {
+    updateVuetifyObject(api, 'preset')
+  })
+}
+
 // Check for existence of file and add import
-function genVariableImport (file) {
+function genSassVariableImport (file) {
   return `@import ${file}`
+}
+
+// Check if file exists in user project
+function fileExists (api, file) {
+  return fs.existsSync(api.resolve(file))
 }
 
 // Create an import statement
 // to bootstrap a users variables
-function setVariables (opt, file) {
-  const variables = genVariableImport(file)
+function setSassVariables (opt, file) {
+  const variables = genSassVariableImport(file)
 
   let sassLoaderVersion
   try {
@@ -42,8 +91,73 @@ function setVariables (opt, file) {
   return opt
 }
 
+function updateFile (api, file, callback) {
+  file = api.resolve(file)
+  let content = fs.existsSync(file)
+    ? fs.readFileSync(file, { encoding: 'utf8' })
+    : ''
+
+  content = callback(content.split(/\r?\n/g)).join('\n')
+
+  fs.writeFileSync(file, content, { encoding: 'utf8' })
+}
+
+function updateVuetifyObject (api, value) {
+  updateFile(api, 'src/plugins/vuetify.js', content => {
+    const existingValue = str => (
+      str.indexOf(`${value},`) > -1 ||
+      str.indexOf(`${value}:`) > -1
+    )
+
+    if (content.find(existingValue)) {
+      return content
+    }
+
+    const index = content.findIndex(str => {
+      return str.indexOf('new Vuetify(') > -1
+    })
+    const vuetify = content[index]
+
+    if (!vuetify) {
+      console.warn('Unable to locate Vuetify instantiation in `src/plugins/vuetify.js`.')
+
+      return
+    }
+
+    const optionsStartIndex = vuetify.indexOf('({')
+    const optionsStopIndex = vuetify.indexOf('})')
+    const hasOptionsObject = optionsStartIndex > -1
+    const hasInlineObject = (
+      hasOptionsObject &&
+      optionsStopIndex > -1
+    )
+
+    if (hasInlineObject) {
+      const start = vuetify.slice(0, optionsStartIndex + 2)
+      const stop = vuetify.slice(optionsStartIndex + 2)
+
+      content[index] = `${start} ${value} ${stop}`
+    } else if (hasOptionsObject) {
+      content.splice(index + 1, 0, `  ${value},`)
+    } else {
+      const vuetifyStartIndex = vuetify.indexOf('(')
+      const start = vuetify.slice(0, vuetifyStartIndex + 2)
+
+      content[index] = `${start}{ ${value} })`
+    }
+
+    return content
+  })
+}
+
 module.exports = {
-  addVariables,
-  genVariableImport,
-  setVariables,
+  addHtmlLink,
+  addSassVariables,
+  bootstrapPreset,
+  fileExists,
+  generatePreset,
+  genSassVariableImport,
+  setSassVariables,
+  updateFile,
+  updateVuetifyObject
 }
