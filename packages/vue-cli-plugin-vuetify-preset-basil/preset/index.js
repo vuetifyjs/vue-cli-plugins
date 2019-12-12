@@ -1,6 +1,6 @@
 require('./overrides.sass')
 
-const Preset = {
+const preset = {
   theme: {
     themes: {
       light: {
@@ -12,4 +12,4 @@ const Preset = {
   }
 }
 
-module.exports =  { Preset }
+module.exports = { preset }
