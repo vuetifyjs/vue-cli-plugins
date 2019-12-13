@@ -109,6 +109,7 @@ function updateVuetifyObject (api, value) {
       str.indexOf(`${value}:`) > -1
     )
 
+    // If content already exists, skip update
     if (content.find(existingValue)) {
       return content
     }
@@ -126,25 +127,31 @@ function updateVuetifyObject (api, value) {
 
     const optionsStartIndex = vuetify.indexOf('({')
     const optionsStopIndex = vuetify.indexOf('})')
-    const hasOptionsObject = optionsStartIndex > -1
+    const hasMultilineObject = optionsStartIndex > -1
     const hasInlineObject = (
-      hasOptionsObject &&
+      hasMultilineObject &&
       optionsStopIndex > -1
     )
 
+    // new Vuetify({ ... })
     if (hasInlineObject) {
       const start = vuetify.slice(0, optionsStartIndex + 2)
       const stop = vuetify.slice(optionsStartIndex + 2)
 
       content[index] = `${start} ${value} ${stop}`
-    } else if (hasOptionsObject) {
+    // new Vuetify({
+    //   ...
+    // })
+    } else if (hasMultilineObject) {
       content.splice(index + 1, 0, `  ${value},`)
+    // new Vuetify()
     } else {
       const vuetifyStartIndex = vuetify.indexOf('(')
       const start = vuetify.slice(0, vuetifyStartIndex + 2)
 
       content[index] = `${start}{ ${value} })`
     }
+    // TODO: Handle new Vuetify(options) - user options being passed
 
     return content
   })
