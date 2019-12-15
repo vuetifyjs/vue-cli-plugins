@@ -9,7 +9,7 @@ const fonts = {
   },
   mdiSvg: {
     package: {
-      '@mdi/js': '^4.7.95',
+      '@mdi/js': '*',
     },
   },
   md: {
