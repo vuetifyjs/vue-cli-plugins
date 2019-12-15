@@ -2,7 +2,7 @@ const helpers = require('./helpers')
 const fonts = {
   mdi: {
     package: {
-      '@mdi/font': '^3.6.95',
+      '@mdi/font': '*',
     },
     import: '@mdi/font/css/materialdesignicons.css',
     link: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">',
