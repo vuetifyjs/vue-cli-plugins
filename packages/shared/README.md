@@ -1,11 +1,3 @@
-# `shared`
+# `@vuetify/shared`
 
-> TODO: description
-
-## Usage
-
-```
-const shared = require('shared');
-
-// TODO: DEMONSTRATE API
-```
+> This package provides shared utility helper functions for all plugin packages

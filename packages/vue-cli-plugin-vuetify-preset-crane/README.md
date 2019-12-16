@@ -1,11 +1,14 @@
-# `vue-cli-plugin-preset-basil`
+# `vue-cli-plugin-vuetify-preset-crane`
 
-> TODO: description
+> A Vuetify Preset for the [Crane Material Study](https://material.io/design/material-studies/crane.html)
 
-## Usage
+### 🚀 Usage
 
 ```
-const vueCliPluginPresetBasil = require('vue-cli-plugin-preset-basil');
-
-// TODO: DEMONSTRATE API
+vue add vuetify-preset-crane
 ```
+
+### 📑 License
+[MIT](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2016-present Vuetify, LLC
