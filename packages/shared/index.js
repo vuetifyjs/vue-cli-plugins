@@ -41,7 +41,7 @@ function bootstrapPreset (api, preset) {
   addSassVariables(api, `~vue-cli-plugin-vuetify-preset-${preset}/preset/variables.scss`)
 }
 
-function generatePreset (api, preset) {
+function generatePreset (api, preset, onCreateComplete) {
   if (!api.hasPlugin('vuetify')) {
     console.error('Vuetify presets require the `vue-cli-plugin-vuetify` package.')
 
@@ -61,6 +61,11 @@ function generatePreset (api, preset) {
 
   api.onCreateComplete(() => {
     updateVuetifyObject(api, 'preset')
+
+    (
+      typeof onCreateComplete === 'function' &&
+      onCreateComplete()
+    )
   })
 }
 
