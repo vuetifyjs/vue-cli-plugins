@@ -69,7 +69,6 @@ function generatePreset (api, preset, onCreateComplete) {
   })
 }
 
-// Check for existence of file and add import
 function genSassVariableImport (file) {
   return `@import ${file}`
 }
