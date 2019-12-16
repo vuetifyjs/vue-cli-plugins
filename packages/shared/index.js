@@ -62,10 +62,7 @@ function generatePreset (api, preset, onCreateComplete) {
   api.onCreateComplete(() => {
     updateVuetifyObject(api, 'preset')
 
-    (
-      typeof onCreateComplete === 'function' &&
-      onCreateComplete()
-    )
+    typeof onCreateComplete === 'function' && onCreateComplete()
   })
 }
 
