@@ -1,7 +1,7 @@
 const {
   addHtmlLink,
   generatePreset,
-} = require('@vuetify/shared')
+} = require('@vuetify/cli-plugin-utils')
 
 module.exports = api => {
   generatePreset(

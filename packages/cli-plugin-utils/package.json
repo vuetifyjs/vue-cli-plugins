@@ -1,10 +1,9 @@
 {
-  "name": "@vuetify/shared",
+  "name": "@vuetify/cli-plugin-utils",
   "version": "1.0.0",
   "description": "Utility files",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
-  "private": true,
   "license": "MIT",
   "main": "index.js",
   "repository": {

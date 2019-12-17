@@ -17,6 +17,6 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "dependencies": {
-    "@vuetify/shared": "^1.0.0"
+    "@vuetify/cli-plugin-utils": "^1.0.0"
   }
 }
