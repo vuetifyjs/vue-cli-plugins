@@ -2,6 +2,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "private": true,
   "husky": {
     "hooks": {
       "pre-commit": "yarn lerna run test"
