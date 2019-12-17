@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-preset-crane",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Material Studies Crane Theme",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+
   },
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"

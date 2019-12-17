@@ -11,7 +11,7 @@
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+
   },
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
