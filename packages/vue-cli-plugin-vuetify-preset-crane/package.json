@@ -8,7 +8,8 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
+    "directory": "packages/vue-cli-plugin-vuetify-preset-crane"
   },
   "scripts": {},
   "bugs": {
