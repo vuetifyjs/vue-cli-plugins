@@ -1,6 +1,6 @@
 {
   "name": "@vuetify/cli-plugin-utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utility files",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
@@ -10,11 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
   },
-  "scripts": {
-
-  },
+  "scripts": {},
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
-  },
-  "devDependencies": {}
+  }
 }
