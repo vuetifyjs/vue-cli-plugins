@@ -8,9 +8,6 @@
       "pre-commit": "yarn lerna run test"
     }
   },
-  "dependencies": {
-    "shelljs": "^0.8.3"
-  },
   "devDependencies": {
     "husky": "^3.1.0",
     "lerna": "^3.19.0",
