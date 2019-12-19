@@ -17,6 +17,21 @@ function addHtmlLink (api, font) {
   })
 }
 
+function addFontLink (api, font) {
+  font = !Array.isArray(font) ? [font] : font
+
+  const url = font.map(str => {
+    const {
+      family = str,
+      weights = '100,300,400,500,700,900',
+    } = str.split(':')
+
+    return `${family}:${weights}`
+  }).join('|')
+
+  return addHtmlLink(api, `https://fonts.googleapis.com/css?family=${url}`)
+}
+
 function addSassVariables (api, file) {
   api.chainWebpack(config => {
     const modules = ['vue-modules', 'vue', 'normal-modules', 'normal']
@@ -160,6 +175,7 @@ function updateVuetifyObject (api, value) {
 
 module.exports = {
   addHtmlLink,
+  addFontLink,
   addSassVariables,
   bootstrapPreset,
   fileExists,

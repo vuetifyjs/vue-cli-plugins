@@ -1198,11 +1198,6 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vuetify/cli-plugin-utils@latest":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@vuetify/cli-plugin-utils/-/cli-plugin-utils-0.0.3.tgz#43d6d2cfac67d295e0727e7ce4788a4f20cdab3e"
-  integrity sha512-ujhyn8PfXBZtUpxODLLClIiUpkivExTKynP6fERIJtJhpDFLsLoWVO6wSjLuu2ywkpHSa/tdrdor3nZtuIXDtA==
-
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
