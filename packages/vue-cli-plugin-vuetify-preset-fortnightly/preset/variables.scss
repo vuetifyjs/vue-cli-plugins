@@ -1,0 +1,28 @@
+$merriweather-font-family: 'Merriweather', sans-serif;
+$border-radius-root: 0;
+$btn-font-weight: 700;
+$body-font-family: 'Libre Franklin', sans-serif;
+$icon-outlined-border-width: 2px;
+$headings: (
+  'h1': (
+    'font-family': $merriweather-font-family,
+    'weight': 900
+  ),
+  'h3': (
+    'font-family': $merriweather-font-family,
+    'weight': 900
+  ),
+  'h6': (
+    'font-family': $merriweather-font-family,
+    'weight': 700
+  ),
+  'subtitle-2': (
+    'font-family': $merriweather-font-family,
+  ),
+  'body-1': ('font-family': $merriweather-font-family),
+  'overline': ('weight': 700)
+);
+$material-light: ('background': #FFFFFF);
+
+@import '~vuetify/src/components/VBtn/_variables.scss';
+@import '~vuetify/src/components/VChip/_variables.scss';
