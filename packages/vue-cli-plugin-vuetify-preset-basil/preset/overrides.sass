@@ -1,34 +1,46 @@
-.v-image
-  border-radius: 16px
+@import './variables.scss'
 
-// Remove in v2.0.0-beta.2
-.v-tabs-bar
-  background-color: transparent !important
-  padding: 8px 0
+.theme--light
+  .v-card // remove after 2.2 release
+    box-shadow: none
 
-.v-tabs
-  .v-tabs-slider
-    background-color: transparent
-    border-radius: 24px
-    border: 2px solid currentColor
-    min-height: inherit
+  .v-image
+    border-radius: $basil-image-border-radius
 
-  .v-tabs-slider-wrapper
-    min-height: 100%
+  .v-navigation-drawer.v-navigation-drawer,
+  .v-toolbar.v-toolbar
+    background-color: map-get($material-light, 'background')
 
-    + .v-tab ~ .v-tab
-      margin-left: 16px
+  .v-tabs
+    &:not(.v-tabs--vertical)
+      .v-tabs-bar .v-tabs-slider-wrapper
+        max-height: 1px
 
-  .v-tab
-    &:before,
-    .v-ripple__container
-      border-radius: 24px
+      .v-tab
+        min-width: 0
+        padding: 0
 
-.v-text-field
-  // Remove in v2.0.0-beta.2
-  border-radius: 4px !important
+  .v-tabs--vertical
+    .v-tabs-slider
+      background-color: transparent
+      border-radius: 50%
+      border: 2px solid currentColor
 
-  .v-input__slot
-    &:before,
-    &:after
-      display: none
+    .v-tabs-slider-wrapper
+      border-radius: 50%
+      height: $basil-tabs-vertical-size
+      min-width: $basil-tabs-vertical-size
+      max-width: $basil-tabs-vertical-size
+
+    .v-tab
+      font-size: $basil-tab-font-size
+      min-width: 0
+      padding: $basil-tab-padding
+      min-height: $basil-tabs-vertical-size
+      max-height: $basil-tabs-vertical-size
+
+    .v-tab
+      &:before,
+      &:after,
+      .v-ripple__container
+        border-radius: 50%
