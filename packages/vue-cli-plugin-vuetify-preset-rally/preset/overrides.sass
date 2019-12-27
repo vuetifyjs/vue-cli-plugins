@@ -1,0 +1,25 @@
+@import './variables.scss'
+
+.theme--dark
+  .v-card.v-sheet,
+  .v-snack > .v-snack__wrapper
+    box-shadow: $rally-box-shadow
+
+  .v-card.v-sheet
+    > .v-card__text,
+    .v-card__subtitle
+      color: $rally-text-color
+
+  .v-tabs
+    .v-tabs-slider
+      background: $rally-tabs-slider-background
+
+    .v-tab.v-tab--active
+      color: $rally-text-color
+
+  .v-navigation-drawer.v-navigation-drawer,
+  .v-toolbar.v-toolbar
+    background-color: map-get($material-dark, 'background')
+
+  .v-dialog > .theme--dark.v-card.v-sheet
+    background-color: $rally-dialog-background-color
