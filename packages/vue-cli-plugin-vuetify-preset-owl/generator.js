@@ -5,6 +5,6 @@ const {
 
 module.exports = api => {
   generatePreset(api, 'owl', () => {
-    addFontLink(api, 'Rubik')
+    addFontLink(api, 'Rubik:400,500,700')
   })
 }
