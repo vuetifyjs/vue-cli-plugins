@@ -2,7 +2,7 @@ require('./overrides.sass')
 
 const preset = {
   theme: {
-    dark: true,
+    dark: false,
     themes: {
       dark: {
         primary: '#344955',

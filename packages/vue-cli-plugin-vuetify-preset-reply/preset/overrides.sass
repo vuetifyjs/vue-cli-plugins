@@ -1,3 +1,7 @@
-.v-bottom-sheet
-  > *
-    border-radius: 12px 12px 0 0 !important
+@import './variables.scss'
+
+.theme--light
+  .v-dialog.v-bottom-sheet
+    > *,
+    > .v-card
+      border-radius: $dialog-border-radius
