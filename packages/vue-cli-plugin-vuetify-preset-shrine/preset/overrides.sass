@@ -1,0 +1,57 @@
+@import './variables.scss'
+
+.theme--light
+  .v-chip.v-chip
+    border-radius: $shrine-chip-border-radius
+    border: $shrine-chip-border
+    font-weight: $shrine-chip-font-weight
+    padding: $shrine-chip-padding
+    +elevation(0)
+
+    &::before,
+    .v-ripple__container
+      display: none
+
+    &--active
+      border-color: $shrine-chip-active-border-color
+
+  .v-tab
+    &::before
+      display: none
+
+  .v-tabs-slider-wrapper
+    z-index: 0
+
+  .v-tabs-slider
+    background-color: transparent
+    border-color: $shrine-tabs-slider-border-color  transparent
+    border-style: solid
+    border-width: 0 16px 27px 16px
+    height: 0
+    margin-top: 8px
+    position: relative
+    width: 0
+    z-index: 0
+
+    &::before
+      background-color: transparent
+      border-color: $shrine-toolbar-background-color transparent
+      border-style: solid
+      border-width: 0 10px 18px 10px
+      content: ''
+      height: 0
+      margin-left: -10px
+      position: absolute
+      top: 6px
+      width: 0
+
+
+  .v-tabs-slider-wrapper
+    display: flex
+    justify-content: center
+    min-height: 100%
+
+  .v-sheet.v-toolbar,
+  .v-slide-group__content.v-tabs-bar__content
+    background-color: $shrine-toolbar-background-color
+    color: map-get($shades, 'black')
