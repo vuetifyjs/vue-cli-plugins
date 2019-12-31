@@ -1,10 +1,10 @@
 const {
-  addFontLink,
-  generatePreset,
+  injectGoogleFontLink,
+  VuetifyPresetGenerator,
 } = require('@vuetify/cli-plugin-utils')
 
 module.exports = api => {
-  generatePreset(api, 'crane', () => {
-    addFontLink(api, 'Raleway')
+  VuetifyPresetGenerator(api, 'crane', () => {
+    injectGoogleFontLink(api, 'Raleway')
   })
 }

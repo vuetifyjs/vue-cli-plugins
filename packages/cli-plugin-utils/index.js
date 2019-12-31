@@ -2,10 +2,11 @@
 const semver = require('semver')
 const fs = require('fs')
 
-function addHtmlLink (api, font) {
+// Injects a <link> element into ./public/index.html
+function injectHtmlLink (api, font, attrs) {
   updateFile(api, './public/index.html', lines => {
     const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
-    const link = `<link rel="stylesheet" href="${font}&display=swap">`
+    const link = `<link ${attrs} href="${font}&display=swap">`
 
     if (lines.join('').indexOf(link) > -1) {
       return lines.reverse()
@@ -17,7 +18,8 @@ function addHtmlLink (api, font) {
   })
 }
 
-function addFontLink (api, font) {
+// Injects a font <link> into ./public/index.html
+function injectGoogleFontLink (api, font) {
   font = !Array.isArray(font) ? [font] : font
 
   const url = font.map(str => {
@@ -29,13 +31,16 @@ function addFontLink (api, font) {
     return `${family}:${weights}`
   }).join('|')
 
-  return addHtmlLink(api, `https://fonts.googleapis.com/css?family=${url}`)
+  return injectHtmlLink(api, `https://fonts.googleapis.com/css?family=${url}`, 'rel="stylesheet"')
 }
 
-function addSassVariables (api, file) {
+// Injects target SASS variables file
+function injectSassVariables (
+  api,
+  file,
+  modules = ['vue-modules', 'vue', 'normal-modules', 'normal']
+) {
   api.chainWebpack(config => {
-    const modules = ['vue-modules', 'vue', 'normal-modules', 'normal']
-
     modules.forEach(match => {
       for (let i = 0; i < 2; i++) {
         const boolean = Boolean(i)
@@ -46,14 +51,10 @@ function addSassVariables (api, file) {
           .rule(rule)
           .oneOf(match)
           .use('sass-loader')
-          .tap(opt => setSassVariables(opt, `'${file}${end}`))
+          .tap(opt => mergeSassVariables(opt, `'${file}${end}`))
       }
     })
   })
-}
-
-function bootstrapPreset (api, preset) {
-  addSassVariables(api, `~vue-cli-plugin-vuetify-preset-${preset}/preset/variables.scss`)
 }
 
 function generatePreset (api, preset, onCreateComplete) {
@@ -67,22 +68,18 @@ function generatePreset (api, preset, onCreateComplete) {
   const plugin = api.resolve(file)
 
   if (!fs.existsSync(plugin)) {
-    console.warn('Unable to locate `vuetify.js` plugin file.')
+    console.warn('Unable to locate `vuetify.js` plugin file in `src/plugins`.')
 
     return
   }
 
-  api.injectImports(file, `import { preset } from 'vue-cli-plugin-vuetify-preset-${preset}/preset'`)
+  api.injectImports(file, `import { preset } from ${preset}`)
 
   api.onCreateComplete(() => {
     updateVuetifyObject(api, 'preset')
 
     typeof onCreateComplete === 'function' && onCreateComplete()
   })
-}
-
-function genSassVariableImport (file) {
-  return `@import ${file}`
 }
 
 // Check if file exists in user project
@@ -92,8 +89,8 @@ function fileExists (api, file) {
 
 // Create an import statement
 // to bootstrap a users variables
-function setSassVariables (opt, file) {
-  const variables = genSassVariableImport(file)
+function mergeSassVariables (opt, file) {
+  const variables = `@import ${file}`
 
   let sassLoaderVersion
   try {
@@ -107,17 +104,20 @@ function setSassVariables (opt, file) {
   return opt
 }
 
+// Update local file with supplied callback
 function updateFile (api, file, callback) {
+  const { EOL } = require('os')
   file = api.resolve(file)
   let content = fs.existsSync(file)
     ? fs.readFileSync(file, { encoding: 'utf8' })
     : ''
 
-  content = callback(content.split(/\r?\n/g)).join('\n')
+  content = callback(content.split(/\r?\n/g)).join(EOL)
 
-  fs.writeFileSync(file, content, { encoding: 'utf8' })
+  fs.writeFileSync(file, content, { encoding: 'utf-8' })
 }
 
+// Add new property to the Vuetify object
 function updateVuetifyObject (api, value) {
   updateFile(api, 'src/plugins/vuetify.js', content => {
     const existingValue = str => (
@@ -173,15 +173,24 @@ function updateVuetifyObject (api, value) {
   })
 }
 
+// Helper functions for Vuetify presets
+function VuetifyPresetService (api, preset) {
+  injectSassVariables(api, `~vue-cli-plugin-vuetify-preset-${preset}/preset/variables.scss`)
+}
+
+function VuetifyPresetGenerator (api, preset, onCreateComplete) {
+  generatePreset(api, `'vue-cli-plugin-vuetify-preset-${preset}/preset'`, onCreateComplete)
+}
+
 module.exports = {
-  addHtmlLink,
-  addFontLink,
-  addSassVariables,
-  bootstrapPreset,
   fileExists,
   generatePreset,
-  genSassVariableImport,
-  setSassVariables,
+  injectGoogleFontLink,
+  injectHtmlLink,
+  injectSassVariables,
+  mergeSassVariables,
   updateFile,
-  updateVuetifyObject
+  updateVuetifyObject,
+  VuetifyPresetGenerator,
+  VuetifyPresetService,
 }

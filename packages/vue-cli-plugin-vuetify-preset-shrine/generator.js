@@ -1,10 +1,10 @@
 const {
-  addFontLink,
-  generatePreset,
+  injectGoogleFontLink,
+  VuetifyPresetGenerator,
 } = require('@vuetify/cli-plugin-utils')
 
 module.exports = api => {
-  generatePreset(api, 'shrine', () => {
-    addFontLink(api, 'Rubik:300,400,500')
+  VuetifyPresetGenerator(api, 'shrine', () => {
+    injectGoogleFontLink(api, 'Rubik:300,400,500')
   })
 }

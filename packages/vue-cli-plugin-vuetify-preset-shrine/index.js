@@ -1,4 +1,4 @@
 // Imports
-const { bootstrapPreset } = require('@vuetify/cli-plugin-utils')
+const { VuetifyPresetService } = require('@vuetify/cli-plugin-utils')
 
-module.exports = api => bootstrapPreset(api, 'shrine')
+module.exports = api => VuetifyPresetService(api, 'shrine')
