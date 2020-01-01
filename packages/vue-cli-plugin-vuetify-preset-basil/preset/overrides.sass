@@ -4,9 +4,6 @@
   .v-card // remove after 2.2 release
     box-shadow: none
 
-  .v-image
-    border-radius: $basil-image-border-radius
-
   .v-navigation-drawer.v-navigation-drawer,
   .v-toolbar.v-toolbar
     background-color: map-get($material-light, 'background')
@@ -19,6 +16,11 @@
       .v-tab
         min-width: 0
         padding: 0
+        margin: 0 16px
+
+        &::before,
+        .v-ripple__container
+          display: none
 
   .v-tabs--vertical
     .v-tabs-slider
@@ -28,16 +30,14 @@
 
     .v-tabs-slider-wrapper
       border-radius: 50%
-      height: $basil-tabs-vertical-size
-      min-width: $basil-tabs-vertical-size
-      max-width: $basil-tabs-vertical-size
+      min-height: $basil-tabs-slider-wrapper-min-height
+      min-width: $basil-tabs-slider-wrapper-min-width
 
     .v-tab
       font-size: $basil-tab-font-size
       min-width: 0
       padding: $basil-tab-padding
-      min-height: $basil-tabs-vertical-size
-      max-height: $basil-tabs-vertical-size
+      width: $basil-tabs-tab-width
 
     .v-tab
       &:before,
