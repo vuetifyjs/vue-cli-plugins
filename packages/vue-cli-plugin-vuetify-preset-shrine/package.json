@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-preset-shrine",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Material Studies Shrine Theme",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
@@ -15,6 +15,6 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "devDependencies": {
-    "@vuetify/cli-plugin-utils": "^0.0.3"
+    "@vuetify/cli-plugin-utils": "^0.0.4"
   }
 }
