@@ -2,12 +2,13 @@
 
 // Basil specific variables
 $basil-font-size: 16;
-$basil-image-border-radius: 16px;
 $basil-tab-font-size: 1rem;
 $basil-tab-padding: 0 10px;
 $basil-tabs-slider-border-radius: 24px;
 $basil-tabs-slider-border-width: 2px;
-$basil-tabs-vertical-size: 40px;
+$basil-tabs-slider-wrapper-min-height: 40px;
+$basil-tabs-slider-wrapper-min-width: 100%;
+$basil-tabs-tab-width: 100%;
 
 // Preset variables
 $body-font-family: 'Montserrat', sans-serif;
@@ -93,7 +94,7 @@ $headings: (
 );
 $material-light: (
   'status-bar': (
-    'regular': #B9E4C9
+    'regular': #ECE9D5
   ),
   'background': #FFFBE6,
   'cards': rgba(185, 228, 201, .1),
@@ -102,6 +103,6 @@ $material-light: (
   )
 );
 $tabs-bar-background-color: transparent;
-$tabs-bar-height: 32px;
-$tabs-item-vertical-height: 36px;
+$tabs-bar-height: 22px;
+$tabs-item-vertical-height: 40px;
 $tabs-item-letter-spacing: 0;
