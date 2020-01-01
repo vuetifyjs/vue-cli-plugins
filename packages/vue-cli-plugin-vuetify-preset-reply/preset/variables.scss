@@ -1,0 +1,93 @@
+@import '~vuetify/src/styles/styles.sass';
+
+// Reply specific variables
+$reply-font-size: 16;
+
+// Preset variables
+$body-font-family: 'Work Sans', sans-serif;
+$btn-font-weight: 500;
+$card-border-radius: 0;
+$dialog-border-radius: 12px 12px 0 0;
+$headings: (
+  'h1':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{96 / $reply-font-size}rem,
+    'weight': 300
+  ),
+  'h2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{60 / $reply-font-size}rem,
+    'weight': 600
+  ),
+  'h3':(
+    'font-family': $heading-font-family,
+    'letter-spacing': initial,
+    'size': #{48 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'h4':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{34 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'h5':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{24 / $reply-font-size}rem,
+    'weight': 700
+  ),
+  'h6':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{20 / $reply-font-size}rem,
+    'weight': 500
+  ),
+  'subtitle-1':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{16 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'subtitle-2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{14 / $reply-font-size}rem,
+    'weight': 500
+  ),
+  'body-1':(
+    'font-family': $heading-font-family,
+    'letter-spacing': initial,
+    'size': #{18 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'body-2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{14 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'caption':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{12 / $reply-font-size}rem,
+    'weight': 400
+  ),
+  'overline':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{12 / $reply-font-size}rem,
+    'weight': 600
+  )
+);
+$material-dark: (
+  'status-bar': (
+    'regular': #27272f
+  ),
+  'background': #33333d,
+  'cards': #373740,
+  'dividers': #33333d,
+  'tabs': rgba(255, 255, 255, .3)
+);

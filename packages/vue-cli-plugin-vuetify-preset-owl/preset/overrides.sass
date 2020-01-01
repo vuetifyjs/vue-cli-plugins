@@ -1,0 +1,102 @@
+@import './variables.scss'
+
+.v-btn.v-btn--fab.v-btn--fab
+  &.v-btn--right
+    right: 0
+
+  &.v-btn--left
+    left: 0
+
+  &.v-btn--top
+    top: 0
+
+  &.v-btn--bottom
+    bottom: 0
+
+  &.v-btn--right.v-btn--bottom
+    +ltr()
+      border-radius: #{$owl-btn-border-radius} 0 0 0
+
+    +rtl()
+      border-radius: 0 #{$owl-btn-border-radius} 0 0
+
+  &.v-btn--right.v-btn--top
+    +ltr()
+      border-radius: 0 0 0 #{$owl-btn-border-radius}
+
+    +rtl()
+      border-radius: 0 0 #{$owl-btn-border-radius} 0
+
+  &.v-btn--left.v-btn--bottom
+    +ltr()
+      border-radius: 0 #{$owl-btn-border-radius} 0 0
+
+    +rtl()
+      border-radius: #{$owl-btn-border-radius} 0 0 0
+
+  &.v-btn--right.v-btn--top
+    +ltr()
+      border-radius: 0 0 #{$owl-btn-border-radius} 0
+
+    +rtl()
+      border-radius: 0 0 0 #{$owl-btn-border-radius}
+
+  .v-ripple__container,
+  .v-ripple__container .v-ripple__animation
+    border-radius: inherit
+
+.v-navigation-drawer--temporary.v-navigation-drawer--right
+  +ltr()
+    border-radius: #{$owl-drawer-border-radius} 0 0 #{$owl-drawer-border-radius}
+
+  +rtl()
+    border-radius: 0 #{$owl-drawer-border-radius} #{$owl-drawer-border-radius} 0
+
+.v-chip.v-chip--clickable
+  min-height: 80px
+  padding: 0
+  transition: $primary-transition
+  +elevation(4)
+
+  &:not(:focus)::before
+    display: none
+
+  &:not(.v-chip--active)
+    background-color: transparent !important
+
+    .v-image
+      opacity: 0
+      transform: translateX(calc(-100% + 12px))
+
+  &:not(.v-chip--label)
+    +ltr()
+      border-radius: #{$owl-chip-border-radius} 0 0 0
+
+    +rtl()
+      border-radius: 0 0 #{$owl-chip-border-radius} 0
+
+  .v-chip__content
+    color: initial
+    transition: $primary-transition
+
+    > *:not(.v-icon)
+      background-color: #FFFFFF !important
+      padding: 24px
+
+    > .v-icon
+      background-color: inherit
+      border-radius: inherit
+      color: black
+      height: 100%
+      max-width: 80px
+      transition: inherit
+      width: 80px
+
+  .v-image
+    bottom: 0
+    left: 0
+    opacity: .2
+    position: absolute
+    top: 0
+    transition: inherit
+    width: 80px

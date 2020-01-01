@@ -1,0 +1,97 @@
+@import '~vuetify/src/styles/styles.sass';
+
+// Owl specific variables
+$owl-btn-border-radius: 50%;
+$owl-chip-border-radius: 16px;
+$owl-drawer-border-radius: 16px;
+$owl-font-size: 16;
+
+// Preset variables
+$body-font-family: 'Rubik', sans-serif;
+$btn-font-weight: 700;
+$chip-icon-margin-after: 0;
+$chip-icon-margin-before: 0;
+$chip-icon-size: 26px;
+$chip-label-border-radius: 0;
+$chip-transition-duration: initial;
+$chip-transition-fn: map-get($transition, 'swing');
+$chip-white-space: initial;
+$headings: (
+  'h1':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{96 / $owl-font-size}rem,
+    'weight': 700
+  ),
+  'h2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{60 / $owl-font-size}rem,
+    'weight': 700
+  ),
+  'h3':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{48 / $owl-font-size}rem,
+    'weight': 700
+  ),
+  'h4':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{34 / $owl-font-size}rem,
+    'weight': 700
+  ),
+  'h5':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{24 / $owl-font-size}rem,
+    'weight': 700
+  ),
+  'h6':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{20 / $owl-font-size}rem,
+    'weight': 500
+  ),
+  'subtitle-1':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{16 / $owl-font-size}rem,
+    'weight': 500
+  ),
+  'subtitle-2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{14 / $owl-font-size}rem,
+    'weight': 400
+  ),
+  'body-1':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{16 / $owl-font-size}rem,
+    'weight': 400
+  ),
+  'body-2':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{14 / $owl-font-size}rem,
+    'weight': 400
+  ),
+  'caption':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{12 / $owl-font-size}rem,
+    'weight': 400
+  ),
+  'overline':(
+    'font-family': $body-font-family,
+    'letter-spacing': initial,
+    'size': #{10 / $owl-font-size}rem,
+    'weight': 400
+  )
+);
+$heading-font-family: 'Rubik', sans-serif;
+$material-light: (
+  'chips': #FFFFFF
+);
+$sheet-border-radius: 0;

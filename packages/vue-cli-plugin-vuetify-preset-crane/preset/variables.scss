@@ -1,0 +1,26 @@
+$body-font-family: 'Raleway', sans-serif;
+$card-border-radius: 16px;
+$tabs-bar-height: 52px;
+$tabs-item-min-width: 82px;
+$text-field-filled-border-radius: 4px;
+$text-field-filled-full-width-outlined-slot-min-height: 48px;
+$text-field-outlined-fieldset-border-width: 2px;
+$text-field-enclosed-prepend-append-margin-top: 12px;
+$headings: (
+  'h2': ('weight': 500),
+  'h3': ('weight': 600),
+  'h4': ('weight': 600),
+  'h5': ('weight': 500),
+  'h6': ('weight': 600),
+  'subtitle-2': ('weight': 600),
+  'body-1': ('weight': 600),
+  'body-2': ('weight': 600),
+  'caption': ('weight': 500),
+  'overline': (
+    'size': .75rem,
+    'weight': 600
+  )
+);
+$material-light: (
+  'text-fields': ('outlined': rgba(0, 0, 0, 0.12))
+);

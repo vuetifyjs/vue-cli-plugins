@@ -1,0 +1,55 @@
+.theme--light
+  .display-4,
+  .display-2,
+  .title,
+  .caption
+    font-style: $fortnightly-heading-font-style
+
+  .v-btn.v-btn--contained,
+  .v-card
+    box-shadow: none
+
+  .v-chip.v-chip
+    border-radius: 0
+    border-style: solid
+    border-width: thin
+
+  .v-stepper.v-stepper--vertical
+    .v-stepper__content
+      border-left-color: transparent !important
+      margin-bottom: 16px
+      padding-bottom: 0
+
+    .v-stepper__step,
+    .v-stepper__step + .v-stepper__content
+      border-left-style: solid
+      border-left-width: medium !important
+      margin-left: 36px
+
+    .v-stepper__step
+      border-left-color: rgba(0, 0, 0, .38)
+      border-left-style: solid
+      padding: 8px 16px
+
+      &--active,
+      &--active + .v-stepper__content
+        border-left-color: $fortnightly-primary-color !important
+
+      &--active
+        .v-stepper__label
+          color: $fortnightly-primary-color
+
+        .v-stepper__step__step
+          color: $fortnightly-primary-color !important
+
+      &__step,
+      .v-stepper__label
+        font-size: 1.3rem
+        font-weight: 700
+
+      &__step
+        background-color: transparent !important
+        color: rgba(0, 0, 0, .38) !important
+
+      &:first-child
+        padding-top: 0
