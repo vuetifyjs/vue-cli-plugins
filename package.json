@@ -3,6 +3,9 @@
     "packages/*"
   ],
   "private": true,
+  "scripts": {
+    "release": "lerna publish from-git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lerna run test"
