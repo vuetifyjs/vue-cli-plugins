@@ -14,6 +14,19 @@
   <tbody>
     <tr>
       <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify">@vuetify/cli-plugin-utils</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/@vuetify/cli-plugin-utils">
+          <img src="https://img.shields.io/npm/v/@vuetify/cli-plugin-utils.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+       A collection of helper utilities for creating Vue CLI plugins
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify">vue-cli-plugin-vuetify</a>
       </td>
       <td>
@@ -22,7 +35,7 @@
         </a>
       </td>
       <td>
-       A Vue CLI 3 plugin for installing and configuring Vuetify
+       A Vue CLI plugin for installing and configuring Vuetify
       </td>
     </tr>
     <tr>
