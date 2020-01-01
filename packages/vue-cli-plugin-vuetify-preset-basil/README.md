@@ -8,10 +8,12 @@
 vue add vuetify-preset-basil
 ```
 
+### 🕶 Preview
+![image](https://user-images.githubusercontent.com/9064066/71647028-2387e500-2cb6-11ea-8863-75c5e2effb9a.png)
+
 ### ⚡ Features
 This is an overview of the changes that were made to support the Basil study and may not include details about every modification made; e.g. custom fonts and colors, removed border radius, etc. For a detailed outline of the specification, visit the [Basil study page](https://material.io/design/material-studies/basil.html#) .
 
-##### Supported
 * `v-btn`
   * increased font-weight
   * increased icon sizes
