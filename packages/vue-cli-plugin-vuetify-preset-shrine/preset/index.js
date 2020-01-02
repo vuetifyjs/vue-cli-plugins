@@ -4,7 +4,7 @@ const preset = {
   theme: {
     dark: false,
     themes: {
-      dark: {
+      light: {
         primary: '#FEDBD0',
         secondary: '#FEEAE6',
         accent: '#442C2E',
