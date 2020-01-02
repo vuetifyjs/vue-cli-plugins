@@ -92,6 +92,10 @@ $headings: (
 );
 $heading-font-family: 'Rubik', sans-serif;
 $material-light: (
+  'background': #FFDF00,
+  'status-bar': (
+    'regular': #FFC000
+  ),
   'chips': #FFFFFF
 );
 $sheet-border-radius: 0;
