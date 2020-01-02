@@ -1,7 +1,19 @@
 @import './variables.scss'
 
 .theme--light
-  .v-dialog.v-bottom-sheet
-    > *,
-    > .v-card
-      border-radius: $dialog-border-radius
+  // Remove after v2.2 release
+  .v-card.v-sheet
+    +elevation(0)
+
+  .v-btn.v-btn--fab
+    &.v-btn--absolute,
+    &.v-btn--fixed
+      +elevation(1)
+
+  .v-bottom-sheet.v-dialog
+    border-radius: $dialog-border-radius
+    box-shadow: none
+
+    > *:only-child
+      border-radius: inherit
+      box-shadow: none

@@ -7,6 +7,7 @@ $reply-font-size: 16;
 $body-font-family: 'Work Sans', sans-serif;
 $btn-font-weight: 500;
 $card-border-radius: 0;
+$card-elevation: 0;
 $dialog-border-radius: 12px 12px 0 0;
 $headings: (
   'h1':(
@@ -82,12 +83,9 @@ $headings: (
     'weight': 600
   )
 );
-$material-dark: (
+$material-light: (
   'status-bar': (
-    'regular': #27272f
+    'regular': #D2DBE0
   ),
-  'background': #33333d,
-  'cards': #373740,
-  'dividers': #33333d,
-  'tabs': rgba(255, 255, 255, .3)
+  'background': #FFFFFF,
 );
