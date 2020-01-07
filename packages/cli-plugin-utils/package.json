@@ -3,16 +3,16 @@
   "version": "0.0.4",
   "description": "Utility files",
   "author": "John Leider <john@vuetifyjs.com>",
-  "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
+  "homepage": "https://github.com/vuetifyjs/vue-cli-plugins#readme",
   "license": "MIT",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugins.git",
     "directory": "packages/cli-plugin-utils"
   },
   "scripts": {},
   "bugs": {
-    "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
+    "url": "https://github.com/vuetifyjs/vue-cli-plugins/issues"
   }
 }

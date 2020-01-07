@@ -14,7 +14,7 @@
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify">@vuetify/cli-plugin-utils</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/cli-plugin-utils">@vuetify/cli-plugin-utils</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/@vuetify/cli-plugin-utils">
@@ -22,20 +22,33 @@
         </a>
       </td>
       <td>
-       A collection of helper utilities for creating Vue CLI plugins
+        A collection of helper utilities for creating Vue CLI plugins
       </td>
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify">vue-cli-plugin-vuetify</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify-cli">vue-cli-plugin-vuetify-cli</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify.svg" alt="Version">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-cli">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-cli.svg" alt="Version">
         </a>
       </td>
       <td>
-       A Vue CLI plugin for installing and configuring Vuetify
+        A Vue CLI plugin for scaffolding Vue applications
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify-essentials">vue-cli-plugin-vuetify-essentials</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-essentials">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-essentials.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        A supplementary Vue CLI plugin used by <a href="https:/github.com/vuetifyjs.com/vue-cli-preset-vuetify">vue-cli-preset-vuetify</a>
       </td>
     </tr>
     <tr>
@@ -43,12 +56,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-basil.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/basil.html">Basil Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/basil.html">Basil Material Study</a>
       </td>
     </tr>
     <tr>
@@ -56,12 +69,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-crane">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-crane.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/crane.html">Crane Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/crane.html">Crane Material Study</a>
       </td>
     </tr>
     <tr>
@@ -69,12 +82,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-fortnightly">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-fortnightly.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly Material Study</a>
       </td>
     </tr>
     <tr>
@@ -82,12 +95,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-owl">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-owl.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/owl.html">Owl Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/owl.html">Owl Material Study</a>
       </td>
     </tr>
     <tr>
@@ -95,12 +108,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-rally">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-rally.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/rally.html">Rally Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/rally.html">Rally Material Study</a>
       </td>
     </tr>
     <tr>
@@ -108,12 +121,12 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-reply">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-reply.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/reply.html">Reply Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/reply.html">Reply Material Study</a>
       </td>
     </tr>
     <tr>
@@ -121,12 +134,38 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-shrine">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-shrine.svg" alt="Version">
         </a>
       </td>
       <td>
-      A Vuetify Preset for the <a href="https://material.io/design/material-studies/shrine.html">Shrine Material Study</a>
+        A Vuetify Preset for the <a href="https://material.io/design/material-studies/shrine.html">Shrine Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify-storybook">vue-cli-plugin-vuetify-storybook</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-storybook">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-storybook.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        A Vue CLI plugin for using Storybook w/ Vuetify
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify">vue-cli-plugin-vuetify</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        A Vue CLI plugin for installing and configuring Vuetify
       </td>
     </tr>
   </tbody>
