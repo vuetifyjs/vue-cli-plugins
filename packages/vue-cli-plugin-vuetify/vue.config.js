@@ -4,8 +4,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        'vue$': path.resolve('./node_modules/vue/dist/vue.common.js')
-      }
-    }
-  }
+        vue$: path.resolve('./node_modules/vue/dist/vue.common.js'),
+      },
+    },
+  },
 }

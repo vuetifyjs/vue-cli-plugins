@@ -4,7 +4,7 @@ const resolve = file => path.resolve(__dirname, file)
 
 const PRESET_MAP = {
   default: 'Default (recommended)',
-  prototype: 'Prototype (rapid development)'
+  prototype: 'Prototype (rapid development)',
 }
 
 module.exports = fs.readdirSync(resolve('../presets')).map(preset => {

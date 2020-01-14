@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ."
+  },
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },

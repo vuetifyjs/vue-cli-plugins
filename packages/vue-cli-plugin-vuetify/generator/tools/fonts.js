@@ -34,7 +34,7 @@ const fonts = {
     },
     import: 'roboto-fontface/css/roboto/roboto-fontface.css',
     link: '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">',
-  }
+  },
 }
 
 function addDependencies (api, iconFont) {
@@ -42,7 +42,7 @@ function addDependencies (api, iconFont) {
     dependencies: {
       ...fonts.roboto.package,
       ...fonts[iconFont].package,
-    }
+    },
   })
 }
 
@@ -55,7 +55,7 @@ function addLinks (api, iconFont) {
   helpers.updateFile(api, './public/index.html', lines => {
     const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
 
-    lines.splice(lastLink + 1, 0, `    ${fonts['roboto'].link}`)
+    lines.splice(lastLink + 1, 0, `    ${fonts.roboto.link}`)
     lines.splice(lastLink + 1, 0, `    ${fonts[iconFont].link}`)
 
     return lines.reverse()

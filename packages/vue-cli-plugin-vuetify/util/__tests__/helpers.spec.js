@@ -5,7 +5,7 @@ jest.mock('fs')
 
 describe('helpers.js', () => {
   const api = {
-    resolve: val => val
+    resolve: val => val,
   }
 
   afterEach(() => {

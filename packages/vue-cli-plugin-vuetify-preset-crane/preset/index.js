@@ -6,10 +6,10 @@ const preset = {
       light: {
         primary: '#356859',
         secondary: '#FD5523',
-        accent: '#B9E4C9'
-      }
-    }
-  }
+        accent: '#B9E4C9',
+      },
+    },
+  },
 }
 
 module.exports = { preset }

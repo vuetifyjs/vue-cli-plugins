@@ -7,7 +7,7 @@ module.exports = (api) => {
 
   const hasVuetifyLoader = Boolean(
     devDependencies['vuetify-loader'] ||
-    dependencies['vuetify-loader']
+    dependencies['vuetify-loader'],
   )
 
   if (hasVuetifyLoader) {

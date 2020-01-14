@@ -4,8 +4,8 @@ const fs = require('fs')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      "@babel/polyfill": "^7.4.4",
-    }
+      '@babel/polyfill': '^7.4.4',
+    },
   })
 }
 
@@ -19,13 +19,13 @@ function updateBabelConfig (api) {
     if (vuePresetIndex < 0) return cfg
 
     if (isArray) {
-      cfg.presets[vuePresetIndex][1]['useBuiltIns'] = 'entry'
+      cfg.presets[vuePresetIndex][1].useBuiltIns = 'entry'
     } else {
       cfg.presets[vuePresetIndex] = [
         '@vue/app',
         {
-          useBuiltIns: 'entry'
-        }
+          useBuiltIns: 'entry',
+        },
       ]
     }
 
@@ -52,7 +52,7 @@ function updateBrowsersList (api) {
     fs.writeFileSync(
       pkgPath,
       JSON.stringify(pkg, null, 2),
-      { encoding: 'utf8' }
+      { encoding: 'utf8' },
     )
   } else {
     helpers.updateFile(api, './.browserslistrc', lines => {
@@ -77,7 +77,7 @@ function updateBrowsersList (api) {
 }
 
 function addImports (api) {
-  api.injectImports(api.entryFile, `import '@babel/polyfill'`)
+  api.injectImports(api.entryFile, 'import \'@babel/polyfill\'')
 }
 
 module.exports = {

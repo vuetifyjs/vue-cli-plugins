@@ -1,6 +1,3 @@
-// Imports
-const shell = require('shelljs')
-
 module.exports = (api, opts) => {
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')

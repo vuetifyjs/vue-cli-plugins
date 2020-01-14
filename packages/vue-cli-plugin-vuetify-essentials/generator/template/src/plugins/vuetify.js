@@ -27,7 +27,7 @@ export default new Vuetify({
       mdiMenu,
       mdiMonitorCellphone,
       mdiMonitorDashboard,
-      mdiVuetify
+      mdiVuetify,
     },
   },
   theme: {

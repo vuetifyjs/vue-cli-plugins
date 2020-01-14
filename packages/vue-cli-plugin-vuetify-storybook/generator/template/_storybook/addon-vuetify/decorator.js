@@ -22,7 +22,7 @@ export default makeDecorator({
     const rtl = searchParams.get('eyes-variation') === 'rtl'
     const vuetify = new Vuetify(deepmerge({
       rtl,
-      theme: { dark }
+      theme: { dark },
     }, parameters))
     const WrappedComponent = storyFn(context)
 
@@ -35,7 +35,7 @@ export default makeDecorator({
             <wrapped-component />
           </v-container>
         </v-app>
-      `
+      `,
     })
-  }
+  },
 })
