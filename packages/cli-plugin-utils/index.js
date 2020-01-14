@@ -3,10 +3,10 @@ const semver = require('semver')
 const fs = require('fs')
 
 // Injects a <link> element into ./public/index.html
-function injectHtmlLink (api, font, attrs) {
+function injectHtmlLink (api, href, attrs) {
   updateFile(api, './public/index.html', lines => {
     const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
-    const link = `<link ${attrs} href="${font}&display=swap">`
+    const link = `<link ${attrs} href="${href}">`
 
     if (lines.join('').indexOf(link) > -1) {
       return lines.reverse()
@@ -25,13 +25,13 @@ function injectGoogleFontLink (api, font) {
   const url = font.map(str => {
     const {
       family = str,
-      weights = '100,300,400,500,700,900',
+      weights = '100,300,400,500,700,900'
     } = str.split(':')
 
     return `${family}:${weights}`
   }).join('|')
 
-  return injectHtmlLink(api, `https://fonts.googleapis.com/css?family=${url}`, 'rel="stylesheet"')
+  return injectHtmlLink(api, `https://fonts.googleapis.com/css?family=${url}&display=swap`, 'rel="stylesheet"')
 }
 
 // Injects target SASS variables file
@@ -192,5 +192,5 @@ module.exports = {
   updateFile,
   updateVuetifyObject,
   VuetifyPresetGenerator,
-  VuetifyPresetService,
+  VuetifyPresetService
 }

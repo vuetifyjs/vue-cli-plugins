@@ -11,7 +11,9 @@
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugins.git",
     "directory": "packages/cli-plugin-utils"
   },
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ."
+  },
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugins/issues"
   }
