@@ -14,7 +14,7 @@ const LOCALE_MAP = {
   he: 'Hebrew',
   hu: 'Hungary',
   it: 'Italy',
-  id: "Indonesian",
+  id: 'Indonesian',
   ja: 'Japanese',
   ko: 'Korean',
   lv: 'Latvian',
@@ -32,12 +32,12 @@ const LOCALE_MAP = {
   tr: 'Turkish',
   uk: 'Ukrainian',
   'zh-Hans': 'Chinese (simplified)',
-  'zh-Hant': 'Chinese (traditional)'
+  'zh-Hant': 'Chinese (traditional)',
 }
 
 module.exports = Object.keys(LOCALE_MAP).map(key => {
   return {
     name: LOCALE_MAP[key],
-    value: key
+    value: key,
   }
 }).sort()

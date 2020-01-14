@@ -6,35 +6,35 @@ module.exports = api => {
   api.extendPackage({
     devDependencies: {
       '@mdi/js': '*',
-      'axios': '*',
+      axios: '*',
       'eslint-config-vuetify': '*',
       'vue-analytics': '*',
       'vue-meta': '*',
       'vuex-pathify': '*',
       'vuex-router-sync': '*',
-      'webfontloader': '*',
-      "lodash": "*",
+      webfontloader: '*',
+      lodash: '*',
     },
     eslintConfig: {
       env: { jest: true },
-      extends: 'vuetify'
+      extends: 'vuetify',
     },
     jest: {
       setupFiles: [
-        '<rootDir>/tests/index.js'
-      ]
-    }
+        '<rootDir>/tests/index.js',
+      ],
+    },
   })
 
-  api.injectImports(api.entryFile, `import './plugins'`)
+  api.injectImports(api.entryFile, 'import \'./plugins\'')
 
   api.onCreateComplete(() => {
     const packagePath = api.resolve('package.json')
-    const package = require(packagePath)
+    const projectPackage = require(packagePath)
 
-    package.scripts.deploy = 'yarn build && now'
+    projectPackage.scripts.deploy = 'yarn build && now'
 
-    fs.writeFileSync(packagePath, JSON.stringify(package, null, 2))
+    fs.writeFileSync(packagePath, JSON.stringify(projectPackage, null, 2))
 
     try {
       fs.unlinkSync(api.resolve('src/views/About.vue'))

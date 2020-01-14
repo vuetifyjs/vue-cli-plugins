@@ -5,7 +5,9 @@
   "main": "index.js",
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
-  "devDependencies": {},
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ."
+  },
   "dependencies": {
     "lodash": "^4.17.15"
   }

@@ -5,8 +5,8 @@ const helpers = require('./helpers')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      vuetify: "^2.1.0"
-    }
+      vuetify: '^2.1.0',
+    },
   })
 }
 
@@ -15,10 +15,10 @@ function renderFiles (api, { opts }) {
   const pluginFilename = `vuetify.${ext}`
 
   api.render({
-    [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js'
+    [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js',
   }, {
     ...opts,
-    typescript: api.hasPlugin('typescript')
+    typescript: api.hasPlugin('typescript'),
   })
 
   // Render files if we're replacing
@@ -30,7 +30,7 @@ function renderFiles (api, { opts }) {
     const files = {
       './src/App.vue': `../templates/default/src/App.${ext}.vue`,
       './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
-      './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`
+      './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`,
     }
 
     if (opts.router) {
@@ -42,7 +42,7 @@ function renderFiles (api, { opts }) {
 }
 
 function addImports (api) {
-  api.injectImports(api.entryFile, `import vuetify from './plugins/vuetify';`)
+  api.injectImports(api.entryFile, 'import vuetify from \'./plugins/vuetify\';')
   api.injectRootOptions(api.entryFile, 'vuetify')
 }
 

@@ -5,7 +5,7 @@ module.exports = async ({ config }) => {
 
   config.module.rules.push({
     resourceQuery: /blockType=story/,
-    loader: 'vue-storybook'
+    loader: 'vue-storybook',
   })
 
   config.module.rules.push({

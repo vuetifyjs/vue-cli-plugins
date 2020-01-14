@@ -9,7 +9,7 @@ export const storyFactory = (components) => {
 
     return {
       components,
-      ...opts
+      ...opts,
     }
   }
 }

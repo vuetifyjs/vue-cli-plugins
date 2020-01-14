@@ -25,7 +25,7 @@ function updateBabelConfig (api, callback) {
     fs.writeFileSync(
       configPath,
       `${moduleExports}${JSON.stringify(config, null, 2)}`,
-      { encoding: 'utf8' }
+      { encoding: 'utf8' },
     )
   } else {
     // TODO: handle if babel config doesn't exist

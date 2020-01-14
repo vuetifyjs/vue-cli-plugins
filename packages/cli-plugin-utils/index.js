@@ -25,7 +25,7 @@ function injectGoogleFontLink (api, font) {
   const url = font.map(str => {
     const {
       family = str,
-      weights = '100,300,400,500,700,900'
+      weights = '100,300,400,500,700,900',
     } = str.split(':')
 
     return `${family}:${weights}`
@@ -38,7 +38,7 @@ function injectGoogleFontLink (api, font) {
 function injectSassVariables (
   api,
   file,
-  modules = ['vue-modules', 'vue', 'normal-modules', 'normal']
+  modules = ['vue-modules', 'vue', 'normal-modules', 'normal'],
 ) {
   api.chainWebpack(config => {
     modules.forEach(match => {
@@ -192,5 +192,5 @@ module.exports = {
   updateFile,
   updateVuetifyObject,
   VuetifyPresetGenerator,
-  VuetifyPresetService
+  VuetifyPresetService,
 }

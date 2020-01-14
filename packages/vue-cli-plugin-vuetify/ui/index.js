@@ -20,7 +20,7 @@ module.exports = api => {
           default: 'en',
           link: 'https://vuetifyjs.com/customization/internationalization',
           type: 'list',
-          choices: locales
+          choices: locales,
         },
         {
           name: 'theme',
@@ -28,56 +28,56 @@ module.exports = api => {
           description: 'Specify custom theme values',
           default: false,
           link: 'https://vuetifyjs.com/customization/theme',
-          type: 'confirm'
+          type: 'confirm',
         },
         {
           name: 'theme-primary',
           message: 'Primary color',
           default: '#1976D2',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-secondary',
           message: 'Secondary color',
           default: '#424242',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-accent',
           message: 'Accent color',
           default: '#82B1FF',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-success',
           message: 'Success color',
           default: '#4CAF50',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-info',
           message: 'Info color',
           default: '#2196F3',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-warning',
           message: 'Warning color',
           default: '#FFC107',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'theme-error',
           message: 'Error color',
           default: '#FF5252',
           type: 'input',
-          when: answers => answers.theme
+          when: answers => answers.theme,
         },
         {
           name: 'custom-properties',
@@ -85,7 +85,7 @@ module.exports = api => {
           description: 'Create css variables from defined theme',
           default: false,
           link: 'https://vuetifyjs.com/customization/theme#options',
-          type: 'confirm'
+          type: 'confirm',
         },
         {
           name: 'icons',
@@ -94,7 +94,7 @@ module.exports = api => {
           default: 'mdi',
           link: 'https://vuetifyjs.com/customization/icons#using-custom-icons',
           type: 'list',
-          choices: iconfonts
+          choices: iconfonts,
         },
         {
           name: 'rtl',
@@ -102,9 +102,9 @@ module.exports = api => {
           description: 'Enable Right to Left support',
           default: false,
           link: 'https://vuetifyjs.com/customization/rtl',
-          type: 'confirm'
-        }
-      ]
+          type: 'confirm',
+        },
+      ],
     }),
     onWrite: ({
       prompts,
@@ -112,9 +112,9 @@ module.exports = api => {
       data,
       files,
       cwd,
-      api
+      api,
     }) => {
       //
-    }
+    },
   })
 }

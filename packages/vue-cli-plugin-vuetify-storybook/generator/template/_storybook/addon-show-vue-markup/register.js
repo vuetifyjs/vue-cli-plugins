@@ -11,13 +11,13 @@ export const EVENT_ID = `${ADDON_ID}/markup`
 class MarkupPanel extends React.Component {
   state = { markup: '' }
 
-  componentDidMount() {
+  componentDidMount () {
     const { channel } = this.props
 
     channel.on(EVENT_ID, this.onStoryChange)
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     const { channel } = this.props
 
     channel.off(EVENT_ID, this.onStoryChange)
@@ -27,7 +27,7 @@ class MarkupPanel extends React.Component {
     this.setState({ markup })
   }
 
-  render() {
+  render () {
     const { markup } = this.state
     const { active } = this.props
 
@@ -38,13 +38,13 @@ class MarkupPanel extends React.Component {
       children: ({ className, style, tokens, getLineProps, getTokenProps }) => {
         return createElement('pre', {
           className,
-          style
+          style,
         }, tokens.map((line, i) => createElement('div', {
-          ...getLineProps({ line, key: i })
+          ...getLineProps({ line, key: i }),
         }, line.map((token, key) => createElement('span', {
-          ...getTokenProps({ token, key})
+          ...getTokenProps({ token, key }),
         })))))
-      }
+      },
     }) : null
   }
 }
@@ -55,6 +55,6 @@ addons.register(ADDON_ID, () => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
     title: 'Markup',
-    render: ({ active, key }) => createElement(MarkupPanel, { active, key, channel })
+    render: ({ active, key }) => createElement(MarkupPanel, { active, key, channel }),
   })
 })

@@ -4,6 +4,7 @@
   ],
   "private": true,
   "scripts": {
+    "lint": "lerna run lint -- --fix",
     "release": "lerna publish from-git"
   },
   "husky": {
@@ -12,11 +13,22 @@
     }
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-vuetify": "^0.4.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.1.2",
     "husky": "^3.1.0",
     "lerna": "^3.19.0",
     "lerna-changelog": "^0.8.3",
     "semver": "^6.3.0",
     "vue": "^2.6.4",
+    "vue-eslint-parser": "^7.0.0",
     "vue-template-compiler": "^2.5.0",
     "vuetify": "^2.1.13",
     "webpack": "^4.0.0"

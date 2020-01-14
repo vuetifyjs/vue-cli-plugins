@@ -16,30 +16,30 @@ module.exports = [
     type: 'list',
     choices: [
       ...presets,
-      { name: 'Configure (advanced)', value: 'configure' }
+      { name: 'Configure (advanced)', value: 'configure' },
     ],
-    default: 'default'
+    default: 'default',
   },
   {
     name: 'replaceComponents',
     type: 'confirm',
     message: 'Use a pre-made template? (will replace App.vue and HelloWorld.vue)',
     default: true,
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'useTheme',
     type: 'confirm',
     message: 'Use custom theme?',
     default: false,
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'useCustomProperties',
     type: 'confirm',
     message: 'Use custom properties (CSS variables)?',
     default: false,
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'iconFont',
@@ -47,21 +47,21 @@ module.exports = [
     message: 'Select icon font',
     choices: iconfonts,
     default: 'mdi',
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'installFonts',
     type: 'confirm',
     message: 'Use fonts as a dependency (for Electron or offline)?',
     default: false,
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'useAlaCarte',
     type: 'confirm',
     message: 'Use a-la-carte components?',
     default: true,
-    when: isCustom
+    when: isCustom,
   },
   {
     name: 'usePolyfill',
@@ -70,7 +70,7 @@ module.exports = [
     default: true,
     when: answers => {
       return isCustom(answers) && !answers.useAlaCarte
-    }
+    },
   },
   {
     name: 'locale',
@@ -78,6 +78,6 @@ module.exports = [
     message: 'Select locale',
     choices: locales,
     default: 'en',
-    when: isCustom
-  }
+    when: isCustom,
+  },
 ]

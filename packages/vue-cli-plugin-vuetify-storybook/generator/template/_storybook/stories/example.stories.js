@@ -10,7 +10,7 @@ function genComponent (name) {
 
     render (h) {
       return h('div', this.$slots.default)
-    }
+    },
   }
 }
 
@@ -22,23 +22,23 @@ const story = storyFactory({
 export const asDefault = () => story({
   props: {
     actions: {
-      default: boolean('Actions', false)
+      default: boolean('Actions', false),
     },
     cardText: {
-      default: text('Card text', 'Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Donec sodales sagittis magna. Vestibulum dapibus nunc ac augue. Donec sodales sagittis magna. Duis vel nibh at velit scelerisque suscipit.')
+      default: text('Card text', 'Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Donec sodales sagittis magna. Vestibulum dapibus nunc ac augue. Donec sodales sagittis magna. Duis vel nibh at velit scelerisque suscipit.'),
     },
     divider: {
-      default: boolean('Divider', false)
+      default: boolean('Divider', false),
     },
     text: {
-      default: boolean('Text', true)
+      default: boolean('Text', true),
     },
     title: {
-      default: boolean('Show title', true)
+      default: boolean('Show title', true),
     },
     titleText: {
-      default: text('Title text', 'Card title')
-    }
+      default: text('Title text', 'Card title'),
+    },
   },
   template: `
     <base-card>
@@ -56,5 +56,5 @@ export const asDefault = () => story({
         <base-btn depressed>Accept</base-btn>
       </v-card-actions>
     </base-card>
-  `
+  `,
 })

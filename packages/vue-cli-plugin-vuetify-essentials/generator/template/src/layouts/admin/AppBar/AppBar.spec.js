@@ -8,7 +8,7 @@ import { shallow, createLocalVue } from '@vue/test-utils'
 const localVue = createLocalVue()
 
 describe('AppBar', () => {
-  function mountFunction(options = {}) {
+  function mountFunction (options = {}) {
     return shallow(AppBar, {
       localVue,
       ...options,

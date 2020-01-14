@@ -19,9 +19,9 @@ module.exports = api => {
       '@storybook/vue': '^5.2',
       'babel-preset-vue': '^2.0.2',
       'prism-react-renderer': '^0.1.7',
-      'prismjs': '^1.17.1',
+      prismjs: '^1.17.1',
       'vue-storybook': '^1.1.0',
-    }
+    },
   })
 
   api.onCreateComplete(() => {
