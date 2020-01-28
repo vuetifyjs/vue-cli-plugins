@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
   "dependencies": {
+    "semver": "^6.3.0",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
