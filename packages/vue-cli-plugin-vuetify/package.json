@@ -35,5 +35,10 @@
   "devDependencies": {
     "jest": "^24.9.0",
     "vuetify-loader": "^1.2.2"
+  },
+  "peerDependenciesMeta": {
+    "sass-loader": {
+      "optional": true
+    }
   }
 }
