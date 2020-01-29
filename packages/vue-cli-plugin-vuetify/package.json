@@ -39,6 +39,9 @@
   "peerDependenciesMeta": {
     "sass-loader": {
       "optional": true
+    },
+    "vuetify-loader": {
+      "optional": true
     }
   }
 }
