@@ -8,6 +8,7 @@ const LOCALE_MAP = {
   en: 'English',
   et: 'Estonian',
   fa: 'Farsi',
+  fi: 'Finnish',
   gr: 'Greek',
   fr: 'French',
   hr: 'Croatian',
