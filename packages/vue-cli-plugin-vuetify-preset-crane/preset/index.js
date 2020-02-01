@@ -4,9 +4,10 @@ const preset = {
   theme: {
     themes: {
       light: {
-        primary: '#356859',
-        secondary: '#FD5523',
-        accent: '#B9E4C9',
+        primary: '#5D1049',
+        secondary: '#E30425',
+        accent: '#4E0D3A',
+        tertiary: '#720D5D',
       },
     },
   },

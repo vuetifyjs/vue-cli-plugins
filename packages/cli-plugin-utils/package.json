@@ -16,5 +16,13 @@
   },
   "bugs": {
     "url": "https://github.com/vuetifyjs/vue-cli-plugins/issues"
+  },
+  "dependencies": {
+    "semver": "^6.3.0"
+  },
+  "peerDependenciesMeta": {
+    "sass-loader": {
+      "optional": true
+    }
   }
 }
