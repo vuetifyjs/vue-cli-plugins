@@ -27,6 +27,7 @@ const LOCALE_MAP = {
   ru: 'Russian',
   ro: 'Romanian',
   sl: 'Slovenian',
+  sk: 'Slovak',
   'sr-Cyrl': 'Serbian (cyrillic)',
   sv: 'Swedish',
   th: 'Thai',
