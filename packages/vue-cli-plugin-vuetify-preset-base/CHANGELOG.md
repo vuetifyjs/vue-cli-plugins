@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.1.3...@vuetify/vue-cli-plugin-preset-base@0.1.4) (2020-02-05)
+
+
+### Bug Fixes
+
+* **preset-base:** add missing items array to layout drawer ([c5f1ab2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/c5f1ab2360fb3a0c24500f684b0a0177a5df0d23))
+
+
+
+
+
 ## [0.1.3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.1.2...@vuetify/vue-cli-plugin-preset-base@0.1.3) (2020-02-05)
 
 
