@@ -9,5 +9,8 @@
     "directory": "packages/vue-cli-plugin-vuetify-preset-base"
   },
   "author": "John Leider <john@vuetifyjs.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
