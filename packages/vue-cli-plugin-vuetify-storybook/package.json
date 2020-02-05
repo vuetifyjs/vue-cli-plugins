@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-storybook",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Vue CLI 3 Plugin for bootstrapping Storybook with Vuetify",
   "main": "index.js",
   "author": "John Leider <john@vuetifyjs.com>",
