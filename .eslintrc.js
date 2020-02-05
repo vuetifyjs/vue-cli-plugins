@@ -16,6 +16,6 @@ module.exports = {
   rules: {
     'template-curly-spacing' : 'off',
     'vue/require-default-prop': 'off',
-    indent : "off",
+    indent : 'off'
   }
 }
