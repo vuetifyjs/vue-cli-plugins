@@ -29,6 +29,8 @@
   export default {
     name: 'BaseDrawer',
 
-    computed: { drawer: sync('base/drawer') },
+    computed: {
+      ...sync('base', ['drawer', 'items']),
+    },
   }
 </script>
