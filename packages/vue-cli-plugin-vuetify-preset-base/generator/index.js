@@ -15,6 +15,7 @@ module.exports = api => {
       'eslint-config-vuetify': '^0.4.1',
       'eslint-plugin-vuetify': '^1.0.0-beta.6',
       'eslint-plugin-vue': '^6.1.2',
+      lodash: '^4.17.14',
       'vuex-pathify': '^1.4.0',
       'vuex-router-sync': '^5.0.0',
       webfontloader: '^1.6.28',
