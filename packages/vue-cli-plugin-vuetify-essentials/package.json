@@ -1,9 +1,0 @@
-{
-  "name": "vue-cli-plugin-vuetify-essentials",
-  "version": "0.8.3",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint --ext .js,.vue ."
-  }
-}

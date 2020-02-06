@@ -5,7 +5,7 @@ const helpers = require('./helpers')
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
-      vuetify: '^2.1.0',
+      vuetify: '^2.2.11',
     },
   })
 }

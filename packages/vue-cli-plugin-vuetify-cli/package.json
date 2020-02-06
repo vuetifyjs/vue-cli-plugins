@@ -1,17 +1,17 @@
 {
   "name": "vue-cli-plugin-vuetify-cli",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "A Scaffolding Tool for Vue / Vuetify",
   "main": "index.js",
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
+  "dependencies": {
+    "pluralize": "^8.0.0"
+  },
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.1.0",
     "inquirer": "^7.0.0",
     "lodash": "^4.17.15",
     "shelljs": "^0.8.3"
-  },
-  "peerDependencies": {
-    "pluralize": "^8.0.0"
   }
 }

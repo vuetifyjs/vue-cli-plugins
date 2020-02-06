@@ -1,0 +1,15 @@
+{
+  "name": "@vuetify/vue-cli-plugin-preset-base",
+  "version": "0.1.4",
+  "description": "A baseline preset for Vue CLI and Vuetify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
+    "directory": "packages/vue-cli-plugin-vuetify-preset-base"
+  },
+  "author": "John Leider <john@vuetifyjs.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
