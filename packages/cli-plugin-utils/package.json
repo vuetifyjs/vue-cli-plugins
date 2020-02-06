@@ -18,7 +18,7 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugins/issues"
   },
   "dependencies": {
-    "semver": "^6.3.0"
+    "semver": "^7.1.2"
   },
   "peerDependenciesMeta": {
     "sass-loader": {
