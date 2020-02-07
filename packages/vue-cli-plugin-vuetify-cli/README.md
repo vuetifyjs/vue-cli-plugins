@@ -4,7 +4,7 @@
 ### 💿 Install
 
 ```bash
-vue install vuetify-cli
+vue add vuetify-cli
 ```
 
 ### 🚀 Usage
