@@ -10,7 +10,6 @@ const views = []
 const types = [
   { name: 'Regular', value: '' },
   { name: 'Base', value: 'base/' },
-  { name: 'Core', value: 'core/' },
 ]
 
 if (fs.existsSync('src/views')) {
