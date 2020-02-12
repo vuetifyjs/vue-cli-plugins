@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.1.4...@vuetify/vue-cli-plugin-preset-base@0.2.0) (2020-02-12)
+
+
+### Bug Fixes
+
+* **preset-base:** remove vuetify eslint extension ([24eaa49](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/24eaa49943f91e0281712a716461be01f137eacd))
+
+
+### Features
+
+* add base components and bootstrap + readme ([eb69c40](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/eb69c402187291402b1790f837318112b6efc5e5))
+
+
+
+
+
 ## [0.1.4](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.1.3...@vuetify/vue-cli-plugin-preset-base@0.1.4) (2020-02-05)
 
 

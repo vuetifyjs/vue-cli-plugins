@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-preset-owl",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Material Studies Owl Theme",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
@@ -17,6 +17,6 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "dependencies": {
-    "@vuetify/cli-plugin-utils": "^0.0.5"
+    "@vuetify/cli-plugin-utils": "^0.0.6"
   }
 }

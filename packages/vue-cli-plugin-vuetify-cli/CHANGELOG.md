@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify-cli@0.1.0...vue-cli-plugin-vuetify-cli@0.1.1) (2020-02-12)
+
+
+### Bug Fixes
+
+* **vuetify-cli:** resolve wrapper lint error ([23cc2c0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/23cc2c06ab8ccc037232b8cbdd0d947124d080ec))
+
+
+
+
+
 # 0.1.0 (2020-02-05)
 
 
