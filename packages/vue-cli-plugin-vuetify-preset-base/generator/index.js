@@ -22,7 +22,6 @@ module.exports = api => {
     },
     eslintConfig: {
       env: { jest: true },
-      extends: 'vuetify',
     },
     jest: {
       setupFiles: ['<rootDir>/tests/index.js'],
