@@ -19,7 +19,7 @@ const Mock = {
 }
 
 // Bootstrap
-function mountFunction(options = {}) {
+function mountFunction (options = {}) {
   return shallow(Mock, {
     localVue,
     ...options,
@@ -31,5 +31,7 @@ const localVue = createLocalVue()
 describe('directive', () => {
   it('should work', () => {
     const wrapper = mountFunction()
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

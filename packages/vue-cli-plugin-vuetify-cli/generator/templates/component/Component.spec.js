@@ -17,5 +17,7 @@ describe('Component', () => {
 
   it('should work', () => {
     const wrapper = mountFunction()
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })

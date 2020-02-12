@@ -23,5 +23,7 @@ const localVue = createLocalVue()
 describe('mixin', () => {
   it('should work', () => {
     const wrapper = mountFunction()
+
+    expect(wrapper.html()).toMatchSnapshot()
   })
 })
