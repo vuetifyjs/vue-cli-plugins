@@ -11,7 +11,7 @@ const Mock = {
 }
 
 // Bootstrap
-function mountFunction(options = {}) {
+function mountFunction (options = {}) {
   return shallow(Mock, {
     localVue,
     ...options,

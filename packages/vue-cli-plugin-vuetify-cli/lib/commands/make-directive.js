@@ -9,8 +9,8 @@ const questions = [
     type: 'input',
     message: 'Directive name:',
     name: 'name',
-    filter: kebabCase
-  }
+    filter: kebabCase,
+  },
 ]
 
 async function command (api) {
@@ -26,7 +26,7 @@ module.exports = api => {
     description: 'scaffold a new vue directive',
     usage: 'vue-cli-service make:directive [options]',
     options: {
-      '--name': 'specify directive name'
-    }
+      '--name': 'specify directive name',
+    },
   }, () => command(api))
 }

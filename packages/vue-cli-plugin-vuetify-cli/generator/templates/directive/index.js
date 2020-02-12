@@ -23,5 +23,5 @@ export default {
   inserted,
   update,
   componentUpdated,
-  unbind
+  unbind,
 }

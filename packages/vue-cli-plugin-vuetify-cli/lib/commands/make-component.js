@@ -22,7 +22,7 @@ if (fs.existsSync('src/views')) {
 if (views.length > 0) {
   types.push({
     name: 'View',
-    value: 'view'
+    value: 'view',
   })
 }
 
@@ -31,7 +31,7 @@ const questions = [
     type: 'list',
     message: 'Component type:',
     name: 'type',
-    choices: types
+    choices: types,
   },
   {
     type: 'list',
@@ -44,8 +44,8 @@ const questions = [
     type: 'input',
     message: 'Component name:',
     name: 'name',
-    filter: val => upperFirst(camelCase(val))
-  }
+    filter: val => upperFirst(camelCase(val)),
+  },
 ]
 
 async function command (api) {
@@ -69,6 +69,6 @@ module.exports = api => {
     options: {
       '--name': 'specify component name',
       '--type': 'specify component type',
-    }
+    },
   }, () => command(api))
 }

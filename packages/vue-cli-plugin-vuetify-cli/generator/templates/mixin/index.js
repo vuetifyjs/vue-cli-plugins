@@ -1,3 +1,3 @@
 export const Mixin = {
-  name: 'Mixin'
+  name: 'Mixin',
 }

@@ -9,8 +9,8 @@ const questions = [
     type: 'input',
     message: 'Mixin name:',
     name: 'name',
-    filter: kebabCase
-  }
+    filter: kebabCase,
+  },
 ]
 
 async function command (api) {
@@ -26,7 +26,7 @@ module.exports = api => {
     description: 'scaffold a new vue mixin',
     usage: 'vue-cli-service make:mixin [options]',
     options: {
-      '--name': 'specify mixin name'
-    }
+      '--name': 'specify mixin name',
+    },
   }, () => command(api))
 }

@@ -9,8 +9,8 @@ const questions = [
     type: 'input',
     message: 'View name:',
     name: 'name',
-    filter: kebabCase
-  }
+    filter: kebabCase,
+  },
 ]
 
 async function command (api) {
@@ -26,7 +26,7 @@ module.exports = api => {
     description: 'scaffold a new vue view',
     usage: 'vue-cli-service make:view [options]',
     options: {
-      '--name': 'specify view name'
-    }
+      '--name': 'specify view name',
+    },
   }, () => command(api))
 }

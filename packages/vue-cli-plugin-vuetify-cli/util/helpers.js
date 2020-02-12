@@ -8,11 +8,11 @@ const shell = require('shelljs')
 function getFile (file, template) {
   return {
     name: file,
-    data: fs.readFileSync(resolve(`${template}/${file}`), 'utf8')
+    data: fs.readFileSync(resolve(`${template}/${file}`), 'utf8'),
   }
 }
 
-function* getFiles (template) {
+function * getFiles (template) {
   for (const file of fs.readdirSync(template)) {
     yield getFile(file, template)
   }
@@ -28,7 +28,7 @@ function writeFile (directory, name, content) {
   } catch (e) {}
 }
 
-async function* parseDir (dir, options, api) {
+async function * parseDir (dir, options, api) {
   const { name: oname, type = '' } = options
   const template = resolve(`../generator/templates/${dir}`)
   const directory = api.resolve(`src/${pluralize(dir)}/${type}${oname}`)
@@ -47,7 +47,7 @@ async function overwriteDir (directory) {
         default: false,
         type: 'confirm',
         message: 'Directory already exists, overwrite?',
-        name: 'overwrite'
+        name: 'overwrite',
       }])
       .then(answers => {
         if (!answers.overwrite) process.exit(0)
@@ -77,7 +77,7 @@ async function writeFiles (name, options, api) {
     writeFile(
       directory,
       name.replace(nameRe, oname),
-      data.replace(nameRe, oname)
+      data.replace(nameRe, oname),
     )
   }
 }
