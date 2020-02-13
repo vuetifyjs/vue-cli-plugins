@@ -6,22 +6,24 @@ const upperFirst = require('lodash/upperFirst')
 const { writeFiles } = require('../../util/helpers.js')
 
 // Variables
-const views = []
+const views = getFolderContents('src/views')
+const layouts = getFolderContents('src/layouts')
 const types = [
   { name: 'Regular', value: '' },
   { name: 'Base', value: 'base/' },
 ]
 
-if (fs.existsSync('src/views')) {
-  fs.readdirSync('src/views').forEach(dir => {
-    views.push(`${dir}/`)
-  })
-}
-
 if (views.length > 0) {
   types.push({
     name: 'View',
     value: 'view',
+  })
+}
+
+if (layouts.length > 0) {
+  types.push({
+    name: 'Layout',
+    value: 'layout',
   })
 }
 
@@ -40,12 +42,30 @@ const questions = [
     when: options => options.type === 'view',
   },
   {
+    type: 'list',
+    message: 'Select the layout',
+    name: 'layout',
+    choices: layouts,
+    when: options => options.type === 'layout',
+  },
+  {
     type: 'input',
     message: 'Component name:',
     name: 'name',
     filter: val => upperFirst(camelCase(val)),
   },
 ]
+
+// Functions
+function getFolderContents (folder) {
+  const files = []
+  if (fs.existsSync(folder)) {
+    fs.readdirSync(folder).forEach(dir => {
+      files.push(`${dir}/`)
+    })
+  }
+  return files
+}
 
 async function command (api) {
   const make = options => {
