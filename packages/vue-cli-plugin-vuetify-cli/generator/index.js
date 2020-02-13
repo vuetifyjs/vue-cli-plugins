@@ -7,6 +7,7 @@ module.exports = api => {
     scripts: {
       'make:component': 'vue-cli-service make:component',
       'make:directive': 'vue-cli-service make:directive',
+      'make:layout': 'vue-cli-service make:layout',
       'make:mixin': 'vue-cli-service make:mixin',
       'make:view': 'vue-cli-service make:view',
     },
