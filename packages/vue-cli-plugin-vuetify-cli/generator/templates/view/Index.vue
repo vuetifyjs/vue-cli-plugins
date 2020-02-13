@@ -9,3 +9,7 @@
     name: 'View',
   }
 </script>
+
+<style lang="sass">
+  //
+</style>
