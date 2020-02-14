@@ -1,12 +1,12 @@
 // Mixin
-import { mixin } from './index'
+import { Mixin } from './index'
 
 // Utilities
 import { shallow, createLocalVue } from '@vue/test-utils'
 
 // Variables
 const Mock = {
-  mixins: [mixin],
+  mixins: [Mixin],
   render: h => h('div'),
 }
 
@@ -20,7 +20,7 @@ function mountFunction (options = {}) {
 
 const localVue = createLocalVue()
 
-describe('mixin', () => {
+describe('Mixin', () => {
   it('should work', () => {
     const wrapper = mountFunction()
 

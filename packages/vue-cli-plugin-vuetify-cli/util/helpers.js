@@ -4,6 +4,7 @@ const inquire = require('inquirer')
 const path = require('path')
 const pluralize = require('pluralize')
 const shell = require('shelljs')
+const { upperFirst, camelCase } = require('lodash')
 
 function getFile (file, template) {
   return {
@@ -64,7 +65,8 @@ async function overwriteDir (directory) {
 
 async function writeFiles (name, options, api) {
   const files = parseDir(name, options, api)
-  const nameRe = new RegExp(`\\b${name.replace('/', '\\/')}\\b`, 'ig')
+  const nameRe = new RegExp(`\\b${name.replace('/', '\\/')}\\b`, 'g')
+  const nameCompRe = new RegExp(`\\b${upperFirst(name).replace('/', '\\/')}\\b`, 'g')
 
   for await (const file of files) {
     const {
@@ -73,11 +75,12 @@ async function writeFiles (name, options, api) {
       name,
       oname,
     } = file
+    const compName = upperFirst(camelCase(oname))
 
     writeFile(
       directory,
-      name.replace(nameRe, oname),
-      data.replace(nameRe, oname),
+      name.replace(nameRe, oname).replace(nameCompRe, compName),
+      data.replace(nameRe, oname).replace(nameCompRe, compName),
     )
   }
 }

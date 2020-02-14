@@ -1,17 +1,17 @@
 // Directive
-import { directive } from './index'
+import { Directive } from './index'
 
 // Utilities
 import { shallow, createLocalVue } from '@vue/test-utils'
 
 // Variables
 const Mock = {
-  directives: { directive },
+  directives: { Directive },
 
   render (h) {
     return h('div', {
       directives: [{
-        name: 'directive',
+        name: 'Directive',
         value: false,
       }],
     })
@@ -28,7 +28,7 @@ function mountFunction (options = {}) {
 
 const localVue = createLocalVue()
 
-describe('directive', () => {
+describe('Directive', () => {
   it('should work', () => {
     const wrapper = mountFunction()
 
