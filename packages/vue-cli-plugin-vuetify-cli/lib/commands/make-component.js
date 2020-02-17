@@ -9,7 +9,7 @@ const { writeFiles } = require('../../util/helpers.js')
 const views = getFolderContents('src/views')
 const layouts = getFolderContents('src/layouts')
 const types = [
-  { name: 'Regular', value: '' },
+  { name: 'Regular', value: 'regular/' },
   { name: 'Base', value: 'base/' },
 ]
 
@@ -71,6 +71,9 @@ async function command (api) {
   const make = options => {
     if (options.view) {
       options.type = `../views/${options.view}/components/`
+    }
+    if (options.layout) {
+      options.type = `../layouts/${options.layout}/components/`
     }
 
     writeFiles('component', options, api)
