@@ -18,6 +18,7 @@ module.exports = api => {
       lodash: '^4.17.14',
       webfontloader: '^1.6.28',
     },
+    eslintConfig: { extends: 'vuetify' },
   })
 
   api.injectImports(api.entryFile, 'import \'./plugins\'')
