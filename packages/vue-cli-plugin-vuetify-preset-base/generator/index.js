@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { updateFile } = require('@vuetify/cli-plugin-utils')
 
 module.exports = api => {
   if (!api.hasPlugin('vuetify')) {
@@ -18,18 +19,17 @@ module.exports = api => {
       lodash: '^4.17.14',
       webfontloader: '^1.6.28',
     },
-    eslintConfig: { extends: 'vuetify' },
   })
 
   api.injectImports(api.entryFile, 'import \'./plugins\'')
 
   api.onCreateComplete(() => {
-    const packagePath = api.resolve('package.json')
-    const projectPackage = require(packagePath)
+    const eslintPath = api.resolve('.eslintrc.js')
+    const eslint = require(eslintPath)
 
-    projectPackage.scripts.deploy = 'yarn build && now'
+    eslint.extends = 'vuetify'
 
-    fs.writeFileSync(packagePath, JSON.stringify(projectPackage, null, 2))
+    fs.writeFileSync(eslintPath, api.genJSConfig(eslint), { utf: 8 })
 
     const about = api.resolve('src/views/About.vue')
     const home = api.resolve('src/views/Home.vue')

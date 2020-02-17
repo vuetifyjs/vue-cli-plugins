@@ -9,6 +9,9 @@
   },
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
+  "dependencies": {
+    "@vuetify/cli-plugin-utils": "^0.0.6"
+  },
   "publishConfig": {
     "access": "public"
   }
