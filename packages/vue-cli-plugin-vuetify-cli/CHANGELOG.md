@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/vuetifyjs/vue-cli-plugins/compare/vue-cli-plugin-vuetify-cli@0.1.1...vue-cli-plugin-vuetify-cli@0.2.0) (2020-02-17)
+
+
+### Bug Fixes
+
+* **vuetify-cli:** name prop should use PascalCase ([6d20c11](https://github.com/vuetifyjs/vue-cli-plugins/commit/6d20c111e14238b1e10b3a12be636cbb424186a6))
+* **vuetify-cli:** place comp in layout folder ([5931451](https://github.com/vuetifyjs/vue-cli-plugins/commit/5931451aabfa6c714247d3b901127acab820b224))
+
+
+### Features
+
+* **vuetify-cli:** add component type layout ([1fd360a](https://github.com/vuetifyjs/vue-cli-plugins/commit/1fd360a186d574cb7950e3c0f89bb00f7410fe81))
+* **vuetify-cli:** add make:layout command ([23be8aa](https://github.com/vuetifyjs/vue-cli-plugins/commit/23be8aa5c4cc7a1d1de7d1643384eb5963d4ec69))
+
+
+
+
+
+
 ## [0.1.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify-cli@0.1.0...vue-cli-plugin-vuetify-cli@0.1.1) (2020-02-12)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.2.0...@vuetify/vue-cli-plugin-preset-base@0.3.0) (2020-02-17)
+
+
+### Features
+
+* add eslintConfig option ([6fc32e1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6fc32e1afefe0a94a5c8bdab843d882cd8146107))
+
+
+
+
+
+
 # [0.2.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/@vuetify/vue-cli-plugin-preset-base@0.1.4...@vuetify/vue-cli-plugin-preset-base@0.2.0) (2020-02-12)
 
 
