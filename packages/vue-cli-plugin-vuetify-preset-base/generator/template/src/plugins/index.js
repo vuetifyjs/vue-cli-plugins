@@ -2,4 +2,3 @@
 
 import './base'
 import './webfontloader'
-import './vuex-router-sync'
