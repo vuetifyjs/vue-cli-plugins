@@ -3,8 +3,6 @@
     <base-app-bar />
 
     <base-view />
-
-    <base-footer />
   </v-app>
 </template>
 
@@ -14,7 +12,6 @@
 
     components: {
       BaseAppBar: () => import('./AppBar'),
-      BaseFooter: () => import('./Footer'),
       BaseView: () => import('./View'),
     },
   }
