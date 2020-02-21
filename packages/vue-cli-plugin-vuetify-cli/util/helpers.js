@@ -75,10 +75,10 @@ async function * parseDir (dir, options, api) {
   }
 
   for (const { name, data } of getFiles(template)) {
-    const fileDir = name === `${dir}.spec.js`
+    const fileDir = name.split('.')[1] === 'spec'
       ? dir === 'component' && ['base/', 'regular/'].includes(type)
         ? path.join(directory, '..', type, '__tests__')
-        : path.join(directory, '__tests__')
+        : path.join(directory, '..', '__tests__')
       : directory
     yield {
       directory: fileDir,

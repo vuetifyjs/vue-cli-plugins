@@ -1,5 +1,5 @@
 // Component
-import Component from '../components/index'
+import Component from '../index'
 
 // Utilities
 import { shallow, createLocalVue } from '@vue/test-utils'
