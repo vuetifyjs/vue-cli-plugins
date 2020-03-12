@@ -13,7 +13,7 @@ module.exports = api => {
   api.extendPackage({
     devDependencies: {
       '@mdi/font': '^4.8.95',
-      'eslint-config-vuetify': '^0.4.1',
+      'eslint-config-vuetify': '^0.5.0',
       'eslint-plugin-vuetify': '^1.0.0-beta.6',
       'eslint-plugin-vue': '^6.1.2',
       lodash: '^4.17.14',
