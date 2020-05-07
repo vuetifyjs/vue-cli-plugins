@@ -141,7 +141,7 @@
         },
         {
           text: 'Select a layout',
-          href: 'https://vuetifyjs.com/layout/pre-defined',
+          href: 'https://vuetifyjs.com/getting-started/pre-made-layouts',
         },
         {
           text: 'Frequently Asked Questions',
