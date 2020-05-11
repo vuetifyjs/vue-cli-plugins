@@ -3641,10 +3641,10 @@ eslint-config-standard@^14.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-14.1.0.tgz#b23da2b76fe5a2eba668374f246454e7058f15d4"
   integrity sha512-EF6XkrrGVbvv8hL/kYa/m6vnvmUT+K82pJJc4JJVMM6+Qgqh0pnwprSxdduDLB9p/7bIxD+YV5O0wfb8lmcPbA==
 
-eslint-config-vuetify@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-vuetify/-/eslint-config-vuetify-0.4.1.tgz#f99bf8b908d052fa8adf5ec5aae3d1ce9409c826"
-  integrity sha512-uMYJFQeEvo4hvICzZe8VyLlXG8ItXIEc/QzOiLm3rS1QuG7g1E/F42d8LHrlu8rytE1RDQXU3GxzGTRBtq3HFg==
+eslint-config-vuetify@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-vuetify/-/eslint-config-vuetify-0.6.0.tgz#0bae6145eaba49f1a4abe9ccbc48d336a1882faf"
+  integrity sha512-Y/+qpO5hJlZjNrEHJ3NOcKZbI3oUpQYvKJ2tUPN4rcRavRZ7DFqZ4uRqrnhpjkKmfRXZ2HroaR4d0OZXFXOTpA==
   dependencies:
     "@release-it/conventional-changelog" "^1.1.0"
     babel-eslint "^10.0.3"
