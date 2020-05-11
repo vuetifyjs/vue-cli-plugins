@@ -1,3 +1,9 @@
+/**
+ * router/index.js
+ *
+ * vue-router documentation: https://router.vuejs.org/
+ */
+
 // Imports
 import Vue from 'vue'
 import Router from 'vue-router'
@@ -16,7 +22,9 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: () => import('@/layouts/base/Index.vue'),
+      // Layouts allow you to define different
+      // structures for different view
+      component: () => import('@/layouts/app/Index.vue'),
       children: [
         {
           path: '',

@@ -1,9 +1,9 @@
+// Imports
 const fs = require('fs')
-const { updateFile } = require('@vuetify/cli-plugin-utils')
 
 module.exports = api => {
   if (!api.hasPlugin('vuetify')) {
-    console.log('`vue-cli-plugin-vuetify-preset-base` requires the `vue-cli-plugin-vuetify` package.')
+    console.log('`@vuetify/vue-cli-plugin-preset-base` requires the `vue-cli-plugin-vuetify` package.')
 
     return
   }
@@ -12,11 +12,10 @@ module.exports = api => {
 
   api.extendPackage({
     devDependencies: {
-      '@mdi/font': '^4.8.95',
-      'eslint-config-vuetify': '^0.5.0',
+      'eslint-config-vuetify': '^0.6.0',
       'eslint-plugin-vuetify': '^1.0.0-beta.6',
       'eslint-plugin-vue': '^6.1.2',
-      lodash: '^4.17.14',
+      lodash: '^4.17.15',
       webfontloader: '^1.6.28',
     },
   })

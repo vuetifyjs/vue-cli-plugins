@@ -5,5 +5,7 @@
 </template>
 
 <script>
-  export default { name: 'BaseAppBar' }
+  export default {
+    name: 'AppBar',
+  }
 </script>

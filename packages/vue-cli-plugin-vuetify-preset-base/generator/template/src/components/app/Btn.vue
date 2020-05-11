@@ -1,6 +1,7 @@
 <template>
   <v-btn
     :color="color"
+    class="v-btn--app"
     v-bind="$attrs"
     v-on="$listeners"
   >
@@ -20,3 +21,7 @@
     },
   }
 </script>
+
+<style lang="sass">
+  // .v-btn--app
+</style>

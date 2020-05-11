@@ -1,4 +1,8 @@
-// Automatically included in './src/main.js'
+/**
+ * plugins/index.js
+ *
+ * Automatically included in `./src/main.js`
+ */
 
-import './base'
+import './app'
 import './webfontloader'

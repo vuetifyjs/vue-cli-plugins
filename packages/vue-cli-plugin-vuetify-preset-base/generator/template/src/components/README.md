@@ -5,7 +5,7 @@ This folder is for organizing your project's components. It is structured to sup
 Below are _examples_ of varoius project structures for **components**.
 
 ### Custom
-A custom component is one that is used in more than one place but is not generic enough to used as a _base_ component.
+A custom component is one that is used in more than one place but is not generic enough to used as a _app_ component.
 
 ```bash
 .
@@ -14,37 +14,37 @@ A custom component is one that is used in more than one place but is not generic
     └── CustomComponentTwo.vue
 ```
 
-### Base
-[**Base components**](https://vuejs.org/v2/style-guide/#Base-component-names-strongly-recommended) are global components that should always be in the root of the `/base` folder. These components will be automatically bootstrapped into Vue via the **base.js** plugin.
+### App
+[**App components**](https://vuejs.org/v2/style-guide/#Base-component-names-strongly-recommended) are global components that should always be in the root of the `/app` folder. These components will be automatically bootstrapped into Vue via the **app.js** plugin.
 
 ```bash
 .
 └── src
     ├── components
     │   ├── CustomComponent.vue
-    │   └── base
+    │   └── app
     │       └── Btn.vue
     └── plugins
-        ├── base.js # Bootstraps *.vue in `src/components/base`
+        ├── app.js # Bootstraps *.vue in `src/components/app`
         ├── index.js
         └── vuetify.js
 ```
 
 **Example usage**
-This is an example of how to use **base components**; global components that can be used in any other component.
+This is an example of how to use **app components**; global components that can be used in any other component.
 
 ```vue
 <!-- In Template -->
 
 <template>
   <div>
-    <base-btn>...</base-btn>
+    <app-btn>...</app-btn>
   </div>
 </template>
 ```
 
 ```vue
-<!-- src/components/base/Btn.vue -->
+<!-- src/components/app/Btn.vue -->
 
 <template>
   <v-btn
@@ -70,33 +70,4 @@ This is an example of how to use **base components**; global components that can
 </script>
 ```
 
-> The component name is automatically prefixed with `Base`. `Btn` would yield `BaseBtn` and `MyComponent` would yield `BaseMyComponent`
-
-### Views
-Views that utilize proprietary components—ones that only exist within or for that page—should keep them _scoped_ to the container view.
-
-```bash
-.
-└── views
-    └── home
-        ├── Index.vue
-        ├── Section.vue
-        └── components
-            ├── CustomComponent.vue
-            └── CustomComponentTwo.vue
-```
-
-**Example usage**
-This is an example of what importing a custom component for a **View** might look like.
-```vue
-<!-- src/views/home/Index.vue -->
-
-<script>
-  export default {
-    components: {
-      CustomComponent: () => import('./components/CustomComponent'),
-      CustomComponentTwo: () => import('./components/CustomComponentTwo'),
-    }
-  }
-</script>
-```
+> The component's **name** property is automatically prefixed with the word `App`. For example, a name of `Btn` would yield `AppBtn`.

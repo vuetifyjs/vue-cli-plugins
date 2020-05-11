@@ -8,6 +8,6 @@
 
 <script>
   export default {
-    name: 'BaseView',
+    name: 'View',
   }
 </script>
