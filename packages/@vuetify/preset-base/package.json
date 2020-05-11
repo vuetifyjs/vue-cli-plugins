@@ -5,7 +5,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
-    "directory": "packages/vue-cli-plugin-vuetify-preset-base"
+    "directory": "packages/@vuetify/preset-base"
   },
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
