@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify-cli@0.2.0...vue-cli-plugin-vuetify-cli@0.2.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* **vuetify-cli:** resolve test folder path logic ([eb9237e](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/eb9237e40ed4ae32e3a22c83ee8578ec4768b634))
+
+
+
+
+
 # [0.2.0](https://github.com/vuetifyjs/vue-cli-plugins/compare/vue-cli-plugin-vuetify-cli@0.1.1...vue-cli-plugin-vuetify-cli@0.2.0) (2020-02-17)
 
 
