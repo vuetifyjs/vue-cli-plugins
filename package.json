@@ -13,24 +13,24 @@
     }
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
     "eslint-config-vuetify": "^0.6.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.6.0",
-    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.1.2",
-    "husky": "^4.2.1",
-    "lerna": "^3.20.2",
-    "lerna-changelog": "^1.0.0",
-    "semver": "^7.1.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "lerna": "^3.21.0",
+    "lerna-changelog": "^1.0.1",
+    "semver": "^7.3.2",
     "vue": "^2.6.11",
-    "vue-eslint-parser": "^7.0.0",
+    "vue-eslint-parser": "^7.1.0",
     "vue-template-compiler": "^2.6.11",
-    "vuetify": "^2.2.11",
-    "webpack": "^4.41.5"
+    "vuetify": "^2.2.28",
+    "webpack": "^4.43.0"
   }
 }
