@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.4 (2020-05-19)</small>
+
+* chore(generator): update dependency versions ([e54d3c7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e54d3c7))
+
+
+
+
+
 ## <small>0.3.3 (2020-05-19)</small>
 
 * chore: move packages and update yarn workspaces ([7a5d1a5](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/7a5d1a5))
