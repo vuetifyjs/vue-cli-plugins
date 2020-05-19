@@ -12,9 +12,9 @@ module.exports = api => {
 
   api.extendPackage({
     devDependencies: {
-      'eslint-config-vuetify': '^0.6.0',
+      'eslint-config-vuetify': '^0.6.1',
       'eslint-plugin-vuetify': '^1.0.0-beta.6',
-      'eslint-plugin-vue': '^6.1.2',
+      'eslint-plugin-vue': '^6.2.2',
       lodash: '^4.17.15',
       webfontloader: '^1.6.28',
     },
