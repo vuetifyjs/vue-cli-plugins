@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.5 (2020-05-19)</small>
+
+* fix: update layout names & structure ([720efa5](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/720efa5))
+
+
+
+
+
 ## <small>0.3.4 (2020-05-19)</small>
 
 * chore(generator): update dependency versions ([e54d3c7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e54d3c7))
