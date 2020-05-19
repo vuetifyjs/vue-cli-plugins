@@ -1575,6 +1575,13 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
+"@vuetify/cli-plugin-utils@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@vuetify/cli-plugin-utils/-/cli-plugin-utils-0.0.6.tgz#843b1f3124e0548f862070998bd2a0eee82b7298"
+  integrity sha512-g/gPeMsQoOIjiA3mmiWYIOu4wr5L6hcwAZRD6QrDFWot51YtTGJvqUIYMXO3EGmC6a744NSDVdoapPDgiDPakw==
+  dependencies:
+    semver "^7.1.2"
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"

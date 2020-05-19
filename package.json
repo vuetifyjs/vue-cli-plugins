@@ -1,11 +1,12 @@
 {
   "workspaces": [
+    "packages/@vuetify/*",
     "packages/*"
   ],
   "private": true,
   "scripts": {
     "lint": "lerna run lint -- --fix",
-    "release": "lerna version --conventional-commits && lerna publish from-git"
+    "release": "lerna version && lerna publish from-git"
   },
   "husky": {
     "hooks": {
