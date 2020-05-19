@@ -1,7 +1,7 @@
 {
-  "name": "@vuetify/vue-cli-plugin-preset-base",
+  "name": "@vuetify/vue-cli-plugin-base",
   "version": "0.3.2",
-  "description": "A baseline preset for Vue CLI and Vuetify",
+  "description": "A Vue CLI preset for setting up a baseline Vuetify application.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
