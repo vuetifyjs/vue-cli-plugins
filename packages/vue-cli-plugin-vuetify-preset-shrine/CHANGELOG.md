@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>1.0.4 (2020-05-19)</small>
+
+**Note:** Version bump only for package vue-cli-plugin-vuetify-preset-shrine
+
+
+
+
+
 ## [1.0.3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify-preset-shrine@1.0.2...vue-cli-plugin-vuetify-preset-shrine@1.0.3) (2020-02-12)
 
 **Note:** Version bump only for package vue-cli-plugin-vuetify-preset-shrine

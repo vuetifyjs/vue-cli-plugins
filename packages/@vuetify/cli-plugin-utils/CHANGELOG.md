@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.7 (2020-05-19)</small>
+
+* chore: move packages and update yarn workspaces ([7a5d1a5](https://github.com/vuetifyjs/vue-cli-plugins/commit/7a5d1a5))
+
+
+
+
+
 ## [0.0.6](https://github.com/vuetifyjs/vue-cli-plugins/compare/@vuetify/cli-plugin-utils@0.0.5...@vuetify/cli-plugin-utils@0.0.6) (2020-02-12)
 
 **Note:** Version bump only for package @vuetify/cli-plugin-utils

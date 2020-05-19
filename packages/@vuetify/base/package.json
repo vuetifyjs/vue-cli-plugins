@@ -1,6 +1,6 @@
 {
   "name": "@vuetify/vue-cli-plugin-base",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A Vue CLI preset for setting up a baseline Vuetify application.",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",
   "dependencies": {
-    "@vuetify/cli-plugin-utils": "^0.0.6"
+    "@vuetify/cli-plugin-utils": "^0.0.7"
   },
   "publishConfig": {
     "access": "public"

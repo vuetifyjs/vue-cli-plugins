@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-vuetify-preset-basil",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Material Studies Basil Theme",
   "author": "John Leider <john@vuetifyjs.com>",
   "homepage": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify#readme",
@@ -18,6 +18,6 @@
     "url": "https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues"
   },
   "dependencies": {
-    "@vuetify/cli-plugin-utils": "^0.0.6"
+    "@vuetify/cli-plugin-utils": "^0.0.7"
   }
 }
