@@ -8,6 +8,6 @@
 
 <script>
   export default {
-    name: 'View',
+    name: 'AppView',
   }
 </script>

@@ -24,7 +24,7 @@ const router = new Router({
       path: '/',
       // Layouts allow you to define different
       // structures for different view
-      component: () => import('@/layouts/app/Index.vue'),
+      component: () => import('@/layouts/default/Index.vue'),
       children: [
         {
           path: '',
