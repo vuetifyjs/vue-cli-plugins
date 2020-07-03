@@ -45,13 +45,13 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <%_ if (router) { _%>
       <router-view/>
       <%_ } else { _%>
       <HelloWorld/>
       <%_ } _%>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
