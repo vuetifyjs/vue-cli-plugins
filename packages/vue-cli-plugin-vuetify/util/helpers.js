@@ -56,12 +56,15 @@ function mergeRules (api, opt, ext) {
     if (opt.data) data.unshift(opt.data)
 
     opt.data = data.join('\n')
-  } else {
+   } else if (sassLoaderVersion < 9) {
     if (opt.prependData) data.unshift(opt.prependData)
 
     opt.prependData = data.join('\n')
-  }
+  } else {
+    if (opt.additionalData) data.unshift(opt.additionalData);
 
+    opt.additionalData = data.join('\n');
+  }
   return opt
 }
 
