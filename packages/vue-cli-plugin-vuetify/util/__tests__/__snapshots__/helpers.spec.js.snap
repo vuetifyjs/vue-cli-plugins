@@ -2,7 +2,7 @@
 
 exports[`helpers.js should merge sass variable rules 1`] = `
 Object {
-  "prependData": "@import '@/sass/variables.sass'
+  "additionalData": "@import '@/sass/variables.sass'
 @import '@/sass/variables.scss'
 @import '@/scss/variables.sass'
 @import '@/scss/variables.scss'
@@ -14,7 +14,7 @@ Object {
 
 exports[`helpers.js should merge sass variable rules 2`] = `
 Object {
-  "prependData": "@import '@/sass/variables.sass';
+  "additionalData": "@import '@/sass/variables.sass';
 @import '@/sass/variables.scss';
 @import '@/scss/variables.sass';
 @import '@/scss/variables.scss';
