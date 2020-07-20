@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.0.7 (2020-07-20)</small>
+
+* test: update snapshots ([223380c](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/223380c)), closes [#185](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/185)
+* fix: add missing null-loader dependency (#152) ([983a796](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/983a796)), closes [#152](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/152) [#101](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/101)
+* fix(sass-loader): prependData removed from v9 (#185) ([6e14328](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6e14328)), closes [#185](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/185)
+* fix(template): update v-content to v-main (#186) ([39eddce](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/39eddce)), closes [#186](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/186)
+
+
+
+
+
 ## [2.0.6](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.0.5...vue-cli-plugin-vuetify@2.0.6) (2020-05-12)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.2.2 (2020-07-20)</small>
+
+* chore(deps-dev): bump lodash in /packages/vue-cli-plugin-vuetify-cli (#193) ([636d5a0](https://github.com/vuetifyjs/vue-cli-plugins/commit/636d5a0)), closes [#193](https://github.com/vuetifyjs/vue-cli-plugins/issues/193)
+
+
+
+
+
 ## [0.2.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify-cli@0.2.0...vue-cli-plugin-vuetify-cli@0.2.1) (2020-05-12)
 
 

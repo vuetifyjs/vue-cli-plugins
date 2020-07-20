@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.6 (2020-07-20)</small>
+
+* fix(template): update v-content to v-main (#186) ([39eddce](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/39eddce)), closes [#186](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/186)
+
+
+
+
+
 ## <small>0.3.5 (2020-05-19)</small>
 
 * fix: update layout names & structure ([720efa5](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/720efa5))
