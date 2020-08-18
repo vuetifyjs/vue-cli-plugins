@@ -4,8 +4,12 @@ const fs = require('fs')
 module.exports = api => {
   if (!api.hasPlugin('vuetify')) {
     console.log('`@vuetify/presets/templates/base` requires the `vue-cli-plugin-vuetify` package.')
-
     return
+  }
+
+  // Base preset already installed
+  if (api.hasPlugin('base')) {
+    return;
   }
 
   api.render('./template')
