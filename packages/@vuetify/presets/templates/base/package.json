@@ -4,8 +4,8 @@
   "description": "A Vue CLI preset for setting up a baseline Vuetify application.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
-    "directory": "packages/@vuetify/base"
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugins.git",
+    "directory": "packages/@vuetify/presets/templates/base"
   },
   "author": "John Leider <john@vuetifyjs.com>",
   "license": "MIT",

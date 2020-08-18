@@ -3,7 +3,7 @@ const fs = require('fs')
 
 module.exports = api => {
   if (!api.hasPlugin('vuetify')) {
-    console.log('`@vuetify/vue-cli-plugin-preset-base` requires the `vue-cli-plugin-vuetify` package.')
+    console.log('`@vuetify/presets/templates/base` requires the `vue-cli-plugin-vuetify` package.')
 
     return
   }
