@@ -1,10 +1,10 @@
 {
-  "name": "@vuetify/presets",
+  "name": "@vuetify/vue-cli-plugin-essential",
   "version": "0.3.6",
   "description": "A Vue CLI preset for setting up an essential Vuetify application.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuetifyjs/vue-cli-plugin-vuetify.git",
+    "url": "git+https://github.com/Mert75/vue-cli-plugins.git",
     "directory": "packages/@vuetify/presets/essential"
   },
   "author": "John Leider <john@vuetifyjs.com>",

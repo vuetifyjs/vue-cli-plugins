@@ -1,5 +1,5 @@
 # Components
-> Create your regular and base components here
+> Create your essential and base components here
 
 This folder is for organizing your project's components. It is structured to support the official Vue [**style-guide**](https://vuejs.org/v2/style-guide/#Component-files-strongly-recommended).
 Below are _examples_ of varoius project structures for **components**.

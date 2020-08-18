@@ -12,7 +12,7 @@
         <span class="headline font-weight-light">Vuetify</span>
 
         <h1 class="display-4 font-weight-black mb-6">
-          Base Preset
+          Essential Preset
         </h1>
 
         <v-img
@@ -120,12 +120,12 @@
         ['Routing', 'mdi-road-variant', 'blue-grey'],
         ['Vuetify ESLint', 'mdi-auto-fix', 'deep-purple accent-4'],
         ['SASS', 'mdi-sass', 'pink'],
-        ['Base Components', 'mdi-cube-scan', 'indigo'],
+        ['Essential Components', 'mdi-cube-scan', 'indigo'],
         ['View Layouts', 'mdi-view-grid-outline', 'orange'],
         ['Webfont Loader', 'mdi-format-size', 'green accent-4'],
       ],
       links: [
-        ['//github.com/vuetifyjs/vuetify', 'Github', 'mdi-github-circle'],
+        ['//github.com/vuetifyjs/vuetify', 'Github', 'mdi-github'],
         ['//vuetifyjs.com', 'Documentation', 'mdi-file-document'],
         ['//community.vuetifyjs.com', 'Community', 'mdi-account-multiple'],
         ['//github.com/users/johnleider/sponsors', 'Support Vuetify', 'mdi-vuetify'],
