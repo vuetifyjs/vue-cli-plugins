@@ -1,9 +1,7 @@
 const LOCALE_MAP = {
   af: 'Afrikaans',
   ar: 'Arabic',
-  az: 'Azerbaijani',
   ca: 'Catalan',
-  ckb: 'Central Kurdish',
   cs: 'Czech',
   de: 'German',
   es: 'Spanish',
