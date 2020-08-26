@@ -23,5 +23,8 @@
     "sass-loader": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
