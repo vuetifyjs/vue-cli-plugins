@@ -1,0 +1,18 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## 0.1.0-alpha.0 (2020-08-26)
+
+* chore: add missing package.json for presets ([7c5b18f](https://github.com/vuetifyjs/vue-cli-plugins/commit/7c5b18f))
+* chore(essential-preset): remove unnecessary files ([804003f](https://github.com/vuetifyjs/vue-cli-plugins/commit/804003f))
+* chore(generator): create new generator process ([33ef239](https://github.com/vuetifyjs/vue-cli-plugins/commit/33ef239))
+* chore(package.json): add publishConfig public access ([b89992c](https://github.com/vuetifyjs/vue-cli-plugins/commit/b89992c))
+* feat: prompts and generators seperated ([3dadaae](https://github.com/vuetifyjs/vue-cli-plugins/commit/3dadaae))
+* added default index and prompt files ([c3c28a7](https://github.com/vuetifyjs/vue-cli-plugins/commit/c3c28a7))
+* added essential preset ([940a26d](https://github.com/vuetifyjs/vue-cli-plugins/commit/940a26d))
+* essential & base ([133d552](https://github.com/vuetifyjs/vue-cli-plugins/commit/133d552))
+* refactor base & essential folders ([b35bf14](https://github.com/vuetifyjs/vue-cli-plugins/commit/b35bf14))
+* relocate files ([3d3e4f4](https://github.com/vuetifyjs/vue-cli-plugins/commit/3d3e4f4))
+* template wrap presets & generator ([bf5e0b7](https://github.com/vuetifyjs/vue-cli-plugins/commit/bf5e0b7))
