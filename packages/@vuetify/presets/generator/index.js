@@ -23,21 +23,15 @@ module.exports = (api, { preset }) => {
   api.injectImports(api.entryFile, 'import \'./plugins\'')
 
   api.onCreateComplete(() => {
-    // if (!api.hasPlugin('eslint')) {
-    //   console.log('`@vuetify/presets` requires the `eslint` plugin')
-    // } else {
-    //   const eslintPath = api.resolve('.eslintrc.js')
-    //   const eslint = require(eslintPath)
-
-    //   eslint.extends = 'vuetify'
-
-    //   fs.writeFileSync(eslintPath, api.genJSConfig(eslint), { utf: 8 })
-    // }
+    const presetName = `Vuetify ${preset} preset`
+    const projectName = api.rootOptions.projectName
 
     const about = api.resolve('src/views/About.vue')
     const home = api.resolve('src/views/Home.vue')
 
     if (fs.existsSync(about)) fs.unlinkSync(about)
     if (fs.existsSync(home)) fs.unlinkSync(home)
+
+    api.exitLog(`🍣  Successfully generated ${projectName} from the ${presetName}.\n`)
   })
 }
