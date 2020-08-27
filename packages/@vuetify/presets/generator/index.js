@@ -1,14 +1,18 @@
 // Imports
 const fs = require('fs')
 
-module.exports = (api, { preset }) => {
+module.exports = (api, options) => {
   if (!api.hasPlugin('vuetify')) {
     console.log('`@vuetify/presets` requires the `vue-cli-plugin-vuetify` package.')
 
     return
   }
 
-  api.render(`./templates/${preset}`)
+  try {
+    api.render(`./templates/${options.preset}`)
+  } catch (e) {
+    console.log(e, options)
+  }
 
   api.extendPackage({
     devDependencies: {
