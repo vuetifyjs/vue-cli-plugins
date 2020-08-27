@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.3 (2020-08-27)
+
+* fix(presets): update onCreateComplete cb ([5f298ab](https://github.com/vuetifyjs/vue-cli-plugins/commit/5f298ab))
+
+
+
+
+
 ## 0.1.0-alpha.2 (2020-08-27)
 
 * refactor(presets): update prompts file ([9f81295](https://github.com/vuetifyjs/vue-cli-plugins/commit/9f81295))
