@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.1 (2020-08-27)
+
+* fix(presets): add missing index.js file for vue-cli plugins ([e3f56be](https://github.com/vuetifyjs/vue-cli-plugins/commit/e3f56be))
+
+
+
+
+
 ## 0.1.0-alpha.0 (2020-08-26)
 
 * chore: add missing package.json for presets ([7c5b18f](https://github.com/vuetifyjs/vue-cli-plugins/commit/7c5b18f))
