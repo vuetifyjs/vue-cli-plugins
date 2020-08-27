@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.2 (2020-08-27)
+
+* refactor(presets): update prompts file ([9f81295](https://github.com/vuetifyjs/vue-cli-plugins/commit/9f81295))
+* style(prompts.js): clean-up code styling ([ee86157](https://github.com/vuetifyjs/vue-cli-plugins/commit/ee86157))
+
+
+
+
+
 ## 0.1.0-alpha.1 (2020-08-27)
 
 * fix(presets): add missing index.js file for vue-cli plugins ([e3f56be](https://github.com/vuetifyjs/vue-cli-plugins/commit/e3f56be))
