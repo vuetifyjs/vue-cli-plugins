@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.4 (2020-08-27)
+
+* chore: testing new install ([39958ec](https://github.com/vuetifyjs/vue-cli-plugins/commit/39958ec))
+
+
+
+
+
 ## 0.1.0-alpha.3 (2020-08-27)
 
 * fix(presets): update onCreateComplete cb ([5f298ab](https://github.com/vuetifyjs/vue-cli-plugins/commit/5f298ab))
