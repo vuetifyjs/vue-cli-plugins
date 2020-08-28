@@ -27,7 +27,7 @@ module.exports = (api, options) => {
   api.injectImports(api.entryFile, 'import \'./plugins\'')
 
   api.onCreateComplete(() => {
-    const presetName = `Vuetify ${preset} preset`
+    const presetName = `Vuetify ${options.preset} preset`
     const projectName = api.rootOptions.projectName
 
     const about = api.resolve('src/views/About.vue')
