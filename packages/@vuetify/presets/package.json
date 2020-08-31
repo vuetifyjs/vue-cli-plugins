@@ -1,0 +1,30 @@
+{
+  "name": "@vuetify/vue-cli-plugin-presets",
+  "version": "0.1.0-alpha.6",
+  "description": "Vuetify Vue CLI Plugin Presets",
+  "author": "John Leider <john@vuetifyjs.com>",
+  "homepage": "https://github.com/vuetifyjs/vue-cli-plugins#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuetifyjs/vue-cli-plugins.git",
+    "directory": "packages/@vuetify/presets"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ."
+  },
+  "bugs": {
+    "url": "https://github.com/vuetifyjs/vue-cli-plugins/issues"
+  },
+  "dependencies": {
+    "semver": "^7.1.2"
+  },
+  "peerDependenciesMeta": {
+    "sass-loader": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

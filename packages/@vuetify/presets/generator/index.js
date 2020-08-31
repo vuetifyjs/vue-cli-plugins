@@ -1,14 +1,18 @@
 // Imports
 const fs = require('fs')
 
-module.exports = api => {
+module.exports = (api, options) => {
   if (!api.hasPlugin('vuetify')) {
-    console.log('`@vuetify/vue-cli-plugin-preset-base` requires the `vue-cli-plugin-vuetify` package.')
+    console.log('`@vuetify/presets` requires the `vue-cli-plugin-vuetify` package.')
 
     return
   }
 
-  api.render('./template')
+  try {
+    api.render(`./templates/${options.preset}`)
+  } catch (e) {
+    console.log(e, options)
+  }
 
   api.extendPackage({
     devDependencies: {
@@ -23,17 +27,15 @@ module.exports = api => {
   api.injectImports(api.entryFile, 'import \'./plugins\'')
 
   api.onCreateComplete(() => {
-    const eslintPath = api.resolve('.eslintrc.js')
-    const eslint = require(eslintPath)
-
-    eslint.extends = 'vuetify'
-
-    fs.writeFileSync(eslintPath, api.genJSConfig(eslint), { utf: 8 })
+    const presetName = `Vuetify ${options.preset} preset`
+    const projectName = api.rootOptions.projectName
 
     const about = api.resolve('src/views/About.vue')
     const home = api.resolve('src/views/Home.vue')
 
     if (fs.existsSync(about)) fs.unlinkSync(about)
     if (fs.existsSync(home)) fs.unlinkSync(home)
+
+    api.exitLog(`🍣  Successfully generated ${projectName} from the ${presetName}.\n`)
   })
 }
