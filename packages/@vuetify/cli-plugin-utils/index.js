@@ -73,7 +73,7 @@ function generatePreset (api, onCreateComplete) {
     return
   }
 
-  api.injectImports(file, `import { preset } from ${api.id}/preset`)
+  api.injectImports(file, `import { preset } from '${api.id}/preset'`)
 
   api.onCreateComplete(() => {
     updateVuetifyObject(api, 'preset')
