@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <default-bar />
+    <default-app-bar />
 
     <default-view />
   </v-app>
@@ -11,7 +11,7 @@
     name: 'DefaultLayout',
 
     components: {
-      DefaultBar: () => import('./AppBar'),
+      DefaultAppBar: () => import('./AppBar'),
       DefaultView: () => import('./View'),
     },
   }

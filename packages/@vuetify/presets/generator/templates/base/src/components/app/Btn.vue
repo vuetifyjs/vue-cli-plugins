@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: 'Btn',
+    name: 'AppBtn',
 
     props: {
       color: {
@@ -23,5 +23,6 @@
 </script>
 
 <style lang="sass">
-  // .v-btn--app
+  .v-btn--app
+    //
 </style>
