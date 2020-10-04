@@ -21,6 +21,7 @@ module.exports = (api, options) => {
       'eslint-plugin-vue': '^6.2.2',
       lodash: '^4.17.15',
       webfontloader: '^1.6.28',
+      'vuex-pathify': '^1.4.1',
     },
   })
 

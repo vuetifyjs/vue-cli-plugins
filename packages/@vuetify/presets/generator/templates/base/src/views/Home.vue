@@ -125,7 +125,7 @@
         ['Webfont Loader', 'mdi-format-size', 'green accent-4'],
       ],
       links: [
-        ['//github.com/vuetifyjs/vuetify', 'Github', 'mdi-github-circle'],
+        ['//github.com/vuetifyjs/vuetify', 'Github', 'mdi-github'],
         ['//vuetifyjs.com', 'Documentation', 'mdi-file-document'],
         ['//community.vuetifyjs.com', 'Community', 'mdi-account-multiple'],
         ['//github.com/users/johnleider/sponsors', 'Support Vuetify', 'mdi-vuetify'],
