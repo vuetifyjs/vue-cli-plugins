@@ -12,8 +12,6 @@
 
   export default {
     name: 'DefaultDrawer',
-    computed: {
-      drawer: sync('app/drawer'),
-    },
+    computed: { drawer: sync('app/drawer') },
   }
 </script>
