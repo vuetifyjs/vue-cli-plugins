@@ -99,7 +99,8 @@ function mergeSassVariables (opt, file) {
 
   // Merge with user-defined loader data config
   if (sassLoaderVersion < 8) opt.data = variables
-  else opt.prependData = variables
+  else if (sassLoaderVersion < 9) opt.prependData = variables
+  else opt.additionalData = variables
 
   return opt
 }
