@@ -3,6 +3,7 @@
 > A collection of Vuetify plugins for Vue CLI
 
 ### Available Packages
+#### Plugins
 <table>
   <thead>
     <tr>
@@ -53,97 +54,6 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-basil.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/basil.html">Basil Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-crane">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-crane.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/crane.html">Crane Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-fortnightly">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-fortnightly.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-owl">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-owl.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/owl.html">Owl Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-rally">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-rally.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/rally.html">Rally Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-reply">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-reply.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/reply.html">Reply Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
-      </td>
-      <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-shrine">
-          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-shrine.svg" alt="Version">
-        </a>
-      </td>
-      <td>
-        A Vuetify Preset for the <a href="https://material.io/design/material-studies/shrine.html">Shrine Material Study</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/vue-cli-plugin-vuetify-storybook">vue-cli-plugin-vuetify-storybook</a>
       </td>
       <td>
@@ -166,6 +76,110 @@
       </td>
       <td>
         A Vue CLI plugin for installing and configuring Vuetify
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### Presets
+<table>
+  <thead>
+    <tr>
+      <th>Preset</th>
+      <th>Version</th>
+      <th>Study</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-basil.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/basil.html">Basil Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-crane">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-crane.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/crane.html">Crane Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-fortnightly">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-fortnightly.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-owl">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-owl.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/owl.html">Owl Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-rally">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-rally.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/rally.html">Rally Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-reply">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-reply.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/reply.html">Reply Material Study</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
+      </td>
+      <td>
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-shrine">
+          <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-shrine.svg" alt="Version">
+        </a>
+      </td>
+      <td>
+        <a href="https://material.io/design/material-studies/shrine.html">Shrine Material Study</a>
       </td>
     </tr>
   </tbody>
