@@ -12,6 +12,7 @@ import colors from 'vuetify/lib/util/colors'
 Vue.use(Vuetify)
 
 export default new Vuetify({
+  // https://vuetifyjs.com/en/features/theme/#theme-generator
   theme: {
     themes: {
       light: {

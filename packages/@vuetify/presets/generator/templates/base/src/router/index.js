@@ -1,4 +1,6 @@
 /**
+ * Vuetify Vue CLI Preset
+ *
  * router/index.js
  *
  * vue-router documentation: https://router.vuejs.org/
@@ -13,7 +15,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  scrollBehavior: (to, from, savedPosition) => {
+  scrollBehavior: (to, _, savedPosition) => {
     if (to.hash) return { selector: to.hash }
     if (savedPosition) return savedPosition
 
@@ -24,13 +26,21 @@ export default new Router({
       path: '/',
       // Layouts allow you to define different
       // structures for different view
+      // https://router.vuejs.org/guide/essentials/nested-routes.html#nested-routes
       component: () => import('@/layouts/default'),
       children: [
         {
           path: '',
           name: 'Home',
           component: () => import('@/views/Home')
-        }
+        },
+        // Create a new Vue template for an About page
+        // and uncomment this entry to enable the route
+        // {
+        //   path: 'about',
+        //   name: 'About',
+        //   component: () => import('@/views/About')
+        // },
       ]
     }
   ]

@@ -6,7 +6,10 @@
  */
 
 export function registerComponents (app) {
-  // Get all .vue files within `src/components/app`
+  // Automatically get all .vue files within
+  // `src/components` and register them to
+  // the current app.
+  // https://webpack.js.org/guides/dependency-management/#requirecontext
   const requireComponent = require.context('@/components', true, /\.vue$/)
 
   for (const file of requireComponent.keys()) {
