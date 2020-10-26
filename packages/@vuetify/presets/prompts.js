@@ -1,7 +1,7 @@
 module.exports = [
   {
     type: 'list',
-    name: 'preset',
+    name: 'configuration',
     message: 'Select from one of the following presets to scaffold your Vuetify project:',
     choices: [
       {
