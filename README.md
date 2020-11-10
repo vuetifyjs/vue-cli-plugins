@@ -96,7 +96,7 @@
         <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
       </td>
       <td>
-        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-basil">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-basil.svg" alt="Version">
         </a>
       </td>
@@ -106,7 +106,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-crane">
@@ -119,7 +119,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-fortnightly">
@@ -132,7 +132,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-owl">
@@ -145,7 +145,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-rally">
@@ -158,7 +158,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-reply">
@@ -171,7 +171,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-shrine">
