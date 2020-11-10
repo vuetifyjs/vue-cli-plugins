@@ -93,10 +93,10 @@
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/docs/readme-presets/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
       </td>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-basil">
+        <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
           <img src="https://img.shields.io/npm/v/vue-cli-plugin-vuetify-preset-basil.svg" alt="Version">
         </a>
       </td>
