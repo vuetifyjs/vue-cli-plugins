@@ -188,7 +188,7 @@
 ### 🔮 About Presets
 Vuetify Presets are an in progress feature that will be enhanced as Vuetify gains new functionality in the future, such as global component defaults. They are our _best-guess_ implementation of the official [Material Design Studies](https://material.io/design/material-studies/about-our-material-studies.html). The studies are more visual than they are technical and in many cases must have aspects of their specification inferred. There are also cases in which part of a study _**will not**_ be supported:
 
-You can find more information about presets in the [Vuetify preset documentation](https://vuetifyjs.com/customization/presets).
+You can find more information about presets in the [Vuetify preset documentation](https://vuetifyjs.com/features/presets/).
 
 ### 📑 License
 [MIT](http://opensource.org/licenses/MIT)
