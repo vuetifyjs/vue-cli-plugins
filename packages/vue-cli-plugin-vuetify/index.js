@@ -25,19 +25,24 @@ module.exports = (api) => {
     config.module
       .rule('vue')
       .use('vue-loader')
-      .tap(options => ({
-        ...options,
-        transformAssetUrls: {
-          // v-app-bar extends v-toolbar
-          'v-app-bar': 'src',
-          // v-carousel-item extends v-img
-          'v-carousel-item': ['src', 'lazy-src'],
-          'v-img': ['src', 'lazy-src'],
-          'v-navigation-drawer': 'src',
-          'v-parallax': 'src',
-          'v-toolbar': 'src',
-        },
-      }))
+      .tap(options => {
+        const transformAssetUrls = options.transformAssetUrls || {};
+    
+        return ({
+          ...options,
+          transformAssetUrls: {
+            // v-app-bar extends v-toolbar
+            'v-app-bar': 'src',
+            // v-carousel-item extends v-img
+            'v-carousel-item': ['src', 'lazy-src'],
+            'v-img': ['src', 'lazy-src'],
+            'v-navigation-drawer': 'src',
+            'v-parallax': 'src',
+            'v-toolbar': 'src',
+            ...transformAssetUrls
+          },
+        })
+      })
   })
 
   // Avoid loading styles in testing
