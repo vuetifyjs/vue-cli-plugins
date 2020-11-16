@@ -93,7 +93,7 @@
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-basil">vue-cli-plugin-vuetify-preset-basil</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-basil">
@@ -106,7 +106,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-crane">vue-cli-plugin-vuetify-preset-crane</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-crane">
@@ -119,7 +119,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-fortnightly">vue-cli-plugin-vuetify-preset-fortnightly</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-fortnightly">
@@ -132,7 +132,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-owl">vue-cli-plugin-vuetify-preset-owl</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-owl">
@@ -145,7 +145,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-rally">vue-cli-plugin-vuetify-preset-rally</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-rally">
@@ -158,7 +158,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-reply">vue-cli-plugin-vuetify-preset-reply</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-reply">
@@ -171,7 +171,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugin-vuetify/tree/master/packages/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/%40vuetify/material-studies/templates/vue-cli-plugin-vuetify-preset-shrine">vue-cli-plugin-vuetify-preset-shrine</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/vue-cli-plugin-vuetify-preset-shrine">
@@ -188,7 +188,7 @@
 ### 🔮 About Presets
 Vuetify Presets are an in progress feature that will be enhanced as Vuetify gains new functionality in the future, such as global component defaults. They are our _best-guess_ implementation of the official [Material Design Studies](https://material.io/design/material-studies/about-our-material-studies.html). The studies are more visual than they are technical and in many cases must have aspects of their specification inferred. There are also cases in which part of a study _**will not**_ be supported:
 
-You can find more information about presets in the [Vuetify preset documentation](https://vuetifyjs.com/customization/presets).
+You can find more information about presets in the [Vuetify preset documentation](https://vuetifyjs.com/features/presets/).
 
 ### 📑 License
 [MIT](http://opensource.org/licenses/MIT)
