@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/cli-plugin-utils">@vuetify/cli-plugin-utils</a>
+        <a href="https://github.com/vuetifyjs/vue-cli-plugins/tree/master/packages/@vuetify/cli-plugin-utils">@vuetify/cli-plugin-utils</a>
       </td>
       <td>
         <a href="https://www.npmjs.com/package/@vuetify/cli-plugin-utils">
