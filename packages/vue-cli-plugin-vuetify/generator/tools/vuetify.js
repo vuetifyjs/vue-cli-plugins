@@ -21,6 +21,12 @@ function renderFiles (api, { opts }) {
     typescript: api.hasPlugin('typescript'),
   })
 
+  if (api.hasPlugin('typescript') && opts.useAlaCarte) {
+    api.render({
+      './src/shims-vuetify.d.ts': '../templates/default/src/shims-vuetify.d.ts',
+    })
+  }
+
   // Render files if we're replacing
   const fs = require('fs')
   const routerPath = api.resolve(`./src/router.${ext}`)
