@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.0.8 (2020-12-03)</small>
+
+* fix: import types with a-la-carte and typescript ([3dac4f1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/3dac4f1)), closes [#43](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/43)
+* fix: use faster a-la-carte import ([4d0c5e3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/4d0c5e3)), closes [#203](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/203)
+* fix: use require.resolve for loaders ([d7e1d00](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/d7e1d00))
+* fix(template): update current lang (#204) ([29b9ff0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/29b9ff0)), closes [#204](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/204)
+
+
+
+
+
 ## <small>2.0.7 (2020-07-20)</small>
 
 * test: update snapshots ([223380c](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/223380c)), closes [#185](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/185)

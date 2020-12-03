@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.7 (2020-12-03)
+
+* chore: normalize file doc intros and clean-up language ([9ea02e2](https://github.com/vuetifyjs/vue-cli-plugins/commit/9ea02e2))
+* chore: rename configuration option name, clean-up generator ([4a6bbe6](https://github.com/vuetifyjs/vue-cli-plugins/commit/4a6bbe6))
+* chore: update structure with latest changes ([23c25ec](https://github.com/vuetifyjs/vue-cli-plugins/commit/23c25ec))
+* feat(presets): add drawer component to base preset (#208) ([5bb67e1](https://github.com/vuetifyjs/vue-cli-plugins/commit/5bb67e1)), closes [#208](https://github.com/vuetifyjs/vue-cli-plugins/issues/208)
+* refactor: update package structure ([77004cc](https://github.com/vuetifyjs/vue-cli-plugins/commit/77004cc))
+* refactor(presets): re-organize structure (#199) ([875af38](https://github.com/vuetifyjs/vue-cli-plugins/commit/875af38)), closes [#199](https://github.com/vuetifyjs/vue-cli-plugins/issues/199)
+
+
+
+
+
 ## 0.1.0-alpha.6 (2020-08-28)
 
 * refactor(presets): update prompts file ([0d19dba](https://github.com/vuetifyjs/vue-cli-plugins/commit/0d19dba))
