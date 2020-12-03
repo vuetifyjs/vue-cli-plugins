@@ -35,7 +35,7 @@ export default new Vuetify({
   <%_ if (locale !== 'en') { _%>
     lang: {
       locales: { <%= locale.replace(/-/g, '') %> },
-      current: '<%= locale %>',
+      current: '<%= locale.replace(/-/g, '') %>',
     },
   <%_ } _%>
   <%_ if (iconFont !== 'mdi') { _%>
