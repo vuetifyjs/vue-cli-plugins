@@ -1,3 +1,5 @@
+const { updateFile } = require("@vuetify/cli-plugin-utils")
+
 const helpers = require('./helpers')
 const fonts = {
   mdi: {
@@ -52,7 +54,7 @@ function addImports (api, iconFont) {
 }
 
 function addLinks (api, iconFont) {
-  helpers.updateFile(api, './public/index.html', lines => {
+  updateFile(api, './public/index.html', lines => {
     const lastLink = lines.reverse().findIndex(line => line.match(/^\s*<\/head>/))
 
     lines.splice(lastLink + 1, 0, `    ${fonts.roboto.link}`)

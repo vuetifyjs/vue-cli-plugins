@@ -1,6 +1,8 @@
 const helpers = require('./helpers')
 const fs = require('fs')
 
+const { updateFile } = require("@vuetify/cli-plugin-utils")
+
 function addDependencies (api) {
   api.extendPackage({
     dependencies: {
@@ -55,7 +57,7 @@ function updateBrowsersList (api) {
       { encoding: 'utf8' },
     )
   } else {
-    helpers.updateFile(api, './.browserslistrc', lines => {
+    updateFile(api, './.browserslistrc', lines => {
       if (!lines.length) {
         return [
           '> 1%',
