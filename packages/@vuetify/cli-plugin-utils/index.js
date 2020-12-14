@@ -2,6 +2,31 @@
 const semver = require('semver')
 const fs = require('fs')
 
+// Check for existence of file and add import
+function addImport (api, file, data, folder, end) {
+  // sass & scss file types
+  for (const ext of ['sass', 'scss']) {
+    const path = `${folder}/${file}.${ext}`
+
+    // If file doesn't exist in user
+    // project, continue to next
+    if (!fileExists(api, `src/${path}`)) continue
+
+    // If file exists, push it into
+    // the import statement
+    data.push(`@import '@/${path}${end}`)
+  }
+}
+
+// Go through each folder and add available imports
+function addImports (api, file, data, end) {
+  // supported folders that can contain
+  // a variables or lists file
+  for (const folder of ['sass', 'scss', 'styles']) {
+    addImport(api, file, data, folder, end)
+  }
+}
+
 // Injects a <link> element into ./public/index.html
 function injectHtmlLink (api, href, attrs) {
   updateFile(api, './public/index.html', lines => {
@@ -216,6 +241,8 @@ function VuetifyPresetGenerator (api, preset, onCreateComplete) {
 }
 
 module.exports = {
+  addImport,
+  addImports,
   fileExists,
   generatePreset,
   injectGoogleFontLink,
