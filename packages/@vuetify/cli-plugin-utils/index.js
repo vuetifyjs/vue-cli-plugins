@@ -67,7 +67,7 @@ function generatePreset (api, preset, onCreateComplete) {
   const file = 'src/plugins/vuetify.js'
   const plugin = api.resolve(file)
 
-  if (!fs.existsSync(plugin)) {
+  if (!fileExists(api, plugin)) {
     console.warn('Unable to locate `vuetify.js` plugin file in `src/plugins`.')
 
     return
@@ -110,10 +110,10 @@ function updateBabelConfig(api, callback) {
 
   const rcPath = api.resolve("./babel.config.js");
   const pkgPath = api.resolve("./package.json");
-  if (fs.existsSync(rcPath)) {
+  if (fileExists(api, rcPath)) {
     configPath = rcPath;
     config = callback(require(rcPath));
-  } else if (fs.existsSync(pkgPath)) {
+  } else if (fileExists(api, pkgPath)) {
     configPath = pkgPath;
     config = JSON.parse(fs.readFileSync(pkgPath, { encoding: "utf8" }));
 
@@ -141,7 +141,7 @@ function updateBabelConfig(api, callback) {
 function updateFile (api, file, callback) {
   const { EOL } = require('os')
   file = api.resolve(file)
-  let content = fs.existsSync(file)
+  let content = fileExists(api, file)
     ? fs.readFileSync(file, { encoding: 'utf8' })
     : ''
 
