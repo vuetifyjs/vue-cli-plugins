@@ -104,6 +104,11 @@ function mergeSassVariables (opt, file) {
   return opt
 }
 
+// Resolve the supplied file
+function resolve(file) {
+  return path.resolve(__dirname, file);
+}
+
 // Update Babel config file with supplied callback
 function updateBabelConfig(api, callback) {
   let config, configPath;
@@ -222,6 +227,7 @@ module.exports = {
   injectHtmlLink,
   injectSassVariables,
   mergeSassVariables,
+  resolve,
   updateBabelConfig,
   updateFile,
   updateVuetifyObject,
