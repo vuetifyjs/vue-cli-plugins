@@ -104,6 +104,11 @@ function mergeSassVariables (opt, file) {
   return opt
 }
 
+
+function parseFile(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, { encoding: "utf8" }));
+}
+
 // Resolve the supplied file
 function resolve(file) {
   return path.resolve(__dirname, file);
@@ -120,7 +125,7 @@ function updateBabelConfig(api, callback) {
     config = callback(require(rcPath));
   } else if (fileExists(api, pkgPath)) {
     configPath = pkgPath;
-    config = JSON.parse(fs.readFileSync(pkgPath, { encoding: "utf8" }));
+    config = parseFile(pkgPath);
 
     if (config.babel) {
       config.babel = callback(config.babel);
@@ -147,7 +152,7 @@ function updateFile (api, file, callback) {
   const { EOL } = require('os')
   file = api.resolve(file)
   let content = fileExists(api, file)
-    ? fs.readFileSync(file, { encoding: 'utf8' })
+    ? parseFile(file)
     : ''
 
   content = callback(content.split(/\r?\n/g)).join(EOL)
@@ -227,6 +232,7 @@ module.exports = {
   injectHtmlLink,
   injectSassVariables,
   mergeSassVariables,
+  parseFile,
   resolve,
   updateBabelConfig,
   updateFile,
