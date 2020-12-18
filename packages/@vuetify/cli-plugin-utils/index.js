@@ -104,7 +104,7 @@ function mergeSassVariables (opt, file) {
   return opt
 }
 
-
+// JSON-ify the contents of the supplied file
 function parseFile(filePath) {
   return JSON.parse(fs.readFileSync(filePath, { encoding: "utf8" }));
 }
