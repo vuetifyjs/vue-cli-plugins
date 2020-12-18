@@ -115,6 +115,7 @@ function updateBabelConfig(api, callback) {
 
   const rcPath = api.resolve("./babel.config.js");
   const pkgPath = api.resolve("./package.json");
+
   if (fileExists(api, rcPath)) {
     configPath = rcPath;
     config = callback(require(rcPath));
