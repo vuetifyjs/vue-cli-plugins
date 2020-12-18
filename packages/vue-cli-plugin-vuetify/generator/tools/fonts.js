@@ -1,3 +1,4 @@
+// Utilities
 const { updateFile } = require("@vuetify/cli-plugin-utils")
 
 const helpers = require('./helpers')
