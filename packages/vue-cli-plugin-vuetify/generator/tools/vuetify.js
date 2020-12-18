@@ -1,7 +1,6 @@
 // Imports
 const fs = require('fs')
 const helpers = require('./helpers')
-
 const { updateFile } = require("@vuetify/cli-plugin-utils")
 
 function addDependencies (api) {
