@@ -64,30 +64,9 @@ function setHtmlLang (api, locale) {
   })
 }
 
-function updateOrCreateVueConfig (api) {
-  const config = api.resolve('vue.config.js')
-
-  if (!fs.existsSync(config)) {
-    fs.writeFileSync(config, 'module.exports = {}', 'utf8')
-  }
-
-  const file = require(config)
-
-  if (!file.transpileDependencies) {
-    file.transpileDependencies = []
-  }
-
-  if (!file.transpileDependencies.includes('vuetify')) {
-    file.transpileDependencies.push('vuetify')
-  }
-
-  fs.writeFileSync(config, `module.exports = ${JSON.stringify(file, 2, 2)}`, 'utf8')
-}
-
 module.exports = {
   addDependencies,
   addImports,
   renderFiles,
   setHtmlLang,
-  updateOrCreateVueConfig,
 }

@@ -8,6 +8,17 @@ function addDependencies (api) {
   })
 }
 
+function addVueConfigTranspileDependency (api) {
+  api.extendPackage({
+    vue: {
+      transpileDependencies: [
+        'vuetify',
+      ],
+    },
+  })
+}
+
 module.exports = {
   addDependencies,
+  addVueConfigTranspileDependency,
 }
