@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.0.9 (2020-12-29)</small>
+
+* fix(types): remove import from ambient declaration ([e5f1891](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e5f1891)), closes [#228](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/228)
+
+
+
+
+
 ## <small>2.0.8 (2020-12-03)</small>
 
 * fix: import types with a-la-carte and typescript ([3dac4f1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/3dac4f1)), closes [#43](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/43)
