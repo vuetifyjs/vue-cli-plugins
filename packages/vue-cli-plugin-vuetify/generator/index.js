@@ -21,6 +21,9 @@ module.exports = (api, opts) => {
 
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
+  // Update vue.config.js for transpileDependency if AlaCarte
+  if (opts.useAlaCarte) alaCarte.addVueConfigTranspileDependency(api)
+
   // Update templates
   vuetify.renderFiles(api, { opts })
 
@@ -32,9 +35,6 @@ module.exports = (api, opts) => {
     }
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
-
-    // Update vue.config.js for transpileDependency if AlaCarte
-    if (opts.useAlaCarte) vuetify.updateOrCreateVueConfig(api)
 
     api.exitLog('Discord community: https://community.vuetifyjs.com')
     api.exitLog('Github: https://github.com/vuetifyjs/vuetify')
