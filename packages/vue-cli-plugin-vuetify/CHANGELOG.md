@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.0 (2021-01-27)
+
+* fix: install latest versions of packages ([44cc257](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/44cc257))
+* fix: merge `transformAssetUrls` options (#216) ([d829f25](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/d829f25)), closes [#216](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/216)
+* fix: use extendPackage to write transpileDependencies (#227) ([6c0454d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6c0454d)), closes [#227](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/227)
+* feat(locale): add bulgarian locale ([90de05f](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/90de05f)), closes [vuetifyjs/vuetify#12649](https://github.com/vuetifyjs/vuetify/issues/12649)
+* feat(locale): add Azerbaijani and Central Kurdish ([8ea21cb](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/8ea21cb))
+* feat(locale): add Finnish translation (#156) ([b10d800](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/b10d800)), closes [#156](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/156)
+* feat(locale): add Slovak translation (#154) ([9a6162d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/9a6162d)), closes [#154](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/154)
+
+
+
+
+
 ## <small>2.0.9 (2020-12-29)</small>
 
 * fix(types): remove import from ambient declaration ([e5f1891](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e5f1891)), closes [#228](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/228)
