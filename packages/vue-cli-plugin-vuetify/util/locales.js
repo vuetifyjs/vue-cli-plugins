@@ -36,6 +36,7 @@ const LOCALE_MAP = {
   th: 'Thai',
   tr: 'Turkish',
   uk: 'Ukrainian',
+  vi: 'Vietnamese',
   'zh-Hans': 'Chinese (simplified)',
   'zh-Hant': 'Chinese (traditional)',
 }
