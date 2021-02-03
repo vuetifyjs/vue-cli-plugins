@@ -15,7 +15,7 @@ Vue.use(Vuetify)
 export default makeDecorator({
   name: 'withVuetify',
   parameterName: 'vuetify',
-  wrapper: (storyFn, context, { parameters = {} }) => {
+  wrapper: (storyFn, context, { options = {}, parameters = {} }) => {
     // Reduce to one new URL?
     const searchParams = new URL(window.location).searchParams
     const dark = searchParams.get('eyes-variation') === 'dark'
