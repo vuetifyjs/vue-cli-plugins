@@ -1,6 +1,8 @@
 // Imports
+// Utilities
 const fs = require('fs')
 const helpers = require('./helpers')
+const { updateFile } = require("@vuetify/cli-plugin-utils")
 
 function addDependencies (api) {
   api.extendPackage({
@@ -53,7 +55,7 @@ function addImports (api) {
 }
 
 function setHtmlLang (api, locale) {
-  helpers.updateFile(api, './public/index.html', lines => {
+  updateFile(api, './public/index.html', lines => {
     const htmlIndex = lines.findIndex(line => line.match(/<html\s+(.+\s+)?lang=[^\s>]+(\s|>)/))
 
     if (htmlIndex !== -1) {

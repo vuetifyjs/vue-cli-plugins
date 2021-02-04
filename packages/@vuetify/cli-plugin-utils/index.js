@@ -67,7 +67,7 @@ function generatePreset (api, preset, onCreateComplete) {
   const file = 'src/plugins/vuetify.js'
   const plugin = api.resolve(file)
 
-  if (!fs.existsSync(plugin)) {
+  if (!fileExists(api, plugin)) {
     console.warn('Unable to locate `vuetify.js` plugin file in `src/plugins`.')
 
     return
@@ -105,12 +105,56 @@ function mergeSassVariables (opt, file) {
   return opt
 }
 
+// JSON-ify the contents of the supplied file
+function parseFile(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, { encoding: "utf8" }));
+}
+
+// Resolve the supplied file
+function resolve(file) {
+  return path.resolve(__dirname, file);
+}
+
+// Update Babel config file with supplied callback
+function updateBabelConfig(api, callback) {
+  let config, configPath;
+
+  const rcPath = api.resolve("./babel.config.js");
+  const pkgPath = api.resolve("./package.json");
+
+  if (fileExists(api, rcPath)) {
+    configPath = rcPath;
+    config = callback(require(rcPath));
+  } else if (fileExists(api, pkgPath)) {
+    configPath = pkgPath;
+    config = parseFile(pkgPath);
+
+    if (config.babel) {
+      config.babel = callback(config.babel);
+    } else {
+      // TODO: error handling here?
+    }
+  }
+
+  if (configPath) {
+    const moduleExports = configPath !== pkgPath ? "module.exports = " : "";
+
+    fs.writeFileSync(
+      configPath,
+      `${moduleExports}${JSON.stringify(config, null, 2)}`,
+      { encoding: "utf8" }
+    );
+  } else {
+    // TODO: handle if babel config doesn't exist
+  }
+}
+
 // Update local file with supplied callback
 function updateFile (api, file, callback) {
   const { EOL } = require('os')
   file = api.resolve(file)
-  let content = fs.existsSync(file)
-    ? fs.readFileSync(file, { encoding: 'utf8' })
+  let content = fileExists(api, file)
+    ? parseFile(file)
     : ''
 
   content = callback(content.split(/\r?\n/g)).join(EOL)
@@ -190,6 +234,9 @@ module.exports = {
   injectHtmlLink,
   injectSassVariables,
   mergeSassVariables,
+  parseFile,
+  resolve,
+  updateBabelConfig,
   updateFile,
   updateVuetifyObject,
   VuetifyPresetGenerator,
