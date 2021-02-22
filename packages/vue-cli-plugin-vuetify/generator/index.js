@@ -15,7 +15,7 @@ module.exports = (api, opts) => {
   if (opts.installFonts) fonts.addImports(api, opts.iconFont)
 
   // Add dependencies
-  vuetify.addDependencies(api)
+  vuetify.addDependencies(api, opts.v3)
   if (opts.useAlaCarte) alaCarte.addDependencies(api)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
