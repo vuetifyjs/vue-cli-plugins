@@ -7,7 +7,7 @@ function addDependencies (api, v3) {
     dependencies: {
       vuetify: v3 ? "^3.0.0-alpha.0" : "^2.4.0",
     },
-  });
+  })
 }
 
 function renderFiles (api, { opts }) {
