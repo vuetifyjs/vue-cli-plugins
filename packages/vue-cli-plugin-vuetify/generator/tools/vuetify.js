@@ -15,7 +15,7 @@ function renderFiles (api, { opts }) {
   const pluginFilename = `vuetify.${ext}`
 
   api.render({
-    [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js',
+    [`./src/plugins/${pluginFilename}`]: opts.v3 ? '../templates/v3/src/plugins/vuetify.js' : '../templates/default/src/plugins/vuetify.js',
   }, {
     ...opts,
     typescript: hasTS,
