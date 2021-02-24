@@ -1,5 +1,4 @@
 // Imports
-const fs = require('fs')
 const helpers = require('./helpers')
 
 function addDependencies (api, v3) {
@@ -11,17 +10,18 @@ function addDependencies (api, v3) {
 }
 
 function renderFiles (api, { opts }) {
-  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  const hasTS = api.hasPlugin('typescript')
+  const ext = hasTS ? 'ts' : 'js'
   const pluginFilename = `vuetify.${ext}`
 
   api.render({
     [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js',
   }, {
     ...opts,
-    typescript: api.hasPlugin('typescript'),
+    typescript: hasTS,
   })
 
-  if (api.hasPlugin('typescript') && opts.useAlaCarte) {
+  if (hasTS && opts.useAlaCarte) {
     api.render({
       './src/shims-vuetify.d.ts': '../templates/default/src/shims-vuetify.d.ts',
     })
