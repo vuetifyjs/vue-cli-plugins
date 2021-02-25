@@ -30,13 +30,23 @@ function renderFiles (api, { opts }) {
   // Render files if we're replacing
   const fs = require('fs')
   const routerPath = api.resolve(`./src/router.${ext}`)
+  let files;
   opts.router = fs.existsSync(routerPath)
 
   if (opts.replaceComponents) {
-    const files = {
-      './src/App.vue': `../templates/default/src/App.${ext}.vue`,
-      './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
-      './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`,
+    // replaceComponents is always true
+    if (opts.v3) {
+      files = {
+        "./src/App.vue": `../templates/v3/src/App.${ext}.vue`,
+        "./src/assets/logo.svg": "../templates/v3/src/assets/logo.svg",
+        "./src/main.js": "../templates/v3/src/index.js",
+      }
+    } else {
+      files = {
+        "./src/App.vue": `../templates/default/src/App.${ext}.vue`,
+        "./src/assets/logo.svg": "../templates/default/src/assets/logo.svg",
+        "./src/components/HelloWorld.vue": `../templates/default/src/components/HelloWorld.${ext}.vue`,
+      }
     }
 
     if (opts.router) {
