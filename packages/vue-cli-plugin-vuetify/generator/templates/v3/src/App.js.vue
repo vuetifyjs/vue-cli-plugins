@@ -1,9 +1,11 @@
 <template>
-  <%_ if (router) { _%>
-  <router-view/>
-  <%_ } else { _%>
-  <HelloWorld/>
-  <%_ } _%>
+  <v-app>
+    <%_ if (router) { _%>
+    <router-view/>
+    <%_ } else { _%>
+    <HelloWorld/>
+    <%_ } _%>
+  <v-app/>
 </template>
 
 <script>
