@@ -31,8 +31,13 @@ function renderFiles (api, { opts }) {
   // Render files if we're replacing
   const fs = require('fs')
   const routerPath = api.resolve(`./src/router.${ext}`)
-  let files
   opts.router = fs.existsSync(routerPath)
+
+  let files = {
+    "./src/App.vue": `../templates/default/src/App.${ext}.vue`,
+    "./src/assets/logo.svg": "../templates/default/src/assets/logo.svg",
+    "./src/components/HelloWorld.vue": `../templates/default/src/components/HelloWorld.${ext}.vue`,
+  }
 
   // replaceComponents is always true
   if (opts.replaceComponents) {
@@ -42,12 +47,6 @@ function renderFiles (api, { opts }) {
         "./src/assets/logo.svg": "../templates/v3/src/assets/logo.svg",
         "./src/components/HelloWorld.vue": `../templates/v3/src/components/HelloWorld.${ext}.vue`,
         [api.entryFile]: "../templates/v3/src/main.js",
-      };
-    } else {
-      files = {
-        './src/App.vue': `../templates/default/src/App.${ext}.vue`,
-        './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
-        './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`,
       }
     }
 
@@ -62,8 +61,8 @@ function renderFiles (api, { opts }) {
 }
 
 function addImports (api) {
-  api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify';");
-  api.injectRootOptions(api.entryFile, "vuetify");
+  api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify';")
+  api.injectRootOptions(api.entryFile, "vuetify")
 }
 
 function setHtmlLang (api, locale) {
