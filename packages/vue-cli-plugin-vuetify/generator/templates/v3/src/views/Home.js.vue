@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HelloWorld msg="Welcome to Your Vuetify.js App" />
+    <HelloWorld/>
   </div>
 </template>
 
