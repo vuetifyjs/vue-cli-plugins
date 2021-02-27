@@ -64,11 +64,12 @@ function generatePreset (api, preset, onCreateComplete) {
     return
   }
 
-  const file = 'src/plugins/vuetify.js'
+  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  const file = `src/plugins/vuetify.${ext}`
   const plugin = api.resolve(file)
 
   if (!fs.existsSync(plugin)) {
-    console.warn('Unable to locate `vuetify.js` plugin file in `src/plugins`.')
+    console.warn(`Unable to locate vuetify.${ext} plugin file in src/plugins.`)
 
     return
   }
