@@ -37,13 +37,23 @@ const fonts = {
   },
 }
 
-function addDependencies (api, iconFont) {
-  api.extendPackage({
+function addDependencies (api, iconFont, useV3) {
+  let pkgOpts = {
     dependencies: {
       ...fonts.roboto.package,
       ...fonts[iconFont].package,
-    },
-  })
+    }
+  }
+
+  if (useV3) pkgOpts = {
+    ...pkgOpts,
+    // Use specified version or latest?
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-solid-svg-icons": "latest",
+    "@fortawesome/vue-fontawesome": "latest",
+  }
+
+  api.extendPackage(pkgOpts)
 }
 
 function addImports (api, iconFont) {

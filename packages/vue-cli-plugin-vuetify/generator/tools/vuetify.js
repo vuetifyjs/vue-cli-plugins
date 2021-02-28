@@ -1,26 +1,28 @@
 // Imports
 const helpers = require('./helpers')
 
-function addDependencies (api) {
+function addDependencies (api, v3) {
   api.extendPackage({
     dependencies: {
-      vuetify: '^2.4.0',
+      // Will currently prompt to select version for v3 preset, until v3 is released.
+      vuetify: v3 ? '^3.0.0-alpha.0' : '^2.4.0',
     },
   })
 }
 
 function renderFiles (api, { opts }) {
-  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  const hasTS = api.hasPlugin('typescript')
+  const ext = hasTS ? 'ts' : 'js'
   const pluginFilename = `vuetify.${ext}`
 
   api.render({
-    [`./src/plugins/${pluginFilename}`]: '../templates/default/src/plugins/vuetify.js',
+    [`./src/plugins/${pluginFilename}`]: opts.useV3 ? '../templates/v3/src/plugins/vuetify.js' : '../templates/default/src/plugins/vuetify.js',
   }, {
     ...opts,
-    typescript: api.hasPlugin('typescript'),
+    typescript: hasTS,
   })
 
-  if (api.hasPlugin('typescript') && opts.useAlaCarte) {
+  if (hasTS && opts.useAlaCarte) {
     api.render({
       './src/shims-vuetify.d.ts': '../templates/default/src/shims-vuetify.d.ts',
     })
@@ -31,15 +33,27 @@ function renderFiles (api, { opts }) {
   const routerPath = api.resolve(`./src/router.${ext}`)
   opts.router = fs.existsSync(routerPath)
 
+  let files = {
+    "./src/App.vue": `../templates/default/src/App.${ext}.vue`,
+    "./src/assets/logo.svg": "../templates/default/src/assets/logo.svg",
+    "./src/components/HelloWorld.vue": `../templates/default/src/components/HelloWorld.${ext}.vue`,
+  }
+
+  // replaceComponents is always true
   if (opts.replaceComponents) {
-    const files = {
-      './src/App.vue': `../templates/default/src/App.${ext}.vue`,
-      './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
-      './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`,
+    if (opts.useV3) {
+      files = {
+        "./src/App.vue": `../templates/v3/src/App.${ext}.vue`,
+        "./src/assets/logo.svg": "../templates/v3/src/assets/logo.svg",
+        "./src/components/HelloWorld.vue": `../templates/v3/src/components/HelloWorld.${ext}.vue`,
+        [api.entryFile]: "../templates/v3/src/main.js",
+      }
     }
 
     if (opts.router) {
-      files['./src/views/Home.vue'] = `../templates/default/src/views/Home.${ext}.vue`
+      files["./src/views/Home.vue"] = opts.v3
+        ? "../templates/v3/src/views/Home.js.vue"
+        : `../templates/default/src/views/Home.${ext}.vue`
     }
 
     api.render(files, opts)
@@ -47,8 +61,8 @@ function renderFiles (api, { opts }) {
 }
 
 function addImports (api) {
-  api.injectImports(api.entryFile, 'import vuetify from \'./plugins/vuetify\';')
-  api.injectRootOptions(api.entryFile, 'vuetify')
+  api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify';")
+  api.injectRootOptions(api.entryFile, "vuetify")
 }
 
 function setHtmlLang (api, locale) {

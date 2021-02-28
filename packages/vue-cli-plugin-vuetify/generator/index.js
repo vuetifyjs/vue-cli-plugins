@@ -10,16 +10,16 @@ module.exports = (api, opts) => {
 
   // Add imports
   // Must be before dependencies because of weird bug
-  vuetify.addImports(api)
+  if (!opts.useV3) vuetify.addImports(api)
   if (!opts.useAlaCarte && opts.usePolyfill) polyfill.addImports(api)
-  if (opts.installFonts) fonts.addImports(api, opts.iconFont)
+  if (opts.installFonts && !opts.useV3) fonts.addImports(api, opts.iconFont)
 
   // Add dependencies
-  vuetify.addDependencies(api)
+  vuetify.addDependencies(api, opts.useV3)
   if (opts.useAlaCarte) alaCarte.addDependencies(api)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
-  if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
+  if (opts.installFonts) fonts.addDependencies(api, opts.iconFont, opts.useV3)
 
   // Update vue.config.js for transpileDependency if AlaCarte
   if (opts.useAlaCarte) alaCarte.addVueConfigTranspileDependency(api)
