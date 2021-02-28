@@ -1,6 +1,9 @@
 <template>
   <v-app-bar app>
-    <v-app-bar-nav-icon @click="drawer = !drawer" />
+    <v-app-bar-nav-icon
+      aria-label="Toggle Navigation Drawer"
+      @click="drawer = !drawer"
+    />
 
     <v-toolbar-title>Application</v-toolbar-title>
   </v-app-bar>
