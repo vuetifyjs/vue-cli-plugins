@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.10 (2021-02-28)
+
+* fix(AppBar): add missing aria-label ([d2c0b26](https://github.com/vuetifyjs/vue-cli-plugins/commit/d2c0b26))
+* fix(index.html): remove asset links causing duplicate resources ([ad00810](https://github.com/vuetifyjs/vue-cli-plugins/commit/ad00810))
+
+
+
+
+
 ## 0.1.0-alpha.9 (2021-02-28)
 
 * chore(Home): rename view and update export ([7c4d923](https://github.com/vuetifyjs/vue-cli-plugins/commit/7c4d923))

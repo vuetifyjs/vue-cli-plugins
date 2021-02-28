@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.9 (2021-02-28)</small>
+
+* refactor(update-file): support ts. ([37e1fd8](https://github.com/vuetifyjs/vue-cli-plugins/commit/37e1fd8))
+* fix(gen-preset): support ts. ([f967f85](https://github.com/vuetifyjs/vue-cli-plugins/commit/f967f85))
+
+
+
+
+
 ## <small>0.0.8 (2021-01-27)</small>
 
 * fix(utils): Add support for sass-loader >= 9 (#211) ([520d067](https://github.com/vuetifyjs/vue-cli-plugins/commit/520d067)), closes [#211](https://github.com/vuetifyjs/vue-cli-plugins/issues/211)

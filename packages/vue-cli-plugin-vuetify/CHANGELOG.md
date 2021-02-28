@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.0 (2021-02-28)
+
+* feat(v3-preset): add v3 preset (#237) ([5706657](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/5706657)), closes [#237](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/237)
+
+
+
+
+
 ## <small>2.1.1 (2021-02-28)</small>
 
 * chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a36555e))
