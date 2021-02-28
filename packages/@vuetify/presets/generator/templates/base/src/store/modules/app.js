@@ -3,7 +3,7 @@ import { make } from 'vuex-pathify'
 
 // Data
 const state = {
-  drawer: null
+  drawer: null,
 }
 
 const mutations = make.mutations(state)

@@ -32,9 +32,9 @@ export default new Router({
         {
           path: '',
           name: 'Default',
-          component: () => import('@/views/home')
+          component: () => import('@/views/home'),
         },
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 })

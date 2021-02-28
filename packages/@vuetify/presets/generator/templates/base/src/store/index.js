@@ -22,7 +22,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules,
-  plugins: [pathify.plugin]
+  plugins: [pathify.plugin],
 })
 
 // A reusable const for making root commits and dispatches

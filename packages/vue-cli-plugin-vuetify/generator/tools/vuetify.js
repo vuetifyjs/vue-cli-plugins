@@ -1,5 +1,4 @@
 // Imports
-const fs = require('fs')
 const helpers = require('./helpers')
 
 function addDependencies (api) {

@@ -6,7 +6,7 @@ module.exports = [
     choices: [
       {
         name: 'Base (A basic Vuetify project)',
-        value: 'base'
+        value: 'base',
       },
       {
         name: 'Essential (Coming soon)',
@@ -15,5 +15,5 @@ module.exports = [
       },
     ],
     default: 'base',
-  }
+  },
 ]

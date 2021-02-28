@@ -6,7 +6,7 @@ module.exports = api => {
   api.extendPackage({
     scripts: {
       'serve:storybook': 'start-storybook -p 6006',
-      "build:storybook": "build-storybook",
+      'build:storybook': 'build-storybook',
     },
     devDependencies: {
       '@babel/preset-react': '^7.6.3',
@@ -21,7 +21,7 @@ module.exports = api => {
       'babel-preset-vue': '^2.0.2',
       'prism-react-renderer': '^0.1.7',
       'js-beautify': '^1.11.0',
-      'prismjs': '^1.17.1',
+      prismjs: '^1.17.1',
       'vue-storybook': '^1.1.0',
     },
   })

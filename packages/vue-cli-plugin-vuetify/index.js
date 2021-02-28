@@ -26,8 +26,8 @@ module.exports = (api) => {
       .rule('vue')
       .use('vue-loader')
       .tap(options => {
-        const transformAssetUrls = options.transformAssetUrls || {};
-    
+        const transformAssetUrls = options.transformAssetUrls || {}
+
         return ({
           ...options,
           transformAssetUrls: {
@@ -39,7 +39,7 @@ module.exports = (api) => {
             'v-navigation-drawer': 'src',
             'v-parallax': 'src',
             'v-toolbar': 'src',
-            ...transformAssetUrls
+            ...transformAssetUrls,
           },
         })
       })
