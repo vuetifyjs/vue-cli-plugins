@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.9 (2021-02-28)
+
+* chore(Home): rename view and update export ([7c4d923](https://github.com/vuetifyjs/vue-cli-plugins/commit/7c4d923))
+
+
+
+
+
 ## 0.1.0-alpha.8 (2021-02-28)
 
 * chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugins/commit/a36555e))
