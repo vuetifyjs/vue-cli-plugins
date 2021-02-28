@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.1.1 (2021-02-28)</small>
+
+* chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a36555e))
+
+
+
+
+
 ## 2.1.0 (2021-01-27)
 
 * fix: install latest versions of packages ([44cc257](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/44cc257))

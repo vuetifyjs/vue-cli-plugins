@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.8 (2021-02-28)
+
+* chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugins/commit/a36555e))
+* refactor: update exported view names and added packages ([8f89066](https://github.com/vuetifyjs/vue-cli-plugins/commit/8f89066))
+
+
+
+
+
 ## 0.1.0-alpha.7 (2020-12-03)
 
 * chore: normalize file doc intros and clean-up language ([9ea02e2](https://github.com/vuetifyjs/vue-cli-plugins/commit/9ea02e2))
