@@ -12,7 +12,7 @@
         <span class="headline font-weight-light">Vuetify</span>
 
         <h1 class="display-4 font-weight-black mb-6">
-          Essential Preset
+          Vuetify Preset
         </h1>
 
         <v-img
@@ -120,7 +120,7 @@
         ['Routing', 'mdi-road-variant', 'blue-grey'],
         ['Vuetify ESLint', 'mdi-auto-fix', 'deep-purple accent-4'],
         ['SASS', 'mdi-sass', 'pink'],
-        ['Essential Components', 'mdi-cube-scan', 'indigo'],
+        ['Base Components', 'mdi-cube-scan', 'indigo'],
         ['View Layouts', 'mdi-view-grid-outline', 'orange'],
         ['Webfont Loader', 'mdi-format-size', 'green accent-4'],
       ],

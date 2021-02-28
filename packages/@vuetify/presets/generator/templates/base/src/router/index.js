@@ -31,16 +31,9 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'Home',
-          component: () => import('@/views/Home')
+          name: 'Default',
+          component: () => import('@/views/home')
         },
-        // Create a new Vue template for an About page
-        // and uncomment this entry to enable the route
-        // {
-        //   path: 'about',
-        //   name: 'About',
-        //   component: () => import('@/views/About')
-        // },
       ]
     }
   ]
