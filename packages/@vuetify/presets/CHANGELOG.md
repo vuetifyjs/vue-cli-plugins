@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.11 (2021-03-01)
+
+* fix(index.html): remove reference to undefined webpack variable ([277656e](https://github.com/vuetifyjs/vue-cli-plugins/commit/277656e))
+* fix(webfontloader): add missing mdi css ([154cc25](https://github.com/vuetifyjs/vue-cli-plugins/commit/154cc25))
+
+
+
+
+
 ## 0.1.0-alpha.10 (2021-02-28)
 
 * fix(AppBar): add missing aria-label ([d2c0b26](https://github.com/vuetifyjs/vue-cli-plugins/commit/d2c0b26))
