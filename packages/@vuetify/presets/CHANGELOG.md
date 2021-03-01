@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.12 (2021-03-01)
+
+* fix(index.html): add default title ([538b39f](https://github.com/vuetifyjs/vue-cli-plugins/commit/538b39f))
+
+
+
+
+
 ## 0.1.0-alpha.11 (2021-03-01)
 
 * fix(index.html): remove reference to undefined webpack variable ([277656e](https://github.com/vuetifyjs/vue-cli-plugins/commit/277656e))
