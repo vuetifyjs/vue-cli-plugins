@@ -6,7 +6,7 @@
       "preset": "configure",
       "replaceComponents": true,
       "iconFont": "mdi",
-      "installFonts": false,
+      "installFonts": true,
       "locale": "en",
       "useAlaCarte": true,
       "useCustomProperties": false,
