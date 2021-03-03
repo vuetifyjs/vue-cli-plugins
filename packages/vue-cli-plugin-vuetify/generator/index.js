@@ -16,10 +16,10 @@ module.exports = (api, opts) => {
 
   // Add dependencies
   vuetify.addDependencies(api, opts.useV3)
-  if (opts.useAlaCarte) alaCarte.addDependencies(api)
+  if (opts.useAlaCarte) alaCarte.addDependencies(api, opts.useV3)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
-  if (opts.installFonts) fonts.addDependencies(api, opts.iconFont, opts.useV3)
+  if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
   // Update vue.config.js for transpileDependency if AlaCarte
   if (opts.useAlaCarte) alaCarte.addVueConfigTranspileDependency(api)
