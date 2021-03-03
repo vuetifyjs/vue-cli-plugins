@@ -5,7 +5,7 @@
     <%_ } else { _%>
     <HelloWorld/>
     <%_ } _%>
-  <v-app/>
+  </v-app>
 </template>
 
 <script>
