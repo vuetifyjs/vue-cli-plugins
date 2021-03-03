@@ -94,7 +94,7 @@
 <script>
 
   export default {
-    name: 'Playground',
+    name: 'HelloWorld',
 
     data: () => ({
       ecosystem: [
