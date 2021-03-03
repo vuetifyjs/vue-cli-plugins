@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.2.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.0...vue-cli-plugin-vuetify@2.2.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* Update template imports and don't install vuetify-loader ([#243](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/243)) ([cc969bd](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/cc969bdda4291fccbf04d103bb5374b5db570956))
+* **fonts:** @mdi/font version ([#240](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/240)) ([ac2c30c](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/ac2c30ce917b9c2e7933ee23a8141f1bddaf76f1))
+* **v3:** updates to components, formatting, and imports ([#242](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/242)) ([46e6322](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/46e63226da828b36fbfd1a711a4ef3e7ec894d6d))
+
+
+
 ## 2.2.0 (2021-02-28)
 
 * feat(v3-preset): add v3 preset (#237) ([5706657](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/5706657)), closes [#237](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/237)
