@@ -1,10 +1,12 @@
 <template>
   <v-app>
-    <%_ if (router) { _%>
-    <router-view/>
-    <%_ } else { _%>
-    <HelloWorld/>
-    <%_ } _%>
+    <v-main>
+      <%_ if (router) { _%>
+      <router-view/>
+      <%_ } else { _%>
+      <HelloWorld/>
+      <%_ } _%>
+    </v-main>
   </v-app>
 </template>
 
