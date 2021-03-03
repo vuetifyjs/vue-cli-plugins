@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import vuetify from "./vuetify";
+import vuetify from "./plugins/vuetify";
 import App from "./App";
 
 const app = createApp(App);
