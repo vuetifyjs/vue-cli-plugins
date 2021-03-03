@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.2.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.1...vue-cli-plugin-vuetify@2.2.2) (2021-03-03)
+
+
+### Bug Fixes
+
+* add vuetify-loader to devDependencies ([0060295](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/00602957f97cd4f84d65749ee0f873314ec92076))
+
+
+
 ### [2.2.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.0...vue-cli-plugin-vuetify@2.2.1) (2021-03-03)
 
 
