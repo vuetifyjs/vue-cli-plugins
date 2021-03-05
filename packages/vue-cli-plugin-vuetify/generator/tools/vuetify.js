@@ -24,7 +24,7 @@ function renderFiles (api, { opts }) {
 
   if (hasTS && opts.useAlaCarte) {
     api.render({
-      './src/shims-vuetify.d.ts': '../templates/default/src/shims-vuetify.d.ts',
+      './src/shims-vuetify.d.ts': opts.useV3 ? '../templates/default/src/shims-vuetify.d.ts' : '../templates/default/src/shims-vuetify.d.ts',
     })
   }
 
@@ -34,26 +34,24 @@ function renderFiles (api, { opts }) {
   opts.router = fs.existsSync(routerPath)
 
   let files = {
-    "./src/App.vue": `../templates/default/src/App.${ext}.vue`,
-    "./src/assets/logo.svg": "../templates/default/src/assets/logo.svg",
-    "./src/components/HelloWorld.vue": `../templates/default/src/components/HelloWorld.${ext}.vue`,
+    './src/App.vue': `../templates/default/src/App.${ext}.vue`,
+    './src/assets/logo.svg': '../templates/default/src/assets/logo.svg',
+    './src/components/HelloWorld.vue': `../templates/default/src/components/HelloWorld.${ext}.vue`,
   }
 
   // replaceComponents is always true
   if (opts.replaceComponents) {
     if (opts.useV3) {
       files = {
-        "./src/App.vue": `../templates/v3/src/App.${ext}.vue`,
-        "./src/assets/logo.svg": "../templates/v3/src/assets/logo.svg",
-        "./src/components/HelloWorld.vue": `../templates/v3/src/components/HelloWorld.${ext}.vue`,
-        [api.entryFile]: "../templates/v3/src/main.js",
+        './src/App.vue': `../templates/v3/src/App.${ext}.vue`,
+        './src/assets/logo.svg': '../templates/v3/src/assets/logo.svg',
+        './src/components/HelloWorld.vue': `../templates/v3/src/components/HelloWorld.${ext}.vue`,
+        [api.entryFile]: `../templates/v3/src/main.${ext}`,
       }
     }
 
     if (opts.router) {
-      files["./src/views/Home.vue"] = opts.v3
-        ? "../templates/v3/src/views/Home.js.vue"
-        : `../templates/default/src/views/Home.${ext}.vue`
+      files['./src/views/Home.vue'] = opts.v3 ? `../templates/v3/src/views/Home.${ext}.vue` : `../templates/default/src/views/Home.${ext}.vue`
     }
 
     api.render(files, opts)
@@ -62,7 +60,7 @@ function renderFiles (api, { opts }) {
 
 function addImports (api) {
   api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify';")
-  api.injectRootOptions(api.entryFile, "vuetify")
+  api.injectRootOptions(api.entryFile, 'vuetify')
 }
 
 function setHtmlLang (api, locale) {
