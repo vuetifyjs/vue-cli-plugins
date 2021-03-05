@@ -30,7 +30,9 @@ function renderFiles (api, { opts }) {
   // Render files if we're replacing
   const fs = require('fs')
   const routerPath = api.resolve(`./src/router.${ext}`)
+  const storePath = api.resolve(`./src/store.${ext}`)
   opts.router = fs.existsSync(routerPath)
+  opts.store = fs.existsSync(storePath)
 
   let files = {
     "./src/App.vue": `../templates/default/src/App.${ext}.vue`,
