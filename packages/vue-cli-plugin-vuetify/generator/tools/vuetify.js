@@ -4,7 +4,6 @@ const helpers = require('./helpers')
 function addDependencies (api, v3) {
   api.extendPackage({
     dependencies: {
-      // Will currently prompt to select version for v3 preset, until v3 is released.
       vuetify: v3 ? '^3.0.0-alpha.0' : '^2.4.0',
     },
   })
