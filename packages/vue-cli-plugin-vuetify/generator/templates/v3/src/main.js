@@ -1,14 +1,14 @@
 import { createApp } from 'vue'
 import vuetify from './plugins/vuetify'
-import App from './App'
-<_% if (router) { %_>
+import App from './App.vue'
+<%_ if (router) { _%>
 import router from './router'
-<_% } %_>
+<%_ } _%>
 
 const app = createApp(App)
-<_% if (router) { %_>
+<%_ if (router) { _%>
 app.use(router)
-<_% } %_>
+<%_ } _%>
 app.use(vuetify)
 
 app.mount('#app')
