@@ -4,9 +4,9 @@ const resolve = file => path.resolve(__dirname, file)
 
 const PRESET_MAP = {
   default: 'Default (recommended)',
+  preview: 'Preview (vuetify 3 + vite)',
   prototype: 'Prototype (rapid development)',
   v3: 'V3 (alpha)',
-  preview: 'Preview (v3 + vite)',
 }
 
 module.exports = fs.readdirSync(resolve('../presets')).map(preset => {
