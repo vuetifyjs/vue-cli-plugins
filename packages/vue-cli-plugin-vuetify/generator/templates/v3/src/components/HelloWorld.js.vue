@@ -15,6 +15,10 @@
           <div>Welcome to the Vuetify 3 Alpha</div>
         </h1>
 
+<%_ if (useVite) { _%>
+          <small>Vite Preview</small>
+<%_ } _%>
+
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
           <br>please join our online
