@@ -142,7 +142,7 @@ export default {
       },
       {
         text: 'Roadmap',
-        href: 'https://vuetifyjs.com/en/introduction/roadmap/',
+        href: 'https://vuetifyjs.com/introduction/roadmap/',
       },
       {
         text: 'Frequently Asked Questions',
