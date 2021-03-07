@@ -12,11 +12,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          <%_ if (useVite) { _%>
-          Welcome to Vuetify 3 + Vite Preview
-          <%_ } else { _%>
-          Welcome to Vuetify 3 Alpha
-          <%_ } _%>
+          <div>Welcome to the Vuetify 3 Alpha</div>
         </h1>
 
         <p class="subheading font-weight-regular">
