@@ -29,9 +29,9 @@ module.exports = (api, opts) => {
         'vite': '^2.0.5',
       },
       scripts: {
-      'serve': 'vite preview',
-      'build': 'vite build',
-      'dev': 'vite',
+        'serve': 'vite preview',
+        'build': 'vite build',
+        'dev': 'vite',
       }
     })
 
