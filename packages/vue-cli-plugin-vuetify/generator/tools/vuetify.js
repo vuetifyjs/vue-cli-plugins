@@ -30,7 +30,7 @@ function renderFiles (api, { opts }) {
 
   // Render files if we're replacing
   const fs = require('fs')
-  const routerPath = api.resolve(`./src/router.${ext}`)
+  const routerPath = api.resolve(`./src/router/index.${ext}`)
   opts.router = fs.existsSync(routerPath)
 
   let files = {
@@ -51,7 +51,7 @@ function renderFiles (api, { opts }) {
     }
 
     if (opts.router) {
-      files['./src/views/Home.vue'] = opts.v3 ? `../templates/v3/src/views/Home.${ext}.vue` : `../templates/default/src/views/Home.${ext}.vue`
+      files['./src/views/Home.vue'] = opts.useV3 ? `../templates/v3/src/views/Home.${ext}.vue` : `../templates/default/src/views/Home.${ext}.vue`
     }
 
     api.render(files, opts)
