@@ -24,7 +24,7 @@ function renderFiles (api, { opts }) {
 
   if (hasTS && opts.useAlaCarte) {
     api.render({
-      './src/shims-vuetify.d.ts': opts.useV3 ? '../templates/default/src/shims-vuetify.d.ts' : '../templates/default/src/shims-vuetify.d.ts',
+      './src/shims-vuetify.d.ts': opts.useV3 ? '../templates/v3/src/shims-vuetify.d.ts' : '../templates/default/src/shims-vuetify.d.ts',
     })
   }
 
