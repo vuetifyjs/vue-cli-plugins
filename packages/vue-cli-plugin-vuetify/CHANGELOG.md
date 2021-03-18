@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.2...vue-cli-plugin-vuetify@2.3.0) (2021-03-18)
+
+
+### Features
+
+* **vite-preview:** add vite preview preset. ([cde9d29](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/cde9d297f19ca7de6ec2ee0a85d677b0d73e53e8))
+
+
+### Bug Fixes
+
+* **templates:** correct hello world cmp name. update router conditional. ([6a1bf87](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6a1bf87d1c7fdc474db2b8095f375532dbc71cdc))
+
+
+
 ### [2.2.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.1...vue-cli-plugin-vuetify@2.2.2) (2021-03-03)
 
 
