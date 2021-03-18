@@ -26,7 +26,7 @@ module.exports = (api, opts) => {
     api.extendPackage({
       devDependencies: {
         '@vitejs/plugin-vue': '^1.1.5',
-        'vite': '^2.0.5',
+        'vite': '~2.0.5',
       },
       scripts: {
         'serve': 'vite preview',
