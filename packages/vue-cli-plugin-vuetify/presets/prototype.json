@@ -11,7 +11,9 @@
       "useAlaCarte": false,
       "useCustomProperties": false,
       "usePolyfill": false,
-      "useTheme": true
+      "useTheme": true,
+      "useV3": false,
+      "useVite": false
     }
   }
 }
