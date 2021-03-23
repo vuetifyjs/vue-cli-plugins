@@ -1,7 +1,8 @@
 <template>
   <v-navigation-drawer
     v-model="drawer"
-    app
+    fixed
+    floating
   >
     <!-- -->
   </v-navigation-drawer>

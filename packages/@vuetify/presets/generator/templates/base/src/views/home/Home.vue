@@ -17,8 +17,9 @@
 
         <v-img
           class="mx-auto mb-10"
+          contain
+          height="224"
           src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-light.png"
-          width="196"
         />
 
         <h2 class="body-2 font-weight-black">
@@ -50,6 +51,7 @@
                 :href="link"
                 block
                 depressed
+                rel="noreferrer"
                 target="_blank"
               >
                 <v-icon

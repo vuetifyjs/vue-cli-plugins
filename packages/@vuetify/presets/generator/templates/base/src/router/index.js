@@ -31,7 +31,7 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'Default',
+          name: 'Home',
           component: () => import('@/views/home'),
         },
       ],
