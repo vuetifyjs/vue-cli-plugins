@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.3.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.3.0...vue-cli-plugin-vuetify@2.3.1) (2021-03-19)
+
+**Note:** Version bump only for package vue-cli-plugin-vuetify
+
+
+
+
+
+## [2.3.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.2...vue-cli-plugin-vuetify@2.3.0) (2021-03-18)
+
+
+### Features
+
+* **vite-preview:** add vite preview preset. ([cde9d29](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/cde9d297f19ca7de6ec2ee0a85d677b0d73e53e8))
+
+
+### Bug Fixes
+
+* **templates:** correct hello world cmp name. update router conditional. ([6a1bf87](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6a1bf87d1c7fdc474db2b8095f375532dbc71cdc))
+
+
+
+### [2.2.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.1...vue-cli-plugin-vuetify@2.2.2) (2021-03-03)
+
+
+### Bug Fixes
+
+* add vuetify-loader to devDependencies ([0060295](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/00602957f97cd4f84d65749ee0f873314ec92076))
+
+
+
+### [2.2.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.2.0...vue-cli-plugin-vuetify@2.2.1) (2021-03-03)
+
+
+### Bug Fixes
+
+* Update template imports and don't install vuetify-loader ([#243](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/243)) ([cc969bd](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/cc969bdda4291fccbf04d103bb5374b5db570956))
+* **fonts:** @mdi/font version ([#240](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/240)) ([ac2c30c](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/ac2c30ce917b9c2e7933ee23a8141f1bddaf76f1))
+* **v3:** updates to components, formatting, and imports ([#242](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/242)) ([46e6322](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/46e63226da828b36fbfd1a711a4ef3e7ec894d6d))
+
+
+
+## 2.2.0 (2021-02-28)
+
+* feat(v3-preset): add v3 preset (#237) ([5706657](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/5706657)), closes [#237](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/237)
+
+
+
+
+
+## <small>2.1.1 (2021-02-28)</small>
+
+* chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a36555e))
+
+
+
+
+
+## 2.1.0 (2021-01-27)
+
+* fix: install latest versions of packages ([44cc257](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/44cc257))
+* fix: merge `transformAssetUrls` options (#216) ([d829f25](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/d829f25)), closes [#216](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/216)
+* fix: use extendPackage to write transpileDependencies (#227) ([6c0454d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6c0454d)), closes [#227](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/227)
+* feat(locale): add bulgarian locale ([90de05f](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/90de05f)), closes [vuetifyjs/vuetify#12649](https://github.com/vuetifyjs/vuetify/issues/12649)
+* feat(locale): add Azerbaijani and Central Kurdish ([8ea21cb](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/8ea21cb))
+* feat(locale): add Finnish translation (#156) ([b10d800](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/b10d800)), closes [#156](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/156)
+* feat(locale): add Slovak translation (#154) ([9a6162d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/9a6162d)), closes [#154](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/154)
+
+
+
+
+
 ## <small>2.0.9 (2020-12-29)</small>
 
 * fix(types): remove import from ambient declaration ([e5f1891](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e5f1891)), closes [#228](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/228)

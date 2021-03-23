@@ -64,11 +64,12 @@ function generatePreset (api, preset, onCreateComplete) {
     return
   }
 
-  const file = 'src/plugins/vuetify.js'
+  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  const file = `src/plugins/vuetify.${ext}`
   const plugin = api.resolve(file)
 
   if (!fs.existsSync(plugin)) {
-    console.warn('Unable to locate `vuetify.js` plugin file in `src/plugins`.')
+    console.warn(`Unable to locate 'vuetify.${ext}' plugin file in 'src/plugins'.`)
 
     return
   }
@@ -120,7 +121,9 @@ function updateFile (api, file, callback) {
 
 // Add new property to the Vuetify object
 function updateVuetifyObject (api, value) {
-  updateFile(api, 'src/plugins/vuetify.js', content => {
+  const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
+  
+  updateFile(api, `src/plugins/vuetify.${ext}`, content => {
     const existingValue = str => (
       str.indexOf(`${value},`) > -1 ||
       str.indexOf(`${value}:`) > -1
@@ -137,7 +140,7 @@ function updateVuetifyObject (api, value) {
     const vuetify = content[index]
 
     if (!vuetify) {
-      console.warn('Unable to locate Vuetify instantiation in `src/plugins/vuetify.js`.')
+      console.warn(`Unable to locate Vuetify instantiation in 'src/plugins/vuetify.${ext}'.`)
 
       return
     }

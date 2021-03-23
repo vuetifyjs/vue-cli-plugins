@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.0-alpha.12 (2021-03-01)
+
+* fix(index.html): add default title ([538b39f](https://github.com/vuetifyjs/vue-cli-plugins/commit/538b39f))
+
+
+
+
+
+## 0.1.0-alpha.11 (2021-03-01)
+
+* fix(index.html): remove reference to undefined webpack variable ([277656e](https://github.com/vuetifyjs/vue-cli-plugins/commit/277656e))
+* fix(webfontloader): add missing mdi css ([154cc25](https://github.com/vuetifyjs/vue-cli-plugins/commit/154cc25))
+
+
+
+
+
+## 0.1.0-alpha.10 (2021-02-28)
+
+* fix(AppBar): add missing aria-label ([d2c0b26](https://github.com/vuetifyjs/vue-cli-plugins/commit/d2c0b26))
+* fix(index.html): remove asset links causing duplicate resources ([ad00810](https://github.com/vuetifyjs/vue-cli-plugins/commit/ad00810))
+
+
+
+
+
+## 0.1.0-alpha.9 (2021-02-28)
+
+* chore(Home): rename view and update export ([7c4d923](https://github.com/vuetifyjs/vue-cli-plugins/commit/7c4d923))
+
+
+
+
+
+## 0.1.0-alpha.8 (2021-02-28)
+
+* chore(eslintrc): remove vuetify config and update eslint settings ([a36555e](https://github.com/vuetifyjs/vue-cli-plugins/commit/a36555e))
+* refactor: update exported view names and added packages ([8f89066](https://github.com/vuetifyjs/vue-cli-plugins/commit/8f89066))
+
+
+
+
+
 ## 0.1.0-alpha.7 (2020-12-03)
 
 * chore: normalize file doc intros and clean-up language ([9ea02e2](https://github.com/vuetifyjs/vue-cli-plugins/commit/9ea02e2))

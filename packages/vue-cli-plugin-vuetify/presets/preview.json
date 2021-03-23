@@ -8,12 +8,12 @@
       "iconFont": "mdi",
       "installFonts": true,
       "locale": "en",
-      "useAlaCarte": false,
+      "useAlaCarte": true,
       "useCustomProperties": false,
       "usePolyfill": false,
-      "useTheme": true,
-      "useV3": false,
-      "useVite": false
+      "useTheme": false,
+      "useV3": true,
+      "useVite": true
     }
   }
 }

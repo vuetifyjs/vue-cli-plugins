@@ -18,12 +18,9 @@ module.exports = (api, options) => {
 
   api.extendPackage({
     devDependencies: {
-      'eslint-config-vuetify': '^0.6.1',
-      'eslint-plugin-vue': '^6.2.2',
-      'eslint-plugin-vuetify': '^1.0.0-beta.6',
-      'vuex-pathify': '^1.4.1',
-      lodash: '^4.17.15',
+      lodash: '^4.17.21',
       webfontloader: '^1.6.28',
+      'vuex-pathify': '^1.4.5',
     },
   })
 
@@ -34,8 +31,10 @@ module.exports = (api, options) => {
     const projectName = api.rootOptions.projectName
 
     const home = api.resolve('src/views/Home.vue')
+    const about = api.resolve('src/views/About.vue')
 
     if (fs.existsSync(home)) fs.unlinkSync(home)
+    if (fs.existsSync(about)) fs.unlinkSync(about)
 
     api.exitLog(`🍣  Successfully generated ${projectName} from the ${presetName}.\n`)
   })

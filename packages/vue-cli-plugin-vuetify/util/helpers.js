@@ -61,9 +61,9 @@ function mergeRules (api, opt, ext) {
 
     opt.prependData = data.join('\n')
   } else {
-    if (opt.additionalData) data.unshift(opt.additionalData);
+    if (opt.additionalData) data.unshift(opt.additionalData)
 
-    opt.additionalData = data.join('\n');
+    opt.additionalData = data.join('\n')
   }
   return opt
 }
