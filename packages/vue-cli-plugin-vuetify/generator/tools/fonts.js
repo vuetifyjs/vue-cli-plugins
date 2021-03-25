@@ -10,7 +10,7 @@ const fonts = {
   },
   md: {
     package: {
-      'material-design-icons-iconfont': 'latest',
+      'material-design-icons-iconfont': '6.1.0',
     },
     import: 'material-design-icons-iconfont/dist/material-design-icons.css',
     link:
@@ -18,7 +18,7 @@ const fonts = {
   },
   fa: {
     package: {
-      '@fortawesome/fontawesome-free': 'latest',
+      '@fortawesome/fontawesome-free': '5.15.3',
     },
     import: '@fortawesome/fontawesome-free/css/all.css',
     link:
@@ -26,7 +26,7 @@ const fonts = {
   },
   fa4: {
     package: {
-      'font-awesome': 'latest',
+      'font-awesome': '4.7.0',
     },
     import: 'font-awesome/css/font-awesome.css',
     link:
