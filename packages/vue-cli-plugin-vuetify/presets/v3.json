@@ -12,7 +12,8 @@
       "useCustomProperties": false,
       "usePolyfill": false,
       "useTheme": false,
-      "useV3": true
+      "useV3": true,
+      "useVite": false
     }
   }
 }

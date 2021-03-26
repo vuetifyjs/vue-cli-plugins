@@ -12,7 +12,7 @@
 
 <script>
 <%_ if (!router) { _%>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWorld.vue';
 <%_ } _%>
 
 export default {
