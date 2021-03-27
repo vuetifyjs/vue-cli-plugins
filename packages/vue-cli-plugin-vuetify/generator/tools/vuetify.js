@@ -61,7 +61,7 @@ function renderFiles (api, { opts }) {
 }
 
 function addImports (api) {
-  api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify';")
+  api.injectImports(api.entryFile, "import vuetify from './plugins/vuetify'")
   api.injectRootOptions(api.entryFile, 'vuetify')
 }
 

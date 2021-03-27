@@ -61,7 +61,7 @@ module.exports = (api, opts) => {
     vuetify.setHtmlLang(api, opts.locale)
 
     if (fs.existsSync('src/public/index.html')) {
-      fs.unlinkSync(api.resolve('src/public/index.html'));
+      fs.unlinkSync(api.resolve('src/public/index.html'))
     }
 
     api.exitLog('Discord community: https://community.vuetifyjs.com')
