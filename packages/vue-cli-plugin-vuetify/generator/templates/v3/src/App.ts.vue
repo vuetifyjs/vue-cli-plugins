@@ -10,12 +10,13 @@
   </v-app>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 <%_ if (!router) { _%>
 import HelloWorld from './components/HelloWorld.vue'
 <%_ } _%>
 
-export default {
+export default defineComponent({
   name: 'App',
 
   <%_ if (!router) { _%>
@@ -24,8 +25,10 @@ export default {
   },
 
   <%_ } _%>
-  data: () => ({
-    //
-  }),
-}
+  data () {
+    return {
+      //
+    }
+  },
+})
 </script>
