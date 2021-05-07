@@ -15,6 +15,7 @@
 
   export default {
     name: 'DefaultAppBar',
+
     computed: { drawer: sync('app/drawer') },
   }
 </script>
