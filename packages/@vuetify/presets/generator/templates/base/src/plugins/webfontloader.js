@@ -1,6 +1,9 @@
 /**
  * plugins/webfontloader.js
  *
+ * The webfontloader provides a common interface
+ * for loading fonts regardless of the source.
+ *
  * webfontloader documentation: https://github.com/typekit/webfontloader
  */
 

@@ -1,7 +1,9 @@
 /**
- * Vuetify Vue CLI Preset
- *
  * router/index.js
+ *
+ * Vue Router is the official router for Vue.js.
+ * It integrates with the Vue.js core to make
+ * building Single Page Applications easier
  *
  * vue-router documentation: https://router.vuejs.org/
  */
