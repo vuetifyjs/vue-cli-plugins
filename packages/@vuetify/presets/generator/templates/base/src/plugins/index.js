@@ -5,5 +5,5 @@
  */
 
  // Imports
-import './app'
+import './bootstrap'
 import './webfontloader'
