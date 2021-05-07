@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.3.1...vue-cli-plugin-vuetify@2.4.0) (2021-04-26)
+
+
+### Features
+
+* **v3-preset:** Add typescript support ([c78005f](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/c78005f01cf2647a393f848714ad5c7cc8800602))
+* **v3-preset:** add v3 template files. ([4920658](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/49206585e5204f26224726561d1b8e25f67fb6f0))
+
+
+### Bug Fixes
+
+* **fonts:** specify versions for all font packages. ([8a87fda](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/8a87fda3d330d02c17500a7ecf8a7c58b9a26f13))
+* **v3:** replace wrong option for checking if using v3. ([79aeb98](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/79aeb98d470de26f3027c16faef817e1f777ffef))
+* **v3-ts:** add temp shims, update syntax style. ([ab133f7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/ab133f7e7b8de85a3553536d5d26c98fc01101c1))
+* **vuetify:** update paths for store and router option check. ([4ae3628](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/4ae36285b2ff7d4a63cce7f25fb0a8c6b4b1c5c2))
+
+
+
 ### [2.3.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.3.0...vue-cli-plugin-vuetify@2.3.1) (2021-03-19)
 
 **Note:** Version bump only for package vue-cli-plugin-vuetify
