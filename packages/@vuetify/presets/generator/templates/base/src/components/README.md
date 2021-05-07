@@ -1,8 +1,8 @@
 # Components
 
-> Create your regular and base components here
+> Create your **App** **Regular** components here
 
-This folder is for organizing your project's components. It is structured to support the official Vue [**style-guide**](https://vuejs.org/v2/style-guide/#Component-files-strongly-recommended).
+This folder is for organizing your project's regular components. It is structured to support the official Vue [**style-guide**](https://vuejs.org/v2/style-guide/#Component-files-strongly-recommended).
 
 ```bash
 ### App
