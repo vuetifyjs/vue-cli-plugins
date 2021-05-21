@@ -12,73 +12,73 @@ $headings: (
   'h1':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{96 / $fortnightly-font-size}rem,
+    'size': math.div(96, $fortnightly-font-size)rem,
     'weight': 900
   ),
   'h2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{60 / $fortnightly-font-size}rem,
+    'size': math.div(60, $fortnightly-font-size)rem,
     'weight': 300
   ),
   'h3':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{48 / $fortnightly-font-size}rem,
+    'size': math.div(48, $fortnightly-font-size)rem,
     'weight': 900
   ),
   'h4':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{34 / $fortnightly-font-size}rem,
+    'size': math.div(34, $fortnightly-font-size)rem,
     'weight': 400
   ),
   'h5':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{24 / $fortnightly-font-size}rem,
+    'size': math.div(24, $fortnightly-font-size)rem,
     'weight': 400
   ),
   'h6':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{20 / $fortnightly-font-size}rem,
+    'size': math.div(20, $fortnightly-font-size)rem,
     'weight': 700
   ),
   'subtitle-1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $fortnightly-font-size}rem,
+    'size': math.div(16, $fortnightly-font-size)rem,
     'weight': 500
   ),
   'subtitle-2':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $fortnightly-font-size}rem,
+    'size': math.div(14, $fortnightly-font-size)rem,
     'weight': 500
   ),
   'body-1':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $fortnightly-font-size}rem,
+    'size': math.div(16, $fortnightly-font-size)rem,
     'weight': 400
   ),
   'body-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $fortnightly-font-size}rem,
+    'size': math.div(14, $fortnightly-font-size)rem,
     'weight': 400
   ),
   'caption':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{12 / $fortnightly-font-size}rem,
+    'size': math.div(12, $fortnightly-font-size)rem,
     'weight': 400
   ),
   'overline':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{10 / $fortnightly-font-size}rem,
+    'size': math.div(10, $fortnightly-font-size)rem,
     'weight': 700
   )
 );
