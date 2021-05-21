@@ -1,3 +1,6 @@
+
+@use 'sass:math';
+
 @import '~vuetify/src/styles/styles.sass';
 
 // Shrine specific variables
@@ -22,73 +25,73 @@ $headings: (
   'h1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{96 / $shrine-font-size}rem,
+    'size': math.div(96, $shrine-font-size)rem,
     'weight': 300
   ),
   'h2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{60 / $shrine-font-size}rem,
+    'size': math.div(60, $shrine-font-size)rem,
     'weight': 300
   ),
   'h3':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{48 / $shrine-font-size}rem,
+    'size': math.div(48, $shrine-font-size)rem,
     'weight': 400
   ),
   'h4':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{34 / $shrine-font-size}rem,
+    'size': math.div(34, $shrine-font-size)rem,
     'weight': 400
   ),
   'h5':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{24 / $shrine-font-size}rem,
+    'size': math.div(24, $shrine-font-size)rem,
     'weight': 500
   ),
   'h6':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{20 / $shrine-font-size}rem,
+    'size': math.div(20, $shrine-font-size)rem,
     'weight': 500
   ),
   'subtitle-1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $shrine-font-size}rem,
+    'size': math.div(16, $shrine-font-size)rem,
     'weight': 500
   ),
   'subtitle-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $shrine-font-size}rem,
+    'size': math.div(14, $shrine-font-size)rem,
     'weight': 500
   ),
   'body-1':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $shrine-font-size}rem,
+    'size': math.div(16, $shrine-font-size)rem,
     'weight': 400
   ),
   'body-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $shrine-font-size}rem,
+    'size': math.div(14, $shrine-font-size)rem,
     'weight': 400
   ),
   'caption':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{12 / $shrine-font-size}rem,
+    'size': math.div(12, $shrine-font-size)rem,
     'weight': 400
   ),
   'overline':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $shrine-font-size}rem,
+    'size': math.div(14, $shrine-font-size)rem,
     'weight': 400
   )
 );
