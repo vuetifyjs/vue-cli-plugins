@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import '~vuetify/src/styles/styles.sass';
 
 // Rally specific variables
@@ -11,7 +13,7 @@ $rally-text-color: #FFFFFF;
 $body-font-family: 'Roboto Condensed', sans-serif;
 $heading-font-family: 'Eczar', sans-serif;
 $border-radius-root: 0;
-$btn-font-size: #{14 / $rally-font-size}rem;
+$btn-font-size: math.div(14, $rally-font-size)rem;
 $btn-font-weight: 700;
 $card-box-shadow: none;
 $dialog-card-subtitle-padding: 24px;
@@ -22,73 +24,73 @@ $headings: (
   'h1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{96 / $rally-font-size}rem,
+    'size': math.div(96, $rally-font-size)rem,
     'weight': 300
   ),
   'h2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{60 / $rally-font-size}rem,
+    'size': math.div(60, $rally-font-size)rem,
     'weight': 300
   ),
   'h3':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{48 / $rally-font-size}rem,
+    'size': math.div(48, $rally-font-size)rem,
     'weight': 400
   ),
   'h4':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{34 / $rally-font-size}rem,
+    'size': math.div(34, $rally-font-size)rem,
     'weight': 400
   ),
   'h5':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{24 / $rally-font-size}rem,
+    'size': math.div(24, $rally-font-size)rem,
     'weight': 400
   ),
   'h6':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{20 / $rally-font-size}rem,
+    'size': math.div(20, $rally-font-size)rem,
     'weight': 500
   ),
   'subtitle-1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $rally-font-size}rem,
+    'size': math.div(16, $rally-font-size)rem,
     'weight': 400
   ),
   'subtitle-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $rally-font-size}rem,
+    'size': math.div(14, $rally-font-size)rem,
     'weight': 500
   ),
   'body-1':(
     'font-family': $heading-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $rally-font-size}rem,
+    'size': math.div(16, $rally-font-size)rem,
     'weight': 400
   ),
   'body-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $rally-font-size}rem,
+    'size': math.div(14, $rally-font-size)rem,
     'weight': 300
   ),
   'caption':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{12 / $rally-font-size}rem,
+    'size': math.div(12, $rally-font-size)rem,
     'weight': 400
   ),
   'overline':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{10 / $rally-font-size}rem,
+    'size': math.div(10, $rally-font-size)rem,
     'weight': 400
   )
 );
