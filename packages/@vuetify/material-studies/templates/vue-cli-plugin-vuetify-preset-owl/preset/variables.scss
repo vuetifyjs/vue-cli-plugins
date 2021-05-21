@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import '~vuetify/src/styles/styles.sass';
 
 // Owl specific variables
@@ -20,73 +22,73 @@ $headings: (
   'h1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{96 / $owl-font-size}rem,
+    'size': math.div(96, $owl-font-size)rem,
     'weight': 700
   ),
   'h2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{60 / $owl-font-size}rem,
+    'size': math.div(60, $owl-font-size)rem,
     'weight': 700
   ),
   'h3':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{48 / $owl-font-size}rem,
+    'size': math.div(48, $owl-font-size)rem,
     'weight': 700
   ),
   'h4':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{34 / $owl-font-size}rem,
+    'size': math.div(34, $owl-font-size)rem,
     'weight': 700
   ),
   'h5':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{24 / $owl-font-size}rem,
+    'size': math.div(24, $owl-font-size)rem,
     'weight': 700
   ),
   'h6':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{20 / $owl-font-size}rem,
+    'size': math.div(20, $owl-font-size)rem,
     'weight': 500
   ),
   'subtitle-1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $owl-font-size}rem,
+    'size': math.div(16, $owl-font-size)rem,
     'weight': 500
   ),
   'subtitle-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $owl-font-size}rem,
+    'size': math.div(14, $owl-font-size)rem,
     'weight': 400
   ),
   'body-1':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{16 / $owl-font-size}rem,
+    'size': math.div(16, $owl-font-size)rem,
     'weight': 400
   ),
   'body-2':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{14 / $owl-font-size}rem,
+    'size': math.div(14, $owl-font-size)rem,
     'weight': 400
   ),
   'caption':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{12 / $owl-font-size}rem,
+    'size': math.div(12, $owl-font-size)rem,
     'weight': 400
   ),
   'overline':(
     'font-family': $body-font-family,
     'letter-spacing': initial,
-    'size': #{10 / $owl-font-size}rem,
+    'size': math.div(10, $owl-font-size)rem,
     'weight': 400
   )
 );
