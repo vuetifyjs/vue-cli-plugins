@@ -1,7 +1,7 @@
 function addDependencies (api, useV3) {
   let deps = {
     devDependencies: {
-      sass: '^1.32.0',
+      sass: '~1.32.0',
       'sass-loader': '^10.0.0',
     },
   }
