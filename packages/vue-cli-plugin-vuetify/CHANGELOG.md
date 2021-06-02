@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.4.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.0...vue-cli-plugin-vuetify@2.4.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* lock sass version to ~1.32 ([0caeead](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/0caeead4aae4a8bc5ab75aa792113154a3b88c01))
+* **configure:** update css var primary color value. ([38f1f17](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/38f1f1774c04bf450e1c99c5f0800a255638d15b))
+
+
+
 ## [2.4.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.3.1...vue-cli-plugin-vuetify@2.4.0) (2021-04-26)
 
 
