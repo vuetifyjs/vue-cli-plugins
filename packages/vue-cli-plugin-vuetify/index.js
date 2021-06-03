@@ -50,11 +50,11 @@ module.exports = (api) => {
     api.chainWebpack(config => {
       const sassRule = config.module.rule('sass')
       sassRule.uses.clear()
-      sassRule.use('null-loader').loader(require.resolve('null-loader'))
+      config.resolve.alias.set('sass', false)
 
       const scssRule = config.module.rule('scss')
       scssRule.uses.clear()
-      scssRule.use('null-loader').loader(require.resolve('null-loader'))
+      config.resolve.alias.set('scss', false)
     })
 
     return
