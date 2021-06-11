@@ -13,6 +13,10 @@ module.exports = [
         value: 'essential',
         disabled: true,
       },
+      {
+        name: 'Library (Vuetify Wrapper Framework)',
+        value: 'library',
+      },
     ],
     default: 'base',
   },

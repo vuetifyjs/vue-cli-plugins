@@ -16,15 +16,17 @@ module.exports = (api, options) => {
     console.log(e, options)
   }
 
-  api.extendPackage({
-    devDependencies: {
-      lodash: '^4.17.21',
-      webfontloader: '^1.6.28',
-      'vuex-pathify': '^1.4.5',
-    },
-  })
+  if (configuration !== 'library') {
+    api.extendPackage({
+      devDependencies: {
+        lodash: '^4.17.21',
+        webfontloader: '^1.6.28',
+        'vuex-pathify': '^1.4.5',
+      },
+    })
 
-  api.injectImports(api.entryFile, 'import \'./plugins\'')
+    api.injectImports(api.entryFile, 'import \'./plugins\'')
+  }
 
   api.onCreateComplete(() => {
     const presetName = `Vuetify ${configuration} preset`
