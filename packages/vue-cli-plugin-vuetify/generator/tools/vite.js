@@ -12,9 +12,16 @@ function addDependencies(api) {
   })
 }
 
-function renderFiles(api, { opts }) {
+function renderFiles(api, opts) {
+  opts.hasTS = api.hasPlugin('typescript')
+
   api.render({
-    './vite.config.js': './templates/v3/src/vite.config.js',
-    './index.html': './templates/v3/src/index.vite.html',
+    './vite.config.js': '../templates/v3/src/vite.config.js',
+    './index.html': '../templates/v3/src/index.vite.html',
   }, opts)
+}
+
+module.exports = {
+  addDependencies,
+  renderFiles,
 }
