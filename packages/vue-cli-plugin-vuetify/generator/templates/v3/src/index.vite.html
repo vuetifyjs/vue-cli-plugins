@@ -10,7 +10,11 @@
 
 <body>
     <div id="app"></div>
+    <%_ if (hasTS) { _%>
+    <script type="module" src="/src/main.ts"></script>
+    <%_ } else { _%>
     <script type="module" src="/src/main.js"></script>
+    <%_ } _%>
 </body>
 
 </html>

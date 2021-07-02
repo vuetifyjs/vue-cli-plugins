@@ -2,6 +2,7 @@ module.exports = (api, opts) => {
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
   const polyfill = require('./tools/polyfill')
+  const vite = require('./tools/vite')
   const vuetify = require('./tools/vuetify')
 
   const fs = require("fs")
@@ -23,24 +24,8 @@ module.exports = (api, opts) => {
 
   // Vite
   if (opts.useVite) {
-    api.extendPackage({
-      devDependencies: {
-        '@vitejs/plugin-vue': '^1.1.5',
-        'vite': '~2.0.5',
-      },
-      scripts: {
-        'serve': 'vite preview',
-        'build': 'vite build',
-        'dev': 'vite',
-      }
-    })
-
-    const viteFiles = {
-      './vite.config.js': './templates/v3/src/vite.config.js',
-      './index.html': './templates/v3/src/index.vite.html',
-    }
-
-    api.render(viteFiles, opts)
+    vite.addDependencies(api)
+    vite.renderFiles(api, opts)
   }
 
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
