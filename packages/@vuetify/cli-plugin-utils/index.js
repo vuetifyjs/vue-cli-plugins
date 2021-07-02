@@ -122,7 +122,7 @@ function updateFile (api, file, callback) {
 // Add new property to the Vuetify object
 function updateVuetifyObject (api, value) {
   const ext = api.hasPlugin('typescript') ? 'ts' : 'js'
-  
+
   updateFile(api, `src/plugins/vuetify.${ext}`, content => {
     const existingValue = str => (
       str.indexOf(`${value},`) > -1 ||

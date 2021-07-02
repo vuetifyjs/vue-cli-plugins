@@ -5,7 +5,7 @@ module.exports = (api, opts) => {
   const vite = require('./tools/vite')
   const vuetify = require('./tools/vuetify')
 
-  const fs = require("fs")
+  const fs = require('fs')
 
   if (opts.preset !== 'configure') {
     opts = require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
