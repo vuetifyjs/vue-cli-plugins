@@ -1,8 +1,8 @@
 function addDependencies(api) {
   api.extendPackage({
     devDependencies: {
-        '@vitejs/plugin-vue': '^1.1.5',
-        'vite': '~2.0.5',
+        '@vitejs/plugin-vue': '^1.2.4',
+        'vite': '^2.0.0',
       },
     scripts: {
       'serve': 'vite preview',
