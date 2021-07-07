@@ -1,18 +1,18 @@
-function addDependencies(api) {
+function addDependencies (api) {
   api.extendPackage({
     devDependencies: {
         '@vitejs/plugin-vue': '^1.2.4',
-        'vite': '^2.0.0',
+        vite: '^2.0.0',
       },
     scripts: {
-      'serve': 'vite preview',
-      'build': 'vite build',
-      'dev': 'vite',
-    }
+      serve: 'vite preview',
+      build: 'vite build',
+      dev: 'vite',
+    },
   })
 }
 
-function renderFiles(api, opts) {
+function renderFiles (api, opts) {
   opts.hasTS = api.hasPlugin('typescript')
 
   api.render({
