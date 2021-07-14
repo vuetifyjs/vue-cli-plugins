@@ -1,7 +1,4 @@
 import { createApp } from 'vue'
-<%_ if (useVite) { _%>
-import { loadFonts } from './plugins/webfontloader'
-<%_ } _%>
 import App from './App.vue'
 <%_ if (router) { _%>
 import router from './router'
@@ -11,7 +8,7 @@ import store from './store'
 <%_ } _%>
 import vuetify from './plugins/vuetify'
 
-<%_ if (useVite) { _%>
+<%_ if (useV3) { _%>
 loadFonts()
 <%_ } _%>
 
