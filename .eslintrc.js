@@ -1,5 +1,6 @@
 module.exports = {
   parser: 'vue-eslint-parser',
+  ignorePatterns: ['**/templates/**'],
   env: {
     'jest/globals': true,
     commonjs: true,

@@ -31,7 +31,7 @@ function renderFiles (api, { opts }) {
   const fs = require('fs')
   const routerPath = api.resolve(`./src/router/index.${ext}`)
   const storePath = api.resolve(`./src/store/index.${ext}`)
-  
+
   opts.router = fs.existsSync(routerPath)
   opts.store = fs.existsSync(storePath)
 
