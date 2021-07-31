@@ -32,6 +32,19 @@ function fileExists (api, file) {
   return fs.existsSync(api.resolve(file))
 }
 
+// Returns the correct path for styles based on the Vuetify version
+function getStylesPath (end) {
+  let vuetifyVersion
+
+  try {
+    vuetifyVersion = semver.major(require('vuetify/package.json').version)
+  } catch (e) {}
+
+  return vuetifyVersion === 3
+    ? `@import '~vuetify/lib/styles/styles.sass${end}`
+    : `@import '~vuetify/src/styles/styles.sass${end}`
+}
+
 // Create an import statement
 // to bootstrap a users variables
 function mergeRules (api, opt, ext) {
@@ -44,7 +57,7 @@ function mergeRules (api, opt, ext) {
   if (!data.length) return opt
 
   // Inject Vuetify styles at the end of user supplied
-  data.push(`@import '~vuetify/src/styles/styles.sass${end}`)
+  data.push(getStylesPath(end))
 
   let sassLoaderVersion
   try {
