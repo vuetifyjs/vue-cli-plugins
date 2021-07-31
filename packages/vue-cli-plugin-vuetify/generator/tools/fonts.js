@@ -72,11 +72,12 @@ function addPlugin(api, opts) {
   const ext = opts.hasTS ? 'ts' : 'js'
 
   api.injectImports(api.entryFile, `import { loadFonts } from './plugins/webfontloader'`)
-  
+
   api.extendPackage({
     dependencies: {
-      'webfontloader': '^1.0.0',
+      webfontloader: '^1.0.0',
     },
+    ...(opts.hasTS && { devDependencies: { '@types/webfontloader': '^1.0.0' }}),
   })
 
   api.render({
