@@ -77,7 +77,7 @@ function addPlugin(api, opts) {
     dependencies: {
       webfontloader: '^1.0.0',
     },
-    ...(opts.hasTS && { devDependencies: { '@types/webfontloader': '^1.0.0' }}),
+    ...(opts.hasTS && { devDependencies: { '@types/webfontloader': '^1.0.0' }, }),
   })
 
   api.render({
