@@ -33,7 +33,7 @@ function fileExists (api, file) {
 }
 
 // Returns the correct path for styles based on the Vuetify version
-function determineStylesPath(end) {
+function getStylesPath (end) {
   let vuetifyVersion
 
   try {
@@ -57,7 +57,7 @@ function mergeRules (api, opt, ext) {
   if (!data.length) return opt
 
   // Inject Vuetify styles at the end of user supplied
-  data.push(determineStylesPath(end))
+  data.push(getStylesPath(end))
 
   let sassLoaderVersion
   try {
