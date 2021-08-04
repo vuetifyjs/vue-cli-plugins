@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.4.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.1...vue-cli-plugin-vuetify@2.4.2) (2021-08-04)
+
+
+### Bug Fixes
+
+* **#287:** inject the correct path based on vuetify version. ([7e7608a](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/7e7608a42a82c529834975bd3c0ab08b8c02fe0a)), closes [#287](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/287)
+* **preview:** install correct vite version. ([#281](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/281)) ([44bebf7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/44bebf7f9c931b7ad933b9888ca212e332be7ee5))
+* **vite:** add support for css variables ([a844235](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a844235a911bafc23bb1210eb0cd221bd15c4767))
+* **vite:** Vite preset inserts wrong main entry w/ ts ([#280](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/280)) ([a5ed8db](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a5ed8db9c683cde6376b69f002fbbd8eadbdf561))
+
+
+
 ### [2.4.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.0...vue-cli-plugin-vuetify@2.4.1) (2021-06-02)
 
 

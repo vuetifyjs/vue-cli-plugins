@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.0.10](https://github.com/vuetifyjs/vue-cli-plugins/compare/@vuetify/cli-plugin-utils@0.0.9...@vuetify/cli-plugin-utils@0.0.10) (2021-08-04)
+
+**Note:** Version bump only for package @vuetify/cli-plugin-utils
+
+
+
+
+
 ## <small>0.0.9 (2021-02-28)</small>
 
 * refactor(update-file): support ts. ([37e1fd8](https://github.com/vuetifyjs/vue-cli-plugins/commit/37e1fd8))
