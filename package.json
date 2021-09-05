@@ -25,13 +25,13 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^4.2.5",
-    "lerna": "^3.21.0",
+    "lerna": "^4.0.0",
     "lerna-changelog": "^1.0.1",
     "semver": "^7.3.2",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.1.0",
     "vue-template-compiler": "^2.6.11",
     "vuetify": "^2.2.28",
-    "webpack": "^4.43.0"
+    "webpack": "4.46.0"
   }
 }
