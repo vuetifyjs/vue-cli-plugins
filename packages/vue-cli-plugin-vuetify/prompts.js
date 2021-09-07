@@ -15,8 +15,8 @@ module.exports = [
     message: 'Choose a preset:',
     type: 'list',
     choices: [
-      ...presets,
       { name: 'Configure (advanced)', value: 'configure' },
+      ...presets,
     ],
     default: 'default',
   },
