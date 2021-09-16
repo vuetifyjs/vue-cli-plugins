@@ -11,7 +11,7 @@ module.exports = (api) => {
   )
 
   if (hasVuetifyLoader) {
-    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+    const VuetifyLoaderPlugin = require('vuetify-loader')
 
     api.chainWebpack(config => {
       config
