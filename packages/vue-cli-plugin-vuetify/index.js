@@ -1,6 +1,8 @@
 // Imports
 const { mergeRules } = require('./util/helpers')
 
+const semver = require('semver')
+
 module.exports = (api) => {
   const dependencies = api.service.pkg.dependencies || {}
   const devDependencies = api.service.pkg.devDependencies || {}
@@ -11,7 +13,8 @@ module.exports = (api) => {
   )
 
   if (hasVuetifyLoader) {
-    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+    const vueVersion = semver.major(require('vue/package.json').version)
+    const VuetifyLoaderPlugin = vueVersion === 3 ? require('vuetify-loader').VuetifyLoaderPlugin : require('vuetify-loader/lib/plugin')
 
     api.chainWebpack(config => {
       config
