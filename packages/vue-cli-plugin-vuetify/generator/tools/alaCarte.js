@@ -3,7 +3,7 @@ function addDependencies (api, useV3) {
     devDependencies: {
       sass: useV3 ? '^1.38.0' : '~1.32.0',
       'sass-loader': '^10.0.0',
-      'vuetify-loader': useV3 ? '^2.0.0-alpha.0' : '^1.7.0'
+      'vuetify-loader': useV3 ? '^2.0.0-alpha.0' : '^1.7.0',
     },
   };
 
