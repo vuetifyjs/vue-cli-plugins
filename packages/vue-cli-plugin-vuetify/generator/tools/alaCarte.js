@@ -5,7 +5,7 @@ function addDependencies (api, useV3) {
       'sass-loader': '^10.0.0',
       'vuetify-loader': useV3 ? '^2.0.0-alpha.0' : '^1.7.0',
     },
-  };
+  }
 
   if (useV3) deps.devDependencies['@vue/cli-service'] = '~5.0.0-beta.3'
 
