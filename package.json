@@ -16,7 +16,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "conventional-changelog-conventionalcommits": "^4.5.0",
-    "eslint": "^7.0.0",
+    "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.1",
@@ -28,6 +28,7 @@
     "lerna": "^4.0.0",
     "lerna-changelog": "^1.0.1",
     "semver": "^7.3.2",
+    "typescript": "^3.4.0",
     "vue": "^2.6.11",
     "vue-eslint-parser": "^7.1.0",
     "vue-template-compiler": "^2.6.11",
