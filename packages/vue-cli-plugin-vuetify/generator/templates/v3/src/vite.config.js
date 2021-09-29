@@ -1,17 +1,21 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vuetify from '@vuetify/vite-plugin'
 
 import path from 'path'
-const srcPath = path.resolve(__dirname, 'src', 'styles', 'variables.scss')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    vuetify({
+      autoimport: true,
+    }),
+  ],
   define: { 'process.env': {} },
-  css: {
-    preprocessorOptions: {
-      sass: { additionalData: `@import ${srcPath}\n` },
-      scss: { additionalData: `@import ${srcPath};\n` },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   /* remove the need to specify .vue files https://vitejs.dev/config/#resolve-extensions

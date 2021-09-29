@@ -2,6 +2,7 @@ function addDependencies (api) {
   api.extendPackage({
     devDependencies: {
         '@vitejs/plugin-vue': '^1.2.4',
+        '@vuetify/vite-plugin': '^1.0.0-alpha.3',
         vite: '^2.0.0',
       },
     scripts: {
