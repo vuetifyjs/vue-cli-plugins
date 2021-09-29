@@ -8,8 +8,10 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     vue(),
+    // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
-      autoimport: true,
+      autoImport: true,
+      styles: 'expose',
     }),
   ],
   define: { 'process.env': {} },
