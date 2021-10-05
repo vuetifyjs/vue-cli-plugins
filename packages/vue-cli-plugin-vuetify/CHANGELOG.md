@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.4.3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.2...vue-cli-plugin-vuetify@2.4.3) (2021-10-05)
+
+
+### Bug Fixes
+
+* **cli:** updates for alpha 11. ([#297](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/297)) ([7eef931](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/7eef93109535f56bf8d83470a81cb4217f8af04c))
+* **vite.config.js:** update vuetify vite plugin options ([6bbb74d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/6bbb74d48a2c0ccef921c4498c3506ba090bbab9))
+* **webfontloader:** change uppercase L to lowercase ([25bfd8e](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/25bfd8ed37ce03f31acaae246a15a0471e30c421))
+
+
+
 ### [2.4.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.1...vue-cli-plugin-vuetify@2.4.2) (2021-08-04)
 
 

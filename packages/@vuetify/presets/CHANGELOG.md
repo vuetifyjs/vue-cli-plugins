@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.0-alpha.13](https://github.com/vuetifyjs/vue-cli-plugins/compare/@vuetify/vue-cli-plugin-presets@0.1.0-alpha.12...@vuetify/vue-cli-plugin-presets@0.1.0-alpha.13) (2021-10-05)
+
+
+### Bug Fixes
+
+* **base:** remove wrapper function from base app plugin. ([500df40](https://github.com/vuetifyjs/vue-cli-plugins/commit/500df400afe0d2bed443eb3010e6ca4daef2080c))
+
+
+
 ## 0.1.0-alpha.12 (2021-03-01)
 
 * fix(index.html): add default title ([538b39f](https://github.com/vuetifyjs/vue-cli-plugins/commit/538b39f))
