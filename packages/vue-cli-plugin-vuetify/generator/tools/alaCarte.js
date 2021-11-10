@@ -7,7 +7,11 @@ function addDependencies (api, useV3) {
     },
   }
 
-  if (useV3) deps.devDependencies['@vue/cli-service'] = '~5.0.0-beta.3'
+  // @TODO temporary fix for Vuetify 3 only
+  if (useV3) {
+    deps.devDependencies['@vue/cli-service'] = '5.0.0-beta.7'
+    deps.devDependencies['@vue/cli-plugin-babel'] = '5.0.0-beta.7'
+  }
 
   api.extendPackage(deps)
 }
