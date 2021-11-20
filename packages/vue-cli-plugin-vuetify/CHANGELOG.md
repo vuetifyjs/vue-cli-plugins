@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.4.4](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.3...vue-cli-plugin-vuetify@2.4.4) (2021-11-20)
+
+
+### Bug Fixes
+
+* **v3:** Update vite config ([#307](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/307)) ([04576cb](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/04576cbc6185fa5912246ad8a919c2b97992cfaf))
+
+
+
 ### [2.4.3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.2...vue-cli-plugin-vuetify@2.4.3) (2021-10-05)
 
 
