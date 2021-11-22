@@ -3,7 +3,7 @@ const { mergeRules } = require('./util/helpers')
 
 const semver = require('semver')
 
-module.exports = (api) => {
+module.exports = (api, options) => {
   const dependencies = api.service.pkg.dependencies || {}
   const devDependencies = api.service.pkg.devDependencies || {}
 
@@ -12,15 +12,25 @@ module.exports = (api) => {
     dependencies['vuetify-loader'],
   )
 
+  const vueVersion = semver.major(require('vue/package.json').version)
+  
   if (hasVuetifyLoader) {
-    const vueVersion = semver.major(require('vue/package.json').version)
     const VuetifyLoaderPlugin = vueVersion === 3 ? require('vuetify-loader').VuetifyLoaderPlugin : require('vuetify-loader/lib/plugin')
 
-    api.chainWebpack(config => {
-      config
-        .plugin('VuetifyLoaderPlugin')
-        .use(VuetifyLoaderPlugin)
-    })
+    if (vueVersion === 3) {
+      api.chainWebpack(config => {
+        config
+          .plugin('VuetifyLoaderPlugin')
+          .use(VuetifyLoaderPlugin)
+      })
+    }
+    else {
+      api.chainWebpack(config => {
+        config
+          .plugin('VuetifyLoaderPlugin')
+          .use(VuetifyLoaderPlugin, [options.pluginOptions.vuetify])
+      })
+    }
   }
 
   // Resolve asset references from components
@@ -64,7 +74,7 @@ module.exports = (api) => {
   }
 
   // Bootstrap SASS Variables
-  api.chainWebpack(config => {
+  if (vueVersion === 2) api.chainWebpack(config => {
     ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
       for (let i = 0; i < 2; i++) {
         const boolean = Boolean(i)
