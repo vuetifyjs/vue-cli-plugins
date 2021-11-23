@@ -15,16 +15,9 @@ module.exports = (api, options) => {
   const vueVersion = semver.major(require('vue/package.json').version)
   
   if (hasVuetifyLoader) {
-    const VuetifyLoaderPlugin = vueVersion === 3 ? require('vuetify-loader').VuetifyLoaderPlugin : require('vuetify-loader/lib/plugin')
+    const VuetifyLoaderPlugin = require('vuetify-loader').VuetifyLoaderPlugin
 
     if (vueVersion === 3) {
-      api.chainWebpack(config => {
-        config
-          .plugin('VuetifyLoaderPlugin')
-          .use(VuetifyLoaderPlugin)
-      })
-    }
-    else {
       api.chainWebpack(config => {
         config
           .plugin('VuetifyLoaderPlugin')
