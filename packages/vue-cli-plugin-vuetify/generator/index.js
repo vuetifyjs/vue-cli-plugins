@@ -31,8 +31,7 @@ module.exports = (api, opts) => {
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
   // Update vue.config.js for transpileDependency if AlaCarte
-  alaCarte.addVueConfigVuetify(api, opts.useV3)
-  // if (opts.useAlaCarte && !opts.useV3) alaCarte.addVueConfigTranspileDependency(api)
+  if (opts.useAlaCarte) alaCarte.addVueConfigVuetify(api, opts.useV3)
 
   // Update templates
   vuetify.renderFiles(api, { opts })

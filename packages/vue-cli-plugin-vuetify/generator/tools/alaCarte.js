@@ -16,6 +16,18 @@ function addDependencies (api, useV3) {
   api.extendPackage(deps)
 }
 
+function addVueConfigPluginOptions(api) {
+  api.extendPackage({
+    vue: {
+      pluginOptions: {
+        vuetify: {
+          styles: 'expose',
+        },
+      },
+    },
+  })
+}
+
 function addVueConfigTranspileDependency (api) {
   api.extendPackage({
     vue: {
@@ -26,7 +38,11 @@ function addVueConfigTranspileDependency (api) {
   })
 }
 
+function addVueConfigVuetify(api, useV3) {
+  useV3 ? addVueConfigPluginOptions(api) : addVueConfigTranspileDependency(api)
+}
+
 module.exports = {
   addDependencies,
-  addVueConfigTranspileDependency,
+  addVueConfigVuetify
 }
