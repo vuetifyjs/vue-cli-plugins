@@ -12,16 +12,25 @@ module.exports = (api, options) => {
     dependencies['vuetify-loader'],
   )
 
-  const vueVersion = semver.major(require('vue/package.json').version)
-  
-  if (hasVuetifyLoader) {
-    const VuetifyLoaderPlugin = require('vuetify-loader').VuetifyLoaderPlugin
+  const isVue3 = semver.major(require('vue/package.json').version) === 3
 
-    if (vueVersion === 3) {
+  if (hasVuetifyLoader) {
+    if (isVue3) {
+      const VuetifyLoaderPlugin = require('vuetify-loader').VuetifyLoaderPlugin
+      
       api.chainWebpack(config => {
         config
           .plugin('VuetifyLoaderPlugin')
           .use(VuetifyLoaderPlugin, [options.pluginOptions.vuetify])
+      })
+    }
+    else {
+      const VuetifyLoaderPlugin = require('vuetify-loader')
+
+      api.chainWebpack(config => {
+        config
+          .plugin('VuetifyLoaderPlugin')
+          .use(VuetifyLoaderPlugin)
       })
     }
   }
@@ -67,7 +76,7 @@ module.exports = (api, options) => {
   }
 
   // Bootstrap SASS Variables
-  if (vueVersion === 2) api.chainWebpack(config => {
+  if (!isVue3) api.chainWebpack(config => {
     ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
       for (let i = 0; i < 2; i++) {
         const boolean = Boolean(i)

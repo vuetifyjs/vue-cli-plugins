@@ -20,9 +20,7 @@ function addVueConfigPluginOptions(api) {
   api.extendPackage({
     vue: {
       pluginOptions: {
-        vuetify: {
-          styles: 'expose',
-        },
+        vuetify: {},
       },
     },
   })
@@ -44,5 +42,5 @@ function addVueConfigVuetify(api, useV3) {
 
 module.exports = {
   addDependencies,
-  addVueConfigVuetify
+  addVueConfigVuetify,
 }

@@ -50,8 +50,6 @@ function renderFiles (api, { opts }) {
         './src/components/HelloWorld.vue': `../templates/v3/src/components/HelloWorld.${ext}.vue`,
         [api.entryFile]: `../templates/v3/src/main.${ext}`,
       }
-
-      if (!opts.useVite) files = ({ ...files, ...{ './src/styles/main.scss': '../templates/v3/src/styles/main.scss' } })
     }
 
     if (opts.router) {
