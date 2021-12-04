@@ -1,4 +1,5 @@
 // Imports
+const fs = require('fs')
 const helpers = require('./helpers')
 
 function addDependencies (api, v3) {
@@ -28,7 +29,6 @@ function renderFiles (api, { opts }) {
   }
 
   // Render files if we're replacing
-  const fs = require('fs')
   const routerPath = api.resolve(`./src/router/index.${ext}`)
   const storePath = api.resolve(`./src/store/index.${ext}`)
 
@@ -77,9 +77,24 @@ function setHtmlLang (api, locale) {
   })
 }
 
+function addVuetifyLoaderDocsLink(configFile) {
+  const vuetifyLoaderLink = '// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader'
+
+  let content = fs.readFileSync(configFile, { encoding: 'utf8' })
+
+  content = content.replace('vuetify: {}', `vuetify: {\n\t\t\t${vuetifyLoaderLink}\n\t\t}`)
+
+  fs.writeFileSync(
+    configFile,
+    content,
+    { encoding: 'utf8' }
+  )
+}
+
 module.exports = {
   addDependencies,
   addImports,
+  addVuetifyLoaderDocsLink,
   renderFiles,
   setHtmlLang,
 }

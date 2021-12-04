@@ -1,4 +1,5 @@
 module.exports = (api, opts) => {
+  const { fileExists } = require('../util/helpers')
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
   const polyfill = require('./tools/polyfill')
@@ -31,7 +32,7 @@ module.exports = (api, opts) => {
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
 
   // Update vue.config.js for transpileDependency if AlaCarte
-  if (opts.useAlaCarte && !opts.useVite) alaCarte.addVueConfigTranspileDependency(api)
+  if (opts.useAlaCarte && !opts.useVite) alaCarte.addVueConfigVuetify(api, opts.useV3)
 
   // Update templates
   vuetify.renderFiles(api, { opts })
@@ -42,11 +43,18 @@ module.exports = (api, opts) => {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
     }
+    
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
 
-    if (fs.existsSync('src/public/index.html')) {
+    if (fileExists(api, 'src/public/index.html')) {
       fs.unlinkSync(api.resolve('src/public/index.html'))
+    }
+
+    const configFile = api.resolve('./vue.config.js');
+
+    if (fileExists(api, configFile)) {
+      vuetify.addVuetifyLoaderDocsLink(configFile)
     }
 
     api.exitLog('Discord community: https://community.vuetifyjs.com')
