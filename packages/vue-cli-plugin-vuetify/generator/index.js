@@ -1,6 +1,5 @@
 module.exports = (api, opts) => {
   const { fileExists } = require('../util/helpers')
-
   const alaCarte = require('./tools/alaCarte')
   const fonts = require('./tools/fonts')
   const polyfill = require('./tools/polyfill')
