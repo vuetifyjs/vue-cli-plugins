@@ -25,7 +25,7 @@ module.exports = (api, options) => {
       })
     }
     else {
-      const VuetifyLoaderPlugin = require('vuetify-loader')
+      const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
       api.chainWebpack(config => {
         config
