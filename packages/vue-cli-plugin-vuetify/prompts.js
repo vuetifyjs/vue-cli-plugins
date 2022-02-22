@@ -9,6 +9,10 @@ function isCustom (answers) {
   return answers.preset === 'configure'
 }
 
+function isVuetify3 (answers) {
+  return answers.preset === 'v3'
+}
+
 module.exports = [
   {
     name: 'preset',
@@ -19,6 +23,15 @@ module.exports = [
       ...presets,
     ],
     default: 'default',
+  },
+  {
+    name: 'useNightly',
+    type: 'confirm',
+    message: 'Would you like to install Vuetify 3 nightly build?',
+    default: false,
+    when: answers => {
+      return isVuetify3(answers)
+    }
   },
   {
     name: 'replaceComponents',
