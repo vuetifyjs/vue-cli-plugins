@@ -9,7 +9,10 @@ module.exports = (api, opts) => {
   const fs = require('fs')
 
   if (opts.preset !== 'configure') {
-    opts = require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
+    opts = {
+      ...opts,
+      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
+    }
   }
 
   // Add imports
@@ -19,7 +22,7 @@ module.exports = (api, opts) => {
   if (opts.installFonts) opts.useV3 ? fonts.addPlugin(api, opts) : fonts.addImports(api, opts.iconFont)
 
   // Add dependencies
-  vuetify.addDependencies(api, opts.useV3)
+  vuetify.addDependencies(api, opts)
   if (opts.useAlaCarte) alaCarte.addDependencies(api, opts.useV3)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 

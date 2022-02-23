@@ -2,10 +2,11 @@
 const fs = require('fs')
 const helpers = require('./helpers')
 
-function addDependencies (api, v3) {
+function addDependencies (api, opts) {
+  const { useV3, useNightly } = opts
   api.extendPackage({
     dependencies: {
-      vuetify: v3 ? '^3.0.0-alpha.0' : '^2.4.0',
+      vuetify: useV3 ? (useNightly ? 'npm:@vuetify/nightly@next' : '^3.0.0-alpha.0') : '^2.6.0',
     },
   })
 }
