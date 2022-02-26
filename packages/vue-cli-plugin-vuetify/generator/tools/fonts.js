@@ -68,7 +68,6 @@ function addLinks (api, iconFont) {
 }
 
 function addPlugin(api, opts) {
-  opts.hasTS = api.hasPlugin('typescript')
   const ext = opts.hasTS ? 'ts' : 'js'
 
   api.injectImports(api.entryFile, `import { loadFonts } from './plugins/webfontloader'`)
