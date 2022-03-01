@@ -12,7 +12,7 @@ module.exports = (api, opts) => {
     opts = {
       hasTS: api.hasPlugin('typescript') || Object.keys(api.generator.pkg.devDependencies).includes('typescript'),
       ...opts,
-      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
+      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify'],
     }
   }
 
