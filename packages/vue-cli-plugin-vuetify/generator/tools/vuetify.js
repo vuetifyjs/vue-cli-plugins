@@ -12,18 +12,17 @@ function addDependencies (api, opts) {
 }
 
 function renderFiles (api, { opts }) {
-  const hasTS = api.hasPlugin('typescript')
-  const ext = hasTS ? 'ts' : 'js'
+  const ext = opts.hasTS ? 'ts' : 'js'
   const pluginFilename = `vuetify.${ext}`
 
   api.render({
     [`./src/plugins/${pluginFilename}`]: opts.useV3 ? '../templates/v3/src/plugins/vuetify.js' : '../templates/default/src/plugins/vuetify.js',
   }, {
     ...opts,
-    typescript: hasTS,
+    typescript: opts.hasTS,
   })
 
-  if (hasTS && opts.useAlaCarte) {
+  if (opts.hasTS && opts.useAlaCarte) {
     api.render({
       './src/shims-vuetify.d.ts': opts.useV3 ? '../templates/v3/src/shims-vuetify.d.ts' : '../templates/default/src/shims-vuetify.d.ts',
     })
@@ -54,7 +53,7 @@ function renderFiles (api, { opts }) {
     }
 
     if (opts.router) {
-      files['./src/views/Home.vue'] = opts.useV3 ? `../templates/v3/src/views/Home.${ext}.vue` : `../templates/default/src/views/Home.${ext}.vue`
+      files['./src/views/HomeView.vue'] = opts.useV3 ? `../templates/v3/src/views/HomeView.${ext}.vue` : `../templates/default/src/views/Home.${ext}.vue`
     }
 
     api.render(files, opts)
@@ -78,7 +77,7 @@ function setHtmlLang (api, locale) {
   })
 }
 
-function addVuetifyLoaderDocsLink(configFile) {
+function addVuetifyLoaderDocsLink (configFile) {
   const vuetifyLoaderLink = '// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader'
 
   let content = fs.readFileSync(configFile, { encoding: 'utf8' })
@@ -88,7 +87,7 @@ function addVuetifyLoaderDocsLink(configFile) {
   fs.writeFileSync(
     configFile,
     content,
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
 }
 

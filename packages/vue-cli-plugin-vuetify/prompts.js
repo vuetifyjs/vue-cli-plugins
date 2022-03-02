@@ -10,7 +10,7 @@ function isCustom (answers) {
 }
 
 function isVuetify3 (answers) {
-  return answers.preset === 'v3'
+  return answers.preset === 'v3' || answers.preset === 'vite'
 }
 
 module.exports = [
@@ -27,11 +27,9 @@ module.exports = [
   {
     name: 'useNightly',
     type: 'confirm',
-    message: 'Would you like to install Vuetify 3 nightly build?',
+    message: 'Would you like to install Vuetify 3 nightly build? (WARNING: Nightly builds are intended for development testing and may include bugs or other issues.)',
     default: false,
-    when: answers => {
-      return isVuetify3(answers)
-    }
+    when: answers => isVuetify3(answers),
   },
   {
     name: 'replaceComponents',

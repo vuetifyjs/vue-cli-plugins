@@ -10,8 +10,9 @@ module.exports = (api, opts) => {
 
   if (opts.preset !== 'configure') {
     opts = {
+      hasTS: api.hasPlugin('typescript') || Object.keys(api.generator.pkg.devDependencies).includes('typescript'),
       ...opts,
-      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify']
+      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify'],
     }
   }
 
@@ -46,7 +47,7 @@ module.exports = (api, opts) => {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
     }
-    
+
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
 
@@ -54,7 +55,7 @@ module.exports = (api, opts) => {
       fs.unlinkSync(api.resolve('src/public/index.html'))
     }
 
-    const configFile = api.resolve('./vue.config.js');
+    const configFile = api.resolve('./vue.config.js')
 
     if (fileExists(api, configFile)) {
       vuetify.addVuetifyLoaderDocsLink(configFile)

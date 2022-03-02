@@ -17,14 +17,13 @@ module.exports = (api, options) => {
   if (hasVuetifyLoader) {
     if (isVue3) {
       const VuetifyLoaderPlugin = require('vuetify-loader').VuetifyLoaderPlugin
-      
+
       api.chainWebpack(config => {
         config
           .plugin('VuetifyLoaderPlugin')
           .use(VuetifyLoaderPlugin, [options.pluginOptions.vuetify])
       })
-    }
-    else {
+    } else {
       const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
       api.chainWebpack(config => {
@@ -76,18 +75,20 @@ module.exports = (api, options) => {
   }
 
   // Bootstrap SASS Variables
-  if (!isVue3) api.chainWebpack(config => {
-    ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
-      for (let i = 0; i < 2; i++) {
-        const boolean = Boolean(i)
-        const rule = boolean ? 'sass' : 'scss'
+  if (!isVue3) {
+    api.chainWebpack(config => {
+      ['vue-modules', 'vue', 'normal-modules', 'normal'].forEach(match => {
+        for (let i = 0; i < 2; i++) {
+          const boolean = Boolean(i)
+          const rule = boolean ? 'sass' : 'scss'
 
-        config.module
-          .rule(rule)
-          .oneOf(match)
-          .use('sass-loader')
-          .tap(opt => mergeRules(api, opt, rule))
-      }
+          config.module
+            .rule(rule)
+            .oneOf(match)
+            .use('sass-loader')
+            .tap(opt => mergeRules(api, opt, rule))
+        }
+      })
     })
-  })
+  }
 }

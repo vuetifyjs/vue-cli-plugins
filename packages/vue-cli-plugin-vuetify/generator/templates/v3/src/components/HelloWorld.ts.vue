@@ -3,7 +3,11 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
+          <%_ if (useVite) { _%>
+          :src="logo"
+          <%_ } else { _%>
           :src="require('../assets/logo.svg')"
+          <%_ } _%>
           class="my-3"
           contain
           height="200"
@@ -14,6 +18,10 @@
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to Vuetify V3 Alpha
         </h1>
+
+        <%_ if (useVite) { _%>
+          <h4>Vite Preview</h4>
+        <%_ } _%>
 
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
@@ -94,6 +102,11 @@
 <script lang='ts'>
 import { defineComponent } from 'vue'
 
+<%_ if (useVite) { _%>
+// Logo
+import logo from '../assets/logo.svg'
+<%_ } _%>
+
 export default defineComponent({
   name: 'HelloWorld',
 
@@ -131,6 +144,9 @@ export default defineComponent({
           href: 'https://medium.com/vuetify',
         },
       ],
+      <%_ if (useVite) { _%>
+      logo,
+      <%_ } _%>
       whatsNext: [
         {
           text: 'Explore components',

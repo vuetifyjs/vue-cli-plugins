@@ -1,8 +1,8 @@
 function addDependencies (api) {
   api.extendPackage({
     devDependencies: {
-        '@vitejs/plugin-vue': '^1.2.4',
-        '@vuetify/vite-plugin': '^1.0.0-alpha.3',
+        '@vitejs/plugin-vue': '^2.0.0',
+        '@vuetify/vite-plugin': '^1.0.0-alpha.0',
         vite: '^2.0.0',
       },
     scripts: {
@@ -13,10 +13,11 @@ function addDependencies (api) {
   })
 }
 
-function renderFiles(api, opts) {
+function renderFiles (api, opts) {
+  const ext = opts.hasTS ? 'ts' : 'js'
   const files = {
     './index.html': '../templates/v3/vite/index.vite.html',
-    './vite.config.js': '../templates/v3/vite/vite.config.js',
+    [`./vite.config.${ext}`]: `../templates/v3/vite/vite.config.${ext}`,
     './src/styles/_variables.scss': '../templates/v3/vite/styles/_variables.scss',
   }
 

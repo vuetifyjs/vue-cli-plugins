@@ -10,7 +10,7 @@ function addDependencies (api, useV3) {
   api.extendPackage(deps)
 }
 
-function addVueConfigPluginOptions(api) {
+function addVueConfigPluginOptions (api) {
   api.extendPackage({
     vue: {
       pluginOptions: {
@@ -30,7 +30,7 @@ function addVueConfigTranspileDependency (api) {
   })
 }
 
-function addVueConfigVuetify(api, useV3) {
+function addVueConfigVuetify (api, useV3) {
   useV3 ? addVueConfigPluginOptions(api) : addVueConfigTranspileDependency(api)
 }
 
