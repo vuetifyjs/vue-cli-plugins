@@ -47,7 +47,7 @@ module.exports = (api, opts) => {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
     }
-    
+
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
 
@@ -55,7 +55,7 @@ module.exports = (api, opts) => {
       fs.unlinkSync(api.resolve('src/public/index.html'))
     }
 
-    const configFile = api.resolve('./vue.config.js');
+    const configFile = api.resolve('./vue.config.js')
 
     if (fileExists(api, configFile)) {
       vuetify.addVuetifyLoaderDocsLink(configFile)

@@ -77,7 +77,7 @@ function setHtmlLang (api, locale) {
   })
 }
 
-function addVuetifyLoaderDocsLink(configFile) {
+function addVuetifyLoaderDocsLink (configFile) {
   const vuetifyLoaderLink = '// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader'
 
   let content = fs.readFileSync(configFile, { encoding: 'utf8' })
@@ -87,7 +87,7 @@ function addVuetifyLoaderDocsLink(configFile) {
   fs.writeFileSync(
     configFile,
     content,
-    { encoding: 'utf8' }
+    { encoding: 'utf8' },
   )
 }
 

@@ -13,7 +13,7 @@ function addDependencies (api) {
   })
 }
 
-function renderFiles(api, opts) {
+function renderFiles (api, opts) {
   const ext = opts.hasTS ? 'ts' : 'js'
   const files = {
     './index.html': '../templates/v3/vite/index.vite.html',
