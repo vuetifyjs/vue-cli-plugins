@@ -16,7 +16,7 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify V3 Alpha
+          Welcome to Vuetify 3 Beta
         </h1>
 
         <%_ if (useVite) { _%>

@@ -6,7 +6,7 @@ function addDependencies (api, opts) {
   const { useV3, useNightly } = opts
   api.extendPackage({
     dependencies: {
-      vuetify: useV3 ? (useNightly ? 'npm:@vuetify/nightly@next' : '^3.0.0-alpha.0') : '^2.6.0',
+      vuetify: useV3 ? (useNightly ? 'npm:@vuetify/nightly@next' : '^3.0.0-beta.0') : '^2.6.0',
     },
   })
 }
