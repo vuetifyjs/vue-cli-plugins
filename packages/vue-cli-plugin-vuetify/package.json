@@ -37,6 +37,9 @@
     "jest": "^25.1.0",
     "vuetify-loader": "^1.4.3"
   },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  },
   "peerDependenciesMeta": {
     "sass-loader": {
       "optional": true
