@@ -7,31 +7,38 @@ module.exports = (api, options) => {
   const dependencies = api.service.pkg.dependencies || {}
   const devDependencies = api.service.pkg.devDependencies || {}
 
-  const hasVuetifyLoader = Boolean(
+  const hasVuetifyLoader = !!(
     devDependencies['vuetify-loader'] ||
-    dependencies['vuetify-loader'],
+    dependencies['vuetify-loader']
+  )
+
+  const hasVuetifyPlugin = !!(
+    devDependencies['webpack-plugin-vuetify'] ||
+    dependencies['webpack-plugin-vuetify']
   )
 
   const isVue3 = semver.major(require('vue/package.json').version) === 3
 
-  if (hasVuetifyLoader) {
-    if (isVue3) {
-      const VuetifyLoaderPlugin = require('vuetify-loader').VuetifyLoaderPlugin
+  if (isVue3) {
+    if (hasVuetifyPlugin) {
+      const { VuetifyPlugin } = require('webpack-plugin-vuetify')
 
       api.chainWebpack(config => {
         config
-          .plugin('VuetifyLoaderPlugin')
-          .use(VuetifyLoaderPlugin, [options.pluginOptions.vuetify])
+          .plugin('VuetifyPlugin')
+          .use(VuetifyPlugin, [options.pluginOptions.vuetify])
       })
-    } else {
-      const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
-
-      api.chainWebpack(config => {
-        config
-          .plugin('VuetifyLoaderPlugin')
-          .use(VuetifyLoaderPlugin)
-      })
+    } else if (hasVuetifyLoader) {
+      throw new Error('vuetify-loader is only for use with vuetify 2, replace it with webpack-plugin-vuetify')
     }
+  } else if (hasVuetifyLoader) {
+    const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+
+    api.chainWebpack(config => {
+      config
+        .plugin('VuetifyLoaderPlugin')
+        .use(VuetifyLoaderPlugin)
+    })
   }
 
   // Resolve asset references from components
