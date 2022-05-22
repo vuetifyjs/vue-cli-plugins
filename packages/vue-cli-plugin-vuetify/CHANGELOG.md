@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.0](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.8...vue-cli-plugin-vuetify@2.5.0) (2022-05-22)
+
+
+### Features
+
+* update v3 compiler plugin package names ([c0926d8](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/c0926d86587caebdc95fa1944c64652aff6c1fc6))
+
+
+
 ### [2.4.8](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.4.7...vue-cli-plugin-vuetify@2.4.8) (2022-03-17)
 
 **Note:** Version bump only for package vue-cli-plugin-vuetify
