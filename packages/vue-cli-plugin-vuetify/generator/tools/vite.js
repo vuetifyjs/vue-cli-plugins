@@ -18,13 +18,15 @@ function addDependencies (api) {
 
 function renderFiles (api, opts) {
   const ext = opts.hasTS ? 'ts' : 'js'
-  const viteConfigPath = api.resolve(`./vite.config.${ext}`)
+  const viteConfigFile = `./vite.config.${ext}`
+  const viteConfigPath = api.resolve(viteConfigFile)
+
   const files = {
     './index.html': '../templates/v3/vite/index.vite.html',
     './src/styles/_variables.scss': '../templates/v3/vite/styles/_variables.scss',
   }
 
-  if (!fileExists(api, viteConfigPath)) files[viteConfigPath] = `../templates/v3/vite/vite.config.${ext}`
+  if (!fileExists(api, viteConfigPath)) files[viteConfigFile] = `../templates/v3/vite/vite.config.${ext}`
   else updateViteConfig(api, viteConfigPath)
 
   api.render(files, opts)
@@ -36,7 +38,7 @@ function updateViteConfig (api, viteConfigPath) {
     const exportIndex = lines.findIndex(line => line.includes('export default'))
 
     const vuetifyPluginImport = `\n// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin\nimport vuetify from 'vite-plugin-vuetify'\n`
-    const vuetifyPlugin = '\n\t\tvuetify({ autoImport: true }),\n\t'
+    const vuetifyPlugin = '\n\t\tvuetify({ autoImport: true }),\n'
 
     if (pluginsIndex !== -1) {
       lines[exportIndex - 2] = vuetifyPluginImport
