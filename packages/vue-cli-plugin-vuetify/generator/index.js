@@ -28,10 +28,9 @@ module.exports = (api, opts) => {
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
   // Vite
-  if (opts.useVite) {
+  if (opts.useVite) { // @TODO Replace vite config if it doesn't already exist, otherwise inject the vuetify plugin
     vite.addDependencies(api)
     vite.renderFiles(api, opts)
-    vite.updateViteConfig(api, opts)
   }
 
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)

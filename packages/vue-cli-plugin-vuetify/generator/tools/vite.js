@@ -1,4 +1,5 @@
-const helpers = require('./helpers')
+const { fileExists } = require('../../util/helpers')
+const { updateFile } = require('./helpers')
 
 function addDependencies (api) {
   api.extendPackage({
@@ -17,28 +18,28 @@ function addDependencies (api) {
 
 function renderFiles (api, opts) {
   const ext = opts.hasTS ? 'ts' : 'js'
+  const viteConfigPath = api.resolve(`./vite.config.${ext}`)
   const files = {
     './index.html': '../templates/v3/vite/index.vite.html',
-    // @TODO Remove
-    // [`./vite.config.${ext}`]: `../templates/v3/vite/vite.config.${ext}`,
     './src/styles/_variables.scss': '../templates/v3/vite/styles/_variables.scss',
   }
+
+  if (!fileExists(api, viteConfigPath)) files[viteConfigPath] = `../templates/v3/vite/vite.config.${ext}`
+  else updateViteConfig(api, viteConfigPath)
 
   api.render(files, opts)
 }
 
-function updateViteConfig (api, opts) {
-  const ext = opts.hasTs ? 'ts' : 'js'
-  const viteConfigPath = api.resolve(`./vite.config.${ext}`)
-  
-  helpers.updateFile(api, viteConfigPath, (lines) => {
+function updateViteConfig (api, viteConfigPath) {
+  updateFile(api, viteConfigPath, (lines) => {
     const pluginsIndex = lines.findIndex(line => line.match(/plugins:/))
-    const importsIndex = lines.lastIndexOf("\nimport ")
+    const exportIndex = lines.findIndex(line => line.includes('export default'))
 
-    const vuetifyPluginImport = `import vuetify from 'vite-plugin-vuetify\t'`
+    const vuetifyPluginImport = `\n// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin\nimport vuetify from 'vite-plugin-vuetify'\n`
     const vuetifyPlugin = '\n\t\tvuetify({ autoImport: true }),\n\t'
 
     if (pluginsIndex !== -1) {
+      lines[exportIndex - 2] = vuetifyPluginImport
       const matchedPlugins = lines[pluginsIndex].match(/(?<=\[).+?(?=\])/)
 
       if (matchedPlugins !== null) {
@@ -64,5 +65,4 @@ function updateViteConfig (api, opts) {
 module.exports = {
   addDependencies,
   renderFiles,
-  updateViteConfig,
 }
