@@ -26,10 +26,29 @@ function renderFiles (api, opts) {
     './src/styles/_variables.scss': '../templates/v3/vite/styles/_variables.scss',
   }
 
-  if (!fileExists(api, viteConfigPath)) files[viteConfigFile] = `../templates/v3/vite/vite.config.${ext}`
+  if (!fileExists(api, viteConfigPath)) {
+    files[viteConfigFile] = `../templates/v3/vite/vite.config.${ext}`
+    updateJsConfigTarget(api)
+  }
   else updateViteConfig(api, viteConfigPath)
 
   api.render(files, opts)
+}
+
+function updateJsConfigTarget(api) {
+  const jsConfigPath = api.resolve('./jsconfig.json')
+
+  if (fileExists(api, jsConfigPath)) {
+    updateFile(api, jsConfigPath, (lines) => {
+      const targetIndex = lines.findIndex(line => line.match(/"target":/))
+
+      if (targetIndex !== -1) {
+        lines[targetIndex] = lines[targetIndex].replace('es5', 'esnext')
+      }
+
+      return lines
+    })
+  }
 }
 
 function updateViteConfig (api, viteConfigPath) {
