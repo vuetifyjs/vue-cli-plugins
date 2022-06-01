@@ -24,7 +24,7 @@ module.exports = (api, opts) => {
 
   // Add dependencies
   vuetify.addDependencies(api, opts)
-  if (opts.useAlaCarte) alaCarte.addDependencies(api, opts.useV3)
+  if (opts.useAlaCarte && !opts.useVite) alaCarte.addDependencies(api, opts.useV3)
   else if (opts.usePolyfill) polyfill.addDependencies(api)
 
   // Vite
@@ -51,14 +51,18 @@ module.exports = (api, opts) => {
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
 
-    if (fileExists(api, 'src/public/index.html')) {
-      fs.unlinkSync(api.resolve('src/public/index.html'))
+    if (fileExists(api, './src/public/index.html')) {
+      fs.unlinkSync(api.resolve('./src/public/index.html'))
     }
 
     const configFile = api.resolve('./vue.config.js')
 
     if (fileExists(api, configFile)) {
-      vuetify.addVuetifyLoaderDocsLink(configFile)
+      if (opts.useVite) {
+        fs.unlinkSync(configFile)
+      } else {
+        vuetify.addVuetifyLoaderDocsLink(configFile)
+      }
     }
 
     api.exitLog('Discord community: https://community.vuetifyjs.com')
