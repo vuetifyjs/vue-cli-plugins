@@ -3,10 +3,10 @@ const path = require('path')
 const resolve = file => path.resolve(__dirname, file)
 
 const PRESET_MAP = {
-  default: 'Default (recommended)',
-  preview: 'Vite Preview (Vuetify 3 + Vite)',
-  prototype: 'Prototype (rapid development)',
-  v3: 'Vuetify 3 Preview (Vuetify 3)',
+  default: 'Vuetify 2 - Vue CLI (recommended)',
+  prototype: 'Vuetify 2 - Prototype (rapid development)',
+  v3vite: 'Vuetify 3 - Vite (preview)',
+  v3vuecli: 'Vuetify 3 - Vue CLI (preview)',
 }
 
 module.exports = fs.readdirSync(resolve('../presets')).map(preset => {

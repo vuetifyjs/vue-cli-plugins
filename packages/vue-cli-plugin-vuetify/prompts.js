@@ -19,7 +19,7 @@ module.exports = [
     message: 'Choose a preset:',
     type: 'list',
     choices: [
-      { name: 'Configure (advanced)', value: 'configure' },
+      { name: 'Vuetify 2 - Configure Vue CLI (advanced)', value: 'configure' },
       ...presets,
     ],
     default: 'default',
