@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.5.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.1...vue-cli-plugin-vuetify@2.5.2) (2022-08-17)
+
+
+### Bug Fixes
+
+* remove type shims ([c79a5cd](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/c79a5cdc92faa3e044132dbba1dd2273cc0085f3)), closes [#327](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/327)
+* **v3-generator:** remove variables, update vite install process ([fb34b26](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/fb34b269153133e4330e47e0f8d72563c9288db7))
+
+
+
 ### [2.5.1](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.0...vue-cli-plugin-vuetify@2.5.1) (2022-06-01)
 
 **Note:** Version bump only for package vue-cli-plugin-vuetify
