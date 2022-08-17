@@ -23,7 +23,6 @@ function renderFiles (api, opts) {
 
   const files = {
     './index.html': '../templates/v3/vite/index.vite.html',
-    './src/styles/_variables.scss': '../templates/v3/vite/styles/_variables.scss',
   }
 
   if (!fileExists(api, viteConfigPath)) {
@@ -56,7 +55,7 @@ function updateViteConfig (api, viteConfigPath) {
     const exportIndex = lines.findIndex(line => line.includes('export default'))
 
     const vuetifyPluginImport = '\n// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin\nimport vuetify from \'vite-plugin-vuetify\'\n'
-    const vuetifyPlugin = '\n\t\tvuetify({ autoImport: true }),\n'
+    const vuetifyPlugin = '\n\t\tvuetify({ autoImport: true }),\n\t'
 
     if (pluginsIndex !== -1) {
       lines[exportIndex - 2] = vuetifyPluginImport
@@ -71,14 +70,12 @@ function updateViteConfig (api, viteConfigPath) {
           )
 
         lines[pluginsIndex] = lines[pluginsIndex].replace(/(?<=\[).+?(?=\])/, allPlugins)
-
-        return lines
       } else {
         lines[pluginsIndex] = lines[pluginsIndex].replace(/\[.*\]/, vuetifyPlugin)
-
-        return lines
       }
     }
+
+    return lines
   })
 }
 

@@ -30,7 +30,6 @@ module.exports = (api, opts) => {
   // Vite
   if (opts.useVite) {
     vite.addDependencies(api)
-    vite.renderFiles(api, opts)
   }
 
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
@@ -43,6 +42,11 @@ module.exports = (api, opts) => {
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
+    // Vite
+    if (opts.useVite) {
+      vite.renderFiles(api, opts)
+    }
+
     if (!opts.useAlaCarte && opts.usePolyfill) {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
