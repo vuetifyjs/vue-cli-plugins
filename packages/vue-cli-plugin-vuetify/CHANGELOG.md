@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.5.3](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.2...vue-cli-plugin-vuetify@2.5.3) (2022-08-19)
+
+
+### Bug Fixes
+
+* **v3:** don't try to generate shims-vuetify ([3af295d](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/3af295dbb7fa8a212243ddd747eb0639fc3a4327)), closes [#333](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/issues/333)
+
+
+
 ### [2.5.2](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.1...vue-cli-plugin-vuetify@2.5.2) (2022-08-17)
 
 
