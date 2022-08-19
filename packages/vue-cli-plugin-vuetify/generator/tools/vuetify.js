@@ -22,9 +22,9 @@ function renderFiles (api, { opts }) {
     typescript: opts.hasTS,
   })
 
-  if (opts.hasTS && opts.useAlaCarte) {
+  if (opts.hasTS && opts.useAlaCarte && !opts.useV3) {
     api.render({
-      './src/shims-vuetify.d.ts': opts.useV3 ? '../templates/v3/src/shims-vuetify.d.ts' : '../templates/default/src/shims-vuetify.d.ts',
+      './src/shims-vuetify.d.ts': '../templates/default/src/shims-vuetify.d.ts',
     })
   }
 
