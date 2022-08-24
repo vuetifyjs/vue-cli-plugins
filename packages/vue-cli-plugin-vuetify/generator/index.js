@@ -30,6 +30,7 @@ module.exports = (api, opts) => {
   // Vite
   if (opts.useVite) {
     vite.addDependencies(api)
+    vite.renderFiles(api, opts)
   }
 
   if (opts.installFonts) fonts.addDependencies(api, opts.iconFont)
@@ -42,11 +43,6 @@ module.exports = (api, opts) => {
 
   // adapted from https://github.com/Akryum/vue-cli-plugin-apollo/blob/master/generator/index.js#L68-L91
   api.onCreateComplete(() => {
-    // Vite
-    if (opts.useVite) {
-      vite.renderFiles(api, opts)
-    }
-
     if (!opts.useAlaCarte && opts.usePolyfill) {
       polyfill.updateBabelConfig(api)
       polyfill.updateBrowsersList(api)
@@ -55,8 +51,8 @@ module.exports = (api, opts) => {
     if (!opts.installFonts) fonts.addLinks(api, opts.iconFont)
     vuetify.setHtmlLang(api, opts.locale)
 
-    if (fileExists(api, './src/public/index.html')) {
-      fs.unlinkSync(api.resolve('./src/public/index.html'))
+    if (fileExists(api, './public/index.html') && opts.useVite) {
+      fs.unlinkSync(api.resolve('./public/index.html'))
     }
 
     const configFile = api.resolve('./vue.config.js')
