@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.5.5](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.4...vue-cli-plugin-vuetify@2.5.5) (2022-08-24)
+
+
+### Bug Fixes
+
+* **vuetify-cli:** generate vite config file for vite projects ([e3e6546](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/e3e654682776325df5f0ea41588b7d02276c8b3b))
+
+
+
 ### [2.5.4](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.2...vue-cli-plugin-vuetify@2.5.4) (2022-08-19)
 
 
