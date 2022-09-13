@@ -115,11 +115,11 @@ export default defineComponent({
       ecosystem: [
         {
           text: 'vuetify-loader',
-          href: 'https://github.com/vuetifyjs/vuetify-loader',
+          href: 'https://github.com/vuetifyjs/vuetify-loader/tree/next',
         },
         {
           text: 'github',
-          href: 'https://github.com/vuetifyjs/vuetify',
+          href: 'https://github.com/vuetifyjs/vuetify/tree/next',
         },
         {
           text: 'awesome-vuetify',
