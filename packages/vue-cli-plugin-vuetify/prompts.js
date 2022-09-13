@@ -15,7 +15,7 @@ function isVuetify3 (answers) {
 
 module.exports = [
   {
-    name: 'preset',
+    name: 'install',
     message: 'Choose a preset:',
     type: 'list',
     choices: [
