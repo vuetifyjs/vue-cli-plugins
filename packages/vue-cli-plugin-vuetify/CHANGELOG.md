@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.5.7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.6...vue-cli-plugin-vuetify@2.5.7) (2022-09-13)
+
+
+### Bug Fixes
+
+* **prompts:** change install preset key ([4a2aa76](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/4a2aa7668a08ffcdc8ffe2a15856e49a216e13dd))
+
+
+
 ### [2.5.6](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.5...vue-cli-plugin-vuetify@2.5.6) (2022-09-13)
 
 **Note:** Version bump only for package vue-cli-plugin-vuetify
