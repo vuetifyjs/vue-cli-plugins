@@ -6,11 +6,11 @@ const presets = require(resolve('./util/presets.js'))
 const locales = require(resolve('./util/locales.js'))
 
 function isCustom (answers) {
-  return answers.preset === 'configure'
+  return answers.install === 'configure'
 }
 
 function isVuetify3 (answers) {
-  return answers.preset === 'v3' || answers.preset === 'vite'
+  return answers.install === 'v3cli' || answers.install === 'v3vite'
 }
 
 module.exports = [

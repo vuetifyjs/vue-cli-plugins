@@ -8,11 +8,11 @@ module.exports = (api, opts) => {
 
   const fs = require('fs')
 
-  if (opts.preset !== 'configure') {
+  if (opts.install !== 'configure') {
     opts = {
       hasTS: api.hasPlugin('typescript') || Object.keys(api.generator.pkg.devDependencies).includes('typescript'),
       ...opts,
-      ...require(`../presets/${opts.preset}`).plugins['vue-cli-plugin-vuetify'],
+      ...require(`../presets/${opts.install}`).plugins['vue-cli-plugin-vuetify'],
     }
   }
 
