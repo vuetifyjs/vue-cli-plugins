@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [2.5.8](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.7...vue-cli-plugin-vuetify@2.5.8) (2022-09-13)
+
+
+### Bug Fixes
+
+* **v3-template:** update ecosystem links to point to next branch ([a219729](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/commit/a21972975bb3c7f1389907d2551bead7dd2f7c76))
+
+
+
 ### [2.5.7](https://github.com/vuetifyjs/vue-cli-plugin-vuetify/compare/vue-cli-plugin-vuetify@2.5.6...vue-cli-plugin-vuetify@2.5.7) (2022-09-13)
 
 
